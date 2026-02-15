@@ -1,11 +1,7 @@
 /* =========================================
    HOME PAGE
-   - Aquí NO definimos resets, ni .container, ni .section, ni .btn.
-   - Todo eso ya vive en index.css (global).
-   - Home.css solo debe contener estilos propios de Home.
 ========================================= */
 
-/* Wrapper de página (si quieres, puedes quitarlo: ya tienes bg global) */
 .page {
   background: var(--color-bg-main);
 }
@@ -15,14 +11,22 @@
 ========================================= */
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh; /* móvil moderno */
 }
 
 .hero__background {
-  height: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+
+  /* ===== FOTO DESKTOP ===== */
   background-image: url("../../assets/images/heroimg/herofinal.png");
+
   background-size: cover;
-  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Enfoque desktop (ajustado para tu foto actual) */
+  background-position: 50% 45%;
 
   display: flex;
   align-items: center;
@@ -50,22 +54,21 @@
   text-align: center;
 }
 
-/* Eyebrow claro SOLO para hero */
 .eyebrow--light {
   color: rgba(255, 255, 255, 0.9);
 }
 
 .hero__title {
   margin: 0;
-  font-size: 3rem;
-  letter-spacing: 0.4rem;
-  color: #fff; /* fuerza blanco en hero */
+  font-size: clamp(2.4rem, 4vw, 3rem);
+  letter-spacing: 0.35rem;
+  color: #fff;
 }
 
 .hero__subtitle {
   margin: 0;
   max-width: 60ch;
-  font-weight: 800;
+  font-weight: 700;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -82,15 +85,13 @@
 
 .story__img {
   width: 100%;
-  border-radius: 18px; /* si quieres token: var(--radius-md) */
+  border-radius: 18px;
   display: block;
   box-shadow: var(--shadow-md);
 }
 
 /* =========================================
-   TITLES / TEXT (solo si quieres mantener las clases)
-   - Esto no es estrictamente necesario porque h2/p ya tienen base global.
-   - Lo mantengo porque lo usas en el JSX y no quiero tocar estética.
+   TITLES / TEXT
 ========================================= */
 
 .title {
@@ -109,7 +110,7 @@
 }
 
 /* =========================================
-   CARDS (Refugio / Beneficios)
+   CARDS
 ========================================= */
 
 .cards3 {
@@ -137,8 +138,6 @@
   border: 1px solid rgba(182, 141, 44, 0.35);
   background: rgba(182, 141, 44, 0.08);
   color: var(--color-gold);
-
-  font-size: 0.9rem;
 }
 
 .card__title {
@@ -157,7 +156,7 @@
 }
 
 /* =========================================
-   ATMÓSFERA (grid imágenes)
+   ATMÓSFERA
 ========================================= */
 
 .atmosphere {
@@ -165,14 +164,12 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 22px;
-  align-items: start;
 }
 
 .atmosphere__item {
   overflow: hidden;
   border-radius: 22px;
   height: 175px;
-  background: #eee;
   box-shadow: var(--shadow-md);
 }
 
@@ -184,6 +181,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -205,12 +203,10 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Lista de features (NO usamos ul global porque en reset está list-style none) */
 .features {
   margin: 16px 0 0;
   padding: 0;
   list-style: none;
-  text-align: left;
 }
 
 .features li {
@@ -225,19 +221,11 @@
   content: "•";
   position: absolute;
   left: 0;
-  top: 0;
   color: var(--color-gold);
 }
 
-.actions {
-  margin-top: 18px;
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
 /* =========================================
-   FEATURE (Restaurante)
+   FEATURE
 ========================================= */
 
 .feature {
@@ -263,7 +251,6 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 26px;
-  opacity: 0.95;
 }
 
 .service {
@@ -272,11 +259,6 @@
   align-items: center;
   gap: 8px;
   color: #5b616c;
-  font-size: 0.95rem;
-}
-
-.service__icon {
-  font-size: 1.25rem;
 }
 
 /* =========================================
@@ -297,116 +279,30 @@
   box-shadow: var(--shadow-md);
 }
 
-.area__list {
-  margin: 16px 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 10px;
-}
-
-.area__list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: #3f4652;
-}
-
-.area__icon {
-  width: 22px;
-  display: inline-flex;
-  justify-content: center;
-  color: var(--color-gold);
-}
-
 /* =========================================
    REVIEWS
 ========================================= */
-
-.reviews__inner {
-  text-align: center;
-}
 
 .reviews__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
-  align-items: stretch;
 }
 
 .review {
-  text-align: left;
   border: 1px solid var(--color-border);
-  padding: 26px 26px 22px;
+  padding: 26px;
   background: rgba(255, 255, 255, 0.6);
 }
 
-.review__stars {
-  color: var(--color-gold);
-  letter-spacing: 2px;
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
-
-.review__quote {
-  color: var(--color-light-text);
-  font-style: italic;
-  line-height: 1.8;
-  margin: 0 0 18px;
-}
-
-.review__name {
-  font-weight: 800;
-  margin: 0;
-  color: var(--color-dark);
-}
-
-.review__city {
-  margin: 2px 0 0;
-  font-size: 0.9rem;
-  color: var(--color-light-text);
-}
-
 /* =========================================
-   CTA FINAL AZUL
+   CTA FINAL
 ========================================= */
 
 .ctaFinal {
-  background: #4e6f8c; /* si quieres token, lo añadimos después */
+  background: #4e6f8c;
   padding: 5rem 0;
   text-align: center;
-}
-
-.ctaFinal__inner {
-  max-width: 58rem;
-}
-
-.ctaFinal__eyebrow {
-  color: rgba(255, 255, 255, 0.8);
-  letter-spacing: 0.22em;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.ctaFinal__title {
-  margin-top: 1rem;
-  color: #fff;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  line-height: 1.1;
-}
-
-.ctaFinal__text {
-  margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 42rem;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.75;
-}
-
-.ctaFinal__actions {
-  margin-top: 2rem;
 }
 
 /* =========================================
@@ -425,6 +321,7 @@
 }
 
 @media (max-width: 900px) {
+
   .story,
   .rooms,
   .feature,
@@ -442,5 +339,27 @@
 
   .reviews__grid {
     grid-template-columns: 1fr;
+  }
+
+  /* ===== HERO MÓVIL ===== */
+
+  .hero__background {
+
+    /* 🔥 CAMBIA AQUÍ cuando tengas la versión vertical */
+    /* background-image: url("../../assets/images/heroimg/herofinal-mobile.png"); */
+
+    background-image: url("../../assets/images/pueblo/iglesia.jpg");
+
+    /* Ajuste de encuadre móvil */
+    background-position: 50% 20%;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .hero__subtitle {
+    max-width: 32ch;
   }
 }

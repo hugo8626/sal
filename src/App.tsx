@@ -10,6 +10,9 @@ import History from "./pages/historia/History";
 import Area from "./pages/area/Area";
 import Reservas from "./components/reservas/Reserva";
 
+/* === CONTACTO === */
+import Contacto from "./pages/contacto/Contacto";
+
 /* === LEGAL PAGES === */
 import Privacy from "./pages/legal/Privacy";
 import LegalNotice from "./pages/legal/LegalNotice";
@@ -33,6 +36,7 @@ export default function App() {
         <Route path="/historia" element={<History />} />
         <Route path="/entorno" element={<Area />} />
         <Route path="/reservar" element={<Reservas />} />
+        <Route path="/contacto" element={<Contacto />} />
 
         {/* === LEGAL ROUTES === */}
         <Route path="/privacidad" element={<Privacy />} />
@@ -43,13 +47,11 @@ export default function App() {
         <Route path="/rooms" element={<Navigate to="/habitaciones" replace />} />
         <Route path="/area" element={<Navigate to="/entorno" replace />} />
 
-        {/* Catch-all */}
+        {/* === 404 fallback === */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
       <Footer />
-
-      {/* Banner global de cookies */}
       <CookieBanner />
     </BrowserRouter>
   );

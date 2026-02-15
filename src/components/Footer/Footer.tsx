@@ -33,7 +33,6 @@ export default function Footer() {
                 <span className="footer__icon" aria-hidden="true">
                   📞
                 </span>
-                {/* Si tienes el número real, reemplaza el href y el texto */}
                 <a className="footer__contactLink" href="tel:+34972000000">
                   +34 972 000 000
                 </a>
@@ -43,7 +42,6 @@ export default function Footer() {
                 <span className="footer__icon" aria-hidden="true">
                   ✉
                 </span>
-                {/* Si tienes el email real, reemplaza el href y el texto */}
                 <a className="footer__contactLink" href="mailto:info@tavernadelasal.com">
                   info@tavernadelasal.com
                 </a>
@@ -68,6 +66,11 @@ export default function Footer() {
               <li>
                 <Link to="/entorno">Entorno</Link>
               </li>
+
+              {/* NUEVO */}
+              <li>
+                <Link to="/contacto">Contacto</Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -75,7 +78,9 @@ export default function Footer() {
         <div className="footer__divider" />
 
         <div className="footer__bottom">
-          <p className="footer__copy">© {year} Taverna de la Sal. Todos los derechos reservados.</p>
+          <p className="footer__copy">
+            © {year} Taverna de la Sal. Todos los derechos reservados.
+          </p>
 
           <nav className="footer__legal" aria-label="Enlaces legales">
             <Link to="/privacidad">Política de privacidad</Link>

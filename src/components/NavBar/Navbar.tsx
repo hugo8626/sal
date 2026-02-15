@@ -12,7 +12,6 @@ export default function Navbar() {
   const close = () => setOpen(false);
   const toggle = () => setOpen((v) => !v);
 
-  // ✅ Cerrar con ESC (accesibilidad / UX)
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
@@ -22,7 +21,6 @@ export default function Navbar() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  // ✅ Evita scroll del body cuando el menú móvil está abierto
   useEffect(() => {
     if (!open) return;
     const prev = document.body.style.overflow;
@@ -41,7 +39,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Desktop + Tablet links */}
+        {/* Desktop + Tablet */}
         <ul className="navbar-links navbar-links--desktop">
           <li>
             <NavLink
@@ -86,6 +84,18 @@ export default function Navbar() {
               {t("nav.area")}
             </NavLink>
           </li>
+
+          {/* NUEVO: Contacto */}
+          <li>
+            <NavLink
+              className={({ isActive }) =>
+                `navbar-link ${isActive ? "navbar-link--active" : ""}`
+              }
+              to="/contacto"
+            >
+              {t("nav.contact")}
+            </NavLink>
+          </li>
         </ul>
 
         <div className="navbar-right">
@@ -110,7 +120,6 @@ export default function Navbar() {
             <option value="ca">CA</option>
           </select>
 
-          {/* Burger SOLO móvil */}
           <button
             className="navbar-burger"
             onClick={toggle}
@@ -124,7 +133,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Overlay SOLO móvil */}
       {open && (
         <div
           className="overlay"
@@ -138,7 +146,6 @@ export default function Navbar() {
         />
       )}
 
-      {/* Popover SOLO móvil */}
       <aside
         id="mobile-menu"
         className={`popover ${open ? "popover--open" : ""}`}
@@ -146,7 +153,12 @@ export default function Navbar() {
       >
         <div className="popover-header">
           <span className="popover-title">Menú</span>
-          <button className="popover-close" onClick={close} aria-label="Cerrar" type="button">
+          <button
+            className="popover-close"
+            onClick={close}
+            aria-label="Cerrar"
+            type="button"
+          >
             ✕
           </button>
         </div>
@@ -164,6 +176,12 @@ export default function Navbar() {
           <NavLink to="/entorno" onClick={close}>
             {t("nav.area")}
           </NavLink>
+
+          {/* NUEVO: Contacto móvil */}
+          <NavLink to="/contacto" onClick={close}>
+            {t("nav.contact")}
+          </NavLink>
+
           <NavLink to="/reservar" onClick={close}>
             {t("nav.reserve")}
           </NavLink>
