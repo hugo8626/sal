@@ -50,6 +50,7 @@ export default function Contact() {
 
               <h3 className="contactCard__title">Dirección</h3>
               <h3 className="contactCard__title">Dirección</h3>
+              <h3 className="contactCard__title">Dirección</h3>
 
 
               <p className="contactCard__text">
