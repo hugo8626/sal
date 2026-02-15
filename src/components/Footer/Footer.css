@@ -1,0 +1,164 @@
+/* =========================================
+   FOOTER
+   - Mantiene tu estética (azul oscuro + franja azul)
+   - Evita hardcodear layout: usa --container
+   - Tipos y bordes coherentes con index.css
+========================================= */
+
+.footer {
+  /* Mantengo tu look, pero alineo con el sistema */
+  background: var(--color-dark);
+  color: rgba(255, 255, 255, 0.88);
+
+  padding: 48px 0 28px;
+  position: relative;
+}
+
+/* franja superior azul */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: var(--color-primary);
+}
+
+.footer__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px; /* igual que .container global */
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 60px;
+  margin-top: 30px;
+}
+
+/* columna marca */
+.footer__title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.footer__desc {
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 340px;
+}
+
+/* headings columnas */
+.footer__heading {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  color: rgba(255, 255, 255, 0.60);
+}
+
+/* contacto */
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.footer__item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* enlaces de contacto (tel y mailto) */
+.footer__contactLink {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.footer__contactLink:hover {
+  color: #ffffff;
+}
+
+/* enlaces navegación */
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.footer__links a {
+  text-decoration: none;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+  transition: color 0.2s ease;
+}
+
+.footer__links a:hover {
+  color: #ffffff;
+}
+
+/* línea divisoria */
+.footer__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 32px 0 18px;
+}
+
+/* parte inferior */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.footer__legal {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__legal a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.55);
+  transition: color 0.2s ease;
+}
+
+.footer__legal a:hover {
+  color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .footer__legal {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}

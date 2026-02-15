@@ -1,0 +1,518 @@
+/* =========================================
+   ROOMS PAGE (coherente con index.css)
+   - No redefinir resets
+   - Usa tokens: --container, --space-*, --radius-*, --shadow-*
+========================================= */
+
+.roomsPage {
+  background: var(--color-bg-main);
+}
+
+/* ================= HERO ================= */
+
+.roomsHero {
+  position: relative;
+  min-height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  padding: 0 var(--space-5); /* 24px */
+}
+
+.roomsHero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.15) 45%,
+    rgba(0, 0, 0, 0.35)
+  );
+}
+
+.roomsHero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 980px;
+  margin-top: var(--space-6);
+}
+
+.roomsHero__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.05;
+  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  margin: 0;
+}
+
+.roomsHero__subtitle {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  max-width: 680px;
+  margin: var(--space-5) auto 0;
+}
+
+/* CTA (único) */
+.roomsHero__ctaWrap {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-6);
+  transform: translateX(-50%);
+  z-index: 2;
+  width: min(720px, calc(100% - 3rem));
+}
+
+.roomsHero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  border-radius: var(--radius-sm);
+  background: var(--color-primary);
+  text-decoration: none;
+  font-family: var(--font-body);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: var(--color-bg-main);
+  box-shadow: var(--shadow-md);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.roomsHero__cta:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+/* ================= INTRO ================= */
+
+.roomsIntro {
+  padding: var(--space-8) var(--space-5);
+  background: var(--color-bg-main);
+}
+
+.roomsIntro__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.roomsIntro__content {
+  max-width: 640px;
+}
+
+.roomsIntro__lead {
+  line-height: 1.8;
+  margin: 0 0 var(--space-6);
+  color: var(--color-text);
+}
+
+/* bullets sin depender de ul/ol global */
+.roomsIntro__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-7);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.roomsIntro__list li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--color-text);
+  opacity: 0.95;
+}
+
+.roomsIntro__list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.5;
+}
+
+.roomsIntro__quote {
+  margin: 0;
+  padding-left: 1.6rem;
+  border-left: 2px solid var(--color-border);
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.35;
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  color: var(--color-dark);
+}
+
+.roomsIntro__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+/* ✅ arreglo PRO: nada de width/height fijos */
+.roomsIntro__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 4 / 3; /* mantiene look en desktop */
+  object-fit: cover;
+}
+
+/* ================= FEATURES ================= */
+
+.roomsFeatures {
+  padding: var(--space-8) var(--space-5);
+  background: var(--color-bg-beige);
+}
+
+.roomsFeatures__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.featureItem__icon {
+  font-size: 1.4rem;
+  opacity: 0.5;
+  margin-bottom: var(--space-5);
+}
+
+.featureItem__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  margin: 0 0 var(--space-5);
+  color: var(--color-dark);
+}
+
+/* bullets desactivados globalmente: los dejamos en estilo “limpio” */
+.featureItem__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--space-2);
+}
+
+.featureItem__list li {
+  font-size: 0.95rem;
+  color: var(--color-light-text);
+}
+
+/* ================= GALLERY ================= */
+
+.roomsGallery {
+  padding: var(--space-7) var(--space-5);
+  background: var(--color-bg-main);
+}
+
+.roomsGallery__container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.roomsGallery__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto var(--space-7);
+}
+
+.roomsGallery__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.roomsGallery__subtitle {
+  margin: var(--space-4) auto 0;
+  line-height: 1.7;
+  color: var(--color-light-text);
+}
+
+.roomsGallery__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.gItem {
+  margin: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 4 / 3;
+  background: rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease;
+}
+
+.gItem:hover {
+  transform: translateY(-3px);
+}
+
+.gItem img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ================= RESERVE STRIP ================= */
+
+.roomsFinal {
+  padding: var(--space-8) var(--space-5);
+  background: var(--color-bg-beige);
+  text-align: center;
+}
+
+.roomsFinal__container {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.roomsFinal__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.3;
+  font-size: clamp(1.8rem, 2.6vw, 2.6rem);
+  color: var(--color-dark);
+  margin: 0 0 var(--space-7);
+}
+
+.roomsFinal__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.roomsFinal__btn:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+/* ================= SERVICES LINK ================= */
+
+.roomsServices {
+  padding: var(--space-7) var(--space-5) var(--space-8);
+  background: var(--color-bg-main);
+  text-align: center;
+}
+
+.roomsServices__container {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.roomsServices__text {
+  color: var(--color-light-text);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: var(--space-6);
+}
+
+.roomsServices__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.2rem;
+  transition: opacity 0.25s ease;
+}
+
+.roomsServices__link:hover {
+  opacity: 0.6;
+}
+
+.roomsServices__arrow {
+  font-size: 0.9rem;
+}
+
+/* ================= FAQ ================= */
+
+.roomsFaq {
+  padding: var(--space-8) var(--space-5);
+  background: var(--color-bg-beige);
+}
+
+.roomsFaq__container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.roomsFaq__title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-dark);
+  margin: 0 0 var(--space-8);
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+/* (FaqItem usa estas clases) */
+.faqItem {
+  position: relative;
+}
+
+.faqItem__head {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 1.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faqItem__q {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  font-weight: 600;
+}
+
+.faqItem__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  color: var(--color-dark);
+  opacity: 0.8;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.faqItem.is-open .faqItem__icon {
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.faqItem__body {
+  padding: 0 0 1.6rem;
+}
+
+.faqItem__a {
+  margin: 0;
+  color: var(--color-light-text);
+  line-height: 1.8;
+  max-width: 820px;
+}
+
+.faqItem__line {
+  height: 1px;
+  background: var(--color-border);
+}
+
+/* ================= FINAL BIG CTA ================= */
+
+.roomsBigCta {
+  padding: 6.5rem var(--space-5);
+  background: var(--color-bg-main);
+  text-align: center;
+}
+
+.roomsBigCta__container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.roomsBigCta__title {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--color-dark);
+  line-height: 1.2;
+  margin: 0 0 var(--space-7);
+  font-size: clamp(2.2rem, 4vw, 4rem);
+}
+
+.roomsBigCta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.05rem 2.4rem;
+  background: var(--color-primary);
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  border-radius: var(--radius-sm);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.roomsBigCta__btn:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .roomsIntro__container {
+    grid-template-columns: 1fr;
+    gap: var(--space-7);
+  }
+
+  .roomsFeatures__container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-7);
+  }
+
+  .roomsGallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .roomsHero {
+    min-height: 75vh;
+  }
+
+  .roomsHero__ctaWrap {
+    bottom: var(--space-5);
+  }
+
+  .roomsHero__cta {
+    height: 58px;
+  }
+
+  .roomsFeatures__container {
+    grid-template-columns: 1fr;
+  }
+
+  .roomsGallery__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faqItem__head {
+    padding: 1.4rem 0;
+  }
+
+  .faqItem__q {
+    font-size: 0.98rem;
+  }
+}

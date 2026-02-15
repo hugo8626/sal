@@ -1,0 +1,384 @@
+/* =========================================
+   RESET GLOBAL
+========================================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ⚠️ Reset agresivo: quita viñetas globalmente.
+   En texto largo (legales/historia) usamos .prose para reactivarlas. */
+ul,
+ol {
+  list-style: none;
+}
+
+/* =========================================
+   FONTS
+========================================= */
+
+@font-face {
+  font-family: "AnticDidone";
+  src: url("../assets/fonts/Antic_Didone/AnticDidone-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================
+   DESIGN SYSTEM (TOKENS)
+========================================= */
+
+:root {
+  /* ---- Tipografías ---- */
+  --font-heading: "AnticDidone", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ---- Colores principales ---- */
+  --color-bg-main: #fbfaf8;
+  --color-bg-beige: #e9e3da;
+  --color-primary: #3f5f7d;
+  --color-gold: #b68d2c;
+  --color-dark: #0f1a2b;
+  --color-text: #404652;
+  --color-light-text: #6b7280;
+
+  /* ---- UI / Superficies ---- */
+  --color-surface: #ffffff;
+  --color-border: rgba(15, 26, 43, 0.12);
+
+  /* ---- Espaciado ---- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 72px;
+
+  /* ---- Radios ---- */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* ---- Sombras ---- */
+  --shadow-sm: 0 8px 18px rgba(15, 26, 43, 0.10);
+  --shadow-md: 0 16px 40px rgba(15, 26, 43, 0.14);
+
+  /* ---- Layout ---- */
+  --container: 1100px;
+  --container-narrow: 820px;
+}
+
+/* =========================================
+   BASE GLOBAL
+========================================= */
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg-main);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* =========================================
+   TIPOGRAFÍA BASE
+========================================= */
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  color: var(--color-dark);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
+h2 { font-size: clamp(2rem, 3vw, 2.6rem); }
+h3 { font-size: 1.4rem; }
+
+p {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* =========================================
+   UTILIDADES GENERALES
+========================================= */
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: var(--space-8) 0;
+}
+
+.section--beige {
+  background: var(--color-bg-beige);
+}
+
+.section--white {
+  background: var(--color-bg-main);
+}
+
+.center {
+  text-align: center;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+}
+
+.link {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* =========================================
+   PROSE (texto largo)
+========================================= */
+
+.prose {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  color: var(--color-text);
+}
+
+.prose h1 { margin-bottom: var(--space-5); }
+.prose h2 { margin-top: var(--space-7); margin-bottom: var(--space-3); }
+.prose h3 { margin-top: var(--space-5); margin-bottom: var(--space-2); }
+
+.prose p { margin: var(--space-3) 0; }
+
+.prose a {
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose ul,
+.prose ol {
+  margin: var(--space-3) 0 var(--space-4);
+  padding-left: 1.2rem;
+}
+
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+
+.prose li { margin: var(--space-2) 0; }
+
+.prose hr {
+  border: 0;
+  border-top: 1px solid var(--color-border);
+  margin: var(--space-6) 0;
+}
+
+/* =========================================
+   COMPONENTES GLOBALES (BOTONES / FORM)
+========================================= */
+
+/* ----- Botón base ----- */
+.btn,
+a.btn,
+button.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  border: 1px solid transparent;
+  cursor: pointer;
+
+  font-family: var(--font-body);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  line-height: 1;
+
+  transition: transform 0.15s ease, filter 0.15s ease, background 0.15s ease,
+    border-color 0.15s ease;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Tamaños */
+.btn--sm { padding: 10px 14px; font-size: 0.95rem; }
+.btn--lg { padding: 14px 22px; font-size: 1.05rem; }
+
+/* Variantes */
+.btn--primary,
+a.btn--primary,
+button.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover { filter: brightness(1.06); }
+.btn--primary:active { transform: translateY(1px); }
+
+.btn--outline,
+a.btn--outline,
+button.btn--outline {
+  background: transparent;
+  color: var(--color-dark);
+  border-color: rgba(15, 26, 43, 0.25);
+}
+
+.btn--outline:hover { border-color: rgba(15, 26, 43, 0.45); }
+.btn--outline:active { transform: translateY(1px); }
+
+/* Botón claro (usa tu beige, sin hardcode) */
+.btn--light,
+a.btn--light,
+button.btn--light {
+  background: var(--color-bg-beige);
+  color: var(--color-dark);
+}
+
+.btn--light:hover { filter: brightness(1.03); }
+.btn--light:active { transform: translateY(1px); }
+
+/* Accesibilidad */
+.btn:focus-visible,
+a.btn:focus-visible,
+button.btn:focus-visible {
+  outline: 3px solid rgba(63, 95, 125, 0.35);
+  outline-offset: 3px;
+}
+
+/* ----- FORM GLOBAL ----- */
+
+.input,
+select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+
+  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.85);
+
+  color: var(--color-dark);
+  font-family: var(--font-body);
+
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Select consistente */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: none;
+}
+
+textarea { min-height: 120px; resize: vertical; }
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(15, 26, 43, 0.45);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: rgba(63, 95, 125, 0.55);
+  box-shadow: 0 0 0 4px rgba(63, 95, 125, 0.12);
+}
+
+/* Checkbox alineado y bonito */
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkboxRow input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+}
+
+/* Texto pequeño helper */
+.helpText {
+  font-size: 0.9rem;
+  color: var(--color-light-text);
+}
+
+/* =========================================
+   SMALL SCREEN TWEAKS
+========================================= */
+
+@media (max-width: 600px) {
+  .section { padding: 56px 0; }
+  .container { padding: 0 18px; }
+}

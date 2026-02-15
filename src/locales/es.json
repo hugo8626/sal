@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "rooms": "Habitaciones",
+    "restaurant": "Restaurante",
+    "history": "Historia",
+    "area": "Entorno",
+    "reserve": "Reservar"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "HOTEL BOUTIQUE · SOLO ADULTOS · L’ESCALA",
+      "title": "Taverna de la Sal",
+      "subtitle": "Seis habitaciones íntimas en un edificio del siglo XIX restaurado, frente al Mediterráneo. Diseñadas para el descanso real.",
+      "cta": "Comprobar disponibilidad"
+    },
+    "story": {
+      "eyebrow": "NUESTRA HISTORIA",
+      "title": "Un edificio del siglo XIX ligado al mar y la sal",
+      "text": "Este edificio centenario, vinculado a la tradición marinera y salinera de L’Escala, ha sido cuidadosamente restaurado para convertirse en un hotel boutique que respeta su esencia original. Cada piedra cuenta una historia de mar, viento y sal.",
+      "link": "Descubrir nuestra historia →",
+      "imageAlt": "Entrada abovedada del hotel"
+    },
+    "refuge": {
+      "eyebrow": "TU REFUGIO EN LA COSTA BRAVA",
+      "title": "Por qué elegir Taverna de la Sal",
+      "cards": [
+        {
+          "title": "Solo seis habitaciones",
+          "text": "Exclusividad y tranquilidad garantizadas. Un refugio íntimo donde cada huésped es protagonista."
+        },
+        {
+          "title": "Ubicación privilegiada",
+          "text": "Entre el Mediterráneo y las calles empedradas del centro histórico de L’Escala."
+        },
+        {
+          "title": "Hospitalidad cercana",
+          "text": "Dirigido por sus propietarios, que cuidan cada detalle para que tu estancia sea inolvidable."
+        }
+      ]
+    },
+    "atmosphere": {
+      "eyebrow": "ATMÓSFERA",
+      "title": "Luz, detalle y calma",
+      "images": [
+        "Detalle decorativo",
+        "Escalera interior",
+        "Terraza con vistas",
+        "Habitación luminosa"
+      ]
+    },
+    "benefits": {
+      "eyebrow": "RESERVA DIRECTA",
+      "title": "Ventajas de reservar con nosotros",
+      "cards": [
+        {
+          "title": "10% descuento restaurante",
+          "text": "Disfruta de nuestra cocina de brasa con un descuento exclusivo para reservas directas."
+        },
+        {
+          "title": "Mejor tarifa garantizada",
+          "text": "Reservando directamente siempre obtendrás el mejor precio disponible."
+        },
+        {
+          "title": "Atención personalizada",
+          "text": "Contacto directo con los propietarios para personalizar tu estancia."
+        }
+      ]
+    },
+    "rooms": {
+      "eyebrow": "HABITACIONES",
+      "title": "Seis habitaciones con vistas al Mediterráneo",
+      "text": "Habitaciones dobles de entre 25 y 30 m², con balcón privado y vistas laterales al mar. Decoradas con materiales naturales y una paleta de tonos cálidos que invitan al descanso.",
+      "features": [
+        "Balcón privado con vistas",
+        "25-30 m² de espacio",
+        "Materiales naturales y diseño cuidado",
+        "Ropa de cama de alta calidad"
+      ],
+      "details": "Ver detalles",
+      "cta": "Comprobar disponibilidad",
+      "imageAlt": "Habitación con balcón y vistas al Mediterráneo"
+    },
+    "restaurant": {
+      "eyebrow": "RESTAURANTE",
+      "title": "Brasa, producto y Mediterráneo",
+      "text": "Nuestro restaurante ofrece una cocina honesta basada en carnes y pescados a la brasa, con producto de temporada y una selección de vinos DO Empordà. Un ambiente íntimo junto al mar para disfrutar de la mejor gastronomía ampurdanesa.",
+      "cta": "Descubrir el restaurante",
+      "imageAlt": "Mesa en la terraza del restaurante con vistas al mar"
+    },
+    "services": {
+      "eyebrow": "SERVICIOS",
+      "title": "Todo lo que necesitas",
+      "items": [
+        "Desayuno con producto local",
+        "Terraza con vistas al mar",
+        "Limpieza diaria",
+        "Wi-Fi gratuito",
+        "Parking bajo reserva"
+      ]
+    },
+    "area": {
+      "eyebrow": "ENTORNO",
+      "title": "L’Escala, Costa Brava",
+      "text": "Un pueblo marinero auténtico en la Costa Brava, donde el patrimonio grecorromano de Empúries convive con playas de agua cristalina, calas escondidas y una tradición gastronómica única marcada por las famosas anchoas de L’Escala.",
+      "items": [
+        "Playas a pocos pasos",
+        "Casco antiguo de L’Escala",
+        "Ruinas de Empúries",
+        "Tradición de las anchoas"
+      ],
+      "imageAlt": "Vista aérea de L’Escala en la Costa Brava"
+    },
+    "reviews": {
+      "eyebrow": "OPINIONES",
+      "title": "Lo que dicen nuestros huéspedes",
+      "starsAria": "5 de 5 estrellas",
+      "items": [
+        {
+          "quote": "“Un lugar mágico donde el tiempo se detiene. La tranquilidad y las vistas son incomparables.”",
+          "name": "María L.",
+          "city": "Madrid"
+        },
+        {
+          "quote": "“La ubicación es perfecta: el mar a un lado, el pueblo al otro. Y la atención de los propietarios es excepcional.”",
+          "name": "Jean-Pierre D.",
+          "city": "Lyon"
+        },
+        {
+          "quote": "“Despertarse con el sonido del mar y desayunar producto local en la terraza. Pura felicidad.”",
+          "name": "Anna K.",
+          "city": "Barcelona"
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "SOLO SEIS HABITACIONES",
+      "title": "Tu refugio frente al Mediterráneo te espera",
+      "text": "Reserva directamente y vive una experiencia íntima, auténtica e inolvidable en el corazón de L’Escala.",
+      "button": "Comprobar disponibilidad"
+    }
+  }
+}

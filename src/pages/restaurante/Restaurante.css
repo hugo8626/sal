@@ -1,0 +1,211 @@
+/* =========================================
+   RESTAURANTE PAGE
+   - No resets
+   - No redefinir .container / .section / .btn (globales)
+   - Usa tokens reales del index.css
+========================================= */
+
+.rest-page {
+  background: var(--color-bg-main);
+}
+
+/* ===== HERO ===== */
+.rest-hero {
+  min-height: 92vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.rest-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.rest-hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.rest-hero__title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.05;
+  margin: 12px 0 14px;
+  letter-spacing: 0.01em;
+  color: #fff; /* título blanco en hero */
+}
+
+.rest-hero__subtitle {
+  font-family: var(--font-body);
+  max-width: 70ch;
+  margin: 0 auto;
+  opacity: 0.95;
+  line-height: 1.75;
+}
+
+.rest-hero__actions {
+  margin-top: 20px;
+}
+
+.rest-hero__note {
+  font-family: var(--font-body);
+  margin-top: 18px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ===== SPLIT ===== */
+.rest-split {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 44px;
+  align-items: center;
+}
+
+/* invertido (imagen izquierda / texto derecha) */
+.rest-split--reverse {
+  grid-template-columns: 420px 1fr;
+}
+
+.rest-split--reverse .rest-split__body {
+  order: 2;
+}
+
+.rest-split--reverse .rest-split__media {
+  order: 1;
+}
+
+.rest-split__img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== WIDE IMAGE ===== */
+.rest-wide {
+  width: 100%;
+  background: #000;
+}
+
+.rest-wide__img {
+  width: 100%;
+  height: min(78vh, 720px);
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== CENTER BLOCKS ===== */
+.rest-center {
+  text-align: center;
+  max-width: 920px;
+}
+
+.rest-center__text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+}
+
+.rest-link {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-body);
+  font-weight: 800;
+  color: var(--color-gold);
+}
+
+.rest-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ===== DARK SECTION ===== */
+.rest-dark {
+  background: #2b313a; /* si luego quieres token, lo añadimos en :root */
+  padding: 84px 0;
+}
+
+.rest-dark__inner {
+  text-align: center;
+  max-width: 860px;
+}
+
+.rest-dark__title {
+  font-family: var(--font-heading);
+  color: #fff;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin: 10px 0 14px;
+  line-height: 1.15;
+}
+
+.rest-dark__text {
+  font-family: var(--font-body);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.8;
+  margin: 0 auto 20px;
+  max-width: 78ch;
+}
+
+/* Ajuste específico del botón outline en fondo oscuro (SIN !important) */
+.rest-dark .btn--outline {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #fff;
+}
+
+/* ===== BENEFITS ===== */
+.rest-benefits {
+  text-align: center;
+  max-width: 880px;
+}
+
+.rest-benefits__text {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 70ch;
+}
+
+.rest-benefits__list {
+  margin: 18px auto 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  max-width: 520px;
+  text-align: left;
+}
+
+.rest-benefits__list li {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.rest-benefits__actions {
+  margin-top: 22px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px) {
+  .rest-split,
+  .rest-split--reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .rest-split--reverse .rest-split__body,
+  .rest-split--reverse .rest-split__media {
+    order: initial;
+  }
+
+  .rest-wide__img {
+    height: 50vh;
+  }
+}

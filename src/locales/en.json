@@ -1,0 +1,142 @@
+{
+  "nav": {
+    "rooms": "Rooms",
+    "restaurant": "Restaurant",
+    "history": "History",
+    "area": "Location",
+    "reserve": "Book"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "BOUTIQUE HOTEL · ADULTS ONLY · L’ESCALA",
+      "title": "Taverna de la Sal",
+      "subtitle": "Six intimate rooms in a restored 19th-century building, facing the Mediterranean. Designed for true rest.",
+      "cta": "Check availability"
+    },
+    "story": {
+      "eyebrow": "OUR STORY",
+      "title": "A 19th-century building linked to the sea and salt",
+      "text": "This historic building, tied to L’Escala’s maritime and salt-making heritage, has been carefully restored into a boutique hotel that respects its original essence. Every stone tells a story of sea, wind, and salt.",
+      "link": "Discover our story →",
+      "imageAlt": "Vaulted entrance of the hotel"
+    },
+    "refuge": {
+      "eyebrow": "YOUR REFUGE ON THE COSTA BRAVA",
+      "title": "Why choose Taverna de la Sal",
+      "cards": [
+        {
+          "title": "Only six rooms",
+          "text": "Guaranteed exclusivity and tranquillity. An intimate refuge where every guest matters."
+        },
+        {
+          "title": "Prime location",
+          "text": "A privileged spot between the Mediterranean and the cobbled streets of L’Escala’s historic center."
+        },
+        {
+          "title": "Warm hospitality",
+          "text": "Hosted by the owners, who care for every detail so your stay is unforgettable."
+        }
+      ]
+    },
+    "atmosphere": {
+      "eyebrow": "ATMOSPHERE",
+      "title": "Light, detail and calm",
+      "images": [
+        "Decorative detail",
+        "Interior staircase",
+        "Terrace with views",
+        "Bright room"
+      ]
+    },
+    "benefits": {
+      "eyebrow": "DIRECT BOOKING",
+      "title": "Benefits of booking with us",
+      "cards": [
+        {
+          "title": "10% restaurant discount",
+          "text": "Enjoy our grill cuisine with an exclusive discount for direct bookings."
+        },
+        {
+          "title": "Best rate guaranteed",
+          "text": "Booking direct always gets you the best available price."
+        },
+        {
+          "title": "Personalised attention",
+          "text": "Direct contact with the owners to tailor your stay."
+        }
+      ]
+    },
+    "rooms": {
+      "eyebrow": "ROOMS",
+      "title": "Six rooms with Mediterranean views",
+      "text": "Double rooms of 25–30 m², with a private balcony and partial sea views. Decorated with natural materials and a warm palette designed for rest.",
+      "features": [
+        "Private balcony with views",
+        "25–30 m² of space",
+        "Natural materials and thoughtful design",
+        "High-quality bedding"
+      ],
+      "details": "View details",
+      "cta": "Check availability",
+      "imageAlt": "Room with balcony and Mediterranean views"
+    },
+    "restaurant": {
+      "eyebrow": "RESTAURANT",
+      "title": "Grill, local produce and the Mediterranean",
+      "text": "Our restaurant offers honest cuisine based on grilled meats and fish, seasonal produce and a selection of DO Empordà wines. An intimate setting by the sea to enjoy the best local gastronomy.",
+      "cta": "Discover the restaurant",
+      "imageAlt": "Restaurant terrace table with sea views"
+    },
+    "services": {
+      "eyebrow": "SERVICES",
+      "title": "Everything you need",
+      "items": [
+        "Breakfast with local produce",
+        "Sea-view terrace",
+        "Daily housekeeping",
+        "Free Wi-Fi",
+        "Parking by reservation"
+      ]
+    },
+    "area": {
+      "eyebrow": "SURROUNDINGS",
+      "title": "L’Escala, Costa Brava",
+      "text": "An authentic fishing town on the Costa Brava, where Empúries’ Greco-Roman heritage meets crystal-clear beaches, hidden coves and a unique gastronomic tradition shaped by L’Escala’s famous anchovies.",
+      "items": [
+        "Beaches just a few steps away",
+        "L’Escala old town",
+        "Empúries ruins",
+        "Anchovy tradition"
+      ],
+      "imageAlt": "Aerial view of L’Escala on the Costa Brava"
+    },
+    "reviews": {
+      "eyebrow": "REVIEWS",
+      "title": "What our guests say",
+      "starsAria": "5 out of 5 stars",
+      "items": [
+        {
+          "quote": "“A magical place where time stands still. The peace and the views are incomparable.”",
+          "name": "María L.",
+          "city": "Madrid"
+        },
+        {
+          "quote": "“Perfect location: the sea on one side, the town on the other. And the owners’ care is exceptional.”",
+          "name": "Jean-Pierre D.",
+          "city": "Lyon"
+        },
+        {
+          "quote": "“Waking up to the sound of the sea and having local breakfast on the terrace. Pure happiness.”",
+          "name": "Anna K.",
+          "city": "Barcelona"
+        }
+      ]
+    },
+    "cta": {
+      "eyebrow": "ONLY SIX ROOMS",
+      "title": "Your refuge by the Mediterranean awaits",
+      "text": "Book direct and enjoy an intimate, authentic and unforgettable experience in the heart of L’Escala.",
+      "button": "Check availability"
+    }
+  }
+}

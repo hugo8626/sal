@@ -1,0 +1,401 @@
+/* ================= PAGE BACKGROUND (rayas crema) ================= */
+/* OJO: esto es el "lienzo" de la página. Las secciones (white/beige)
+   ya se encargan del fondo si las estás usando en el TSX. */
+.areaPage {
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0px,
+      rgba(255, 255, 255, 0) 140px,
+      rgba(0, 0, 0, 0.03) 140px,
+      rgba(0, 0, 0, 0.03) 141px
+    ),
+    linear-gradient(#f6f2ea, #f6f2ea);
+}
+
+/* ================= HERO ================= */
+
+.areaHero {
+  position: relative;
+  min-height: 75vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+.areaHero__overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.areaHero__content {
+  position: relative;
+  text-align: center;
+  max-width: 900px;
+  padding: 0 2rem;
+  z-index: 1;
+}
+
+.areaHero__content h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.areaHero__content p {
+  margin: 1rem auto 0;
+  max-width: 560px;
+}
+
+/* ================= INTRO ================= */
+/* ✅ Ya NO pongo padding aquí: lo pone .section (Home base) */
+/* .areaIntro {} */
+
+/* ✅ coherencia con Home: usa container real si existe; si no, tu grid manda */
+.areaIntro__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px; /* para igualar el .container global si aquí no lo estás usando */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.areaIntro__media {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.areaIntro__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.areaIntro__content {
+  max-width: 560px;
+}
+
+.areaIntro__lead {
+  margin: 1.5rem 0;
+}
+
+.areaIntro__text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+/* ================= PLACES ================= */
+/* ✅ sin padding aquí */
+/* .areaPlaces {} */
+
+.areaPlaces__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.areaPlaces__header {
+  margin-bottom: 4rem;
+  max-width: 600px;
+}
+
+.areaPlaces__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.placeCard img {
+  width: 100%;
+  display: block;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.placeCard__body {
+  margin-top: 1.2rem;
+}
+
+.placeCard__body h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 0 0.8rem;
+}
+
+.placeCard__body span {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* ================= BANNER ================= */
+/* Banner mantiene su propio alto, perfecto */
+.areaBanner {
+  position: relative;
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+
+.areaBanner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.areaBanner__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 2rem;
+}
+
+.areaBanner__content h2 {
+  color: white;
+  max-width: 700px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ================= BEACHES ================= */
+/* ✅ sin padding aquí */
+/* .areaBeaches {} */
+
+.areaBeaches__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.areaBeaches__intro {
+  max-width: 760px;
+  margin: 0 auto 4rem;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.areaBeaches__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 5rem;
+  row-gap: 3.2rem;
+}
+
+.beachItem h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin: 0;
+}
+
+.beachItem h3 span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.beachItem p { 
+  margin: 0.9rem 0 0;
+  line-height: 1.7;
+  max-width: 440px;
+}
+
+.beachItem::after {
+  content: "";
+  display: block;
+  margin-top: 1.6rem;
+  height: 1px;
+  width: 100%;
+  background: currentColor;
+  opacity: 0.2;
+}
+
+/* ================= NATURE ================= */
+/* ✅ sin padding aquí */
+/* .areaNature {} */
+
+.areaNature__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.areaNature__media {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+}
+
+.areaNature__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+.areaNature__content {
+  max-width: 640px;
+}
+
+/* ================= EXPERIENCES ================= */
+/* ✅ sin padding aquí */
+/* .areaExperiences {} */
+
+.areaExperiences__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.areaExperiences__header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 4rem;
+}
+
+.areaExperiences__layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.areaExperiences__media {
+  display: grid;
+  gap: 1.8rem;
+}
+
+.areaExperiences__media img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
+}
+
+.areaExperiences__list {
+  display: grid;
+  gap: 0;
+}
+
+.expItem {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 1.6rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.expItem span {
+  font-size: 0.8rem;
+  opacity: 0.7;
+  padding-top: 0.35rem;
+}
+
+.expItem h3 {
+  margin: 0 0 0.4rem;
+}
+
+.expItem p {
+  margin: 0;
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* ================= FOOD ================= */
+/* ✅ sin padding aquí */
+/* .areaFood {} */
+
+.areaFood__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 520px;
+  gap: 4rem;
+  align-items: center;
+}
+
+.areaFood__content {
+  max-width: 640px;
+}
+
+.areaFood__media {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.14);
+}
+
+.areaFood__media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+/* Si ya tienes botón global, cambia el <a> a tu clase global y borra esto */
+.areaFood__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1rem 1.4rem;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .areaIntro__container,
+  .areaNature__container,
+  .areaExperiences__layout,
+  .areaFood__container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .areaPlaces__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .areaBeaches__grid {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+  }
+
+  .beachItem p {
+    max-width: 100%;
+  }
+
+  .areaExperiences__media {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .areaExperiences__media {
+    grid-template-columns: 1fr;
+  }
+
+  .expItem {
+    grid-template-columns: 40px 1fr;
+    gap: 1.2rem;
+  }
+}
