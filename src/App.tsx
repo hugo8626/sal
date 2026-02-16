@@ -18,6 +18,11 @@ import Privacy from "./pages/legal/Privacy";
 import LegalNotice from "./pages/legal/LegalNotice";
 import Cookies from "./pages/legal/Cookies";
 
+/* === 401 / 403 / 500 === */
+import Unauthorized from "./pages/errors/Unauthorized";
+import Forbidden from "./pages/errors/Forbidden";
+import ServerError from "./pages/errors/ServerError";
+
 /* === 404 === */
 import NotFound from "./pages/notfound/NotFound";
 
@@ -50,6 +55,11 @@ export default function App() {
         <Route path="/privacidad" element={<Privacy />} />
         <Route path="/aviso-legal" element={<LegalNotice />} />
         <Route path="/cookies" element={<Cookies />} />
+
+        {/* === ERROR ROUTES === */}
+        <Route path="/401" element={<Unauthorized />} />
+        <Route path="/403" element={<Forbidden />} />
+        <Route path="/500" element={<ServerError />} />
 
         {/* === Redirects (legacy URLs) === */}
         <Route path="/rooms" element={<Navigate to="/habitaciones" replace />} />
