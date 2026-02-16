@@ -18,6 +18,12 @@ import Privacy from "./pages/legal/Privacy";
 import LegalNotice from "./pages/legal/LegalNotice";
 import Cookies from "./pages/legal/Cookies";
 
+/* === 404 === */
+import NotFound from "./pages/notfound/NotFound";
+
+/* === SCROLL === */
+import ScrollToTop from "./components/scrolltotop/ScrollToTop";
+
 /* === COOKIE BANNER === */
 import CookieBanner from "./components/CookieBanner/CookieBanner";
 
@@ -26,6 +32,8 @@ import "./styles/App.css";
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop /> {/* ✅ AQUÍ VA */}
+
       <Navbar />
 
       <Routes>
@@ -48,7 +56,7 @@ export default function App() {
         <Route path="/area" element={<Navigate to="/entorno" replace />} />
 
         {/* === 404 fallback === */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
 
       <Footer />
