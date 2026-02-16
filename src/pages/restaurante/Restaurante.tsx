@@ -87,7 +87,7 @@ export default function Restaurante() {
             <p className="restP">{t("restaurant.brasa.text1")}</p>
             <p className="restP">{t("restaurant.brasa.text2")}</p>
 
-            <a className="restBtnOutline" href="/restaurante">
+            <a className="restBtnOutline" href="https://docs.google.com/spreadsheets/d/1lL9lPbsDWwKE3LHYwamj8LwcEVSEZxYX/edit?usp=sharing&ouid=115921718176696134396&rtpof=true&sd=true">
               {t("restaurant.brasa.cta")}
             </a>
           </div>

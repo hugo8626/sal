@@ -31,7 +31,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  color: #fff;
+  color: #b3aaaa;
   padding: 6rem 0;
 }
 
@@ -39,13 +39,14 @@
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 4.1rem);
   letter-spacing: 0.02em;
+  color: antiquewhite;
 }
 
 .restHero__subtitle {
   margin: 18px auto 0;
   max-width: 70ch;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.05rem;
+  color: rgba(3, 3, 3, 0.9);
+  font-size: 1.2rem;
   line-height: 1.9;
 }
 
