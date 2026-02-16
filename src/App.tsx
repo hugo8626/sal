@@ -28,6 +28,7 @@ import NotFound from "./pages/notfound/NotFound";
 
 /* === SCROLL === */
 import ScrollToTop from "./components/scrolltotop/ScrollToTop";
+import LanguageSync from "./components/language/LanguageSync";
 
 /* === COOKIE BANNER === */
 import CookieBanner from "./components/CookieBanner/CookieBanner";
@@ -37,40 +38,55 @@ import "./styles/App.css";
 export default function App() {
   return (
     <BrowserRouter>
-      <ScrollToTop /> {/* ✅ AQUÍ VA */}
+      <ScrollToTop />
+      <LanguageSync />
 
       <Navbar />
 
       <Routes>
-        {/* === MAIN ROUTES === */}
-        <Route path="/" element={<Home />} />
-        <Route path="/restaurante" element={<Restaurante />} />
-        <Route path="/habitaciones" element={<Room />} />
-        <Route path="/historia" element={<History />} />
-        <Route path="/entorno" element={<Area />} />
-        <Route path="/reservar" element={<Reservas />} />
-        <Route path="/contacto" element={<Contacto />} />
+        {/* ========= ROUTES WITH LANGUAGE ========= */}
+        <Route path="/:lang/*" element={<Home />} />
+        <Route path="/:lang/restaurante" element={<Restaurante />} />
+        <Route path="/:lang/habitaciones" element={<Room />} />
+        <Route path="/:lang/historia" element={<History />} />
+        <Route path="/:lang/entorno" element={<Area />} />
+        <Route path="/:lang/reservar" element={<Reservas />} />
+        <Route path="/:lang/contacto" element={<Contacto />} />
 
-        {/* === LEGAL ROUTES === */}
-        <Route path="/privacidad" element={<Privacy />} />
-        <Route path="/aviso-legal" element={<LegalNotice />} />
-        <Route path="/cookies" element={<Cookies />} />
+        {/* ========= LEGAL WITH LANGUAGE ========= */}
+        <Route path="/:lang/privacidad" element={<Privacy />} />
+        <Route path="/:lang/aviso-legal" element={<LegalNotice />} />
+        <Route path="/:lang/cookies" element={<Cookies />} />
 
-        {/* === ERROR ROUTES === */}
+        {/* ========= ERROR ROUTES ========= */}
         <Route path="/401" element={<Unauthorized />} />
         <Route path="/403" element={<Forbidden />} />
         <Route path="/500" element={<ServerError />} />
 
-        {/* === Redirects (legacy URLs) === */}
-        <Route path="/rooms" element={<Navigate to="/habitaciones" replace />} />
-        <Route path="/area" element={<Navigate to="/entorno" replace />} />
+        {/* ========= LEGACY ROUTES (fallback) ========= */}
+        <Route path="/" element={<Navigate to="/es" replace />} />
+        <Route path="/restaurante" element={<Navigate to="/es/restaurante" replace />} />
+        <Route path="/habitaciones" element={<Navigate to="/es/habitaciones" replace />} />
+        <Route path="/historia" element={<Navigate to="/es/historia" replace />} />
+        <Route path="/entorno" element={<Navigate to="/es/entorno" replace />} />
+        <Route path="/reservar" element={<Navigate to="/es/reservar" replace />} />
+        <Route path="/contacto" element={<Navigate to="/es/contacto" replace />} />
 
-        {/* === 404 fallback === */}
+        {/* Legacy legal (sin idioma) */}
+        <Route path="/privacidad" element={<Navigate to="/es/privacidad" replace />} />
+        <Route path="/aviso-legal" element={<Navigate to="/es/aviso-legal" replace />} />
+        <Route path="/cookies" element={<Navigate to="/es/cookies" replace />} />
+
+        {/* ========= REDIRECTS ========= */}
+        <Route path="/rooms" element={<Navigate to="/es/habitaciones" replace />} />
+        <Route path="/area" element={<Navigate to="/es/entorno" replace />} />
+
+        {/* ========= 404 ========= */}
         <Route path="*" element={<NotFound />} />
       </Routes>
 
-      <Footer />
       <CookieBanner />
+      <Footer />
     </BrowserRouter>
   );
 }

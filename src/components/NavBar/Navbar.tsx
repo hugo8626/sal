@@ -1,16 +1,31 @@
 import "./Navbar.css";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+
+const SUPPORTED = ["es", "en", "fr", "ca"] as const;
+type SupportedLang = (typeof SUPPORTED)[number];
+
+function getLangFromPath(pathname: string): SupportedLang {
+  const first = pathname.split("/")[1];
+  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
 
 export default function Navbar() {
   const { i18n, t } = useTranslation();
   const [open, setOpen] = useState(false);
 
-  const current = (i18n.language || "es").split("-")[0];
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  const lang = getLangFromPath(pathname);
+  const current = (i18n.language || lang).split("-")[0];
 
   const close = () => setOpen(false);
   const toggle = () => setOpen((v) => !v);
+
+  // helper rutas con idioma
+  const p = (to: string) => `/${lang}${to.startsWith("/") ? to : `/${to}`}`;
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -30,11 +45,26 @@ export default function Navbar() {
     };
   }, [open]);
 
+  const handleLangChange = (newLang: string) => {
+    const next = (SUPPORTED as readonly string[]).includes(newLang) ? (newLang as SupportedLang) : "es";
+
+    // Mantener misma ruta, cambiando solo el prefijo /{lang}
+    const parts = pathname.split("/");
+    const rest = parts.slice(2).join("/"); // todo después del lang actual
+    const target = `/${next}/${rest}`.replace(/\/$/, "");
+
+    navigate(target === `/${next}` ? `/${next}` : target, { replace: true });
+
+    // Para que el select responda al instante (LanguageSync también lo hace)
+    i18n.changeLanguage(next);
+    close();
+  };
+
   return (
     <nav className="navbar" aria-label={t("navbar.ariaMain")}>
       <div className="navbar-container">
         <div className="navbar-logo">
-          <Link to="/" className="navbar-logo__link" onClick={close}>
+          <Link to={`/${lang}`} className="navbar-logo__link" onClick={close}>
             {t("navbar.brand")}
           </Link>
         </div>
@@ -43,10 +73,9 @@ export default function Navbar() {
         <ul className="navbar-links navbar-links--desktop">
           <li>
             <NavLink
-              className={({ isActive }) =>
-                `navbar-link ${isActive ? "navbar-link--active" : ""}`
-              }
-              to="/habitaciones"
+              className={({ isActive }) => `navbar-link ${isActive ? "navbar-link--active" : ""}`}
+              to={p("/habitaciones")}
+              onClick={close}
             >
               {t("nav.rooms")}
             </NavLink>
@@ -54,10 +83,9 @@ export default function Navbar() {
 
           <li>
             <NavLink
-              className={({ isActive }) =>
-                `navbar-link ${isActive ? "navbar-link--active" : ""}`
-              }
-              to="/restaurante"
+              className={({ isActive }) => `navbar-link ${isActive ? "navbar-link--active" : ""}`}
+              to={p("/restaurante")}
+              onClick={close}
             >
               {t("nav.restaurant")}
             </NavLink>
@@ -65,10 +93,9 @@ export default function Navbar() {
 
           <li>
             <NavLink
-              className={({ isActive }) =>
-                `navbar-link ${isActive ? "navbar-link--active" : ""}`
-              }
-              to="/historia"
+              className={({ isActive }) => `navbar-link ${isActive ? "navbar-link--active" : ""}`}
+              to={p("/historia")}
+              onClick={close}
             >
               {t("nav.history")}
             </NavLink>
@@ -76,10 +103,9 @@ export default function Navbar() {
 
           <li>
             <NavLink
-              className={({ isActive }) =>
-                `navbar-link ${isActive ? "navbar-link--active" : ""}`
-              }
-              to="/entorno"
+              className={({ isActive }) => `navbar-link ${isActive ? "navbar-link--active" : ""}`}
+              to={p("/entorno")}
+              onClick={close}
             >
               {t("nav.area")}
             </NavLink>
@@ -87,10 +113,9 @@ export default function Navbar() {
 
           <li>
             <NavLink
-              className={({ isActive }) =>
-                `navbar-link ${isActive ? "navbar-link--active" : ""}`
-              }
-              to="/contacto"
+              className={({ isActive }) => `navbar-link ${isActive ? "navbar-link--active" : ""}`}
+              to={p("/contacto")}
+              onClick={close}
             >
               {t("nav.contact")}
             </NavLink>
@@ -99,18 +124,17 @@ export default function Navbar() {
 
         <div className="navbar-right">
           <NavLink
-            className={({ isActive }) =>
-              `navbar-reserve ${isActive ? "navbar-reserve--active" : ""}`
-            }
-            to="/reservar"
+            className={({ isActive }) => `navbar-reserve ${isActive ? "navbar-reserve--active" : ""}`}
+            to={p("/reservar")}
+            onClick={close}
           >
             {t("nav.reserve")}
           </NavLink>
 
           <select
             className="navbar-lang"
-            value={current}
-            onChange={(e) => i18n.changeLanguage(e.target.value)}
+            value={(SUPPORTED as readonly string[]).includes(current) ? current : lang}
+            onChange={(e) => handleLangChange(e.target.value)}
             aria-label={t("navbar.langSelectAria")}
           >
             <option value="es">{t("navbar.lang.es")}</option>
@@ -164,22 +188,22 @@ export default function Navbar() {
         </div>
 
         <nav className="popover-links" aria-label={t("navbar.mobile.aria")}>
-          <NavLink to="/habitaciones" onClick={close}>
+          <NavLink to={p("/habitaciones")} onClick={close}>
             {t("nav.rooms")}
           </NavLink>
-          <NavLink to="/restaurante" onClick={close}>
+          <NavLink to={p("/restaurante")} onClick={close}>
             {t("nav.restaurant")}
           </NavLink>
-          <NavLink to="/historia" onClick={close}>
+          <NavLink to={p("/historia")} onClick={close}>
             {t("nav.history")}
           </NavLink>
-          <NavLink to="/entorno" onClick={close}>
+          <NavLink to={p("/entorno")} onClick={close}>
             {t("nav.area")}
           </NavLink>
-          <NavLink to="/contacto" onClick={close}>
+          <NavLink to={p("/contacto")} onClick={close}>
             {t("nav.contact")}
           </NavLink>
-          <NavLink to="/reservar" onClick={close}>
+          <NavLink to={p("/reservar")} onClick={close}>
             {t("nav.reserve")}
           </NavLink>
         </nav>

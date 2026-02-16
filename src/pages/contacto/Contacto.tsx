@@ -1,234 +1,260 @@
 import "./contacto.css";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 
-import heroContact from "../../assets/images/espacios/sala.jpg"; // HERO
-import ctaImg from "../../assets/images/espacios/sala.jpg"; // <- usa otra si quieres (o la misma)
+import heroContact from "../../assets/images/espacios/sala.jpg";
+import ctaImg from "../../assets/images/espacios/sala.jpg";
 
-export default function Contact() {
+import SEO from "../../components/seo/SEO";
+
+const SUPPORTED = ["es", "en", "fr", "ca"] as const;
+type SupportedLang = (typeof SUPPORTED)[number];
+
+function getLangFromPath(pathname: string): SupportedLang {
+  const first = pathname.split("/")[1];
+  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
+export default function Contacto() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = getLangFromPath(pathname);
 
   return (
-    <main className="contactPage">
-      {/* ================= HERO ================= */}
-      <section
-        className="contactHero"
-        style={{ backgroundImage: `url(${heroContact})` }}
-        aria-label={t("contact.hero.aria")}
-      >
-        <div className="contactHero__overlay" />
+    <>
+      <SEO
+        title={t("contact.seo.title", { defaultValue: "Contacto | Taverna de la Sal" })}
+        description={t("contact.seo.description", {
+          defaultValue:
+            "Contacta con Taverna de la Sal en L'Escala. Dirección, teléfono, email y mapa para llegar fácilmente.",
+        })}
+        image={heroContact}
+      />
 
-        <div className="contactHero__content">
-          <h1 className="contactHero__title">
-            {t("contact.hero.title.line1")}
-            <br />
-            {t("contact.hero.title.line2")}
-          </h1>
+      <main className="contactPage">
+        {/* ================= HERO ================= */}
+        <section
+          className="contactHero"
+          style={{ backgroundImage: `url(${heroContact})` }}
+          aria-label={t("contact.hero.aria")}
+        >
+          <div className="contactHero__overlay" />
 
-          <p className="contactHero__subtitle">{t("contact.hero.subtitle")}</p>
-        </div>
-      </section>
+          <div className="contactHero__content">
+            <h1 className="contactHero__title">
+              {t("contact.hero.title.line1")}
+              <br />
+              {t("contact.hero.title.line2")}
+            </h1>
 
-      {/* ================= CARDS ================= */}
-      <section className="contactCards" aria-label={t("contact.cards.aria")}>
-        <div className="contactWrap">
-          <div className="contactCards__grid">
-            {/* Dirección */}
-            <article className="contactCard">
-              <div className="contactCard__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M12 21s7-4.35 7-11A7 7 0 1 0 5 10c0 6.65 7 11 7 11Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                  />
-                  <path
-                    d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                  />
-                </svg>
-              </div>
-
-              <h3 className="contactCard__title">{t("contact.cards.address.title")}</h3>
-
-              <p className="contactCard__text">
-                {t("contact.cards.address.line1")}
-                <br />
-                {t("contact.cards.address.line2")}
-              </p>
-
-              <a
-                className="contactCard__btn"
-                href={t("contact.cards.address.mapsUrl")}
-                target="_blank"
-                rel="noreferrer"
-              >
-                {t("contact.cards.address.mapsCta")}
-              </a>
-            </article>
-
-            {/* Email */}
-            <article className="contactCard">
-              <div className="contactCard__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6h16v12H4V6Z" stroke="currentColor" strokeWidth="1.8" />
-                  <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" />
-                </svg>
-              </div>
-
-              <h3 className="contactCard__title">{t("contact.cards.email.title")}</h3>
-
-              <a className="contactCard__link" href={t("contact.cards.email.mailto")}>
-                {t("contact.cards.email.value")}
-              </a>
-
-              <p className="contactCard__hint">{t("contact.cards.email.hint")}</p>
-            </article>
-
-            {/* Teléfono */}
-            <article className="contactCard">
-              <div className="contactCard__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M7 4h3l1 5-2 1c1 3 3 5 6 6l1-2 5 1v3c0 1-1 2-2 2-9 0-16-7-16-16 0-1 1-2 2-2Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                  />
-                </svg>
-              </div>
-
-              <h3 className="contactCard__title">{t("contact.cards.phone.title")}</h3>
-
-              <a className="contactCard__link" href={t("contact.cards.phone.tel")}>
-                {t("contact.cards.phone.value")}
-              </a>
-
-              <p className="contactCard__hint">{t("contact.cards.phone.hint")}</p>
-            </article>
+            <p className="contactHero__subtitle">{t("contact.hero.subtitle")}</p>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ================= FORM ================= */}
-      <section className="contactForm" aria-label={t("contact.form.aria")}>
-        <div className="contactWrap contactWrap--narrow">
-          <h2 className="contactSection__title">{t("contact.form.title")}</h2>
-          <p className="contactSection__subtitle">{t("contact.form.subtitle")}</p>
+        {/* ================= CARDS ================= */}
+        <section className="contactCards" aria-label={t("contact.cards.aria")}>
+          <div className="contactWrap">
+            <div className="contactCards__grid">
+              {/* Dirección */}
+              <article className="contactCard">
+                <div className="contactCard__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M12 21s7-4.35 7-11A7 7 0 1 0 5 10c0 6.65 7 11 7 11Z"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    />
+                    <path
+                      d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    />
+                  </svg>
+                </div>
 
-          <form className="formCard">
-            <div className="formGrid">
-              <div className="field">
-                <label className="label" htmlFor="name">
-                  {t("contact.form.fields.name.label")}
-                </label>
-                <input
-                  id="name"
-                  className="input"
-                  placeholder={t("contact.form.fields.name.placeholder")}
-                  required
-                />
-              </div>
+                <h3 className="contactCard__title">{t("contact.cards.address.title")}</h3>
 
-              <div className="field">
-                <label className="label" htmlFor="email">
-                  {t("contact.form.fields.email.label")}
-                </label>
-                <input
-                  id="email"
-                  className="input"
-                  type="email"
-                  placeholder={t("contact.form.fields.email.placeholder")}
-                  required
-                />
-              </div>
+                <p className="contactCard__text">
+                  {t("contact.cards.address.line1")}
+                  <br />
+                  {t("contact.cards.address.line2")}
+                </p>
 
-              <div className="field field--full">
-                <label className="label" htmlFor="subject">
-                  {t("contact.form.fields.subject.label")}
-                </label>
-                <input
-                  id="subject"
-                  className="input"
-                  placeholder={t("contact.form.fields.subject.placeholder")}
-                  required
-                />
-              </div>
+                <a
+                  className="contactCard__btn"
+                  href={t("contact.cards.address.mapsUrl")}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("contact.cards.address.mapsCta")}
+                </a>
+              </article>
 
-              <div className="field field--full">
-                <label className="label" htmlFor="message">
-                  {t("contact.form.fields.message.label")}{" "}
-                  <span className="label__muted">{t("contact.form.fields.message.optional")}</span>
-                </label>
-                <textarea
-                  id="message"
-                  className="textarea"
-                  placeholder={t("contact.form.fields.message.placeholder")}
-                  rows={6}
-                />
-              </div>
+              {/* Email */}
+              <article className="contactCard">
+                <div className="contactCard__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M4 6h16v12H4V6Z" stroke="currentColor" strokeWidth="1.8" />
+                    <path d="m4 7 8 6 8-6" stroke="currentColor" strokeWidth="1.8" />
+                  </svg>
+                </div>
+
+                <h3 className="contactCard__title">{t("contact.cards.email.title")}</h3>
+
+                <a className="contactCard__link" href={t("contact.cards.email.mailto")}>
+                  {t("contact.cards.email.value")}
+                </a>
+
+                <p className="contactCard__hint">{t("contact.cards.email.hint")}</p>
+              </article>
+
+              {/* Teléfono */}
+              <article className="contactCard">
+                <div className="contactCard__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M7 4h3l1 5-2 1c1 3 3 5 6 6l1-2 5 1v3c0 1-1 2-2 2-9 0-16-7-16-16 0-1 1-2 2-2Z"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                    />
+                  </svg>
+                </div>
+
+                <h3 className="contactCard__title">{t("contact.cards.phone.title")}</h3>
+
+                <a className="contactCard__link" href={t("contact.cards.phone.tel")}>
+                  {t("contact.cards.phone.value")}
+                </a>
+
+                <p className="contactCard__hint">{t("contact.cards.phone.hint")}</p>
+              </article>
             </div>
-
-            <button className="submitBtn" type="submit">
-              <span className="submitBtn__icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path
-                    d="M3 11.5 21 3l-8.5 18-2.5-7-7-2.5Z"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M21 3 10 14"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </span>
-              {t("contact.form.submit")}
-            </button>
-          </form>
-        </div>
-      </section>
-
-      {/* ================= MAP ================= */}
-      <section className="contactMap" aria-label={t("contact.map.aria")}>
-        <div className="contactWrap">
-          <h2 className="contactSection__title">{t("contact.map.title")}</h2>
-          <p className="contactSection__subtitle">{t("contact.map.subtitle")}</p>
-
-          <div className="mapFrame">
-            <iframe
-              title={t("contact.map.iframeTitle")}
-              src={t("contact.map.iframeSrc")}
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* ================= CTA FINAL (DESPUÉS DEL MAP) ================= */}
-      <section
-        className="contactCta"
-        style={{ backgroundImage: `url(${ctaImg})` }}
-        aria-label={t("contact.cta.aria")}
-      >
-        <div className="contactCta__overlay" />
-        <div className="contactCta__content">
-          <h2 className="contactCta__title">
-            {t("contact.cta.title.line1")}
-            <br />
-            {t("contact.cta.title.line2")}
-            <br />
-            {t("contact.cta.title.line3")}
-          </h2>
+        {/* ================= FORM ================= */}
+        <section className="contactForm" aria-label={t("contact.form.aria")}>
+          <div className="contactWrap contactWrap--narrow">
+            <h2 className="contactSection__title">{t("contact.form.title")}</h2>
+            <p className="contactSection__subtitle">{t("contact.form.subtitle")}</p>
 
-          <a className="contactCta__btn" href="/reservar">
-            {t("contact.cta.button")}
-          </a>
-        </div>
-      </section>
-    </main>
+            <form className="formCard">
+              <div className="formGrid">
+                <div className="field">
+                  <label className="label" htmlFor="name">
+                    {t("contact.form.fields.name.label")}
+                  </label>
+                  <input
+                    id="name"
+                    className="input"
+                    placeholder={t("contact.form.fields.name.placeholder")}
+                    required
+                  />
+                </div>
+
+                <div className="field">
+                  <label className="label" htmlFor="email">
+                    {t("contact.form.fields.email.label")}
+                  </label>
+                  <input
+                    id="email"
+                    className="input"
+                    type="email"
+                    placeholder={t("contact.form.fields.email.placeholder")}
+                    required
+                  />
+                </div>
+
+                <div className="field field--full">
+                  <label className="label" htmlFor="subject">
+                    {t("contact.form.fields.subject.label")}
+                  </label>
+                  <input
+                    id="subject"
+                    className="input"
+                    placeholder={t("contact.form.fields.subject.placeholder")}
+                    required
+                  />
+                </div>
+
+                <div className="field field--full">
+                  <label className="label" htmlFor="message">
+                    {t("contact.form.fields.message.label")}{" "}
+                    <span className="label__muted">
+                      {t("contact.form.fields.message.optional")}
+                    </span>
+                  </label>
+                  <textarea
+                    id="message"
+                    className="textarea"
+                    placeholder={t("contact.form.fields.message.placeholder")}
+                    rows={6}
+                  />
+                </div>
+              </div>
+
+              <button className="submitBtn" type="submit">
+                <span className="submitBtn__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M3 11.5 21 3l-8.5 18-2.5-7-7-2.5Z"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M21 3 10 14"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+                {t("contact.form.submit")}
+              </button>
+            </form>
+          </div>
+        </section>
+
+        {/* ================= MAP ================= */}
+        <section className="contactMap" aria-label={t("contact.map.aria")}>
+          <div className="contactWrap">
+            <h2 className="contactSection__title">{t("contact.map.title")}</h2>
+            <p className="contactSection__subtitle">{t("contact.map.subtitle")}</p>
+
+            <div className="mapFrame">
+              <iframe
+                title={t("contact.map.iframeTitle")}
+                src={t("contact.map.iframeSrc")}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* ================= CTA FINAL ================= */}
+        <section
+          className="contactCta"
+          style={{ backgroundImage: `url(${ctaImg})` }}
+          aria-label={t("contact.cta.aria")}
+        >
+          <div className="contactCta__overlay" />
+          <div className="contactCta__content">
+            <h2 className="contactCta__title">
+              {t("contact.cta.title.line1")}
+              <br />
+              {t("contact.cta.title.line2")}
+              <br />
+              {t("contact.cta.title.line3")}
+            </h2>
+
+            <Link className="contactCta__btn" to={`/${lang}/reservar`}>
+              {t("contact.cta.button")}
+            </Link>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

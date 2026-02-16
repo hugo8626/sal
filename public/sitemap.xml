@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://tudominio.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca"/>
+  </url>
+
+  <url>
+    <loc>https://tudominio.com/es/habitaciones</loc>
+  </url>
+
+  <url>
+    <loc>https://tudominio.com/es/restaurante</loc>
+  </url>
+
+  <url>
+    <loc>https://tudominio.com/es/historia</loc>
+  </url>
+
+  <url>
+    <loc>https://tudominio.com/es/entorno</loc>
+  </url>
+
+  <url>
+    <loc>https://tudominio.com/es/contacto</loc>
+  </url>
+
+  <url>
+    <loc>https://tudominio.com/es/reservar</loc>
+  </url>
+
+</urlset>

@@ -1,14 +1,24 @@
 import "./Restaurante.css";
 import { useTranslation } from "react-i18next";
+import { Link, useLocation } from "react-router-dom";
 
 import heroImg from "../../assets/images/restaurante/axidosincopa.png";
 import brasaImg from "../../assets/images/restaurante/photo_2026-02-14_18-51-06.jpg";
 import marImg from "../../assets/images/restaurante/oxido.png";
 
+import SEO from "../../components/seo/SEO";
+
 type IconName = "fork" | "sun" | "waves" | "book" | "sparkle" | "parking" | "wifi";
 
+const SUPPORTED = ["es", "en", "fr", "ca"] as const;
+type SupportedLang = (typeof SUPPORTED)[number];
+
+function getLangFromPath(pathname: string): SupportedLang {
+  const first = pathname.split("/")[1];
+  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
 function Icon({ name }: { name: IconName }) {
-  // SVG monocromo (currentColor). No emojis.
   switch (name) {
     case "fork":
       return (
@@ -57,144 +67,162 @@ function Icon({ name }: { name: IconName }) {
 
 export default function Restaurante() {
   const { t } = useTranslation();
+  const { pathname } = useLocation();
+  const lang = getLangFromPath(pathname);
 
   return (
-    <main className="restPage">
-      {/* HERO */}
-      <section
-        className="restHero"
-        style={{ backgroundImage: `url(${heroImg})` }}
-        aria-label={t("restaurant.hero.aria", { defaultValue: t("restaurant.hero.title") })}
-      >
-        <div className="restHero__overlay" />
-        <div className="container restHero__content">
-          <h1 className="restHero__title">{t("restaurant.hero.title")}</h1>
-          <p className="restHero__subtitle">{t("restaurant.hero.subtitle")}</p>
-        </div>
-      </section>
+    <>
+      <SEO
+        title={t("restaurant.seo.title", { defaultValue: "Restaurante | Taverna de la Sal" })}
+        description={t("restaurant.seo.description", {
+          defaultValue:
+            "Restaurante en Taverna de la Sal: cocina mediterránea, brasa, desayunos y terraza. Sabor local y ambiente tranquilo en L'Escala.",
+        })}
+        image={heroImg}
+      />
 
-      {/* BLOQUE 1: BRASA (texto izq + foto der) */}
-      <section className="section section--white">
-        <div className="container restSplit">
-          <div className="restSplit__body">
-            <span className="restIcon" aria-hidden="true">
-              <Icon name="fork" />
-            </span>
-
-            <p className="restEyebrow">{t("restaurant.brasa.eyebrow")}</p>
-            <h2 className="restH2">{t("restaurant.brasa.title")}</h2>
-
-            <p className="restP">{t("restaurant.brasa.text1")}</p>
-            <p className="restP">{t("restaurant.brasa.text2")}</p>
-
-            <a className="restBtnOutline" href="https://docs.google.com/spreadsheets/d/1lL9lPbsDWwKE3LHYwamj8LwcEVSEZxYX/edit?usp=sharing&ouid=115921718176696134396&rtpof=true&sd=true">
-              {t("restaurant.brasa.cta")}
-            </a>
+      <main className="restPage">
+        {/* HERO */}
+        <section
+          className="restHero"
+          style={{ backgroundImage: `url(${heroImg})` }}
+          aria-label={t("restaurant.hero.aria", { defaultValue: t("restaurant.hero.title") })}
+        >
+          <div className="restHero__overlay" />
+          <div className="container restHero__content">
+            <h1 className="restHero__title">{t("restaurant.hero.title")}</h1>
+            <p className="restHero__subtitle">{t("restaurant.hero.subtitle")}</p>
           </div>
+        </section>
 
-          <figure className="restSplit__media">
-            <img className="restImg" src={brasaImg} alt={t("restaurant.brasa.title")} loading="lazy" />
-          </figure>
-        </div>
-      </section>
-
-      {/* BLOQUE 2: DESAYUNO (foto izq + texto der) */}
-      <section className="section section--white">
-        <div className="container restSplit restSplit--reverse">
-          <div className="restSplit__body">
-            <span className="restIcon" aria-hidden="true">
-              <Icon name="sun" />
-            </span>
-
-            <p className="restEyebrow">{t("restaurant.breakfast.eyebrow")}</p>
-            <h2 className="restH2">{t("restaurant.breakfast.title")}</h2>
-
-            <p className="restP restP--highlight">{t("restaurant.breakfast.text")}</p>
-          </div>
-
-          <figure className="restSplit__media">
-            <img className="restImg" src={marImg} alt={t("restaurant.breakfast.title")} loading="lazy" />
-          </figure>
-        </div>
-      </section>
-
-      {/* BLOQUE 3: TERRAZA (texto izq + foto der) */}
-      <section className="section section--white">
-        <div className="container restSplit">
-          <div className="restSplit__body">
-            <span className="restIcon" aria-hidden="true">
-              <Icon name="waves" />
-            </span>
-
-            <h2 className="restH2">{t("restaurant.terrace.title")}</h2>
-            <p className="restP">{t("restaurant.terrace.text")}</p>
-          </div>
-
-          <figure className="restSplit__media">
-            <img className="restImg" src={marImg} alt={t("restaurant.terrace.title")} loading="lazy" />
-          </figure>
-        </div>
-      </section>
-
-      {/* BLOQUE 4: LECTURA (foto izq + texto der) */}
-      <section className="section section--white">
-        <div className="container restSplit restSplit--reverse">
-          <div className="restSplit__body">
-            <span className="restIcon" aria-hidden="true">
-              <Icon name="book" />
-            </span>
-
-            <h2 className="restH2">{t("restaurant.reading.title")}</h2>
-            <p className="restP">{t("restaurant.reading.text")}</p>
-          </div>
-
-          <figure className="restSplit__media">
-            <img className="restImg" src={brasaImg} alt={t("restaurant.reading.title")} loading="lazy" />
-          </figure>
-        </div>
-      </section>
-
-      {/* CARDS 3 */}
-      <section className="section section--white">
-        <div className="container">
-          <div className="restCards">
-            <article className="restCard">
-              <span className="restCard__icon" aria-hidden="true">
-                <Icon name="sparkle" />
+        {/* BLOQUE 1: BRASA */}
+        <section className="section section--white">
+          <div className="container restSplit">
+            <div className="restSplit__body">
+              <span className="restIcon" aria-hidden="true">
+                <Icon name="fork" />
               </span>
-              <h3 className="restCard__title">{t("restaurant.cards.0.title")}</h3>
-              <p className="restCard__text">{t("restaurant.cards.0.text")}</p>
-            </article>
 
-            <article className="restCard">
-              <span className="restCard__icon" aria-hidden="true">
-                <Icon name="parking" />
-              </span>
-              <h3 className="restCard__title">{t("restaurant.cards.1.title")}</h3>
-              <p className="restCard__text">{t("restaurant.cards.1.text")}</p>
-            </article>
+              <p className="restEyebrow">{t("restaurant.brasa.eyebrow")}</p>
+              <h2 className="restH2">{t("restaurant.brasa.title")}</h2>
 
-            <article className="restCard">
-              <span className="restCard__icon" aria-hidden="true">
-                <Icon name="wifi" />
-              </span>
-              <h3 className="restCard__title">{t("restaurant.cards.2.title")}</h3>
-              <p className="restCard__text">{t("restaurant.cards.2.text")}</p>
-            </article>
+              <p className="restP">{t("restaurant.brasa.text1")}</p>
+              <p className="restP">{t("restaurant.brasa.text2")}</p>
+
+              <a
+                className="restBtnOutline"
+                href="https://docs.google.com/spreadsheets/d/1lL9lPbsDWwKE3LHYwamj8LwcEVSEZxYX/edit?usp=sharing&ouid=115921718176696134396&rtpof=true&sd=true"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t("restaurant.brasa.cta")}
+              </a>
+            </div>
+
+            <figure className="restSplit__media">
+              <img className="restImg" src={brasaImg} alt={t("restaurant.brasa.title")} loading="lazy" />
+            </figure>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA FINAL BEIGE */}
-      <section className="section section--beige restFinal">
-        <div className="container restFinal__inner">
-          <h2 className="restFinal__title">{t("restaurant.final.title")}</h2>
+        {/* BLOQUE 2: DESAYUNO */}
+        <section className="section section--white">
+          <div className="container restSplit restSplit--reverse">
+            <div className="restSplit__body">
+              <span className="restIcon" aria-hidden="true">
+                <Icon name="sun" />
+              </span>
 
-          <a className="restFinal__btn" href="/reservar">
-            {t("restaurant.final.cta")}
-          </a>
-        </div>
-      </section>
-    </main>
+              <p className="restEyebrow">{t("restaurant.breakfast.eyebrow")}</p>
+              <h2 className="restH2">{t("restaurant.breakfast.title")}</h2>
+
+              <p className="restP restP--highlight">{t("restaurant.breakfast.text")}</p>
+            </div>
+
+            <figure className="restSplit__media">
+              <img className="restImg" src={marImg} alt={t("restaurant.breakfast.title")} loading="lazy" />
+            </figure>
+          </div>
+        </section>
+
+        {/* BLOQUE 3: TERRAZA */}
+        <section className="section section--white">
+          <div className="container restSplit">
+            <div className="restSplit__body">
+              <span className="restIcon" aria-hidden="true">
+                <Icon name="waves" />
+              </span>
+
+              <h2 className="restH2">{t("restaurant.terrace.title")}</h2>
+              <p className="restP">{t("restaurant.terrace.text")}</p>
+            </div>
+
+            <figure className="restSplit__media">
+              <img className="restImg" src={marImg} alt={t("restaurant.terrace.title")} loading="lazy" />
+            </figure>
+          </div>
+        </section>
+
+        {/* BLOQUE 4: LECTURA */}
+        <section className="section section--white">
+          <div className="container restSplit restSplit--reverse">
+            <div className="restSplit__body">
+              <span className="restIcon" aria-hidden="true">
+                <Icon name="book" />
+              </span>
+
+              <h2 className="restH2">{t("restaurant.reading.title")}</h2>
+              <p className="restP">{t("restaurant.reading.text")}</p>
+            </div>
+
+            <figure className="restSplit__media">
+              <img className="restImg" src={brasaImg} alt={t("restaurant.reading.title")} loading="lazy" />
+            </figure>
+          </div>
+        </section>
+
+        {/* CARDS 3 */}
+        <section className="section section--white">
+          <div className="container">
+            <div className="restCards">
+              <article className="restCard">
+                <span className="restCard__icon" aria-hidden="true">
+                  <Icon name="sparkle" />
+                </span>
+                <h3 className="restCard__title">{t("restaurant.cards.0.title")}</h3>
+                <p className="restCard__text">{t("restaurant.cards.0.text")}</p>
+              </article>
+
+              <article className="restCard">
+                <span className="restCard__icon" aria-hidden="true">
+                  <Icon name="parking" />
+                </span>
+                <h3 className="restCard__title">{t("restaurant.cards.1.title")}</h3>
+                <p className="restCard__text">{t("restaurant.cards.1.text")}</p>
+              </article>
+
+              <article className="restCard">
+                <span className="restCard__icon" aria-hidden="true">
+                  <Icon name="wifi" />
+                </span>
+                <h3 className="restCard__title">{t("restaurant.cards.2.title")}</h3>
+                <p className="restCard__text">{t("restaurant.cards.2.text")}</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA FINAL BEIGE */}
+        <section className="section section--beige restFinal">
+          <div className="container restFinal__inner">
+            <h2 className="restFinal__title">{t("restaurant.final.title")}</h2>
+
+            <Link className="restFinal__btn" to={`/${lang}/reservar`}>
+              {t("restaurant.final.cta")}
+            </Link>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
