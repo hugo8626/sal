@@ -1,4 +1,5 @@
 import "./Area.css";
+import { useTranslation } from "react-i18next";
 
 import heroImg from "../../assets/images/pueblo/bonitcala.jpg";
 import antigua from "../../assets/images/pueblo/anchoabn.jpg";
@@ -8,202 +9,251 @@ import ruinas from "../../assets/images/pueblo/ruinas.jpg";
 import museo from "../../assets/images/pueblo/museo.jpg";
 import banerplaya from "../../assets/images/pueblo/rocaplaya.jpg";
 import emporda from "../../assets/images/pueblo/emporda.jpg";
-// import montgo from "../../assets/images/pueblo/montgo.jpg";
 import kayak from "../../assets/images/pueblo/kayak.jpg";
 import barcos from "../../assets/images/pueblo/barcos.avif";
 import pescado from "../../assets/images/pueblo/pescado.jpg";
 
 export default function Area() {
+  const { t } = useTranslation();
+
   return (
     <main className="areaPage">
-      {/* HERO (mantengo tu estructura) */}
+      {/* ================= HERO ================= */}
       <section
         className="areaHero"
         style={{ backgroundImage: `url(${heroImg})` }}
-        aria-label="Entorno y actividades en L'Escala"
+        aria-label={t("area.hero.aria")}
       >
         <div className="areaHero__overlay" />
         <div className="areaHero__content">
-          <h1>
-            Explora L&apos;Escala y la Costa <br /> Brava
-          </h1>
-          <p>Naturaleza, historia y mar a pocos pasos del hotel.</p>
+          <h1>{t("area.hero.title")}</h1>
+          <p>{t("area.hero.subtitle")}</p>
         </div>
       </section>
 
-      {/* INTRO (✅ coherencia: sección blanca + padding global) */}
+      {/* ================= INTRO ================= */}
       <section className="section section--white areaIntro">
         <div className="areaIntro__container">
           <div className="areaIntro__media">
-            <img src={antigua} alt="Detalle de la tradición marinera en L'Escala" loading="lazy" />
+            <img src={antigua} alt={t("area.intro.imageAlt")} loading="lazy" />
           </div>
 
           <div className="areaIntro__content">
-            <h2>Historia, cultura y gastronomía frente al Mediterráneo</h2>
+            <h2>{t("area.intro.title")}</h2>
 
-            <p className="areaIntro__lead">
-              Un destino donde el mar no solo se contempla, también se recuerda.
-            </p>
+            <p className="areaIntro__lead">{t("area.intro.lead")}</p>
 
             <div className="areaIntro__text">
-              <p>
-                L&apos;Escala es mucho más que un pueblo costero. Su historia está profundamente
-                ligada al Mediterráneo, al comercio de la sal y a las antiguas civilizaciones que
-                habitaron esta costa.
-              </p>
-
-              <p>
-                A pocos minutos del hotel encontrarás uno de los tesoros arqueológicos más
-                importantes de España: las Ruinas de Empúries, el único enclave donde convivieron
-                ciudades griega y romana junto al mar.
-              </p>
-
-              <p>
-                El casco antiguo conserva la esencia marinera, con calles estrechas, fachadas de
-                piedra y pequeñas plazas donde el tiempo parece detenerse.
-              </p>
-
-              <p>
-                Museos, tradiciones pesqueras y una cultura gastronómica basada en el producto local
-                convierten cada paseo en una experiencia auténtica.
-              </p>
+              <p>{t("area.intro.p1")}</p>
+              <p>{t("area.intro.p2")}</p>
+              <p>{t("area.intro.p3")}</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ARQUEOLOGÍA (✅ alterno a beige como tu Home) */}
+      {/* ================= ARQUEOLOGÍA ================= */}
       <section className="section section--beige areaPlaces">
         <div className="areaPlaces__container">
           <div className="areaPlaces__header">
-            <h2>Arqueología y patrimonio</h2>
-            <p>Vestigios de civilizaciones milenarias al alcance de la mano.</p>
+            <h2>{t("area.places.header.title")}</h2>
+            <p>{t("area.places.header.subtitle")}</p>
           </div>
 
           <div className="areaPlaces__grid">
             <article className="placeCard">
-              <img src={ruinas} alt="Ruinas de Empúries" loading="lazy" />
+              <img src={ruinas} alt={t("area.places.cards.0.imageAlt")} loading="lazy" />
               <div className="placeCard__body">
                 <h3>
-                  Ruinas de Empúries <span>2 km</span>
+                  {t("area.places.cards.0.title")} <span>{t("area.places.cards.0.distance")}</span>
                 </h3>
-                <p>Templos, mosaicos y restos arqueológicos con vistas al Mediterráneo.</p>
+
+                <p>{t("area.places.cards.0.text")}</p>
+
+                <a
+                  className="placeCard__link"
+                  href={t("area.places.cards.0.url")}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("area.places.cards.0.linkText")} →
+                </a>
               </div>
             </article>
 
             <article className="placeCard">
-              <img src={casco} alt="Casco antiguo de L'Escala" loading="lazy" />
+              <img src={casco} alt={t("area.places.cards.1.imageAlt")} loading="lazy" />
               <div className="placeCard__body">
-                <h3>Casco Antiguo de L&apos;Escala</h3>
-                <p>Calles empedradas, tiendas locales y esencia marinera auténtica.</p>
+                <h3>{t("area.places.cards.1.title")}</h3>
+                <p>{t("area.places.cards.1.text")}</p>
               </div>
             </article>
 
             <article className="placeCard">
-              <img src={alfoli} alt="Alfolí de la Sal" loading="lazy" />
+              <img src={alfoli} alt={t("area.places.cards.2.imageAlt")} loading="lazy" />
               <div className="placeCard__body">
-                <h3>Alfolí de la Sal</h3>
-                <p>Antiguo almacén del siglo XVIII que narra la historia comercial del pueblo.</p>
+                <h3>{t("area.places.cards.2.title")}</h3>
+                <p>{t("area.places.cards.2.text")}</p>
               </div>
             </article>
 
             <article className="placeCard">
-              <img src={museo} alt="Museo de la Anchoa y la Sal" loading="lazy" />
+              <img src={museo} alt={t("area.places.cards.3.imageAlt")} loading="lazy" />
               <div className="placeCard__body">
-                <h3>Museo de la Anchoa y la Sal</h3>
-                <p>Descubre el legado pesquero que dio fama internacional a L&apos;Escala.</p>
+                <h3>{t("area.places.cards.3.title")}</h3>
+                <p>{t("area.places.cards.3.text")}</p>
               </div>
             </article>
           </div>
         </div>
       </section>
 
-      {/* BANNER (lo dejo tal cual) */}
+      {/* ================= BANNER ================= */}
       <section
         className="areaBanner"
         style={{ backgroundImage: `url(${banerplaya})` }}
-        aria-label="El Mediterráneo cerca del hotel"
+        aria-label={t("area.banner.aria")}
       >
         <div className="areaBanner__overlay" />
         <div className="areaBanner__content">
-          <h2>El Mediterráneo, a solo unos pasos</h2>
+          <h2>{t("area.banner.title")}</h2>
         </div>
       </section>
 
-      {/* PLAYAS (✅ blanco) */}
+      {/* ================= PLAYAS ================= */}
       <section className="section section--white areaBeaches">
         <div className="areaBeaches__container">
-          <p className="areaBeaches__intro">
-            Desde el hotel puedes salir caminando y estar frente al mar en segundos.
-          </p>
+          <p className="areaBeaches__intro">{t("area.beaches.intro")}</p>
 
           <div className="areaBeaches__grid">
             <article className="beachItem">
               <h3>
-                Platja de les Barques <span>20 m</span>
+                {t("area.beaches.items.0.title")} <span>{t("area.beaches.items.0.distance")}</span>
               </h3>
-              <p>Pequeña playa frente al hotel. Ideal para un baño temprano.</p>
+              <p>{t("area.beaches.items.0.text")}</p>
             </article>
 
             <article className="beachItem">
-              <h3>Port d&apos;en Perris</h3>
-              <p>Cala rocosa en el casco antiguo, aguas claras y entorno íntimo.</p>
+              <h3>{t("area.beaches.items.1.title")}</h3>
+              <p>{t("area.beaches.items.1.text")}</p>
             </article>
 
             <article className="beachItem">
-              <h3>Playas de Empúries</h3>
-              <p>Arena fina junto a las ruinas grecorromanas.</p>
+              <h3>{t("area.beaches.items.2.title")}</h3>
+              <p>{t("area.beaches.items.2.text")}</p>
             </article>
 
             <article className="beachItem">
-              <h3>Cala Montgó</h3>
-              <p>Bahía protegida de aguas turquesa rodeada de naturaleza.</p>
+              <h3>{t("area.beaches.items.3.title")}</h3>
+              <p>{t("area.beaches.items.3.text")}</p>
             </article>
           </div>
+
+          <a
+            className="areaBeaches__link"
+            href={t("area.beaches.url")}
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("area.beaches.linkText")} →
+          </a>
         </div>
       </section>
 
-      {/* NATURALEZA (✅ beige) */}
+      {/* ================= NATURALEZA ================= */}
       <section className="section section--beige areaNature">
         <div className="areaNature__container">
           <div className="areaNature__media">
-            <img src={emporda} alt="Paisajes del Empordà" loading="lazy" />
+            <img src={emporda} alt={t("area.nature.imageAlt")} loading="lazy" />
           </div>
 
           <div className="areaNature__content">
-            <h2>Paisajes abiertos, aire puro y silencio</h2>
-            <p>El Empordà es un territorio de contrastes: mar, acantilados y humedales.</p>
+            <h2>{t("area.nature.title")}</h2>
+
+            <p>{t("area.nature.p1")}</p>
+
+            <div className="paisajes">
+              <div className="paisajes__item">
+                <h3>{t("area.nature.items.0.title")}</h3>
+                <p>{t("area.nature.items.0.text")}</p>
+              </div>
+
+              <div className="paisajes__item">
+                <h3>{t("area.nature.items.1.title")}</h3>
+                <p>{t("area.nature.items.1.text")}</p>
+              </div>
+
+              <div className="paisajes__item">
+                <h3>{t("area.nature.items.2.title")}</h3>
+                <p>{t("area.nature.items.2.text")}</p>
+
+                <a
+                  className="areaNature__link"
+                  href={t("area.nature.items.2.url")}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t("area.nature.items.2.linkText")} →{/* ✅ visible */}
+                </a>
+              </div>
+            </div>
+
+            <p className="areaNature__note">{t("area.nature.note")}</p>
           </div>
         </div>
       </section>
 
-      {/* EXPERIENCIAS (✅ blanco) */}
+      {/* ================= EXPERIENCIAS ================= */}
       <section className="section section--white areaExperiences">
         <div className="areaExperiences__container">
           <header className="areaExperiences__header">
-            <h2>Vivir el destino, no solo visitarlo</h2>
+            <h2>{t("area.experiences.title")}</h2>
           </header>
 
           <div className="areaExperiences__layout">
             <div className="areaExperiences__media">
-              <img src={kayak} alt="Kayak en la costa" loading="lazy" />
-              <img src={barcos} alt="Barcos en el puerto" loading="lazy" />
+              <img src={kayak} alt={t("area.experiences.images.0")} loading="lazy" />
+              <img src={barcos} alt={t("area.experiences.images.1")} loading="lazy" />
             </div>
 
             <div className="areaExperiences__list">
               <div className="expItem">
                 <span>01</span>
                 <div>
-                  <h3>Actividades acuáticas</h3>
-                  <p>Buceo, snorkel y kayak.</p>
+                  <h3>{t("area.experiences.items.0.title")}</h3>
+                  <p>{t("area.experiences.items.0.text")}</p>
                 </div>
               </div>
 
               <div className="expItem">
                 <span>02</span>
                 <div>
-                  <h3>Paseos en barco</h3>
-                  <p>Descubre la costa desde el mar.</p>
+                  <h3>{t("area.experiences.items.1.title")}</h3>
+                  <p>{t("area.experiences.items.1.text")}</p>
+                </div>
+              </div>
+
+              <div className="expItem">
+                <span>03</span>
+                <div>
+                  <h3>{t("area.experiences.items.2.title")}</h3>
+                  <p>{t("area.experiences.items.2.text")}</p>
+                </div>
+              </div>
+
+              <div className="expItem">
+                <span>04</span>
+                <div>
+                  <h3>{t("area.experiences.items.3.title")}</h3>
+                  <p>{t("area.experiences.items.3.text")}</p>
+                </div>
+              </div>
+
+              <div className="expItem">
+                <span>05</span>
+                <div>
+                  <h3>{t("area.experiences.items.4.title")}</h3>
+                  <p>{t("area.experiences.items.4.text")}</p>
                 </div>
               </div>
             </div>
@@ -211,16 +261,26 @@ export default function Area() {
         </div>
       </section>
 
-      {/* SABORES (✅ beige) */}
+      {/* ================= SABORES ================= */}
       <section className="section section--beige areaFood">
         <div className="areaFood__container">
           <div className="areaFood__content">
-            <h2>Sabores del Empordà</h2>
-            <p>Tradición marinera, producto local y recetas mediterráneas.</p>
+            <h2>{t("area.food.title")}</h2>
+
+            <p>{t("area.food.p1")}</p>
+            <p>{t("area.food.p2")}</p>
+            <p>{t("area.food.p3")}</p>
+
+            <p className="areaFood__italic">{t("area.food.italic")}</p>
+
+            {/* ✅ BOTÓN AZUL */}
+            <a className="areaFood__btn" href="/restaurante">
+              {t("area.food.button")} <span aria-hidden="true">→</span>
+            </a>
           </div>
 
           <div className="areaFood__media">
-            <img src={pescado} alt="Producto local del Empordà" loading="lazy" />
+            <img src={pescado} alt={t("area.food.imageAlt")} loading="lazy" />
           </div>
         </div>
       </section>

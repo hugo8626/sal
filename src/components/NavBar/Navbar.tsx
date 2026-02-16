@@ -31,11 +31,11 @@ export default function Navbar() {
   }, [open]);
 
   return (
-    <nav className="navbar" aria-label="Navegación principal">
+    <nav className="navbar" aria-label={t("navbar.ariaMain")}>
       <div className="navbar-container">
         <div className="navbar-logo">
           <Link to="/" className="navbar-logo__link" onClick={close}>
-            Taverna de la Sal
+            {t("navbar.brand")}
           </Link>
         </div>
 
@@ -85,7 +85,6 @@ export default function Navbar() {
             </NavLink>
           </li>
 
-          {/* NUEVO: Contacto */}
           <li>
             <NavLink
               className={({ isActive }) =>
@@ -112,18 +111,18 @@ export default function Navbar() {
             className="navbar-lang"
             value={current}
             onChange={(e) => i18n.changeLanguage(e.target.value)}
-            aria-label="Cambiar idioma"
+            aria-label={t("navbar.langSelectAria")}
           >
-            <option value="es">ES</option>
-            <option value="en">EN</option>
-            <option value="fr">FR</option>
-            <option value="ca">CA</option>
+            <option value="es">{t("navbar.lang.es")}</option>
+            <option value="en">{t("navbar.lang.en")}</option>
+            <option value="fr">{t("navbar.lang.fr")}</option>
+            <option value="ca">{t("navbar.lang.ca")}</option>
           </select>
 
           <button
             className="navbar-burger"
             onClick={toggle}
-            aria-label={open ? "Cerrar menú" : "Abrir menú"}
+            aria-label={open ? t("navbar.burger.close") : t("navbar.burger.open")}
             aria-expanded={open}
             aria-controls="mobile-menu"
             type="button"
@@ -139,7 +138,7 @@ export default function Navbar() {
           onClick={close}
           role="button"
           tabIndex={0}
-          aria-label="Cerrar menú"
+          aria-label={t("navbar.overlayCloseAria")}
           onKeyDown={(e) => {
             if (e.key === "Enter" || e.key === " ") close();
           }}
@@ -150,20 +149,21 @@ export default function Navbar() {
         id="mobile-menu"
         className={`popover ${open ? "popover--open" : ""}`}
         aria-hidden={!open}
+        hidden={!open}
       >
         <div className="popover-header">
-          <span className="popover-title">Menú</span>
+          <span className="popover-title">{t("navbar.mobile.title")}</span>
           <button
             className="popover-close"
             onClick={close}
-            aria-label="Cerrar"
+            aria-label={t("navbar.mobile.close")}
             type="button"
           >
             ✕
           </button>
         </div>
 
-        <nav className="popover-links" aria-label="Menú móvil">
+        <nav className="popover-links" aria-label={t("navbar.mobile.aria")}>
           <NavLink to="/habitaciones" onClick={close}>
             {t("nav.rooms")}
           </NavLink>
@@ -176,12 +176,9 @@ export default function Navbar() {
           <NavLink to="/entorno" onClick={close}>
             {t("nav.area")}
           </NavLink>
-
-          {/* NUEVO: Contacto móvil */}
           <NavLink to="/contacto" onClick={close}>
             {t("nav.contact")}
           </NavLink>
-
           <NavLink to="/reservar" onClick={close}>
             {t("nav.reserve")}
           </NavLink>

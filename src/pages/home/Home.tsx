@@ -21,21 +21,6 @@ export default function Home() {
     city: string;
   }>;
 
-  /* =========================
-     SEO (PAUSADO POR AHORA)
-     - React 19 rompe react-helmet-async (peer deps)
-     - Luego lo haremos con @unhead/react sin tocar estética
-  ========================= */
-
-  // const seoTitle = t("home.seo.title", {
-  //   defaultValue: "Taverna de la Sal — Hotel boutique solo adultos en L’Escala",
-  // });
-
-  // const seoDescription = t("home.seo.description", {
-  //   defaultValue:
-  //     "Hotel boutique solo adultos en L’Escala, Costa Brava. Seis habitaciones íntimas en un edificio del siglo XIX, junto al mar.",
-  // });
-
   return (
     <main className="page">
       {/* HERO */}
@@ -43,9 +28,7 @@ export default function Home() {
         <div className="hero__background">
           <div className="container hero__content">
             <p className="eyebrow eyebrow--light">{t("home.hero.eyebrow")}</p>
-
             <h1 className="hero__title">{t("home.hero.title")}</h1>
-
             <p className="hero__subtitle">{t("home.hero.subtitle")}</p>
 
             <a className="btn btn--primary" href="/reservar">
@@ -106,6 +89,9 @@ export default function Home() {
         <div className="container center">
           <p className="eyebrow">{t("home.atmosphere.eyebrow")}</p>
           <h2 className="title">{t("home.atmosphere.title")}</h2>
+
+          {/* ✅ TEXTO QUE TE FALTABA */}
+          <p className="text text--muted">{t("home.atmosphere.text")}</p>
 
           <div className="atmosphere">
             <figure className="atmosphere__item atmosphere__item--large">
@@ -219,7 +205,6 @@ export default function Home() {
           <div className="feature__body">
             <p className="eyebrow">{t("home.restaurant.eyebrow")}</p>
             <h2 className="title">{t("home.restaurant.title")}</h2>
-
             <p className="text">{t("home.restaurant.text")}</p>
 
             <a className="btn btn--primary" href="/restaurante">
@@ -237,26 +222,40 @@ export default function Home() {
 
           <div className="services">
             <article className="service">
-              <span className="service__icon">☕</span>
+              <span className="service__icon" aria-hidden="true">
+                ☕
+              </span>
               <p>{servicesItems?.[0]}</p>
             </article>
             <article className="service">
-              <span className="service__icon">☀️</span>
+              <span className="service__icon" aria-hidden="true">
+                ☀
+              </span>
               <p>{servicesItems?.[1]}</p>
             </article>
             <article className="service">
-              <span className="service__icon">✨</span>
+              <span className="service__icon" aria-hidden="true">
+                ✦
+              </span>
               <p>{servicesItems?.[2]}</p>
             </article>
             <article className="service">
-              <span className="service__icon">📶</span>
+              <span className="service__icon" aria-hidden="true">
+                ⌁
+              </span>
               <p>{servicesItems?.[3]}</p>
             </article>
             <article className="service">
-              <span className="service__icon">🚗</span>
+              <span className="service__icon" aria-hidden="true">
+                🚗
+              </span>
               <p>{servicesItems?.[4]}</p>
             </article>
           </div>
+
+          <a className="link link--center" href="/servicios">
+            {t("home.services.link")}
+          </a>
         </div>
       </section>
 
@@ -287,6 +286,10 @@ export default function Home() {
                 <span>{areaItems?.[3]}</span>
               </li>
             </ul>
+
+            <a className="link link--left" href="/entorno">
+              {t("home.area.link")}
+            </a>
           </div>
 
           <figure className="area__media">
@@ -320,7 +323,7 @@ export default function Home() {
       {/* CTA AZUL FINAL */}
       <section className="ctaFinal">
         <div className="container ctaFinal__inner">
-          <p className="ctaFinal__eyebrow">{t("home.cta.eyebrow")}</p>
+          
           <h2 className="ctaFinal__title">{t("home.cta.title")}</h2>
           <p className="ctaFinal__text">{t("home.cta.text")}</p>
 

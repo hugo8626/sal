@@ -109,6 +109,13 @@
   color: var(--color-text);
 }
 
+/* texto centrado más suave (para atmósfera) */
+.text--muted {
+  max-width: 70ch;
+  margin: 0 auto 10px;
+  color: #6b7380;
+}
+
 /* =========================================
    CARDS
 ========================================= */
@@ -207,6 +214,7 @@
   margin: 16px 0 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 26px; /* ✅ aire antes de los botones */
 }
 
 .features li {
@@ -222,6 +230,20 @@
   position: absolute;
   left: 0;
   color: var(--color-gold);
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  gap: 24px;
+  row-gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 0;
+}
+
+.actions .btn {
+  margin: 0;
 }
 
 /* =========================================
@@ -261,6 +283,21 @@
   color: #5b616c;
 }
 
+/* Iconos SIN color: monocromo */
+.service__icon {
+  font-size: 22px;
+  line-height: 1;
+  color: currentColor;
+  opacity: 0.9;
+  
+}
+
+/* Link centrado debajo de servicios */
+.link--center {
+  display: inline-block;
+  margin-top: 18px;
+}
+
 /* =========================================
    AREA
 ========================================= */
@@ -272,11 +309,26 @@
   align-items: center;
 }
 
+.area__icon{
+  display: inline-block;
+  padding-bottom: 1rem;
+  width:2rem;
+  
+ 
+}
+
+
 .area__img {
   width: 100%;
   border-radius: 18px;
   display: block;
   box-shadow: var(--shadow-md);
+}
+
+/* Link alineado a la izquierda para entorno */
+.link--left {
+  display: inline-block;
+  margin-top: 18px;
 }
 
 /* =========================================
@@ -287,12 +339,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
+  
+}
+
+.reviews__eyebrow{
+  padding-bottom: 5px;
+  text-align: center;
+}
+.reviews__title{
+  padding-bottom: 15px;
+  text-align: center;
 }
 
 .review {
   border: 1px solid var(--color-border);
   padding: 26px;
-  background: rgba(255, 255, 255, 0.6);
+  background:var(--color-border);
 }
 
 /* =========================================
@@ -303,6 +365,24 @@
   background: #4e6f8c;
   padding: 5rem 0;
   text-align: center;
+  
+}
+.ctaFinal__title{
+  margin-bottom: 5px;
+}
+
+.ctaFinal__text {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.ctaFinal__actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.ctaFinal__eyebrow{
+  color: #fff;
 }
 
 /* =========================================
@@ -321,7 +401,6 @@
 }
 
 @media (max-width: 900px) {
-
   .story,
   .rooms,
   .feature,
@@ -342,9 +421,7 @@
   }
 
   /* ===== HERO MÓVIL ===== */
-
   .hero__background {
-
     /* 🔥 CAMBIA AQUÍ cuando tengas la versión vertical */
     /* background-image: url("../../assets/images/heroimg/herofinal-mobile.png"); */
 

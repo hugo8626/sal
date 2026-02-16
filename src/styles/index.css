@@ -112,7 +112,7 @@ ol {
   --shadow-md: 0 16px 40px rgba(15, 26, 43, 0.14);
 
   /* ---- Layout ---- */
-  --container: 1100px;
+  --container: 1200px;
   --container-narrow: 820px;
 }
 

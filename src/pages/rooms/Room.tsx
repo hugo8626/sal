@@ -1,4 +1,5 @@
 import "./Room.css";
+import { useTranslation } from "react-i18next";
 
 import heroRooms from "../../assets/images/habitaciones/cami.png";
 import introRooms from "../../assets/images/habitaciones/camabaño.png";
@@ -14,31 +15,45 @@ import img8 from "../../assets/images/habitaciones/terraz.png";
 
 import FaqItem from "../../components/FaqItem/FaqItem";
 
+type Feature = {
+  title: string;
+  items: string[];
+};
+
+type Faq = {
+  q: string;
+  a: string;
+};
+
 export default function Room() {
+  const { t } = useTranslation();
+
+  const features = t("rooms.features", { returnObjects: true }) as Feature[];
+  const faq = t("rooms.faq.items", { returnObjects: true }) as Faq[];
+
   return (
     <main className="roomsPage">
       {/* ================= HERO ================= */}
       <section
         className="roomsHero"
         style={{ backgroundImage: `url(${heroRooms})` }}
-        aria-label="Habitaciones boutique en L'Escala"
+        aria-label={t("rooms.hero.title")}
       >
-        {/* Capa oscura para mejorar legibilidad del texto */}
         <div className="roomsHero__overlay" />
 
         <div className="roomsHero__content">
-          <h1 className="roomsHero__title">Habitaciones boutique en L&apos;Escala</h1>
+          <h1 className="roomsHero__title">
+            {t("rooms.hero.title")}
+          </h1>
 
           <p className="roomsHero__subtitle">
-            Espacios luminosos y acogedores diseñados para el descanso real, en un hotel solo
-            adultos junto al mar.
+            {t("rooms.hero.subtitle")}
           </p>
         </div>
 
-        {/* CTA principal */}
         <div className="roomsHero__ctaWrap">
           <a className="roomsHero__cta" href="/reservar">
-            Reservar
+            {t("rooms.hero.cta")}
           </a>
         </div>
       </section>
@@ -47,27 +62,31 @@ export default function Room() {
       <section className="roomsIntro">
         <div className="roomsIntro__container">
           <div className="roomsIntro__content">
+            <h2 className="roomsIntro__title">
+              {t("rooms.intro.title")}
+            </h2>
+
             <p className="roomsIntro__lead">
-              Seis habitaciones únicas con una superficie de entre 25 y 30 m² que representan nuestra
-              forma de entender el descanso.
+              {t("rooms.intro.lead")}
             </p>
 
             <ul className="roomsIntro__list">
-              <li>Todas dobles matrimoniales</li>
-              <li>Dos adaptables a triple gracias a un sofá cama</li>
-              <li>Con balcón y vistas laterales al mar</li>
+              {(
+                t("rooms.intro.list", { returnObjects: true }) as string[]
+              ).map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
 
             <blockquote className="roomsIntro__quote">
-              “Un refugio mediterráneo pensado para disfrutar intimidad, calma y confort en la Costa
-              Brava.”
+              {t("rooms.intro.quote")}
             </blockquote>
           </div>
 
           <div className="roomsIntro__media">
             <img
               src={introRooms}
-              alt="Arquitectura y diseño del hotel"
+              alt={t("rooms.intro.imageAlt")}
               className="roomsIntro__img"
               loading="lazy"
             />
@@ -78,45 +97,18 @@ export default function Room() {
       {/* ================= FEATURES ================= */}
       <section className="roomsFeatures">
         <div className="roomsFeatures__container">
-          <article className="featureItem">
-            <div className="featureItem__icon">🛏</div>
-            <h3 className="featureItem__title">Confort</h3>
-            <ul className="featureItem__list">
-              <li>Superficie entre 25 y 30 m²</li>
-              <li>Cama king-size (2,00 × 1,80 m)</li>
-              <li>Aire acondicionado y calefacción</li>
-            </ul>
-          </article>
-
-          <article className="featureItem">
-            <div className="featureItem__icon">🚿</div>
-            <h3 className="featureItem__title">Baño y cuidado</h3>
-            <ul className="featureItem__list">
-              <li>Ducha tipo walk-in</li>
-              <li>Amenities seleccionadas</li>
-              <li>Secador de pelo</li>
-            </ul>
-          </article>
-
-          <article className="featureItem">
-            <div className="featureItem__icon">☕</div>
-            <h3 className="featureItem__title">Detalles que marcan la diferencia</h3>
-            <ul className="featureItem__list">
-              <li>Hervidor con selección de café y té</li>
-              <li>Mini nevera</li>
-              <li>Caja fuerte</li>
-            </ul>
-          </article>
-
-          <article className="featureItem">
-            <div className="featureItem__icon">📺</div>
-            <h3 className="featureItem__title">Tecnología y conexión</h3>
-            <ul className="featureItem__list">
-              <li>TV pantalla plana</li>
-              <li>Canales nacionales e internacionales</li>
-              <li>Wi-Fi de alta velocidad gratuito</li>
-            </ul>
-          </article>
+          {features.map((feature, index) => (
+            <article className="featureItem" key={index}>
+              <h3 className="featureItem__title">
+                {feature.title}
+              </h3>
+              <ul className="featureItem__list">
+                {feature.items.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+              </ul>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -124,45 +116,26 @@ export default function Room() {
       <section className="roomsGallery">
         <div className="roomsGallery__container">
           <header className="roomsGallery__header">
-            <h2 className="roomsGallery__title">Cada detalle, elegido con intención.</h2>
+            <h2 className="roomsGallery__title">
+              {t("rooms.gallery.title")}
+            </h2>
             <p className="roomsGallery__subtitle">
-              Un recorrido visual por espacios donde diseño, confort y calma se encuentran.
+              {t("rooms.gallery.subtitle")}
             </p>
           </header>
 
-          {/* Grid fijo: 8 imágenes = 8 celdas, SIN Array.from */}
           <div className="roomsGallery__grid">
-            <figure className="gItem">
-              <img src={img1} alt="Detalle de la habitación 1" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img2} alt="Detalle de la habitación 2" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img3} alt="Detalle de la habitación 3" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img4} alt="Detalle de la habitación 4" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img5} alt="Detalle de la habitación 5" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img6} alt="Detalle de la habitación 6" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img7} alt="Detalle de la habitación 7" loading="lazy" />
-            </figure>
-
-            <figure className="gItem">
-              <img src={img8} alt="Detalle de la habitación 8" loading="lazy" />
-            </figure>
+            {[img1, img2, img3, img4, img5, img6, img7, img8].map(
+              (img, i) => (
+                <figure className="gItem" key={i}>
+                  <img
+                    src={img}
+                    alt={t("rooms.gallery.imageAlt")}
+                    loading="lazy"
+                  />
+                </figure>
+              )
+            )}
           </div>
         </div>
       </section>
@@ -171,11 +144,11 @@ export default function Room() {
       <section className="roomsFinal">
         <div className="roomsFinal__container">
           <h2 className="roomsFinal__title">
-            Solo seis habitaciones garantizan un ambiente tranquilo y exclusivo durante todo el año.
+            {t("rooms.final.title")}
           </h2>
 
           <a href="/reservar" className="roomsFinal__btn">
-            QUIERO RESERVAR
+            {t("rooms.final.button")}
           </a>
         </div>
       </section>
@@ -184,11 +157,12 @@ export default function Room() {
       <section className="roomsServices">
         <div className="roomsServices__container">
           <p className="roomsServices__text">
-            Además de tu habitación, podrás disfrutar de nuestra terraza y restaurante junto al mar.
+            {t("rooms.services.text")}
           </p>
 
           <a href="/restaurante" className="roomsServices__link">
-            Descubre nuestros servicios <span className="roomsServices__arrow">→</span>
+            {t("rooms.services.link")}{" "}
+            <span className="roomsServices__arrow">→</span>
           </a>
         </div>
       </section>
@@ -196,34 +170,19 @@ export default function Room() {
       {/* ================= FAQ ================= */}
       <section className="roomsFaq">
         <div className="roomsFaq__container">
-          <h2 className="roomsFaq__title">Preguntas frecuentes</h2>
+          <h2 className="roomsFaq__title">
+            {t("rooms.faq.title")}
+          </h2>
 
           <div className="roomsFaq__list">
-            <FaqItem
-              q="¿Todas las habitaciones tienen el mismo precio?"
-              a="No, el precio varía en función del diseño, la orientación y la temporada. Cada habitación tiene una personalidad propia. Al realizar la reserva, podrás consultar la tarifa actualizada para las fechas que te interesen."
-              defaultOpen
-            />
-            <FaqItem
-              q="¿Todas tienen balcón y vistas al mar?"
-              a="Todas las habitaciones disponen de balcón privado con vistas laterales al mar. Aunque no son vistas frontales directas, desde cada balcón se percibe la presencia del Mediterráneo y la brisa marina."
-            />
-            <FaqItem
-              q="¿Son dobles? ¿Se puede añadir cama?"
-              a="Todas las habitaciones son dobles matrimoniales con cama king-size. Dos de ellas disponen de un sofá cama que permite alojar a una tercera persona adulta, previa solicitud al hacer la reserva."
-            />
-            <FaqItem
-              q="¿Se puede solicitar una habitación concreta?"
-              a="Sí, puedes indicarnos tu preferencia al hacer la reserva. Haremos lo posible por asignarte la habitación deseada, aunque no podemos garantizarlo en todos los casos ya que depende de la disponibilidad."
-            />
-            <FaqItem
-              q="¿Qué tamaño tienen las habitaciones?"
-              a="Las habitaciones tienen una superficie de entre 25 y 30 m², lo que proporciona un espacio amplio y cómodo para disfrutar de tu estancia con total confort."
-            />
-            <FaqItem
-              q="¿Cuál es la política de cancelación?"
-              a="Ofrecemos cancelación gratuita hasta 48 horas antes de la fecha de llegada. Para cancelaciones posteriores o no presentación, se aplicará el cargo de la primera noche. Consulta las condiciones completas durante el proceso de reserva."
-            />
+            {faq.map((item, i) => (
+              <FaqItem
+                key={i}
+                q={item.q}
+                a={item.a}
+                defaultOpen={i === 0}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -231,10 +190,12 @@ export default function Room() {
       {/* ================= FINAL BIG CTA ================= */}
       <section className="roomsBigCta">
         <div className="roomsBigCta__container">
-          <h2 className="roomsBigCta__title">Tu descanso empieza aquí.</h2>
+          <h2 className="roomsBigCta__title">
+            {t("rooms.bigCta.title")}
+          </h2>
 
           <a className="roomsBigCta__btn" href="/reservar">
-            QUIERO COMPROBAR DISPONIBILIDAD
+            {t("rooms.bigCta.button")}
           </a>
         </div>
       </section>

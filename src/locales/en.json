@@ -3,48 +3,74 @@
     "rooms": "Rooms",
     "restaurant": "Restaurant",
     "history": "History",
-    "area": "Location",
+    "area": "Area",
+    "contact": "Contact",
     "reserve": "Book"
   },
+
+  "navbar": {
+    "ariaMain": "Main navigation",
+    "brand": "Taverna de la Sal",
+    "langSelectAria": "Change language",
+    "lang": {
+      "es": "ES",
+      "en": "EN",
+      "fr": "FR",
+      "ca": "CA"
+    },
+    "burger": {
+      "open": "Open menu",
+      "close": "Close menu"
+    },
+    "overlayCloseAria": "Close menu",
+    "mobile": {
+      "title": "Menu",
+      "close": "Close",
+      "aria": "Mobile menu"
+    }
+  },
+
   "home": {
     "hero": {
+      "aria": "Cover",
       "eyebrow": "BOUTIQUE HOTEL · ADULTS ONLY · L’ESCALA",
       "title": "Taverna de la Sal",
-      "subtitle": "Six intimate rooms in a restored 19th-century building, facing the Mediterranean. Designed for true rest.",
-      "cta": "Check availability"
+      "subtitle": "Six intimate rooms in a restored 19th-century building, just a few meters from the sea. Designed to truly switch off and enjoy at your own pace.",
+      "cta": "CHECK AVAILABILITY"
     },
     "story": {
       "eyebrow": "OUR STORY",
-      "title": "A 19th-century building linked to the sea and salt",
-      "text": "This historic building, tied to L’Escala’s maritime and salt-making heritage, has been carefully restored into a boutique hotel that respects its original essence. Every stone tells a story of sea, wind, and salt.",
-      "link": "Discover our story →",
-      "imageAlt": "Vaulted entrance of the hotel"
+      "title": "A 19th-century building shaped by sea and salt",
+      "text": "This historic building, rooted in L'Escala’s seafaring and salt traditions, has been carefully restored into an adults-only boutique hotel and a Mediterranean restaurant that respects its original character.",
+      "link": "DISCOVER OUR STORY  →",
+      "imageAlt": "Arched entrance of the hotel"
     },
     "refuge": {
-      "eyebrow": "YOUR REFUGE ON THE COSTA BRAVA",
+      "eyebrow": "YOUR COASTA BRAVA HIDEAWAY",
       "title": "Why choose Taverna de la Sal",
       "cards": [
         {
-          "title": "Only six rooms",
-          "text": "Guaranteed exclusivity and tranquillity. An intimate refuge where every guest matters."
+          "title": "Total exclusivity",
+          "text": "Six rooms and an adults-only atmosphere that guarantees peace and uninterrupted rest."
         },
         {
-          "title": "Prime location",
-          "text": "A privileged spot between the Mediterranean and the cobbled streets of L’Escala’s historic center."
+          "title": "Seafront & old town",
+          "text": "A privileged location between the Mediterranean and the cobbled streets of L'Escala’s historic center."
         },
         {
-          "title": "Warm hospitality",
-          "text": "Hosted by the owners, who care for every detail so your stay is unforgettable."
+          "title": "Warm, personal hospitality",
+          "text": "Run by the owners, who care for every detail to make your stay unforgettable."
         }
       ]
     },
     "atmosphere": {
       "eyebrow": "ATMOSPHERE",
       "title": "Light, detail and calm",
+      "text": "From Mediterranean light to thoughtfully designed interiors, every space invites you to unwind.",
       "images": [
         "Decorative detail",
-        "Interior staircase",
-        "Terrace with views",
+        "Indoor staircase",
+        "Rooftop terrace with views",
         "Bright room"
       ]
     },
@@ -53,62 +79,64 @@
       "title": "Benefits of booking with us",
       "cards": [
         {
-          "title": "10% restaurant discount",
-          "text": "Enjoy our grill cuisine with an exclusive discount for direct bookings."
+          "title": "10% off at the restaurant",
+          "text": "Enjoy our charcoal-grill cuisine with an exclusive discount when you book direct."
         },
         {
           "title": "Best rate guaranteed",
-          "text": "Booking direct always gets you the best available price."
+          "text": "Booking direct always gives you the best available price."
         },
         {
-          "title": "Personalised attention",
+          "title": "Personalized attention",
           "text": "Direct contact with the owners to tailor your stay."
         }
       ]
     },
     "rooms": {
       "eyebrow": "ROOMS",
-      "title": "Six rooms with Mediterranean views",
-      "text": "Double rooms of 25–30 m², with a private balcony and partial sea views. Decorated with natural materials and a warm palette designed for rest.",
+      "title": "Rooms with Mediterranean views",
+      "text": "Double rooms between 25 and 30 m², with a private balcony and side sea views. Decorated with natural materials, soft light, and a palette of sand and blue tones that invites you to disconnect.",
       "features": [
-        "Private balcony with views",
-        "25–30 m² of space",
-        "Natural materials and thoughtful design",
+        "Handcrafted breakfast included every morning",
+        "Contemporary Mediterranean design",
+        "Daily housekeeping and attention to detail",
         "High-quality bedding"
       ],
-      "details": "View details",
+      "details": "See details",
       "cta": "Check availability",
       "imageAlt": "Room with balcony and Mediterranean views"
     },
     "restaurant": {
       "eyebrow": "RESTAURANT",
-      "title": "Grill, local produce and the Mediterranean",
-      "text": "Our restaurant offers honest cuisine based on grilled meats and fish, seasonal produce and a selection of DO Empordà wines. An intimate setting by the sea to enjoy the best local gastronomy.",
+      "title": "Charcoal, local produce and the Mediterranean",
+      "text": "Our restaurant offers honest cuisine centered on charcoal-grilled meats and fish, seasonal produce, and a selection of DO Empordà wines. An intimate setting by the sea to enjoy the best local gastronomy.",
       "cta": "Discover the restaurant",
-      "imageAlt": "Restaurant terrace table with sea views"
+      "imageAlt": "Table on the restaurant terrace with sea views"
     },
     "services": {
       "eyebrow": "SERVICES",
       "title": "Everything you need",
       "items": [
         "Breakfast with local produce",
-        "Sea-view terrace",
+        "Terrace with sea views",
         "Daily housekeeping",
         "Free Wi-Fi",
         "Parking by reservation"
-      ]
+      ],
+      "link": "SEE ALL SERVICES →"
     },
     "area": {
-      "eyebrow": "SURROUNDINGS",
+      "eyebrow": "AREA",
       "title": "L’Escala, Costa Brava",
-      "text": "An authentic fishing town on the Costa Brava, where Empúries’ Greco-Roman heritage meets crystal-clear beaches, hidden coves and a unique gastronomic tradition shaped by L’Escala’s famous anchovies.",
+      "text": "An authentic fishing village on the Costa Brava, where Empúries’ Greco-Roman heritage meets crystal-clear beaches, hidden coves, and a unique food tradition marked by L'Escala’s famous anchovies.",
       "items": [
-        "Beaches just a few steps away",
+        "Beaches just steps away",
         "L’Escala old town",
         "Empúries ruins",
         "Anchovy tradition"
       ],
-      "imageAlt": "Aerial view of L’Escala on the Costa Brava"
+      "imageAlt": "Aerial view of L’Escala on the Costa Brava",
+      "link": "EXPLORE L’ESCALA →"
     },
     "reviews": {
       "eyebrow": "REVIEWS",
@@ -116,27 +144,405 @@
       "starsAria": "5 out of 5 stars",
       "items": [
         {
-          "quote": "“A magical place where time stands still. The peace and the views are incomparable.”",
-          "name": "María L.",
+          "quote": "“Character, comfort and genuine warmth. Beautifully designed rooms, spotless cleanliness, and a rooftop terrace perfect for sunset. An outstanding breakfast and service that truly makes the difference.”",
+          "name": "Emanuel P.",
           "city": "Madrid"
         },
         {
-          "quote": "“Perfect location: the sea on one side, the town on the other. And the owners’ care is exceptional.”",
-          "name": "Jean-Pierre D.",
-          "city": "Lyon"
+          "quote": "“A wonderful level of peace and quiet. The rooms are extremely well cared for, the beds are very comfortable and everything is super clean. Breakfast is excellent quality.”",
+          "name": "Cristian V.",
+          "city": "Bilbao"
         },
         {
-          "quote": "“Waking up to the sound of the sea and having local breakfast on the terrace. Pure happiness.”",
+          "quote": "“Perfect location right next to the harbor. Lovely hosts. Stylish rooms, excellent breakfast and a restaurant with a truly local atmosphere.”",
           "name": "Anna K.",
           "city": "Barcelona"
         }
       ]
     },
     "cta": {
-      "eyebrow": "ONLY SIX ROOMS",
-      "title": "Your refuge by the Mediterranean awaits",
+      "title": "Your Mediterranean hideaway awaits",
       "text": "Book direct and enjoy an intimate, authentic and unforgettable experience in the heart of L’Escala.",
       "button": "Check availability"
+    }
+  },
+
+  "rooms": {
+    "hero": {
+      "title": "Boutique rooms in L'Escala",
+      "subtitle": "Bright, welcoming spaces designed for real rest, in an adults-only hotel by the sea.",
+      "cta": "Book"
+    },
+    "intro": {
+      "title": "For those who value detail",
+      "lead": "Unique rooms between 25 and 30 m², designed for guests who understand rest as an experience of calm, light and care beside the Mediterranean.",
+      "list": [
+        "All double rooms",
+        "Two can be adapted for triple occupancy on request",
+        "With balcony and side sea views"
+      ],
+      "quote": "An exclusive hideaway for couples seeking detail, privacy and design facing the Mediterranean.",
+      "imageAlt": "Room with bathroom and natural light"
+    },
+    "features": [
+      {
+        "title": "Comfort",
+        "items": [
+          "25–30 m² of space",
+          "King-size bed (2.00 × 1.80 m)",
+          "Air conditioning and heating"
+        ]
+      },
+      {
+        "title": "Bathroom & care",
+        "items": [
+          "Walk-in shower",
+          "Selected amenities",
+          "Hair dryer"
+        ]
+      },
+      {
+        "title": "Details that matter",
+        "items": [
+          "Kettle with coffee & tea selection",
+          "Mini fridge",
+          "Safe"
+        ]
+      },
+      {
+        "title": "Tech & connection",
+        "items": [
+          "Flat-screen TV",
+          "National & international channels",
+          "Free high-speed Wi-Fi"
+        ]
+      }
+    ],
+    "gallery": {
+      "title": "Every detail, chosen with intention.",
+      "subtitle": "A visual journey through spaces where design, comfort and calm come together.",
+      "imageAlt": "Hotel room detail"
+    },
+    "final": {
+      "title": "A small number of rooms ensures a calm, exclusive atmosphere throughout the season.",
+      "button": "BOOK A ROOM"
+    },
+    "services": {
+      "text": "Beyond your room, enjoy our sea-view terrace and our charcoal-grill restaurant.",
+      "link": "Discover our services"
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "q": "Is the hotel adults-only?",
+          "a": "Yes. Taverna de la Sal is an adults-only hotel, designed to offer a quiet and relaxing atmosphere for all guests."
+        },
+        {
+          "q": "Is breakfast included?",
+          "a": "Yes, daily breakfast with local products is included in all reservations."
+        },
+        {
+          "q": "Do you have private parking?",
+          "a": "Yes. We offer nearby private parking with limited spaces. Advance reservation is required and there is an additional cost."
+        },
+        {
+          "q": "What are check-in and check-out times?",
+          "a": "Check-in is from 15:00 and check-out is at 11:00. Early check-in or late check-out may be requested, subject to availability."
+        },
+        {
+          "q": "Is the terrace open to everyone?",
+          "a": "The terrace is for hotel guests only and reserved for adults. In summer we offer live music and cocktails in the evening."
+        },
+        {
+          "q": "Do you allow pets?",
+          "a": "Unfortunately, pets are not allowed."
+        },
+        {
+          "q": "Can you smoke in the rooms?",
+          "a": "No. All rooms and indoor areas are 100% smoke-free. If you wish, you can smoke on the terrace."
+        }
+      ]
+    },
+    "bigCta": {
+      "title": "Your rest starts here.",
+      "button": "CHECK AVAILABILITY"
+    }
+  },
+
+  "restaurant": {
+    "hero": {
+      "aria": "Restaurant",
+      "title": "Services that complete your experience",
+      "subtitle": "Every detail has been designed so your stay at Taverna de la Sal feels comfortable, calm and worry-free.",
+      "note": "✓ 10% discount for hotel guests who book directly on our website"
+    },
+    "brasa": {
+      "eyebrow": "ENJOY",
+      "title": "Charcoal-grill restaurant",
+      "text1": "Specialists in charcoal-grilled meats and fish, with seasonal produce and an intimate atmosphere in L'Escala’s old town.",
+      "text2": "If you book directly on our website, you’ll enjoy a 10% discount at the restaurant during your stay.",
+      "cta": "SEE MORE"
+    },
+    "breakfast": {
+      "eyebrow": "THE AREA",
+      "title": "Start the day with flavor",
+      "text": "Each morning, enjoy a selection of local products, artisan bread, seasonal fruit, natural juices and freshly brewed coffee in a calm, adults-only setting."
+    },
+    "terrace": {
+      "title": "Terrace with Mediterranean views",
+      "text": "Our terrace overlooks the bay and the old town. In summer: cocktails and live music; in winter: calm and unforgettable sunsets."
+    },
+    "reading": {
+      "title": "Reading corner",
+      "text": "A quiet space to relax, read or simply slow down. We offer books and magazines about L'Escala, the sea and local history."
+    },
+    "cards": [
+      {
+        "title": "Comfort without worries",
+        "text": "Daily housekeeping to ensure freshness and comfort. Extra towels and amenities available on request."
+      },
+      {
+        "title": "Parking in the heart of town",
+        "text": "Private parking spot close to the hotel. Limited spaces, advance reservation and additional cost. A rare luxury in a coastal town like L'Escala."
+      },
+      {
+        "title": "High-speed Wi-Fi",
+        "text": "Connection available in all rooms and common areas so you can plan your day or share your experience."
+      }
+    ],
+    "final": {
+      "title": "A small hotel, close attention and services designed so you only have to enjoy.",
+      "cta": "CHECK AVAILABILITY"
+    }
+  },
+
+  "history": {
+    "hero": {
+      "aria": "History",
+      "title": "Two seas, one way of caring",
+      "subtitle": "A story that connects New Zealand and the Mediterranean through genuine hospitality.",
+      "cta": "I want to live the experience"
+    },
+    "block1": {
+      "imageAlt": "The hosts",
+      "kicker": "Taverna de la Sal didn’t start as a business project.",
+      "p1": "It began as a way of life. Matthew arrived from New Zealand with a very clear idea: hospitality isn’t a service, it’s a way of being present. For years he worked in the hospitality world and learned that quiet details are the ones truly remembered.",
+      "p2": "Marina grew up in L’Escala. She knows the rhythm of the sea, the character of the town, and that Mediterranean way of caring that blends closeness with calm.",
+      "quoteLines": [
+        "Two different seas.",
+        "Two cultures.",
+        "One shared way of understanding genuine care."
+      ]
+    },
+    "block2": {
+      "imageAlt": "Building façade",
+      "title": "A building that already had a story",
+      "p1": "The building that is now Taverna de la Sal was born in the 19th century. For decades it was tied to the sea and salt. First it was a refuge for fishermen, then a welcome place for the first travelers who discovered the Costa Brava.",
+      "p2": "Over time, the project grew. We chose to restore the building while respecting its essence and transform it into an adults-only boutique hotel.",
+      "p3": "We didn’t want to create just another hotel, but an intimate space where every stay feels personal.",
+      "p4": "Today, Taverna de la Sal is the result of a union: tradition and a contemporary взгляд, roots and world, sea and hospitality."
+    },
+    "philosophy": {
+      "title": "Our philosophy",
+      "p1": "We believe true luxury is human: being present, calling each guest by name, and caring for every detail so you can truly unwind.",
+      "p2": "\"For us, hospitality isn’t a service — it’s a way of loving what we do.\" Mariona & Matthew"
+    },
+    "final": {
+      "textLine1": "If you choose to stay with us, you’re not just booking a room.",
+      "textLine2": "You become part of a story that began long before your arrival.",
+      "cta": "Live the experience"
+    }
+  },
+
+  "area": {
+    "hero": {
+      "aria": "Area and activities in L'Escala",
+      "title": "Explore L'Escala and the Costa Brava",
+      "subtitle": "Nature, history and sea just steps from the hotel."
+    },
+    "intro": {
+      "imageAlt": "Detail of L'Escala’s seafaring tradition",
+      "title": "History, culture and gastronomy by the Mediterranean",
+      "lead": "A destination where the sea is not only seen — it’s remembered.",
+      "p1": "L'Escala lives linked to the Mediterranean and the salt trade.",
+      "p2": "Just minutes away are the Ruins of Empúries, where Greek and Roman cities coexisted by the sea.",
+      "p3": "Seafaring tradition, heritage and local cuisine complete the experience."
+    },
+    "places": {
+      "header": {
+        "title": "Archaeology and heritage",
+        "subtitle": "Traces of ancient civilizations within easy reach."
+      },
+      "cards": [
+        {
+          "imageAlt": "Empúries ruins",
+          "title": "Empúries ruins",
+          "distance": "2 km",
+          "text": "Temples, mosaics and archaeological remains with Mediterranean views. A journey into ancient Greece and Rome just minutes from the hotel.",
+          "url": "https://www.macempuries.cat/",
+          "linkText": "Visit Empúries"
+        },
+        {
+          "imageAlt": "L'Escala old town",
+          "title": "L'Escala Old Town",
+          "text": "Cobblestone streets, local shops and an authentic seafaring soul."
+        },
+        {
+          "imageAlt": "Alfolí de la Sal",
+          "title": "Alfolí de la Sal",
+          "text": "An 18th-century former salt warehouse telling the town’s trading history."
+        },
+        {
+          "imageAlt": "Anchovy and Salt Museum",
+          "title": "Anchovy and Salt Museum",
+          "text": "Discover the fishing legacy that gave L'Escala international fame."
+        }
+      ]
+    },
+    "banner": {
+      "aria": "The Mediterranean near the hotel",
+      "title": "The Mediterranean, just a few steps away"
+    },
+    "beaches": {
+      "intro": "From the hotel you can walk out and be by the sea in seconds.",
+      "items": [
+        {
+          "title": "Platja de les Barques",
+          "distance": "20 m",
+          "text": "A small beach right in front of the hotel. Perfect for an early swim."
+        },
+        {
+          "title": "Port d'en Perris",
+          "text": "A rocky cove in the old town, clear water and an intimate setting."
+        },
+        {
+          "title": "Empúries beaches",
+          "text": "Fine sand next to the Greco-Roman ruins."
+        },
+        {
+          "title": "Cala Montgó",
+          "text": "A sheltered bay with turquoise water surrounded by nature."
+        }
+      ],
+      "url": "https://www.visitlescala.com/es/playas",
+      "linkText": "Discover all beaches in L'Escala"
+    },
+    "nature": {
+      "imageAlt": "Empordà landscapes",
+      "title": "Open landscapes, fresh air and silence",
+      "p1": "Empordà is a land of contrasts: sea, cliffs, wetlands and gentle hills inviting you to explore without rushing.",
+      "items": [
+        {
+          "title": "Montgrí Natural Park, Medes Islands & Baix Ter",
+          "text": "Sea-view trails, hidden coves and protected marine reserves."
+        },
+        {
+          "title": "Aiguamolls de l'Empordà",
+          "text": "Wetlands ideal for calm walks and birdwatching."
+        },
+        {
+          "title": "Seafront Walk & Portitxol Arch",
+          "text": "Follow the Camí de Ronda along cliffs and wooden walkways to one of the most photogenic natural arches on the Costa Brava.",
+          "url": "https://costabrava.org/es/que-hacer/naturaleza/parques-naturales/",
+          "linkText": "Explore the natural parks"
+        }
+      ],
+      "note": "Perfect for guests who want to combine rest with active nature."
+    },
+    "experiences": {
+      "title": "Live the destination, not just visit it",
+      "images": ["Kayaking on the coast", "Boats in the harbor"],
+      "items": [
+        { "title": "Water activities", "text": "Diving, snorkeling, kayaking and paddleboarding in crystal-clear waters." },
+        { "title": "Boat trips", "text": "Private or group excursions to discover the coast from the sea." },
+        { "title": "Cycling routes", "text": "Coastal and countryside itineraries with Mediterranean scenery." },
+        { "title": "Hiking", "text": "Explore the Montgrí massif or the Camí de Ronda." },
+        { "title": "Culture & day trips", "text": "Dalí Theatre-Museum (Figueres), DO Empordà wineries and local tradition." }
+      ]
+    },
+    "food": {
+      "title": "Flavors of Empordà",
+      "p1": "L'Escala is known for its artisan anchovies, made using traditional methods that are part of Mediterranean identity.",
+      "p2": "Catalan cuisine blends sea and mountains, local recipes and DO Empordà wines.",
+      "p3": "At Taverna de la Sal, this tradition is enjoyed at our table with local produce and authentic flavors that complete your stay.",
+      "italic": "Discover Empordà through the sea, history — and taste.",
+      "button": "DISCOVER FLAVORS",
+      "imageAlt": "Local Empordà produce"
+    }
+  },
+
+  "contact": {
+    "hero": {
+      "aria": "Contact Taverna de la Sal",
+      "title": {
+        "line1": "Contact Taverna de",
+        "line2": "la Sal"
+      },
+      "subtitle": "We’re here to help you plan a calm, well-cared-for and worry-free stay in L'Escala."
+    },
+    "cards": {
+      "aria": "Contact details",
+      "address": {
+        "title": "Address",
+        "line1": "Carrer Santa Màxima, 7",
+        "line2": "17130 L'Escala, Girona, Spain",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Carrer%20Santa%20M%C3%A0xima%207%2017130%20L%27Escala",
+        "mapsCta": "VIEW ON GOOGLE MAPS"
+      },
+      "email": {
+        "title": "Email",
+        "value": "info@tavernadelasal.com",
+        "mailto": "mailto:info@tavernadelasal.com",
+        "hint": "We reply within 24h."
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+34 972 776 278",
+        "tel": "tel:+34972776278",
+        "hint": "Personalized assistance."
+      }
+    },
+    "form": {
+      "aria": "Contact form",
+      "title": "Send us a message",
+      "subtitle": "For bookings, special requests or any question, we’ll be happy to help.",
+      "fields": {
+        "name": {
+          "label": "YOUR NAME *",
+          "placeholder": "Full name"
+        },
+        "email": {
+          "label": "YOUR EMAIL *",
+          "placeholder": "email@example.com"
+        },
+        "subject": {
+          "label": "SUBJECT *",
+          "placeholder": "Reason for contacting"
+        },
+        "message": {
+          "label": "YOUR MESSAGE",
+          "optional": "(optional)",
+          "placeholder": "Tell us how we can help..."
+        }
+      },
+      "submit": "SEND MESSAGE"
+    },
+    "map": {
+      "aria": "Location",
+      "title": "Where we are",
+      "subtitle": "In the heart of L'Escala’s old town, just steps from the sea.",
+      "iframeTitle": "Taverna de la Sal map",
+      "iframeSrc": "https://www.google.com/maps?q=Carrer%20Santa%20M%C3%A0xima%207%2017130%20L%27Escala&output=embed"
+    },
+    "cta": {
+      "aria": "Check availability",
+      "title": {
+        "line1": "A small hotel, close attention",
+        "line2": "and a privileged location",
+        "line3": "just steps from the Mediterranean."
+      },
+      "button": "CHECK AVAILABILITY"
     }
   }
 }
