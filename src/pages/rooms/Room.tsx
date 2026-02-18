@@ -1,4 +1,5 @@
 import "./Room.css";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
@@ -17,6 +18,9 @@ import img8 from "../../assets/images/habitaciones/terraz.png";
 import FaqItem from "../../components/FaqItem/FaqItem";
 import SEO from "../../components/seo/SEO";
 
+/**
+ * ✅ Tipos para i18n (evita errores silenciosos)
+ */
 type Feature = {
   title: string;
   items: string[];
@@ -27,12 +31,27 @@ type Faq = {
   a: string;
 };
 
+/**
+ * ✅ Idiomas soportados en rutas
+ */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
+/**
+ * ✅ Lee el idioma desde la URL (/es/..., /en/...)
+ * Si no hay, cae a "es".
+ */
 function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1];
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
+/**
+ * ✅ Helper para construir rutas internas con idioma
+ */
+function route(lang: SupportedLang, path: string) {
+  const clean = path.replace(/^\/+/, "");
+  return `/${lang}/${clean}`;
 }
 
 export default function Room() {
@@ -40,13 +59,31 @@ export default function Room() {
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
-  const features = t("rooms.features", { returnObjects: true }) as Feature[];
-  const faq = t("rooms.faq.items", { returnObjects: true }) as Faq[];
+  /**
+   * ✅ useMemo:
+   * - Evita recalcular objetos/arrays en cada render.
+   * - Además ponemos "guardas" (fallbacks) para que no explote si falta una key.
+   */
+  const features = useMemo(() => {
+    const data = t("rooms.features", { returnObjects: true }) as Feature[] | unknown;
+    return Array.isArray(data) ? (data as Feature[]) : [];
+  }, [t]);
 
-  const gallery = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const faq = useMemo(() => {
+    const data = t("rooms.faq.items", { returnObjects: true }) as Faq[] | unknown;
+    return Array.isArray(data) ? (data as Faq[]) : [];
+  }, [t]);
+
+  const introList = useMemo(() => {
+    const data = t("rooms.intro.list", { returnObjects: true }) as string[] | unknown;
+    return Array.isArray(data) ? (data as string[]) : [];
+  }, [t]);
+
+  const gallery = useMemo(() => [img1, img2, img3, img4, img5, img6, img7, img8], []);
 
   return (
     <>
+      {/* ✅ SEO específico de la página */}
       <SEO
         title={t("rooms.seo.title", { defaultValue: "Habitaciones | Taverna de la Sal" })}
         description={t("rooms.seo.description", {
@@ -57,10 +94,11 @@ export default function Room() {
       />
 
       <main className="roomsPage">
+        {/* ================= HERO ================= */}
         <section
           className="roomsHero"
           style={{ backgroundImage: `url(${heroRooms})` }}
-          aria-label={t("rooms.hero.title")}
+          aria-label={t("rooms.hero.aria", { defaultValue: "Habitaciones" })}
         >
           <div className="roomsHero__overlay" />
 
@@ -69,13 +107,15 @@ export default function Room() {
             <p className="roomsHero__subtitle">{t("rooms.hero.subtitle")}</p>
           </div>
 
+          {/* ✅ CTA directo a reservar */}
           <div className="roomsHero__ctaWrap">
-            <Link className="roomsHero__cta" to={`/${lang}/reservar`}>
+            <Link className="roomsHero__cta" to={route(lang, "reservar")}>
               {t("rooms.hero.cta")}
             </Link>
           </div>
         </section>
 
+        {/* ================= INTRO ================= */}
         <section className="roomsIntro">
           <div className="roomsIntro__container">
             <div className="roomsIntro__content">
@@ -83,8 +123,8 @@ export default function Room() {
               <p className="roomsIntro__lead">{t("rooms.intro.lead")}</p>
 
               <ul className="roomsIntro__list">
-                {(t("rooms.intro.list", { returnObjects: true }) as string[]).map((item, i) => (
-                  <li key={i}>{item}</li>
+                {introList.map((item, i) => (
+                  <li key={`${item}-${i}`}>{item}</li>
                 ))}
               </ul>
 
@@ -94,7 +134,7 @@ export default function Room() {
             <div className="roomsIntro__media">
               <img
                 src={introRooms}
-                alt={t("rooms.intro.imageAlt")}
+                alt={t("rooms.intro.imageAlt", { defaultValue: "Habitación con baño" })}
                 className="roomsIntro__img"
                 loading="lazy"
               />
@@ -102,21 +142,23 @@ export default function Room() {
           </div>
         </section>
 
+        {/* ================= FEATURES ================= */}
         <section className="roomsFeatures">
           <div className="roomsFeatures__container">
             {features.map((feature, index) => (
-              <article className="featureItem" key={index}>
+              <article className="featureItem" key={`${feature.title}-${index}`}>
                 <h3 className="featureItem__title">{feature.title}</h3>
+
                 <ul className="featureItem__list">
-                  {feature.items.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
+                  {Array.isArray(feature.items) &&
+                    feature.items.map((item, i) => <li key={`${item}-${i}`}>{item}</li>)}
                 </ul>
               </article>
             ))}
           </div>
         </section>
 
+        {/* ================= GALLERY ================= */}
         <section className="roomsGallery">
           <div className="roomsGallery__container">
             <header className="roomsGallery__header">
@@ -129,7 +171,9 @@ export default function Room() {
                 <figure className="gItem" key={i}>
                   <img
                     src={img}
-                    alt={t("rooms.gallery.imageAlt", { defaultValue: "Habitación boutique" }) + ` ${i + 1}`}
+                    alt={`${t("rooms.gallery.imageAlt", {
+                      defaultValue: "Habitación boutique",
+                    })} ${i + 1}`}
                     loading="lazy"
                   />
                 </figure>
@@ -138,42 +182,47 @@ export default function Room() {
           </div>
         </section>
 
+        {/* ================= CTA FINAL ================= */}
         <section className="roomsFinal">
           <div className="roomsFinal__container">
             <h2 className="roomsFinal__title">{t("rooms.final.title")}</h2>
-            <Link to={`/${lang}/reservar`} className="roomsFinal__btn">
+
+            <Link to={route(lang, "reservar")} className="roomsFinal__btn">
               {t("rooms.final.button")}
             </Link>
           </div>
         </section>
 
+        {/* ================= SERVICIOS / RESTAURANTE ================= */}
         <section className="roomsServices">
           <div className="roomsServices__container">
             <p className="roomsServices__text">{t("rooms.services.text")}</p>
 
-            <Link to={`/${lang}/restaurante`} className="roomsServices__link">
+            <Link to={route(lang, "restaurante")} className="roomsServices__link">
               {t("rooms.services.link")} <span className="roomsServices__arrow">→</span>
             </Link>
           </div>
         </section>
 
+        {/* ================= FAQ ================= */}
         <section className="roomsFaq">
           <div className="roomsFaq__container">
             <h2 className="roomsFaq__title">{t("rooms.faq.title")}</h2>
 
             <div className="roomsFaq__list">
               {faq.map((item, i) => (
-                <FaqItem key={i} q={item.q} a={item.a} defaultOpen={i === 0} />
+                <FaqItem key={`${item.q}-${i}`} q={item.q} a={item.a} defaultOpen={i === 0} />
               ))}
             </div>
           </div>
         </section>
 
+        {/* ================= BIG CTA ================= */}
         <section className="roomsBigCta">
           <div className="roomsBigCta__container">
             <h2 className="roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
 
-            <Link className="roomsBigCta__btn" to={`/${lang}/reservar`}>
+            <Link className="roomsBigCta__btn" to={route(lang, "reservar")}>
               {t("rooms.bigCta.button")}
             </Link>
           </div>
