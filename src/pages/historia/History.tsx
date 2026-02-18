@@ -8,12 +8,27 @@ import taverna from "../../assets/images/pueblo/taverna.jpg";
 
 import SEO from "../../components/seo/SEO";
 
+/**
+ * ✅ Idiomas soportados en rutas
+ */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
+/**
+ * ✅ Lee idioma desde URL (/es/..., /en/..., etc.)
+ * Fallback: "es"
+ */
 function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1];
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
+/**
+ * ✅ Construye rutas internas con idioma
+ */
+function route(lang: SupportedLang, path: string) {
+  const clean = path.replace(/^\/+/, "");
+  return `/${lang}/${clean}`;
 }
 
 export default function History() {
@@ -23,6 +38,7 @@ export default function History() {
 
   return (
     <>
+      {/* ✅ SEO página Historia */}
       <SEO
         title={t("history.seo.title", { defaultValue: "Historia | Taverna de la Sal" })}
         description={t("history.seo.description", {
@@ -33,33 +49,33 @@ export default function History() {
       />
 
       <main className="page">
-        {/* HERO */}
+        {/* ================= HERO ================= */}
         <section
           className="historyHero"
-          aria-label={t("history.hero.aria", { defaultValue: t("history.hero.title") })}
+          aria-label={t("history.hero.aria", { defaultValue: "Historia" })}
         >
           <div className="historyHero__bg" style={{ backgroundImage: `url(${heroImg})` }}>
             <div className="historyHero__overlay" />
             <div className="container historyHero__content">
               <h1 className="historyHero__title">{t("history.hero.title")}</h1>
-
               <p className="historyHero__subtitle">{t("history.hero.subtitle")}</p>
 
-              <Link className="btn btn--outline historyHero__btn" to={`/${lang}/reservar`}>
+              {/* ✅ CTA a reservar con ruta multiidioma */}
+              <Link className="btn btn--outline historyHero__btn" to={route(lang, "reservar")}>
                 {t("history.hero.cta")}
               </Link>
             </div>
           </div>
         </section>
 
-        {/* BLOQUE 1 */}
+        {/* ================= BLOQUE 1 ================= */}
         <section className="section section--white">
           <div className="container historyBlock historyBlock--top">
             <figure className="historyBlock__media">
               <img
                 className="historyBlock__img"
                 src={pareja}
-                alt={t("history.block1.imageAlt")}
+                alt={t("history.block1.imageAlt", { defaultValue: "Pareja disfrutando del hotel" })}
                 loading="lazy"
               />
             </figure>
@@ -83,14 +99,14 @@ export default function History() {
           </div>
         </section>
 
-        {/* BLOQUE 2 */}
+        {/* ================= BLOQUE 2 ================= */}
         <section className="section section--beige">
           <div className="container historyCenter">
             <figure className="historyCenter__media">
               <img
                 className="historyCenter__img"
                 src={taverna}
-                alt={t("history.block2.imageAlt")}
+                alt={t("history.block2.imageAlt", { defaultValue: "Edificio histórico en L'Escala" })}
                 loading="lazy"
               />
             </figure>
@@ -106,7 +122,7 @@ export default function History() {
           </div>
         </section>
 
-        {/* FILOSOFÍA */}
+        {/* ================= FILOSOFÍA ================= */}
         <section className="section section--white">
           <div className="container philosophy">
             <h2 className="philosophy__title">{t("history.philosophy.title")}</h2>
@@ -118,7 +134,7 @@ export default function History() {
           </div>
         </section>
 
-        {/* CTA FINAL */}
+        {/* ================= CTA FINAL ================= */}
         <section className="section section--beige">
           <div className="container historyCTA">
             <p className="historyCTA__text">
@@ -127,7 +143,7 @@ export default function History() {
               {t("history.final.textLine2")}
             </p>
 
-            <Link className="btn btn--primary" to={`/${lang}/reservar`}>
+            <Link className="btn btn--primary" to={route(lang, "reservar")}>
               {t("history.final.cta")}
             </Link>
           </div>
