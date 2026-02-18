@@ -1,0 +1,106 @@
+.adminLoginPage {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--color-paper, #f6f3ee);
+}
+
+.adminLoginCard {
+  width: min(420px, 92vw);
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.10);
+}
+
+.adminLoginEyebrow {
+  margin: 0;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--color-muted, #777);
+}
+
+.adminLoginTitle {
+  margin: 10px 0 6px;
+  font-size: 30px;
+  font-family: var(--font-title, serif);
+  color: var(--color-ink, #1d1d1d);
+}
+
+.adminLoginSub {
+  margin: 0 0 14px;
+  color: var(--color-muted, #777);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.adminLoginError {
+  background: #fdeaea;
+  border: 1px solid rgba(181, 42, 42, 0.25);
+  color: #7f1b1b;
+  padding: 10px 12px;
+  border-radius: 12px;
+  margin: 10px 0 14px;
+  font-size: 13px;
+}
+
+.adminLoginForm {
+  display: grid;
+  gap: 10px;
+}
+
+.adminLoginForm label {
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--color-ink, #1d1d1d);
+}
+
+.adminLoginForm input {
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  outline: none;
+  background: #fff;
+}
+
+.adminLoginForm input:focus {
+  border-color: rgba(0, 0, 0, 0.28);
+}
+
+.adminLoginBtn {
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.15s ease;
+  margin-top: 6px;
+}
+
+.adminLoginBtn:hover {
+  opacity: 0.92;
+}
+
+.adminLoginBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.adminLoginGhost {
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  background: #fff;
+  cursor: pointer;
+}
+
+.adminLoginGhost:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
