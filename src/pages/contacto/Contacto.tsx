@@ -7,12 +7,23 @@ import ctaImg from "../../assets/images/espacios/sala.jpg";
 
 import SEO from "../../components/seo/SEO";
 
+/**
+ * ✅ Idiomas soportados en rutas
+ */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1];
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
+/**
+ * ✅ Helper para rutas internas multiidioma
+ */
+function route(lang: SupportedLang, path: string) {
+  const clean = path.replace(/^\/+/, "");
+  return `/${lang}/${clean}`;
 }
 
 export default function Contacto() {
@@ -22,6 +33,7 @@ export default function Contacto() {
 
   return (
     <>
+      {/* ✅ SEO Contacto */}
       <SEO
         title={t("contact.seo.title", { defaultValue: "Contacto | Taverna de la Sal" })}
         description={t("contact.seo.description", {
@@ -36,7 +48,7 @@ export default function Contacto() {
         <section
           className="contactHero"
           style={{ backgroundImage: `url(${heroContact})` }}
-          aria-label={t("contact.hero.aria")}
+          aria-label={t("contact.hero.aria", { defaultValue: "Contacto" })}
         >
           <div className="contactHero__overlay" />
 
@@ -52,7 +64,7 @@ export default function Contacto() {
         </section>
 
         {/* ================= CARDS ================= */}
-        <section className="contactCards" aria-label={t("contact.cards.aria")}>
+        <section className="contactCards" aria-label={t("contact.cards.aria", { defaultValue: "Contacto" })}>
           <div className="contactWrap">
             <div className="contactCards__grid">
               {/* Dirección */}
@@ -80,11 +92,15 @@ export default function Contacto() {
                   {t("contact.cards.address.line2")}
                 </p>
 
+                {/* ✅ Enlace externo seguro */}
                 <a
                   className="contactCard__btn"
                   href={t("contact.cards.address.mapsUrl")}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
+                  aria-label={t("contact.cards.address.mapsAria", {
+                    defaultValue: "Abrir mapa en una nueva pestaña",
+                  })}
                 >
                   {t("contact.cards.address.mapsCta")}
                 </a>
@@ -133,12 +149,18 @@ export default function Contacto() {
         </section>
 
         {/* ================= FORM ================= */}
-        <section className="contactForm" aria-label={t("contact.form.aria")}>
+        <section className="contactForm" aria-label={t("contact.form.aria", { defaultValue: "Formulario de contacto" })}>
           <div className="contactWrap contactWrap--narrow">
             <h2 className="contactSection__title">{t("contact.form.title")}</h2>
             <p className="contactSection__subtitle">{t("contact.form.subtitle")}</p>
 
-            <form className="formCard">
+            {/* ✅ Evita recargar la SPA si aún no conectas backend */}
+            <form
+              className="formCard"
+              onSubmit={(e) => {
+                e.preventDefault();
+              }}
+            >
               <div className="formGrid">
                 <div className="field">
                   <label className="label" htmlFor="name">
@@ -149,6 +171,7 @@ export default function Contacto() {
                     className="input"
                     placeholder={t("contact.form.fields.name.placeholder")}
                     required
+                    autoComplete="name"
                   />
                 </div>
 
@@ -162,6 +185,7 @@ export default function Contacto() {
                     type="email"
                     placeholder={t("contact.form.fields.email.placeholder")}
                     required
+                    autoComplete="email"
                   />
                 </div>
 
@@ -180,9 +204,7 @@ export default function Contacto() {
                 <div className="field field--full">
                   <label className="label" htmlFor="message">
                     {t("contact.form.fields.message.label")}{" "}
-                    <span className="label__muted">
-                      {t("contact.form.fields.message.optional")}
-                    </span>
+                    <span className="label__muted">{t("contact.form.fields.message.optional")}</span>
                   </label>
                   <textarea
                     id="message"
@@ -217,14 +239,14 @@ export default function Contacto() {
         </section>
 
         {/* ================= MAP ================= */}
-        <section className="contactMap" aria-label={t("contact.map.aria")}>
+        <section className="contactMap" aria-label={t("contact.map.aria", { defaultValue: "Mapa" })}>
           <div className="contactWrap">
             <h2 className="contactSection__title">{t("contact.map.title")}</h2>
             <p className="contactSection__subtitle">{t("contact.map.subtitle")}</p>
 
             <div className="mapFrame">
               <iframe
-                title={t("contact.map.iframeTitle")}
+                title={t("contact.map.iframeTitle", { defaultValue: "Mapa de ubicación" })}
                 src={t("contact.map.iframeSrc")}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -237,7 +259,7 @@ export default function Contacto() {
         <section
           className="contactCta"
           style={{ backgroundImage: `url(${ctaImg})` }}
-          aria-label={t("contact.cta.aria")}
+          aria-label={t("contact.cta.aria", { defaultValue: "Reservar" })}
         >
           <div className="contactCta__overlay" />
           <div className="contactCta__content">
@@ -249,7 +271,8 @@ export default function Contacto() {
               {t("contact.cta.title.line3")}
             </h2>
 
-            <Link className="contactCta__btn" to={`/${lang}/reservar`}>
+            {/* ✅ Link interno multiidioma */}
+            <Link className="contactCta__btn" to={route(lang, "reservar")}>
               {t("contact.cta.button")}
             </Link>
           </div>
