@@ -8,16 +8,34 @@ import marImg from "../../assets/images/restaurante/oxido.png";
 
 import SEO from "../../components/seo/SEO";
 
+/**
+ * ✅ Nombres de iconos permitidos (type-safe)
+ */
 type IconName = "fork" | "sun" | "waves" | "book" | "sparkle" | "parking" | "wifi";
 
+/**
+ * ✅ Idiomas soportados en rutas
+ * (ideal: mover a un utils compartido, pero aquí lo dejamos listo y consistente)
+ */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1];
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
+/**
+ * ✅ Helper para construir rutas internas multiidioma
+ */
+function route(lang: SupportedLang, path: string) {
+  const clean = path.replace(/^\/+/, "");
+  return `/${lang}/${clean}`;
+}
+
+/**
+ * ✅ Iconos inline SVG (sin dependencias)
+ */
 function Icon({ name }: { name: IconName }) {
   switch (name) {
     case "fork":
@@ -72,6 +90,7 @@ export default function Restaurante() {
 
   return (
     <>
+      {/* ✅ SEO específico de la página */}
       <SEO
         title={t("restaurant.seo.title", { defaultValue: "Restaurante | Taverna de la Sal" })}
         description={t("restaurant.seo.description", {
@@ -82,11 +101,11 @@ export default function Restaurante() {
       />
 
       <main className="restPage">
-        {/* HERO */}
+        {/* ================= HERO ================= */}
         <section
           className="restHero"
           style={{ backgroundImage: `url(${heroImg})` }}
-          aria-label={t("restaurant.hero.aria", { defaultValue: t("restaurant.hero.title") })}
+          aria-label={t("restaurant.hero.aria", { defaultValue: "Restaurante" })}
         >
           <div className="restHero__overlay" />
           <div className="container restHero__content">
@@ -95,7 +114,7 @@ export default function Restaurante() {
           </div>
         </section>
 
-        {/* BLOQUE 1: BRASA */}
+        {/* ================= BLOQUE 1: BRASA ================= */}
         <section className="section section--white">
           <div className="container restSplit">
             <div className="restSplit__body">
@@ -109,23 +128,32 @@ export default function Restaurante() {
               <p className="restP">{t("restaurant.brasa.text1")}</p>
               <p className="restP">{t("restaurant.brasa.text2")}</p>
 
+              {/* ✅ Enlace externo: usamos <a>, pero con seguridad completa */}
               <a
                 className="restBtnOutline"
                 href="https://docs.google.com/spreadsheets/d/1lL9lPbsDWwKE3LHYwamj8LwcEVSEZxYX/edit?usp=sharing&ouid=115921718176696134396&rtpof=true&sd=true"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
+                aria-label={t("restaurant.brasa.ctaAria", {
+                  defaultValue: "Abrir menú en una nueva pestaña",
+                })}
               >
                 {t("restaurant.brasa.cta")}
               </a>
             </div>
 
             <figure className="restSplit__media">
-              <img className="restImg" src={brasaImg} alt={t("restaurant.brasa.title")} loading="lazy" />
+              <img
+                className="restImg"
+                src={brasaImg}
+                alt={t("restaurant.brasa.imageAlt", { defaultValue: "Cocina a la brasa" })}
+                loading="lazy"
+              />
             </figure>
           </div>
         </section>
 
-        {/* BLOQUE 2: DESAYUNO */}
+        {/* ================= BLOQUE 2: DESAYUNO ================= */}
         <section className="section section--white">
           <div className="container restSplit restSplit--reverse">
             <div className="restSplit__body">
@@ -140,12 +168,17 @@ export default function Restaurante() {
             </div>
 
             <figure className="restSplit__media">
-              <img className="restImg" src={marImg} alt={t("restaurant.breakfast.title")} loading="lazy" />
+              <img
+                className="restImg"
+                src={marImg}
+                alt={t("restaurant.breakfast.imageAlt", { defaultValue: "Desayuno mediterráneo" })}
+                loading="lazy"
+              />
             </figure>
           </div>
         </section>
 
-        {/* BLOQUE 3: TERRAZA */}
+        {/* ================= BLOQUE 3: TERRAZA ================= */}
         <section className="section section--white">
           <div className="container restSplit">
             <div className="restSplit__body">
@@ -158,12 +191,17 @@ export default function Restaurante() {
             </div>
 
             <figure className="restSplit__media">
-              <img className="restImg" src={marImg} alt={t("restaurant.terrace.title")} loading="lazy" />
+              <img
+                className="restImg"
+                src={marImg}
+                alt={t("restaurant.terrace.imageAlt", { defaultValue: "Terraza junto al mar" })}
+                loading="lazy"
+              />
             </figure>
           </div>
         </section>
 
-        {/* BLOQUE 4: LECTURA */}
+        {/* ================= BLOQUE 4: LECTURA ================= */}
         <section className="section section--white">
           <div className="container restSplit restSplit--reverse">
             <div className="restSplit__body">
@@ -176,12 +214,17 @@ export default function Restaurante() {
             </div>
 
             <figure className="restSplit__media">
-              <img className="restImg" src={brasaImg} alt={t("restaurant.reading.title")} loading="lazy" />
+              <img
+                className="restImg"
+                src={brasaImg}
+                alt={t("restaurant.reading.imageAlt", { defaultValue: "Rincón de lectura" })}
+                loading="lazy"
+              />
             </figure>
           </div>
         </section>
 
-        {/* CARDS 3 */}
+        {/* ================= CARDS 3 ================= */}
         <section className="section section--white">
           <div className="container">
             <div className="restCards">
@@ -212,12 +255,12 @@ export default function Restaurante() {
           </div>
         </section>
 
-        {/* CTA FINAL BEIGE */}
+        {/* ================= CTA FINAL ================= */}
         <section className="section section--beige restFinal">
           <div className="container restFinal__inner">
             <h2 className="restFinal__title">{t("restaurant.final.title")}</h2>
 
-            <Link className="restFinal__btn" to={`/${lang}/reservar`}>
+            <Link className="restFinal__btn" to={route(lang, "reservar")}>
               {t("restaurant.final.cta")}
             </Link>
           </div>
