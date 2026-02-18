@@ -16,12 +16,23 @@ import pescado from "../../assets/images/pueblo/pescado.jpg";
 
 import SEO from "../../components/seo/SEO";
 
+/**
+ * ✅ Idiomas soportados en rutas
+ */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1];
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
+/**
+ * ✅ Helper para construir rutas internas multiidioma
+ */
+function route(lang: SupportedLang, path: string) {
+  const clean = path.replace(/^\/+/, "");
+  return `/${lang}/${clean}`;
 }
 
 export default function Area() {
@@ -31,6 +42,7 @@ export default function Area() {
 
   return (
     <>
+      {/* ✅ SEO página Entorno */}
       <SEO
         title={t("area.seo.title", { defaultValue: "Entorno | Taverna de la Sal" })}
         description={t("area.seo.description", {
@@ -45,7 +57,7 @@ export default function Area() {
         <section
           className="areaHero"
           style={{ backgroundImage: `url(${heroImg})` }}
-          aria-label={t("area.hero.aria")}
+          aria-label={t("area.hero.aria", { defaultValue: "Entorno" })}
         >
           <div className="areaHero__overlay" />
           <div className="areaHero__content">
@@ -58,7 +70,11 @@ export default function Area() {
         <section className="section section--white areaIntro">
           <div className="areaIntro__container">
             <div className="areaIntro__media">
-              <img src={antigua} alt={t("area.intro.imageAlt")} loading="lazy" />
+              <img
+                src={antigua}
+                alt={t("area.intro.imageAlt", { defaultValue: "L'Escala y su tradición marinera" })}
+                loading="lazy"
+              />
             </div>
 
             <div className="areaIntro__content">
@@ -85,7 +101,11 @@ export default function Area() {
 
             <div className="areaPlaces__grid">
               <article className="placeCard">
-                <img src={ruinas} alt={t("area.places.cards.0.imageAlt")} loading="lazy" />
+                <img
+                  src={ruinas}
+                  alt={t("area.places.cards.0.imageAlt", { defaultValue: "Ruinas de Empúries" })}
+                  loading="lazy"
+                />
                 <div className="placeCard__body">
                   <h3>
                     {t("area.places.cards.0.title")}{" "}
@@ -94,11 +114,15 @@ export default function Area() {
 
                   <p>{t("area.places.cards.0.text")}</p>
 
+                  {/* ✅ Enlace externo seguro */}
                   <a
                     className="placeCard__link"
                     href={t("area.places.cards.0.url")}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
+                    aria-label={t("area.places.cards.0.aria", {
+                      defaultValue: "Abrir enlace en una nueva pestaña",
+                    })}
                   >
                     {t("area.places.cards.0.linkText")} →
                   </a>
@@ -106,7 +130,11 @@ export default function Area() {
               </article>
 
               <article className="placeCard">
-                <img src={casco} alt={t("area.places.cards.1.imageAlt")} loading="lazy" />
+                <img
+                  src={casco}
+                  alt={t("area.places.cards.1.imageAlt", { defaultValue: "Casco antiguo" })}
+                  loading="lazy"
+                />
                 <div className="placeCard__body">
                   <h3>{t("area.places.cards.1.title")}</h3>
                   <p>{t("area.places.cards.1.text")}</p>
@@ -114,7 +142,11 @@ export default function Area() {
               </article>
 
               <article className="placeCard">
-                <img src={alfoli} alt={t("area.places.cards.2.imageAlt")} loading="lazy" />
+                <img
+                  src={alfoli}
+                  alt={t("area.places.cards.2.imageAlt", { defaultValue: "Alfolí de la Sal" })}
+                  loading="lazy"
+                />
                 <div className="placeCard__body">
                   <h3>{t("area.places.cards.2.title")}</h3>
                   <p>{t("area.places.cards.2.text")}</p>
@@ -122,7 +154,11 @@ export default function Area() {
               </article>
 
               <article className="placeCard">
-                <img src={museo} alt={t("area.places.cards.3.imageAlt")} loading="lazy" />
+                <img
+                  src={museo}
+                  alt={t("area.places.cards.3.imageAlt", { defaultValue: "Museo" })}
+                  loading="lazy"
+                />
                 <div className="placeCard__body">
                   <h3>{t("area.places.cards.3.title")}</h3>
                   <p>{t("area.places.cards.3.text")}</p>
@@ -136,7 +172,7 @@ export default function Area() {
         <section
           className="areaBanner"
           style={{ backgroundImage: `url(${banerplaya})` }}
-          aria-label={t("area.banner.aria")}
+          aria-label={t("area.banner.aria", { defaultValue: "Costa Brava" })}
         >
           <div className="areaBanner__overlay" />
           <div className="areaBanner__content">
@@ -174,11 +210,13 @@ export default function Area() {
               </article>
             </div>
 
+            {/* ✅ Enlace externo seguro */}
             <a
               className="areaBeaches__link"
               href={t("area.beaches.url")}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
+              aria-label={t("area.beaches.aria", { defaultValue: "Abrir enlace en una nueva pestaña" })}
             >
               {t("area.beaches.linkText")} →
             </a>
@@ -189,7 +227,11 @@ export default function Area() {
         <section className="section section--beige areaNature">
           <div className="areaNature__container">
             <div className="areaNature__media">
-              <img src={emporda} alt={t("area.nature.imageAlt")} loading="lazy" />
+              <img
+                src={emporda}
+                alt={t("area.nature.imageAlt", { defaultValue: "Paisajes del Empordà" })}
+                loading="lazy"
+              />
             </div>
 
             <div className="areaNature__content">
@@ -212,11 +254,15 @@ export default function Area() {
                   <h3>{t("area.nature.items.2.title")}</h3>
                   <p>{t("area.nature.items.2.text")}</p>
 
+                  {/* ✅ Enlace externo seguro */}
                   <a
                     className="areaNature__link"
                     href={t("area.nature.items.2.url")}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
+                    aria-label={t("area.nature.items.2.aria", {
+                      defaultValue: "Abrir enlace en una nueva pestaña",
+                    })}
                   >
                     {t("area.nature.items.2.linkText")} →
                   </a>
@@ -237,8 +283,16 @@ export default function Area() {
 
             <div className="areaExperiences__layout">
               <div className="areaExperiences__media">
-                <img src={kayak} alt={t("area.experiences.images.0")} loading="lazy" />
-                <img src={barcos} alt={t("area.experiences.images.1")} loading="lazy" />
+                <img
+                  src={kayak}
+                  alt={t("area.experiences.images.0", { defaultValue: "Kayak en la Costa Brava" })}
+                  loading="lazy"
+                />
+                <img
+                  src={barcos}
+                  alt={t("area.experiences.images.1", { defaultValue: "Barcos y mar" })}
+                  loading="lazy"
+                />
               </div>
 
               <div className="areaExperiences__list">
@@ -298,13 +352,18 @@ export default function Area() {
 
               <p className="areaFood__italic">{t("area.food.italic")}</p>
 
-              <Link className="areaFood__btn" to={`/${lang}/restaurante`}>
+              {/* ✅ Link interno multiidioma */}
+              <Link className="areaFood__btn" to={route(lang, "restaurante")}>
                 {t("area.food.button")} <span aria-hidden="true">→</span>
               </Link>
             </div>
 
             <div className="areaFood__media">
-              <img src={pescado} alt={t("area.food.imageAlt")} loading="lazy" />
+              <img
+                src={pescado}
+                alt={t("area.food.imageAlt", { defaultValue: "Gastronomía local" })}
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
