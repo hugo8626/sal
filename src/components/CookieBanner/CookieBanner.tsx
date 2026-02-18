@@ -16,9 +16,7 @@ type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
   const first = pathname.split("/")[1]?.toLowerCase() ?? "";
-  return (SUPPORTED as readonly string[]).includes(first)
-    ? (first as SupportedLang)
-    : "es";
+  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
 function readPrefs(): CookiePrefs | null {
@@ -40,60 +38,43 @@ export default function CookieBanner() {
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
+  // Leemos prefs UNA VEZ
   const [initialPrefs] = useState<CookiePrefs | null>(() => readPrefs());
+
+  // Visible si NO hay prefs
   const [visible, setVisible] = useState(() => !initialPrefs);
+
+  // Pantalla configuración
   const [showSettings, setShowSettings] = useState(false);
 
-  const [analytics, setAnalytics] = useState<boolean>(
-    () => initialPrefs?.analytics ?? false
-  );
-  const [marketing, setMarketing] = useState<boolean>(
-    () => initialPrefs?.marketing ?? false
-  );
+  // Toggles iniciales desde prefs
+  const [analytics, setAnalytics] = useState<boolean>(() => initialPrefs?.analytics ?? false);
+  const [marketing, setMarketing] = useState<boolean>(() => initialPrefs?.marketing ?? false);
 
+  // Si ya existían prefs, notificamos (sin tocar state aquí)
   useEffect(() => {
     if (!initialPrefs) return;
-    window.dispatchEvent(
-      new CustomEvent("cookie-consent-updated", { detail: initialPrefs })
-    );
+    window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: initialPrefs }));
   }, [initialPrefs]);
 
   const acceptAll = () => {
-    const prefs: CookiePrefs = {
-      necessary: true,
-      analytics: true,
-      marketing: true,
-    };
+    const prefs: CookiePrefs = { necessary: true, analytics: true, marketing: true };
     savePrefs(prefs);
-    window.dispatchEvent(
-      new CustomEvent("cookie-consent-updated", { detail: prefs })
-    );
+    window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: prefs }));
     setVisible(false);
   };
 
   const rejectAll = () => {
-    const prefs: CookiePrefs = {
-      necessary: true,
-      analytics: false,
-      marketing: false,
-    };
+    const prefs: CookiePrefs = { necessary: true, analytics: false, marketing: false };
     savePrefs(prefs);
-    window.dispatchEvent(
-      new CustomEvent("cookie-consent-updated", { detail: prefs })
-    );
+    window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: prefs }));
     setVisible(false);
   };
 
   const saveSelection = () => {
-    const prefs: CookiePrefs = {
-      necessary: true,
-      analytics,
-      marketing,
-    };
+    const prefs: CookiePrefs = { necessary: true, analytics, marketing };
     savePrefs(prefs);
-    window.dispatchEvent(
-      new CustomEvent("cookie-consent-updated", { detail: prefs })
-    );
+    window.dispatchEvent(new CustomEvent("cookie-consent-updated", { detail: prefs }));
     setVisible(false);
   };
 
@@ -104,38 +85,38 @@ export default function CookieBanner() {
       className="cookieBanner"
       role="dialog"
       aria-modal="true"
+      aria-live="polite"
       aria-labelledby="cookieBannerTitle"
       aria-describedby="cookieBannerDesc"
     >
       <div className="cookieBanner__box">
         <div className="cookieBanner__text">
           <p id="cookieBannerTitle" className="cookieBanner__title">
-            {t("cookiesBanner.title")}
+            {t("cookiesBanner.title", { defaultValue: "Cookies" })}
           </p>
 
           <p id="cookieBannerDesc" className="cookieBanner__desc">
-            {t("cookiesBanner.description")}
+            {t("cookiesBanner.description", {
+              defaultValue:
+                "Usamos cookies necesarias para que la web funcione y, con tu permiso, cookies de análisis y marketing. Puedes aceptar, rechazar o configurar.",
+            })}
           </p>
 
           <p className="cookieBanner__links">
             <Link to={`/${lang}/cookies`}>
-              {t("cookiesBanner.links.cookies")}
+              {t("cookiesBanner.links.cookies", { defaultValue: "Política de Cookies" })}
             </Link>
             <span> · </span>
             <Link to={`/${lang}/privacidad`}>
-              {t("cookiesBanner.links.privacy")}
+              {t("cookiesBanner.links.privacy", { defaultValue: "Privacidad" })}
             </Link>
           </p>
         </div>
 
         {!showSettings ? (
           <div className="cookieBanner__actions">
-            <button
-              className="cookieBtn cookieBtn--ghost"
-              type="button"
-              onClick={rejectAll}
-            >
-              {t("cookiesBanner.buttons.reject")}
+            <button className="cookieBtn cookieBtn--ghost" type="button" onClick={rejectAll}>
+              {t("cookiesBanner.actions.reject", { defaultValue: "Rechazar" })}
             </button>
 
             <button
@@ -143,15 +124,11 @@ export default function CookieBanner() {
               type="button"
               onClick={() => setShowSettings(true)}
             >
-              {t("cookiesBanner.buttons.configure")}
+              {t("cookiesBanner.actions.settings", { defaultValue: "Configurar" })}
             </button>
 
-            <button
-              className="cookieBtn cookieBtn--primary"
-              type="button"
-              onClick={acceptAll}
-            >
-              {t("cookiesBanner.buttons.accept")}
+            <button className="cookieBtn cookieBtn--primary" type="button" onClick={acceptAll}>
+              {t("cookiesBanner.actions.accept", { defaultValue: "Aceptar" })}
             </button>
           </div>
         ) : (
@@ -159,44 +136,52 @@ export default function CookieBanner() {
             <div className="cookieRow">
               <div>
                 <p className="cookieRow__name">
-                  {t("cookiesBanner.categories.necessary.title")}
+                  {t("cookiesBanner.categories.necessary.name", { defaultValue: "Necesarias" })}
                 </p>
                 <p className="cookieRow__hint">
-                  {t("cookiesBanner.categories.necessary.hint")}
+                  {t("cookiesBanner.categories.necessary.hint", {
+                    defaultValue: "Siempre activas para el funcionamiento básico.",
+                  })}
                 </p>
               </div>
-              <input type="checkbox" checked disabled />
+              <input type="checkbox" checked disabled aria-label="Cookies necesarias (siempre activas)" />
             </div>
 
             <div className="cookieRow">
               <div>
                 <p className="cookieRow__name">
-                  {t("cookiesBanner.categories.analytics.title")}
+                  {t("cookiesBanner.categories.analytics.name", { defaultValue: "Analítica" })}
                 </p>
                 <p className="cookieRow__hint">
-                  {t("cookiesBanner.categories.analytics.hint")}
+                  {t("cookiesBanner.categories.analytics.hint", {
+                    defaultValue: "Medir tráfico y uso (ej. Analytics).",
+                  })}
                 </p>
               </div>
               <input
                 type="checkbox"
                 checked={analytics}
                 onChange={(e) => setAnalytics(e.target.checked)}
+                aria-label="Cookies de analítica"
               />
             </div>
 
             <div className="cookieRow">
               <div>
                 <p className="cookieRow__name">
-                  {t("cookiesBanner.categories.marketing.title")}
+                  {t("cookiesBanner.categories.marketing.name", { defaultValue: "Marketing" })}
                 </p>
                 <p className="cookieRow__hint">
-                  {t("cookiesBanner.categories.marketing.hint")}
+                  {t("cookiesBanner.categories.marketing.hint", {
+                    defaultValue: "Publicidad y remarketing.",
+                  })}
                 </p>
               </div>
               <input
                 type="checkbox"
                 checked={marketing}
                 onChange={(e) => setMarketing(e.target.checked)}
+                aria-label="Cookies de marketing"
               />
             </div>
 
@@ -206,23 +191,15 @@ export default function CookieBanner() {
                 type="button"
                 onClick={() => setShowSettings(false)}
               >
-                {t("cookiesBanner.buttons.back")}
+                {t("cookiesBanner.actions.back", { defaultValue: "Volver" })}
               </button>
 
-              <button
-                className="cookieBtn cookieBtn--ghost"
-                type="button"
-                onClick={rejectAll}
-              >
-                {t("cookiesBanner.buttons.rejectAll")}
+              <button className="cookieBtn cookieBtn--ghost" type="button" onClick={rejectAll}>
+                {t("cookiesBanner.actions.rejectAll", { defaultValue: "Rechazar todo" })}
               </button>
 
-              <button
-                className="cookieBtn cookieBtn--primary"
-                type="button"
-                onClick={saveSelection}
-              >
-                {t("cookiesBanner.buttons.save")}
+              <button className="cookieBtn cookieBtn--primary" type="button" onClick={saveSelection}>
+                {t("cookiesBanner.actions.save", { defaultValue: "Guardar" })}
               </button>
             </div>
           </div>
