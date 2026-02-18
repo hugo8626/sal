@@ -1,51 +1,52 @@
 import "./legal.css";
+import { useTranslation } from "react-i18next";
+
 export default function Cookies() {
+  const { t } = useTranslation();
+
   return (
     <main className="legalPage">
       <div className="container">
-        <h1>Política de Cookies</h1>
+        <h1>{t("legal.cookies.title")}</h1>
 
-        <h2>1. ¿Qué son las cookies?</h2>
-        <p>
-          Las cookies son pequeños archivos que se almacenan en el navegador del usuario
-          para facilitar la navegación y mejorar la experiencia.
-        </p>
+        <p>{t("legal.cookies.intro")}</p>
 
-        <h2>2. Tipos de cookies utilizadas</h2>
+        <h2>{t("legal.cookies.s1.title")}</h2>
+        <p>{t("legal.cookies.s1.p1")}</p>
+
+        <h2>{t("legal.cookies.s2.title")}</h2>
+
+        <h3>{t("legal.cookies.s2.tech.title")}</h3>
+        <p>{t("legal.cookies.s2.tech.p1")}</p>
+
+        <h3>{t("legal.cookies.s2.analytics.title")}</h3>
+        <p>{t("legal.cookies.s2.analytics.p1")}</p>
+
+        <h3>{t("legal.cookies.s2.third.title")}</h3>
+        <p>{t("legal.cookies.s2.third.p1")}</p>
+
+        <h2>{t("legal.cookies.s3.title")}</h2>
+        <p>{t("legal.cookies.s3.p1")}</p>
+
+        <h2>{t("legal.cookies.s4.title")}</h2>
+        <p>{t("legal.cookies.s4.p1")}</p>
+
         <ul>
-          <li>
-            <strong>Cookies técnicas:</strong> necesarias para el funcionamiento de la web.
-          </li>
-          <li>
-            <strong>Cookies de análisis:</strong> permiten medir el tráfico y el uso del sitio
-            (por ejemplo, Google Analytics).
-          </li>
-          <li>
-            <strong>Cookies de terceros:</strong> utilizadas por servicios externos como
-            pasarelas de pago o mapas.
-          </li>
+          <li>{t("legal.cookies.s4.list.0")}</li>
+          <li>{t("legal.cookies.s4.list.1")}</li>
+          <li>{t("legal.cookies.s4.list.2")}</li>
+          <li>{t("legal.cookies.s4.list.3")}</li>
         </ul>
 
-        <h2>3. Gestión de cookies</h2>
-        <p>
-          El usuario puede configurar su navegador para aceptar, bloquear o eliminar las
-          cookies instaladas. La desactivación de cookies puede afectar al correcto
-          funcionamiento del sitio.
-        </p>
+        <p>{t("legal.cookies.s4.p2")}</p>
 
-        <h2>4. Consentimiento</h2>
-        <p>
-          Al acceder a este sitio web, el usuario acepta el uso de cookies conforme a la
-          presente política. Puede retirar su consentimiento en cualquier momento.
-        </p>
+        <h2>{t("legal.cookies.s5.title")}</h2>
+        <p>{t("legal.cookies.s5.p1")}</p>
 
-        <h2>5. Más información</h2>
-        <p>
-          Para más información sobre el tratamiento de datos personales, consulte nuestra
-          Política de Privacidad.
-        </p>
+        <h2>{t("legal.cookies.s6.title")}</h2>
+        <p>{t("legal.cookies.s6.p1")}</p>
 
-        <p>Última actualización: [FECHA]</p>
+        <p className="legalUpdate">{t("legal.cookies.updated")}</p>
       </div>
     </main>
   );

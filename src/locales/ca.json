@@ -617,5 +617,162 @@
       "phone": "+34 972 000 000"
     }
   }
+  ,
+  "legal": {
+    "cookies": {
+      "title": "Política de Cookies",
+      "intro": "En compliment del que disposa l’article 22.2 de la Llei 34/2002 (LSSI-CE), aquest document informa sobre l’ús de cookies al lloc web [DOMINI].",
+      "s1": {
+        "title": "1. Què són les cookies?",
+        "p1": "Les cookies són petits arxius de text que s’emmagatzemen al navegador de l’usuari quan visita un lloc web. Serveixen per facilitar la navegació, recordar preferències i, en alguns casos, obtenir informació estadística."
+      },
+      "s2": {
+        "title": "2. Tipus de cookies utilitzades",
+        "tech": {
+          "title": "Cookies tècniques (necessàries)",
+          "p1": "Són imprescindibles per al funcionament correcte del lloc web, com la gestió de la navegació o l’accés a zones segures. No requereixen consentiment previ."
+        },
+        "analytics": {
+          "title": "Cookies d’anàlisi",
+          "p1": "Permeten mesurar el trànsit i analitzar l’ús del lloc per millorar l’experiència i els serveis oferts. Requereixen consentiment."
+        },
+        "third": {
+          "title": "Cookies de tercers",
+          "p1": "El lloc pot integrar serveis externs (per exemple, mapes o eines d’analítica) que poden instal·lar cookies pròpies. El tractament es regeix per la política del proveïdor corresponent."
+        }
+      },
+      "s3": {
+        "title": "3. Base legal",
+        "p1": "La base legal per a l’ús de cookies no necessàries és el consentiment de l’usuari, atorgat mitjançant el banner o panell de configuració. El consentiment es pot retirar en qualsevol moment."
+      },
+      "s4": {
+        "title": "4. Com configurar o desactivar les cookies",
+        "p1": "L’usuari pot permetre, bloquejar o eliminar les cookies mitjançant la configuració del navegador:",
+        "list": ["Google Chrome", "Mozilla Firefox", "Safari", "Microsoft Edge"],
+        "p2": "La desactivació de determinades cookies pot afectar el funcionament correcte del lloc web."
+      },
+      "s5": {
+        "title": "5. Identificació del responsable",
+        "p1": "Responsable del tractament: [RAÓ SOCIAL] · NIF/CIF: [NIF/CIF] · Adreça: [ADREÇA COMPLETA] · Email: [EMAIL]"
+      },
+      "s6": {
+        "title": "6. Més informació",
+        "p1": "Per a més informació sobre el tractament de dades personals, consulti la nostra Política de Privacitat."
+      },
+      "updated": "Darrera actualització: [DATA]"
+    }
+  }
+  ,
+  
+  "legalNotice": {
+    "seo": {
+      "title": "Avís legal | Taverna de la Sal",
+      "description": "Informació legal i condicions d’ús del lloc web."
+    },
+    "title": "Avís legal",
+    "intro": "D’acord amb l’article 10 de la Llei 34/2002 de Serveis de la Societat de la Informació i Comerç Electrònic (LSSI-CE), s’informa del següent:",
+    "sections": {
+      "identification": {
+        "title": "1. Dades identificatives",
+        "content": "Titular: [NOM LEGAL DE L’HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicili: [ADREÇA COMPLETA]\nEmail: [EMAIL]\nTelèfon: [TELÈFON]"
+      },
+      "object": {
+        "title": "2. Objecte",
+        "content": "Aquest lloc web té com a finalitat oferir informació sobre els serveis de l’establiment, facilitar el contacte amb els usuaris i permetre la gestió de reserves."
+      },
+      "conditions": {
+        "title": "3. Condicions d’ús",
+        "content": "L’accés i ús d’aquest lloc web atribueix la condició d’usuari i implica l’acceptació plena de les presents condicions."
+      },
+      "intellectual": {
+        "title": "4. Propietat intel·lectual i industrial",
+        "content": "Tots els continguts del lloc web són propietat del titular o disposen de llicència d’ús. Queda prohibida la seva reproducció sense autorització expressa."
+      },
+      "liability": {
+        "title": "5. Responsabilitat",
+        "content": "El titular no es responsabilitza del mal ús dels continguts ni de possibles errors tècnics o interrupcions del servei."
+      },
+      "externalLinks": {
+        "title": "6. Enllaços externs",
+        "content": "Aquest lloc web pot contenir enllaços a llocs de tercers. El titular no assumeix cap responsabilitat sobre els seus continguts."
+      },
+      "dataProtection": {
+        "title": "7. Protecció de dades",
+        "content": "El tractament de les dades personals es regeix per la Política de Privacitat del lloc web."
+      },
+      "law": {
+        "title": "8. Legislació aplicable",
+        "content": "La relació entre l’usuari i el titular es regirà per la normativa vigent a Espanya. Per a la resolució de conflictes, les parts es sotmeten als jutjats del domicili del titular."
+      }
+    },
+    "updated": "Última actualització: [DATA]"
+  },
+  
+  "privacy": {
+    "seo": {
+      "title": "Política de privacitat | Taverna de la Sal",
+      "description": "Informació sobre el tractament de dades personals d’acord amb el RGPD."
+    },
+    "title": "Política de privacitat",
+    "intro": "D’acord amb el Reglament (UE) 2016/679 (RGPD) i la normativa aplicable, informem els usuaris sobre el tractament de les seves dades personals.",
+    "sections": {
+      "controller": {
+        "title": "1. Responsable del tractament",
+        "content": "Titular: [NOM LEGAL DE L’HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicili: [ADREÇA COMPLETA]\nEmail: [EMAIL]\nTelèfon: [TELÈFON]"
+      },
+      "purpose": {
+        "title": "2. Finalitat del tractament",
+        "intro": "Les dades personals que recollim s’utilitzen per:",
+        "items": [
+          "Gestionar reserves i estades.",
+          "Respondre consultes enviades mitjançant el formulari de contacte.",
+          "Enviar comunicacions relacionades amb la reserva.",
+          "Complir obligacions legals."
+        ]
+      },
+      "legalBasis": {
+        "title": "3. Base legal",
+        "intro": "La base jurídica del tractament és:",
+        "items": [
+          "L’execució d’un contracte (reserva hotelera).",
+          "El consentiment de l’usuari.",
+          "El compliment d’obligacions legals."
+        ]
+      },
+      "retention": {
+        "title": "4. Conservació de les dades",
+        "content": "Les dades es conservaran durant el temps necessari per complir la finalitat per a la qual van ser recollides i per atendre possibles responsabilitats legals."
+      },
+      "recipients": {
+        "title": "5. Destinataris",
+        "content": "No es cediran dades a tercers excepte per obligació legal o quan sigui necessari per a la prestació del servei."
+      },
+      "rights": {
+        "title": "6. Drets de l’usuari",
+        "intro": "L’usuari té dret a:",
+        "items": [
+          "Accedir a les seves dades personals.",
+          "Rectificar dades inexactes.",
+          "Sol·licitar la supressió de les dades.",
+          "Limitar o oposar-se al tractament.",
+          "Sol·licitar la portabilitat de les dades."
+        ],
+        "contact": "Pots exercir els teus drets enviant una sol·licitud a [EMAIL]."
+      },
+      "security": {
+        "title": "7. Seguretat",
+        "content": "Adoptem mesures tècniques i organitzatives adequades per garantir la seguretat i confidencialitat de les dades personals."
+      },
+      "changes": {
+        "title": "8. Canvis en la política",
+        "content": "Ens reservem el dret de modificar aquesta política per adaptar-la a novetats legislatives o jurisprudencials."
+      }
+    },
+    "updated": "Última actualització: [DATA]"
+  }
+
+
+
+
 
 }

@@ -2,36 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- HOME -->
   <url>
     <loc>https://tudominio.com/es</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr"/>
     <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es"/>
   </url>
 
+  <!-- HABITACIONES -->
   <url>
     <loc>https://tudominio.com/es/habitaciones</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es/habitaciones"/>
   </url>
 
+  <!-- RESTAURANTE -->
   <url>
     <loc>https://tudominio.com/es/restaurante</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es/restaurante"/>
   </url>
 
+  <!-- HISTORIA -->
   <url>
     <loc>https://tudominio.com/es/historia</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es/historia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en/historia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr/historia"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca/historia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es/historia"/>
   </url>
 
+  <!-- ENTORNO -->
   <url>
     <loc>https://tudominio.com/es/entorno</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es/entorno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en/entorno"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr/entorno"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca/entorno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es/entorno"/>
   </url>
 
+  <!-- CONTACTO -->
   <url>
     <loc>https://tudominio.com/es/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es/contacto"/>
   </url>
 
+  <!-- RESERVAR -->
   <url>
     <loc>https://tudominio.com/es/reservar</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://tudominio.com/es/reservar"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tudominio.com/en/reservar"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://tudominio.com/fr/reservar"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://tudominio.com/ca/reservar"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tudominio.com/es/reservar"/>
   </url>
 
 </urlset>

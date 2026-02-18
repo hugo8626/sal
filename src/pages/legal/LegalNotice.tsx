@@ -1,59 +1,54 @@
 import "./legal.css";
-
+import { useTranslation } from "react-i18next";
+import SEO from "../../components/seo/SEO";
 
 export default function LegalNotice() {
+  const { t } = useTranslation();
+
   return (
-    <main className="legalPage">
-      <div className="container">
-        <h1>Aviso Legal</h1>
+    <>
+      <SEO
+        title={t("legalNotice.seo.title")}
+        description={t("legalNotice.seo.description")}
+      />
 
-        <h2>1. Datos identificativos</h2>
-        <p>
-          En cumplimiento del artículo 10 de la Ley 34/2002 (LSSI-CE), se informa:
-        </p>
+      <main className="legalPage">
+        <div className="container">
 
-        <p>
-          Titular: [NOMBRE DEL HOTEL O EMPRESA] <br />
-          CIF/NIF: [CIF] <br />
-          Domicilio: [DIRECCIÓN COMPLETA] <br />
-          Email: [EMAIL DE CONTACTO] <br />
-          Teléfono: [TELÉFONO]
-        </p>
+          <h1>{t("legalNotice.title")}</h1>
 
-        <h2>2. Objeto</h2>
-        <p>
-          El presente sitio web tiene como finalidad ofrecer información sobre los servicios
-          del hotel, así como permitir la realización de reservas y contacto con el establecimiento.
-        </p>
+          <p>{t("legalNotice.intro")}</p>
 
-        <h2>3. Condiciones de uso</h2>
-        <p>
-          El acceso y uso de esta web atribuye la condición de usuario e implica la aceptación
-          plena de las presentes condiciones.
-        </p>
+          <h2>{t("legalNotice.sections.identification.title")}</h2>
+          <p>
+            {t("legalNotice.sections.identification.content")}
+          </p>
 
-        <h2>4. Propiedad intelectual</h2>
-        <p>
-          Todos los contenidos del sitio web (textos, imágenes, diseño, código fuente,
-          logotipos, etc.) son propiedad del titular o cuentan con licencia de uso.
-          Queda prohibida su reproducción sin autorización expresa.
-        </p>
+          <h2>{t("legalNotice.sections.object.title")}</h2>
+          <p>{t("legalNotice.sections.object.content")}</p>
 
-        <h2>5. Responsabilidad</h2>
-        <p>
-          El titular no se responsabiliza del mal uso de los contenidos de la web ni de
-          posibles errores técnicos o interrupciones del servicio.
-        </p>
+          <h2>{t("legalNotice.sections.conditions.title")}</h2>
+          <p>{t("legalNotice.sections.conditions.content")}</p>
 
-        <h2>6. Legislación aplicable</h2>
-        <p>
-          La relación entre el usuario y el titular se regirá por la normativa vigente
-          en España. Para la resolución de conflictos, las partes se someten a los juzgados
-          y tribunales del domicilio del titular.
-        </p>
+          <h2>{t("legalNotice.sections.intellectual.title")}</h2>
+          <p>{t("legalNotice.sections.intellectual.content")}</p>
 
-        <p>Última actualización: [FECHA]</p>
-      </div>
-    </main>
+          <h2>{t("legalNotice.sections.liability.title")}</h2>
+          <p>{t("legalNotice.sections.liability.content")}</p>
+
+          <h2>{t("legalNotice.sections.externalLinks.title")}</h2>
+          <p>{t("legalNotice.sections.externalLinks.content")}</p>
+
+          <h2>{t("legalNotice.sections.dataProtection.title")}</h2>
+          <p>{t("legalNotice.sections.dataProtection.content")}</p>
+
+          <h2>{t("legalNotice.sections.law.title")}</h2>
+          <p>{t("legalNotice.sections.law.content")}</p>
+
+          <p>{t("legalNotice.updated")}</p>
+
+        </div>
+      </main>
+    </>
   );
 }

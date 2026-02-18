@@ -617,6 +617,166 @@
       "phone": "+34 972 000 000"
     }
   }
+  ,
+  "legal": {
+    "cookies": {
+      "title": "Política de Cookies",
+      "intro": "En cumplimiento de lo dispuesto en el artículo 22.2 de la Ley 34/2002 (LSSI-CE), este documento informa sobre el uso de cookies en el sitio web [DOMINIO].",
+      "s1": {
+        "title": "1. ¿Qué son las cookies?",
+        "p1": "Las cookies son pequeños archivos de texto que se almacenan en el navegador del usuario cuando visita un sitio web. Sirven para facilitar la navegación, recordar preferencias y, en algunos casos, obtener información estadística."
+      },
+      "s2": {
+        "title": "2. Tipos de cookies utilizadas",
+        "tech": {
+          "title": "Cookies técnicas (necesarias)",
+          "p1": "Son imprescindibles para el funcionamiento correcto del sitio web, como la gestión de la navegación o el acceso a áreas seguras. No requieren consentimiento previo."
+        },
+        "analytics": {
+          "title": "Cookies de análisis",
+          "p1": "Permiten medir el tráfico y analizar el uso del sitio para mejorar la experiencia y los servicios ofrecidos. Requieren consentimiento."
+        },
+        "third": {
+          "title": "Cookies de terceros",
+          "p1": "El sitio puede integrar servicios externos (por ejemplo, mapas o herramientas de analítica) que pueden instalar cookies propias. El tratamiento se rige por la política del proveedor correspondiente."
+        }
+      },
+      "s3": {
+        "title": "3. Base legal",
+        "p1": "La base legal para el uso de cookies no necesarias es el consentimiento del usuario, otorgado mediante el banner o panel de configuración. El consentimiento puede retirarse en cualquier momento."
+      },
+      "s4": {
+        "title": "4. Cómo configurar o desactivar las cookies",
+        "p1": "El usuario puede permitir, bloquear o eliminar las cookies mediante la configuración del navegador:",
+        "list": ["Google Chrome", "Mozilla Firefox", "Safari", "Microsoft Edge"],
+        "p2": "La desactivación de determinadas cookies puede afectar al correcto funcionamiento del sitio web."
+      },
+      "s5": {
+        "title": "5. Identificación del responsable",
+        "p1": "Responsable del tratamiento: [NOMBRE O RAZÓN SOCIAL] · NIF/CIF: [NIF/CIF] · Dirección: [DIRECCIÓN COMPLETA] · Email: [EMAIL]"
+      },
+      "s6": {
+        "title": "6. Más información",
+        "p1": "Para más información sobre el tratamiento de datos personales, consulte nuestra Política de Privacidad."
+      },
+      "updated": "Última actualización: [FECHA]"
+    }
+  }
+  ,
+  "legalNotice": {
+    "seo": {
+      "title": "Legal Notice | Taverna de la Sal",
+      "description": "Legal information and terms of use of the website."
+    },
+    "title": "Legal Notice",
+    "intro": "In accordance with Article 10 of Law 34/2002 on Information Society Services and Electronic Commerce (LSSI-CE), the following information is provided:",
+    "sections": {
+      "identification": {
+        "title": "1. Identification details",
+        "content": "Owner: [LEGAL NAME OF THE HOTEL OR COMPANY]\nTax ID: [CIF / NIF]\nRegistered address: [FULL ADDRESS]\nEmail: [EMAIL]\nPhone: [PHONE]"
+      },
+      "object": {
+        "title": "2. Purpose",
+        "content": "This website aims to provide information about the establishment’s services, facilitate communication with users and allow reservation management."
+      },
+      "conditions": {
+        "title": "3. Terms of use",
+        "content": "Accessing and using this website grants user status and implies full acceptance of these conditions. The user agrees to use the site lawfully."
+      },
+      "intellectual": {
+        "title": "4. Intellectual and industrial property",
+        "content": "All website content is owned by the holder or used under license. Reproduction without express authorization is prohibited."
+      },
+      "liability": {
+        "title": "5. Liability",
+        "content": "The holder is not responsible for misuse of the contents or possible technical errors or service interruptions."
+      },
+      "externalLinks": {
+        "title": "6. External links",
+        "content": "This website may contain links to third-party sites. The holder assumes no responsibility for their content."
+      },
+      "dataProtection": {
+        "title": "7. Data protection",
+        "content": "The processing of personal data is governed by the website’s Privacy Policy."
+      },
+      "law": {
+        "title": "8. Applicable law",
+        "content": "The relationship between the user and the holder shall be governed by Spanish law. Any disputes shall be submitted to the courts of the holder’s domicile."
+      }
+    },
+    "updated": "Last update: [DATE]"
+  }
+  ,
+  
+  "privacy": {
+    "seo": {
+      "title": "Política de Privacidad | Taverna de la Sal",
+      "description": "Información sobre el tratamiento de datos personales conforme al RGPD."
+    },
+    "title": "Política de Privacidad",
+    "intro": "En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), informamos sobre el tratamiento de sus datos personales.",
+    "sections": {
+      "controller": {
+        "title": "1. Responsable del tratamiento",
+        "content": "Titular: [NOMBRE LEGAL DEL HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicilio: [DIRECCIÓN COMPLETA]\nEmail: [EMAIL]\nTeléfono: [TELÉFONO]"
+      },
+      "purpose": {
+        "title": "2. Finalidad del tratamiento",
+        "intro": "Los datos personales se utilizan para:",
+        "items": [
+          "Gestionar reservas y estancias.",
+          "Responder consultas enviadas mediante el formulario de contacto.",
+          "Enviar comunicaciones relacionadas con la reserva.",
+          "Cumplir obligaciones legales."
+        ]
+      },
+      "legalBasis": {
+        "title": "3. Base legal",
+        "intro": "La base jurídica del tratamiento es:",
+        "items": [
+          "La ejecución de un contrato (reserva hotelera).",
+          "El consentimiento del usuario.",
+          "El cumplimiento de obligaciones legales."
+        ]
+      },
+      "retention": {
+        "title": "4. Conservación de los datos",
+        "content": "Los datos se conservarán durante el tiempo necesario para cumplir con la finalidad para la que fueron recabados y atender posibles responsabilidades legales."
+      },
+      "recipients": {
+        "title": "5. Destinatarios",
+        "content": "No se cederán datos a terceros salvo obligación legal o cuando sea necesario para la prestación del servicio."
+      },
+      "rights": {
+        "title": "6. Derechos del usuario",
+        "intro": "El usuario tiene derecho a:",
+        "items": [
+          "Acceder a sus datos personales.",
+          "Rectificar datos inexactos.",
+          "Solicitar su supresión.",
+          "Limitar u oponerse al tratamiento.",
+          "Solicitar la portabilidad de sus datos."
+        ],
+        "contact": "Puede ejercer sus derechos enviando una solicitud al correo electrónico [EMAIL]."
+      },
+      "security": {
+        "title": "7. Seguridad",
+        "content": "Se adoptan las medidas técnicas y organizativas necesarias para garantizar la seguridad y confidencialidad de los datos personales."
+      },
+      "changes": {
+        "title": "8. Cambios en la política",
+        "content": "Nos reservamos el derecho de modificar la presente política para adaptarla a novedades legislativas o jurisprudenciales."
+      }
+    },
+    "updated": "Última actualización: [FECHA]"
+  }
+
+
+  
+
+
+
+
 
 
 
