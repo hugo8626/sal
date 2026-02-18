@@ -1,4 +1,5 @@
 import "./Home.css";
+import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import SEO from "../../components/seo/SEO";
@@ -11,12 +12,26 @@ import azoteaimg from "../../assets/images/heroimg/terraza.png";
 import restauranteimg from "../../assets/images/restaurante/oxido.png";
 import salaimg from "../../assets/images/espacios/IMG-20240419-WA0062.jpg";
 
+/**
+ * ✅ Idiomas soportados en rutas (/es/..., /en/..., etc.)
+ * Si no encuentra un idioma válido en la URL, cae a "es".
+ */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1];
+  // pathname: "/es/habitaciones" → ["", "es", "habitaciones"]
+  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
+}
+
+/**
+ * ✅ Helper para construir rutas internas multiidioma
+ * path debe venir SIN "/" inicial, ej: "reservar", "habitaciones"
+ */
+function route(lang: SupportedLang, path: string) {
+  const clean = path.replace(/^\/+/, "");
+  return `/${lang}/${clean}`;
 }
 
 export default function Home() {
@@ -24,17 +39,39 @@ export default function Home() {
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
-  const roomsFeatures = t("home.rooms.features", { returnObjects: true }) as string[];
-  const servicesItems = t("home.services.items", { returnObjects: true }) as string[];
-  const areaItems = t("home.area.items", { returnObjects: true }) as string[];
-  const reviewsItems = t("home.reviews.items", { returnObjects: true }) as Array<{
-    quote: string;
-    name: string;
-    city: string;
-  }>;
+  /**
+   * ✅ Mejoras:
+   * - useMemo: evita recalcular arrays/objetos en cada render.
+   * - defaultValue en alts importantes: no dejamos el alt vacío por fallo de i18n.
+   */
+  const roomsFeatures = useMemo(
+    () => (t("home.rooms.features", { returnObjects: true }) as string[]) ?? [],
+    [t]
+  );
+
+  const servicesItems = useMemo(
+    () => (t("home.services.items", { returnObjects: true }) as string[]) ?? [],
+    [t]
+  );
+
+  const areaItems = useMemo(
+    () => (t("home.area.items", { returnObjects: true }) as string[]) ?? [],
+    [t]
+  );
+
+  const reviewsItems = useMemo(
+    () =>
+      (t("home.reviews.items", { returnObjects: true }) as Array<{
+        quote: string;
+        name: string;
+        city: string;
+      }>) ?? [],
+    [t]
+  );
 
   return (
     <>
+      {/* ✅ SEO (canonical dinámico lo maneja tu componente SEO.tsx) */}
       <SEO
         title={t("home.seo.title", {
           defaultValue: "Hotel Taverna de la Sal | Hotel boutique en L'Escala",
@@ -47,7 +84,7 @@ export default function Home() {
       />
 
       <main className="page">
-        {/* HERO */}
+        {/* ================= HERO ================= */}
         <section className="hero" aria-label={t("home.hero.aria", { defaultValue: "Portada" })}>
           <div className="hero__background">
             <div className="container hero__content">
@@ -55,18 +92,24 @@ export default function Home() {
               <h1 className="hero__title">{t("home.hero.title")}</h1>
               <p className="hero__subtitle">{t("home.hero.subtitle")}</p>
 
-              <Link className="btn btn--primary" to={`/${lang}/reservar`}>
+              {/* ✅ CTA principal siempre a Reservar */}
+              <Link className="btn btn--primary" to={route(lang, "reservar")}>
                 {t("home.hero.cta")}
               </Link>
             </div>
           </div>
         </section>
 
-        {/* HISTORIA */}
+        {/* ================= HISTORIA ================= */}
         <section className="section section--white">
           <div className="container story">
             <figure className="story__media">
-              <img className="story__img" src={storyImg} alt={t("home.story.imageAlt")} loading="lazy" />
+              <img
+                className="story__img"
+                src={storyImg}
+                alt={t("home.story.imageAlt", { defaultValue: "Historia del hotel" })}
+                loading="lazy"
+              />
             </figure>
 
             <div className="story__body">
@@ -74,14 +117,14 @@ export default function Home() {
               <h2 className="title">{t("home.story.title")}</h2>
               <p className="text">{t("home.story.text")}</p>
 
-              <Link className="link" to={`/${lang}/historia`}>
+              <Link className="link" to={route(lang, "historia")}>
                 {t("home.story.link")}
               </Link>
             </div>
           </div>
         </section>
 
-        {/* REFUGIO */}
+        {/* ================= REFUGIO ================= */}
         <section className="section section--beige">
           <div className="container center">
             <p className="eyebrow">{t("home.refuge.eyebrow")}</p>
@@ -109,7 +152,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ATMÓSFERA */}
+        {/* ================= ATMÓSFERA ================= */}
         <section className="section section--white">
           <div className="container center">
             <p className="eyebrow">{t("home.atmosphere.eyebrow")}</p>
@@ -121,7 +164,7 @@ export default function Home() {
               <figure className="atmosphere__item atmosphere__item--large">
                 <img
                   src={pezdecoration}
-                  alt={t("home.atmosphere.images.0")}
+                  alt={t("home.atmosphere.images.0", { defaultValue: "Detalle del hotel" })}
                   loading="lazy"
                   className="atmosphere__img"
                 />
@@ -130,7 +173,7 @@ export default function Home() {
               <figure className="atmosphere__item">
                 <img
                   src={escaleraimg}
-                  alt={t("home.atmosphere.images.1")}
+                  alt={t("home.atmosphere.images.1", { defaultValue: "Escalera interior" })}
                   loading="lazy"
                   className="atmosphere__img"
                 />
@@ -139,7 +182,7 @@ export default function Home() {
               <figure className="atmosphere__item atmosphere__item--large">
                 <img
                   src={salaimg}
-                  alt={t("home.atmosphere.images.2")}
+                  alt={t("home.atmosphere.images.2", { defaultValue: "Sala del hotel" })}
                   loading="lazy"
                   className="atmosphere__img"
                 />
@@ -148,7 +191,7 @@ export default function Home() {
               <figure className="atmosphere__item">
                 <img
                   src={azoteaimg}
-                  alt={t("home.atmosphere.images.3")}
+                  alt={t("home.atmosphere.images.3", { defaultValue: "Terraza" })}
                   loading="lazy"
                   className="atmosphere__img"
                 />
@@ -157,7 +200,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* BENEFICIOS */}
+        {/* ================= BENEFICIOS ================= */}
         <section className="section section--beige">
           <div className="container center">
             <p className="eyebrow">{t("home.benefits.eyebrow")}</p>
@@ -185,7 +228,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* HABITACIONES */}
+        {/* ================= HABITACIONES ================= */}
         <section className="section section--white">
           <div className="container rooms">
             <div className="rooms__content">
@@ -199,29 +242,34 @@ export default function Home() {
               </ul>
 
               <div className="actions">
-                <Link to={`/${lang}/habitaciones`} className="btn btn--outline">
+                <Link to={route(lang, "habitaciones")} className="btn btn--outline">
                   {t("home.rooms.details")}
                 </Link>
-                <Link to={`/${lang}/reservar`} className="btn btn--primary">
+                <Link to={route(lang, "reservar")} className="btn btn--primary">
                   {t("home.rooms.cta")}
                 </Link>
               </div>
             </div>
 
             <figure className="rooms__media">
-              <img className="rooms__img" src={camaimg} alt={t("home.rooms.imageAlt")} loading="lazy" />
+              <img
+                className="rooms__img"
+                src={camaimg}
+                alt={t("home.rooms.imageAlt", { defaultValue: "Habitación del hotel" })}
+                loading="lazy"
+              />
             </figure>
           </div>
         </section>
 
-        {/* RESTAURANTE */}
+        {/* ================= RESTAURANTE ================= */}
         <section className="section section--beige">
           <div className="container feature">
             <figure className="feature__media">
               <img
                 className="feature__img"
                 src={restauranteimg}
-                alt={t("home.restaurant.imageAlt")}
+                alt={t("home.restaurant.imageAlt", { defaultValue: "Restaurante del hotel" })}
                 loading="lazy"
               />
             </figure>
@@ -231,14 +279,14 @@ export default function Home() {
               <h2 className="title">{t("home.restaurant.title")}</h2>
               <p className="text">{t("home.restaurant.text")}</p>
 
-              <Link className="btn btn--primary" to={`/${lang}/restaurante`}>
+              <Link className="btn btn--primary" to={route(lang, "restaurante")}>
                 {t("home.restaurant.cta")}
               </Link>
             </div>
           </div>
         </section>
 
-        {/* SERVICIOS */}
+        {/* ================= SERVICIOS ================= */}
         <section className="section section--white">
           <div className="container center">
             <p className="eyebrow">{t("home.services.eyebrow")}</p>
@@ -246,39 +294,49 @@ export default function Home() {
 
             <div className="services">
               <article className="service">
-                <span className="service__icon" aria-hidden="true">☕</span>
+                <span className="service__icon" aria-hidden="true">
+                  ☕
+                </span>
                 <p>{servicesItems?.[0]}</p>
               </article>
 
               <article className="service">
-                <span className="service__icon" aria-hidden="true">☀</span>
+                <span className="service__icon" aria-hidden="true">
+                  ☀
+                </span>
                 <p>{servicesItems?.[1]}</p>
               </article>
 
               <article className="service">
-                <span className="service__icon" aria-hidden="true">✦</span>
+                <span className="service__icon" aria-hidden="true">
+                  ✦
+                </span>
                 <p>{servicesItems?.[2]}</p>
               </article>
 
               <article className="service">
-                <span className="service__icon" aria-hidden="true">⌁</span>
+                <span className="service__icon" aria-hidden="true">
+                  ⌁
+                </span>
                 <p>{servicesItems?.[3]}</p>
               </article>
 
               <article className="service">
-                <span className="service__icon" aria-hidden="true">🚗</span>
+                <span className="service__icon" aria-hidden="true">
+                  🚗
+                </span>
                 <p>{servicesItems?.[4]}</p>
               </article>
             </div>
 
-            {/* OJO: si NO existe ruta /:lang/servicios, quítalo o crea la página */}
-            <Link className="link link--center" to={`/${lang}/servicios`}>
+            {/* ✅ ARREGLADO: servicios → HABITACIONES (no /room) */}
+            <Link className="link link--center" to={route(lang, "habitaciones")}>
               {t("home.services.link")}
             </Link>
           </div>
         </section>
 
-        {/* ENTORNO */}
+        {/* ================= ENTORNO ================= */}
         <section className="section section--beige">
           <div className="container area">
             <div className="area__body">
@@ -306,18 +364,23 @@ export default function Home() {
                 </li>
               </ul>
 
-              <Link className="link link--left" to={`/${lang}/entorno`}>
+              <Link className="link link--left" to={route(lang, "entorno")}>
                 {t("home.area.link")}
               </Link>
             </div>
 
             <figure className="area__media">
-              <img className="area__img" src={pezdecoration} alt={t("home.area.imageAlt")} loading="lazy" />
+              <img
+                className="area__img"
+                src={pezdecoration}
+                alt={t("home.area.imageAlt", { defaultValue: "Entorno en L'Escala" })}
+                loading="lazy"
+              />
             </figure>
           </div>
         </section>
 
-        {/* OPINIONES */}
+        {/* ================= OPINIONES ================= */}
         <section className="reviews section section--white">
           <div className="container reviews__inner">
             <p className="reviews__eyebrow">{t("home.reviews.eyebrow")}</p>
@@ -339,14 +402,14 @@ export default function Home() {
           </div>
         </section>
 
-        {/* CTA FINAL */}
+        {/* ================= CTA FINAL ================= */}
         <section className="ctaFinal">
           <div className="container ctaFinal__inner">
             <h2 className="ctaFinal__title">{t("home.cta.title")}</h2>
             <p className="ctaFinal__text">{t("home.cta.text")}</p>
 
             <div className="ctaFinal__actions">
-              <Link to={`/${lang}/reservar`} className="btn btn--light">
+              <Link to={route(lang, "reservar")} className="btn btn--light">
                 {t("home.cta.button")}
               </Link>
             </div>
