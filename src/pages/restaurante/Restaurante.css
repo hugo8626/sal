@@ -39,7 +39,7 @@
   margin: 0;
   font-size: clamp(2.4rem, 5vw, 4.1rem);
   letter-spacing: 0.02em;
-  color: antiquewhite;
+  color: rgb(248, 243, 237);
 }
 
 .restHero__subtitle {
@@ -111,7 +111,7 @@
 
 .restP--highlight {
   display: inline;
-  background: rgba(0, 0, 0, 0.12);
+  
   padding: 0.15em 0.25em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;

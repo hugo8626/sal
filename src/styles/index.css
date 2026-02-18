@@ -250,7 +250,7 @@ button.btn {
   gap: 10px;
 
   padding: 12px 18px;
-  border-radius: 999px;
+  border-radius: 10px;
 
   border: 1px solid transparent;
   cursor: pointer;
@@ -374,6 +374,11 @@ textarea:focus {
   color: var(--color-light-text);
 }
 
+
+a{
+  
+  border-radius: 10px;
+}
 /* =========================================
    SMALL SCREEN TWEAKS
 ========================================= */
