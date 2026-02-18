@@ -770,6 +770,36 @@
     },
     "updated": "Última actualització: [DATA]"
   }
+  ,"cookiesBanner": {
+  "title": "Cookies",
+  "description": "Utilitzem cookies necessàries perquè el web funcioni i, amb el teu permís, cookies d’anàlisi i màrqueting. Pots acceptar, rebutjar o configurar.",
+  "links": {
+    "cookies": "Política de Cookies",
+    "privacy": "Política de Privacitat"
+  },
+  "buttons": {
+    "accept": "Acceptar",
+    "reject": "Rebutjar",
+    "configure": "Configurar",
+    "rejectAll": "Rebutjar-ho tot",
+    "save": "Guardar",
+    "back": "Tornar"
+  },
+  "categories": {
+    "necessary": {
+      "title": "Necessàries",
+      "hint": "Sempre actives per al funcionament bàsic del web."
+    },
+    "analytics": {
+      "title": "Analítica",
+      "hint": "Mesurar trànsit i ús (ex. Analytics)."
+    },
+    "marketing": {
+      "title": "Màrqueting",
+      "hint": "Publicitat i remarketing."
+    }
+  }
+}
 
 
 

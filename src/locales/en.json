@@ -769,7 +769,37 @@
       }
     },
     "updated": "Última actualización: [FECHA]"
+  },
+  "cookiesBanner": {
+  "title": "Cookies",
+  "description": "We use necessary cookies to make the website work and, with your permission, analytics and marketing cookies. You can accept, reject or configure them.",
+  "links": {
+    "cookies": "Cookie Policy",
+    "privacy": "Privacy Policy"
+  },
+  "buttons": {
+    "accept": "Accept",
+    "reject": "Reject",
+    "configure": "Configure",
+    "rejectAll": "Reject all",
+    "save": "Save",
+    "back": "Back"
+  },
+  "categories": {
+    "necessary": {
+      "title": "Necessary",
+      "hint": "Always active for basic website functionality."
+    },
+    "analytics": {
+      "title": "Analytics",
+      "hint": "Measure traffic and usage (e.g. Analytics)."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "hint": "Advertising and remarketing."
+    }
   }
+}
 
 
   

@@ -769,7 +769,38 @@
       }
     },
     "updated": "Última actualización: [FECHA]"
+  },
+  "cookiesBanner": {
+  "title": "Cookies",
+  "description": "Usamos cookies necesarias para que la web funcione y, con tu permiso, cookies de análisis y marketing. Puedes aceptar, rechazar o configurar.",
+  "links": {
+    "cookies": "Política de Cookies",
+    "privacy": "Privacidad"
+  },
+  "buttons": {
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "configure": "Configurar",
+    "rejectAll": "Rechazar todo",
+    "save": "Guardar",
+    "back": "Volver"
+  },
+  "categories": {
+    "necessary": {
+      "title": "Necesarias",
+      "hint": "Siempre activas para el funcionamiento básico."
+    },
+    "analytics": {
+      "title": "Analítica",
+      "hint": "Medir tráfico y uso (ej. Analytics)."
+    },
+    "marketing": {
+      "title": "Marketing",
+      "hint": "Publicidad y remarketing."
+    }
   }
+}
+
 
 
   
