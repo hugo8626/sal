@@ -544,5 +544,81 @@
       },
       "button": "CHECK AVAILABILITY"
     }
+  },
+  
+  "booking": {
+    "seo": {
+      "title": "Booking | Taverna de la Sal",
+      "description": "Book your stay at Taverna de la Sal. Choose dates and we’ll confirm availability."
+    },
+    "hero": {
+      "aria": "Booking",
+      "eyebrow": "BOOKING",
+      "title": "Book your room",
+      "lead": "Select your dates and preferences. We’ll confirm availability instantly."
+    },
+    "availability": {
+      "aria": "Availability",
+      "title": "Availability",
+      "prev": "Previous month",
+      "next": "Next month",
+      "legend": {
+        "free": "Available",
+        "blocked": "Unavailable",
+        "selected": "Selected"
+      },
+      "blocked": []
+    },
+    "form": {
+      "title": "Stay details",
+      "checkin": {
+        "label": "Check-in",
+        "placeholder": "Select on the calendar"
+      },
+      "checkout": {
+        "label": "Check-out",
+        "placeholder": "Select on the calendar"
+      },
+      "adults": {
+        "label": "Adults"
+      },
+      "parking": {
+        "title": "Add parking spot",
+        "meta": "+€15 / night · Guaranteed spot"
+      },
+      "name": {
+        "label": "Full name",
+        "placeholder": "Your name"
+      },
+      "phone": {
+        "label": "Phone",
+        "placeholder": "Your phone number"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "email@domain.com"
+      },
+      "message": {
+        "label": "Message (optional)",
+        "placeholder": "Any special request..."
+      },
+      "submit": "Check availability",
+      "hint": "Select check-in and check-out on the calendar."
+    },
+    "summary": {
+      "title": "Your stay",
+      "items": [
+        "Flexible cancellation",
+        "Best price guaranteed",
+        "Secure payment",
+        "Personal assistance"
+      ],
+      "phoneNote": "Prefer booking by phone?",
+      "phone": "+34 972 000 000"
+    }
   }
+
+
+
+
 }

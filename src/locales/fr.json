@@ -547,5 +547,80 @@
       },
       "button": "VÉRIFIER LES DISPONIBILITÉS"
     }
+  },
+  
+  "booking": {
+    "seo": {
+      "title": "Réservation | Taverna de la Sal",
+      "description": "Réservez votre séjour à Taverna de la Sal. Choisissez vos dates et nous confirmons la disponibilité."
+    },
+    "hero": {
+      "aria": "Réservation",
+      "eyebrow": "RÉSERVATION",
+      "title": "Réservez votre chambre",
+      "lead": "Choisissez vos dates et vos préférences. Disponibilité confirmée immédiatement."
+    },
+    "availability": {
+      "aria": "Disponibilité",
+      "title": "Disponibilité",
+      "prev": "Mois précédent",
+      "next": "Mois suivant",
+      "legend": {
+        "free": "Disponible",
+        "blocked": "Indisponible",
+        "selected": "Sélectionné"
+      },
+      "blocked": []
+    },
+    "form": {
+      "title": "Détails du séjour",
+      "checkin": {
+        "label": "Arrivée",
+        "placeholder": "Sélectionnez dans le calendrier"
+      },
+      "checkout": {
+        "label": "Départ",
+        "placeholder": "Sélectionnez dans le calendrier"
+      },
+      "adults": {
+        "label": "Adultes"
+      },
+      "parking": {
+        "title": "Ajouter une place de parking",
+        "meta": "+15€ / nuit · Place garantie"
+      },
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "Votre nom"
+      },
+      "phone": {
+        "label": "Téléphone",
+        "placeholder": "Votre numéro de téléphone"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "email@domaine.com"
+      },
+      "message": {
+        "label": "Message (optionnel)",
+        "placeholder": "Une demande particulière..."
+      },
+      "submit": "Vérifier la disponibilité",
+      "hint": "Sélectionnez l’arrivée et le départ dans le calendrier."
+    },
+    "summary": {
+      "title": "Votre séjour",
+      "items": [
+        "Annulation flexible",
+        "Meilleur prix garanti",
+        "Paiement sécurisé",
+        "Assistance personnalisée"
+      ],
+      "phoneNote": "Vous préférez réserver par téléphone ?",
+      "phone": "+34 972 000 000"
+    }
   }
+
+
+
 }

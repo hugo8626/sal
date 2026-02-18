@@ -545,4 +545,77 @@
       "button": "COMPROVAR DISPONIBILITAT"
     }
   }
+  ,
+  "booking": {
+    "seo": {
+      "title": "Reserves | Taverna de la Sal",
+      "description": "Reserva la teva estada a Taverna de la Sal. Tria dates i confirmem disponibilitat."
+    },
+    "hero": {
+      "aria": "Reserves",
+      "eyebrow": "RESERVES",
+      "title": "Reserva la teva habitació",
+      "lead": "Selecciona les dates i preferències. Confirmem disponibilitat a l’instant."
+    },
+    "availability": {
+      "aria": "Disponibilitat",
+      "title": "Disponibilitat",
+      "prev": "Mes anterior",
+      "next": "Mes següent",
+      "legend": {
+        "free": "Disponible",
+        "blocked": "No disponible",
+        "selected": "Seleccionat"
+      },
+      "blocked": []
+    },
+    "form": {
+      "title": "Detalls de l’estada",
+      "checkin": {
+        "label": "Data d’arribada",
+        "placeholder": "Selecciona al calendari"
+      },
+      "checkout": {
+        "label": "Data de sortida",
+        "placeholder": "Selecciona al calendari"
+      },
+      "adults": {
+        "label": "Adults"
+      },
+      "parking": {
+        "title": "Afegir plaça de pàrquing",
+        "meta": "+15€ / nit · Plaça garantida"
+      },
+      "name": {
+        "label": "Nom complet",
+        "placeholder": "El teu nom"
+      },
+      "phone": {
+        "label": "Telèfon",
+        "placeholder": "El teu número de telèfon"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "correu@domini.com"
+      },
+      "message": {
+        "label": "Missatge (opcional)",
+        "placeholder": "Alguna petició especial..."
+      },
+      "submit": "Comprovar disponibilitat",
+      "hint": "Selecciona arribada i sortida al calendari."
+    },
+    "summary": {
+      "title": "La teva estada",
+      "items": [
+        "Cancel·lació flexible",
+        "Millor preu garantit",
+        "Pagament segur",
+        "Atenció personalitzada"
+      ],
+      "phoneNote": "Prefereixes reservar per telèfon?",
+      "phone": "+34 972 000 000"
+    }
+  }
+
 }

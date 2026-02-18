@@ -544,5 +544,84 @@
       },
       "button": "COMPROBAR DISPONIBILIDAD"
     }
+  },
+  
+  "booking": {
+    "seo": {
+      "title": "Reservas | Taverna de la Sal",
+      "description": "Reserva tu estancia en Taverna de la Sal. Elige fechas y confirmamos disponibilidad."
+    },
+    "hero": {
+      "aria": "Reservas",
+      "eyebrow": "RESERVAS",
+      "title": "Reserva tu habitación",
+      "lead": "Selecciona tus fechas y preferencias. Confirmamos disponibilidad al instante."
+    },
+    "availability": {
+      "aria": "Disponibilidad",
+      "title": "Disponibilidad",
+      "prev": "Mes anterior",
+      "next": "Mes siguiente",
+      "legend": {
+        "free": "Disponible",
+        "blocked": "No disponible",
+        "selected": "Seleccionado"
+      },
+      "blocked": []
+    },
+    "form": {
+      "title": "Detalles de la estancia",
+      "checkin": {
+        "label": "Fecha de llegada",
+        "placeholder": "Selecciona en el calendario"
+      },
+      "checkout": {
+        "label": "Fecha de salida",
+        "placeholder": "Selecciona en el calendario"
+      },
+      "adults": {
+        "label": "Adultos"
+      },
+      "parking": {
+        "title": "Añadir plaza de parking",
+        "meta": "+15€ / noche · Plaza garantizada"
+      },
+      "name": {
+        "label": "Nombre completo",
+        "placeholder": "Tu nombre"
+      },
+      "phone": {
+        "label": "Teléfono",
+        "placeholder": "Tu número de teléfono"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "correo@email.com"
+      },
+      "message": {
+        "label": "Mensaje (opcional)",
+        "placeholder": "Alguna petición especial..."
+      },
+      "submit": "Comprobar disponibilidad",
+      "hint": "Selecciona llegada y salida en el calendario."
+    },
+    "summary": {
+      "title": "Tu estancia",
+      "items": [
+        "Cancelación flexible",
+        "Mejor precio garantizado",
+        "Pago seguro",
+        "Atención personalizada"
+      ],
+      "phoneNote": "¿Prefieres reservar por teléfono?",
+      "phone": "+34 972 000 000"
+    }
   }
+
+  
+
+
+
+
+
 }
