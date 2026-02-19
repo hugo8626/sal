@@ -5,7 +5,8 @@
     "history": "Historia",
     "area": "Entorno",
     "contact": "Contacto",
-    "reserve": "Reservar"
+    "reserve": "Reservar",
+    "services": "Servicios"
   },
 
   "navbar": {
@@ -269,54 +270,62 @@
       "button": "COMPROBAR DISPONIBILIDAD"
     }
   },
-
-  "restaurant": {
-    "hero": {
-      "aria": "Restaurante",
-      "title": "Servicios que completan tu experiencia",
-      "subtitle": "Cada detalle ha sido pensado para que tu estancia en Taverna de la Sal sea cómoda, tranquila y sin preocupaciones.",
-      "note": "✓ 10% de descuento para huéspedes del hotel que reservan directamente en nuestra web"
-    },
-    "brasa": {
-      "eyebrow": "DISFRUTA",
-      "title": "Restaurante a la brasa",
-      "text1": "Especialistas en carnes y pescados a la brasa, con producto de temporada y ambiente íntimo en el casco antiguo de L'Escala.",
-      "text2": "Si reservas directamente en nuestra web, disfrutarás de un 10% de descuento en el restaurante durante tu estancia.",
-      "cta": "VER MÁS"
-    },
-    "breakfast": {
-      "eyebrow": "EL ENTORNO",
-      "title": "Empieza el día con sabor",
-      "text": "Disfruta cada mañana de una selección de productos locales, pan artesanal, fruta de temporada, zumos naturales y café recién hecho en un ambiente tranquilo y solo adultos."
-    },
-    "terrace": {
-      "title": "Terraza con vistas al Mediterráneo",
-      "text": "Nuestra terraza ofrece vistas a la bahía y al casco antiguo. En verano, cócteles y música en vivo; en invierno, calma y atardeceres inolvidables."
-    },
-    "reading": {
-      "title": "Rincón de lectura",
-      "text": "Un pequeño espacio tranquilo donde relajarse, leer o simplemente detener el tiempo. Disponemos de libros y revistas sobre L'Escala, el mar y la historia local."
-    },
-    "cards": [
-      {
-        "title": "Confort sin preocupaciones",
-        "text": "Servicio de limpieza diario para garantizar frescura y comodidad. Toallas y amenities adicionales disponibles bajo petición."
-      },
-      {
-        "title": "Parking en el corazón del pueblo",
-        "text": "Plaza de aparcamiento privado cerca al hotel. Plazas limitadas, reserva previa y coste adicional. Un lujo poco habitual en un pueblo costero como L'Escala."
-      },
-      {
-        "title": "Wi-Fi de alta velocidad",
-        "text": "Conexión disponible en todas las habitaciones y zonas comunes para que puedas planificar tu día o compartir tu experiencia."
-      }
-    ],
-    "final": {
-      "title": "Pequeño hotel, atención cercana y servicios pensados para que solo te ocupes de disfrutar.",
-      "cta": "COMPROBAR DISPONIBILIDAD"
-    }
+  "servicesPage": {
+  "seo": {
+    "title": "Servicios | Taverna de la Sal",
+    "description": "Servicios del hotel: restaurante a la brasa, desayuno con producto local, terraza con vistas al Mediterráneo, rincón de lectura, parking y Wi-Fi."
   },
-
+  "hero": {
+    "aria": "Servicios",
+    "title": "Servicios que completan tu experiencia",
+    "subtitle": "Cada detalle ha sido pensado para que tu estancia en Taverna de la Sal sea cómoda, tranquila y sin preocupaciones.",
+    "note": "✓ 10% de descuento para huéspedes del hotel que reservan directamente en nuestra web"
+  },
+  "brasa": {
+    "eyebrow": "DISFRUTA",
+    "title": "Restaurante a la brasa",
+    "text1": "Especialistas en carnes y pescados a la brasa, con producto de temporada y ambiente íntimo en el casco antiguo de L'Escala.",
+    "text2": "Si reservas directamente en nuestra web, disfrutarás de un 10% de descuento en el restaurante durante tu estancia.",
+    "cta": "VER MÁS",
+    "imageAlt": "Restaurante a la brasa"
+  },
+  "breakfast": {
+    "eyebrow": "EL ENTORNO",
+    "title": "Empieza el día con sabor",
+    "text": "Disfruta cada mañana de una selección de productos locales, pan artesanal, fruta de temporada, zumos naturales y café recién hecho en un ambiente tranquilo y solo adultos.",
+    "imageAlt": "Desayuno con producto local"
+  },
+  "terrace": {
+    "title": "Terraza con vistas al Mediterráneo",
+    "text": "Nuestra terraza ofrece vistas a la bahía y al casco antiguo. En verano, cócteles y música en vivo; en invierno, calma y atardeceres inolvidables.",
+    "imageAlt": "Terraza con vistas al mar"
+  },
+  "reading": {
+    "title": "Rincón de lectura",
+    "text": "Un pequeño espacio tranquilo donde relajarse, leer o simplemente detener el tiempo. Disponemos de libros y revistas sobre L'Escala, el mar y la historia local.",
+    "imageAlt": "Rincón de lectura del hotel"
+  },
+  "cards": [
+    {
+      "title": "Confort sin preocupaciones",
+      "text": "Servicio de limpieza diario para garantizar frescura y comodidad. Toallas y amenities adicionales disponibles bajo petición."
+    },
+    {
+      "title": "Parking en el corazón del pueblo",
+      "text": "Plaza de aparcamiento privado cerca al hotel. Plazas limitadas, reserva previa y coste adicional. Un lujo poco habitual en un pueblo costero como L'Escala."
+    },
+    {
+      "title": "Wi-Fi de alta velocidad",
+      "text": "Conexión disponible en todas las habitaciones y zonas comunes para que puedas planificar tu día o compartir tu experiencia."
+    }
+  ],
+  "final": {
+    "title": "Pequeño hotel, atención cercana y servicios pensados para que solo te ocupes de disfrutar.",
+    "cta": "COMPROBAR DISPONIBILIDAD"
+  }
+},
+  
+  
   "history": {
     "hero": {
       "aria": "Historia",
@@ -799,11 +808,86 @@
       "hint": "Publicidad y remarketing."
     }
   }
-}
+},
+
 
 
 
   
+  "restaurante": {
+    "seo": {
+      "title": "Restaurante | Taverna de la Sal",
+      "description": "Carnes y pescados a la brasa con vistas al mar. Cocina honesta, producto de temporada y vinos del Empordà."
+    },
+    "whatsapp": {
+      "text": "Hola, quiero reservar una mesa en el restaurante. ¿Me confirmas disponibilidad? Gracias."
+    },
+    "hero": {
+      "aria": "Restaurante",
+      "title": "Carnes y pescados a la brasa con vistas al mar",
+      "subtitle": "Especialistas en carnes y pescados a la brasa, donde el producto de temporada y el entorno íntimo del casco antiguo de L’Escala crean una experiencia auténtica.",
+      "cta": "Reservar mesa",
+      "note": "10% de descuento para huéspedes del hotel que reservan directamente en nuestra web"
+    },
+    "propuesta": {
+      "eyebrow": "LA PROPUESTA",
+      "title": "La brasa como protagonista",
+      "lead": "Trabajamos carnes seleccionadas y pescados frescos con respeto por el producto y técnica a la brasa. Cocina honesta, sabores definidos y recetas mediterráneas elaboradas sin artificios.",
+      "p2": "Producto de proximidad, vinos del Empordà y una carta pensada para disfrutar sin prisas.",
+      "imageAlt": "Pescado a la brasa"
+    },
+    "entorno": {
+      "eyebrow": "EL ENTORNO",
+      "title": "Un restaurante a pocos pasos del Mediterráneo",
+      "p1": "Comedor interior acogedor y dos terrazas pensadas para disfrutar sin prisas.",
+      "p2": "En verano, música en vivo y cócteles al atardecer.",
+      "p3": "En invierno, chimenea y sobremesas largas.",
+      "p4": "Un espacio pensado para cenar con calma, tanto si eres huésped como visitante.",
+      "imageAlt": "Terraza con vistas al mar"
+    },
+    "experiencia": {
+      "aria": "La experiencia",
+      "eyebrow": "LA EXPERIENCIA",
+      "title": "Más que un restaurante, una experiencia cercana",
+      "lead": "Se trata de disfrutar el fuego, el mar y el tiempo.",
+      "p2": "El restaurante está dirigido y atendido por su propietario, creando un ambiente auténtico donde muchos de nuestros comensales regresan no solo por la cocina, sino por el trato."
+    },
+    "ventajas": {
+      "eyebrow": "PARA HUÉSPEDES",
+      "title": "Ventajas para nuestros huéspedes",
+      "lead": "Si te alojas en Taverna de la Sal y reservas directamente:",
+      "items": [
+        "10% de descuento en el restaurante",
+        "Atención prioritaria en tu reserva",
+        "Recomendaciones personalizadas según temporada"
+      ],
+      "cta": "Reservar estancia con ventajas"
+    },
+    "carta": {
+      "eyebrow": "LA CARTA",
+      "title": "Explora nuestra carta",
+      "lead": "Descubre carnes y pescados a la brasa, propuestas de temporada y una cuidada selección de vinos locales.",
+      "linkText": "Ver menú",
+      "ctaAria": "Abrir menú en una nueva pestaña",
+      "url": "#"
+    },
+    "horarios": {
+      "eyebrow": "RESERVAS",
+      "title": "Horarios",
+      "week": {
+        "title": "Lunes a viernes",
+        "time": "Cena: 18:30 — 22:30"
+      },
+      "weekend": {
+        "title": "Fines de semana y festivos",
+        "lunch": "Almuerzo: 12:30 — 15:30",
+        "dinner": "Cena: 18:30 — 22:30"
+      },
+      "note": "El aforo es limitado, especialmente en temporada alta.",
+      "cta": "Reservar mesa"
+    }
+  }
+
 
 
 

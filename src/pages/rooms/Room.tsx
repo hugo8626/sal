@@ -198,7 +198,7 @@ export default function Room() {
           <div className="roomsServices__container">
             <p className="roomsServices__text">{t("rooms.services.text")}</p>
 
-            <Link to={route(lang, "restaurante")} className="roomsServices__link">
+            <Link to={route(lang, "servicios")} className="roomsServices__link">
               {t("rooms.services.link")} <span className="roomsServices__arrow">→</span>
             </Link>
           </div>

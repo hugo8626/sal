@@ -2,6 +2,7 @@ import "./Navbar.css";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { BOOKING_URL } from "../../config/links";
 
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
@@ -123,13 +124,16 @@ export default function Navbar() {
         </ul>
 
         <div className="navbar-right">
-          <NavLink
-            className={({ isActive }) => `navbar-reserve ${isActive ? "navbar-reserve--active" : ""}`}
-            to={p("/reservar")}
+          {/*Reservar externo */}
+          <a
+            className="navbar-reserve navbar-reserve--active"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={close}
           >
             {t("nav.reserve")}
-          </NavLink>
+          </a>
 
           <select
             className="navbar-lang"
@@ -177,12 +181,7 @@ export default function Navbar() {
       >
         <div className="popover-header">
           <span className="popover-title">{t("navbar.mobile.title")}</span>
-          <button
-            className="popover-close"
-            onClick={close}
-            aria-label={t("navbar.mobile.close")}
-            type="button"
-          >
+          <button className="popover-close" onClick={close} aria-label={t("navbar.mobile.close")} type="button">
             ✕
           </button>
         </div>
@@ -203,9 +202,17 @@ export default function Navbar() {
           <NavLink to={p("/contacto")} onClick={close}>
             {t("nav.contact")}
           </NavLink>
-          <NavLink to={p("/reservar")} onClick={close}>
+
+          {/*  Reservar externo en mobile  responsive */}
+          <a
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={close}
+            className="nav-link"
+          >
             {t("nav.reserve")}
-          </NavLink>
+          </a>
         </nav>
       </aside>
     </nav>

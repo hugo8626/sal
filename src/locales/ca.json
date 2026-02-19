@@ -5,7 +5,10 @@
     "history": "Història",
     "area": "Entorn",
     "contact": "Contacte",
-    "reserve": "Reservar"
+    "reserve": "Reservar",
+    "services": "Serveis"
+
+    
   },
 
   "navbar": {
@@ -269,54 +272,55 @@
       "button": "COMPROVAR DISPONIBILITAT"
     }
   },
-
-  "restaurant": {
-    "hero": {
-      "aria": "Restaurant",
-      "title": "Serveis que completen la teva experiència",
-      "subtitle": "Cada detall ha estat pensat perquè la teva estada a Taverna de la Sal sigui còmoda, tranquil·la i sense preocupacions.",
-      "note": "✓ 10% de descompte per als hostes que reserven directament a la nostra web"
-    },
-    "brasa": {
-      "eyebrow": "GAUDEIX",
-      "title": "Restaurant a la brasa",
-      "text1": "Especialistes en carns i peixos a la brasa, amb producte de temporada i un ambient íntim al nucli antic de l'Escala.",
-      "text2": "Si reserves directament a la nostra web, gaudiràs d’un 10% de descompte al restaurant durant la teva estada.",
-      "cta": "VEURE MÉS"
-    },
-    "breakfast": {
-      "eyebrow": "L’ENTORN",
-      "title": "Comença el dia amb sabor",
-      "text": "Gaudeix cada matí d’una selecció de productes locals, pa artesanal, fruita de temporada, sucs naturals i cafè acabat de fer en un ambient tranquil i només adults."
-    },
-    "terrace": {
-      "title": "Terrassa amb vistes al Mediterrani",
-      "text": "La nostra terrassa ofereix vistes a la badia i al nucli antic. A l’estiu, còctels i música en viu; a l’hivern, calma i postes de sol inoblidables."
-    },
-    "reading": {
-      "title": "Racó de lectura",
-      "text": "Un petit espai tranquil on relaxar-se, llegir o simplement aturar el temps. Disposem de llibres i revistes sobre l'Escala, el mar i la història local."
-    },
-    "cards": [
-      {
-        "title": "Confort sense preocupacions",
-        "text": "Servei de neteja diari per garantir frescor i comoditat. Tovalloles i amenities addicionals disponibles sota petició."
-      },
-      {
-        "title": "Pàrquing al cor del poble",
-        "text": "Plaça d’aparcament privat a prop de l’hotel. Places limitades, reserva prèvia i cost addicional. Un luxe poc habitual en un poble costaner com l'Escala."
-      },
-      {
-        "title": "Wi-Fi d’alta velocitat",
-        "text": "Connexió disponible a totes les habitacions i zones comunes perquè puguis planificar el dia o compartir la teva experiència."
-      }
-    ],
-    "final": {
-      "title": "Petit hotel, atenció propera i serveis pensats perquè només t’ocupis de gaudir.",
-      "cta": "COMPROVAR DISPONIBILITAT"
-    }
+  "servicesPage": {
+  "seo": {
+    "title": "Serveis | Taverna de la Sal",
+    "description": "Serveis de l’hotel: restaurant a la brasa, esmorzar amb producte local, terrassa mediterrània, racó de lectura, pàrquing i Wi-Fi."
   },
+  "hero": {
+    "aria": "Serveis",
+    "title": "Serveis que completen la teva experiència",
+    "subtitle": "Cada detall ha estat pensat perquè la teva estada sigui còmoda i tranquil·la.",
+    "note": "✓ 10% de descompte per a reserves directes"
+  },
+  "brasa": {
+    "eyebrow": "GAUDEIX",
+    "title": "Restaurant a la brasa",
+    "text1": "Carns i peixos a la brasa amb producte de temporada.",
+    "text2": "10% de descompte si reserves directament.",
+    "cta": "VEURE MÉS",
+    "imageAlt": "Restaurant a la brasa"
+  },
+  "breakfast": {
+    "eyebrow": "L’ENTORN",
+    "title": "Comença el dia amb sabor",
+    "text": "Productes locals, pa artesanal i cafè acabat de fer.",
+    "imageAlt": "Esmorzar amb producte local"
+  },
+  "terrace": {
+    "title": "Terrassa amb vistes al Mediterrani",
+    "text": "Vistes a la badia i postes de sol inoblidables.",
+    "imageAlt": "Terrassa amb vistes al mar"
+  },
+  "reading": {
+    "title": "Racó de lectura",
+    "text": "Un espai tranquil per relaxar-se.",
+    "imageAlt": "Racó de lectura de l’hotel"
+  },
+  "cards": [
+    { "title": "Confort sense preocupacions", "text": "Neteja diària i cura al detall." },
+    { "title": "Pàrquing al centre", "text": "Places limitades amb reserva prèvia." },
+    { "title": "Wi-Fi d’alta velocitat", "text": "Disponible a totes les habitacions." }
+  ],
+  "final": {
+    "title": "Petit hotel, atenció propera i serveis pensats per gaudir.",
+    "cta": "COMPROVAR DISPONIBILITAT"
+  }
+},
 
+
+
+ 
   "history": {
     "hero": {
       "aria": "Història",
@@ -799,8 +803,83 @@
       "hint": "Publicitat i remarketing."
     }
   }
-}
+},
 
+
+
+  "restaurante": {
+    "seo": {
+      "title": "Restaurant | Taverna de la Sal",
+      "description": "Carns i peixos a la brasa amb vistes al mar. Cuina honesta, producte de temporada i vins de l’Empordà."
+    },
+    "whatsapp": {
+      "text": "Hola, vull reservar una taula al restaurant. Em pots confirmar disponibilitat? Gràcies."
+    },
+    "hero": {
+      "aria": "Restaurant",
+      "title": "Carns i peixos a la brasa amb vistes al mar",
+      "subtitle": "Especialistes en carns i peixos a la brasa, on el producte de temporada i l’ambient íntim del nucli antic de l’Escala creen una experiència autèntica.",
+      "cta": "Reservar taula",
+      "note": "10% de descompte per a hostes de l’hotel que reserven directament a la nostra web"
+    },
+    "propuesta": {
+      "eyebrow": "LA PROPOSTA",
+      "title": "La brasa com a protagonista",
+      "lead": "Treballem carns seleccionades i peixos frescos amb respecte pel producte i tècnica a la brasa. Cuina honesta, sabors definits i receptes mediterrànies sense artificis.",
+      "p2": "Producte de proximitat, vins de l’Empordà i una carta pensada per gaudir sense presses.",
+      "imageAlt": "Peix a la brasa"
+    },
+    "entorno": {
+      "eyebrow": "L’ENTORN",
+      "title": "Un restaurant a pocs passos del Mediterrani",
+      "p1": "Menjador interior acollidor i dues terrasses pensades per gaudir sense presses.",
+      "p2": "A l’estiu, música en viu i còctels al capvespre.",
+      "p3": "A l’hivern, llar de foc i llargues sobretaules.",
+      "p4": "Un espai pensat per sopar amb calma, tant si ets hoste com visitant.",
+      "imageAlt": "Terrassa amb vistes al mar"
+    },
+    "experiencia": {
+      "aria": "L’experiència",
+      "eyebrow": "L’EXPERIÈNCIA",
+      "title": "Més que un restaurant, una experiència propera",
+      "lead": "Es tracta de gaudir del foc, del mar i del temps.",
+      "p2": "El restaurant està dirigit i atès pel seu propietari, creant un ambient autèntic on molts comensals tornen no només per la cuina, sinó pel tracte."
+    },
+    "ventajas": {
+      "eyebrow": "PER A HOSTES",
+      "title": "Avantatges per als nostres hostes",
+      "lead": "Si t’allotges a Taverna de la Sal i reserves directament:",
+      "items": [
+        "10% de descompte al restaurant",
+        "Atenció prioritària a la teva reserva",
+        "Recomanacions personalitzades segons temporada"
+      ],
+      "cta": "Reservar estada amb avantatges"
+    },
+    "carta": {
+      "eyebrow": "LA CARTA",
+      "title": "Explora la nostra carta",
+      "lead": "Descobreix carns i peixos a la brasa, propostes de temporada i una selecció acurada de vins locals.",
+      "linkText": "Veure el menú",
+      "ctaAria": "Obrir el menú en una pestanya nova",
+      "url": "#"
+    },
+    "horarios": {
+      "eyebrow": "RESERVES",
+      "title": "Horaris",
+      "week": {
+        "title": "De dilluns a divendres",
+        "time": "Sopar: 18:30 — 22:30"
+      },
+      "weekend": {
+        "title": "Caps de setmana i festius",
+        "lunch": "Dinar: 12:30 — 15:30",
+        "dinner": "Sopar: 18:30 — 22:30"
+      },
+      "note": "L’aforament és limitat, especialment en temporada alta.",
+      "cta": "Reservar taula"
+    }
+  }
 
 
 

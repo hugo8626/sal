@@ -5,7 +5,8 @@
     "history": "History",
     "area": "Area",
     "contact": "Contact",
-    "reserve": "Book"
+    "reserve": "Book",
+    "services": "Services"
   },
 
   "navbar": {
@@ -270,53 +271,53 @@
     }
   },
 
-  "restaurant": {
-    "hero": {
-      "aria": "Restaurant",
-      "title": "Services that complete your experience",
-      "subtitle": "Every detail has been designed so your stay at Taverna de la Sal feels comfortable, calm and worry-free.",
-      "note": "✓ 10% discount for hotel guests who book directly on our website"
-    },
-    "brasa": {
-      "eyebrow": "ENJOY",
-      "title": "Charcoal-grill restaurant",
-      "text1": "Specialists in charcoal-grilled meats and fish, with seasonal produce and an intimate atmosphere in L'Escala’s old town.",
-      "text2": "If you book directly on our website, you’ll enjoy a 10% discount at the restaurant during your stay.",
-      "cta": "SEE MORE"
-    },
-    "breakfast": {
-      "eyebrow": "THE AREA",
-      "title": "Start the day with flavor",
-      "text": "Each morning, enjoy a selection of local products, artisan bread, seasonal fruit, natural juices and freshly brewed coffee in a calm, adults-only setting."
-    },
-    "terrace": {
-      "title": "Terrace with Mediterranean views",
-      "text": "Our terrace overlooks the bay and the old town. In summer: cocktails and live music; in winter: calm and unforgettable sunsets."
-    },
-    "reading": {
-      "title": "Reading corner",
-      "text": "A quiet space to relax, read or simply slow down. We offer books and magazines about L'Escala, the sea and local history."
-    },
-    "cards": [
-      {
-        "title": "Comfort without worries",
-        "text": "Daily housekeeping to ensure freshness and comfort. Extra towels and amenities available on request."
-      },
-      {
-        "title": "Parking in the heart of town",
-        "text": "Private parking spot close to the hotel. Limited spaces, advance reservation and additional cost. A rare luxury in a coastal town like L'Escala."
-      },
-      {
-        "title": "High-speed Wi-Fi",
-        "text": "Connection available in all rooms and common areas so you can plan your day or share your experience."
-      }
-    ],
-    "final": {
-      "title": "A small hotel, close attention and services designed so you only have to enjoy.",
-      "cta": "CHECK AVAILABILITY"
-    }
-  },
 
+  "servicesPage": {
+  "seo": {
+    "title": "Services | Taverna de la Sal",
+    "description": "Hotel services: charcoal-grill restaurant, local breakfast, Mediterranean terrace, reading corner, parking and Wi-Fi."
+  },
+  "hero": {
+    "aria": "Services",
+    "title": "Services that complete your experience",
+    "subtitle": "Every detail has been designed so your stay feels calm, comfortable and worry-free.",
+    "note": "✓ 10% discount for guests who book directly on our website"
+  },
+  "brasa": {
+    "eyebrow": "ENJOY",
+    "title": "Charcoal-grill restaurant",
+    "text1": "Specialists in charcoal-grilled meats and fish with seasonal produce and an intimate atmosphere.",
+    "text2": "Direct bookings enjoy a 10% discount at the restaurant during their stay.",
+    "cta": "SEE MORE",
+    "imageAlt": "Charcoal grill restaurant"
+  },
+  "breakfast": {
+    "eyebrow": "THE AREA",
+    "title": "Start the day with flavour",
+    "text": "Local products, artisan bread, seasonal fruit and fresh coffee in a calm adults-only setting.",
+    "imageAlt": "Breakfast with local products"
+  },
+  "terrace": {
+    "title": "Terrace with Mediterranean views",
+    "text": "Bay views, sunsets and relaxed atmosphere all year round.",
+    "imageAlt": "Terrace overlooking the sea"
+  },
+  "reading": {
+    "title": "Reading corner",
+    "text": "A quiet space to relax and slow down.",
+    "imageAlt": "Hotel reading corner"
+  },
+  "cards": [
+    { "title": "Carefree comfort", "text": "Daily housekeeping and thoughtful details." },
+    { "title": "Parking in the heart of town", "text": "Limited private spaces with advance booking." },
+    { "title": "High-speed Wi-Fi", "text": "Available in all rooms and common areas." }
+  ],
+  "final": {
+    "title": "A small hotel with close attention and thoughtful services.",
+    "cta": "CHECK AVAILABILITY"
+  }
+},
+  
   "history": {
     "hero": {
       "aria": "History",
@@ -799,7 +800,82 @@
       "hint": "Advertising and remarketing."
     }
   }
-}
+},
+
+  "restaurante": {
+    "seo": {
+      "title": "Restaurant | Taverna de la Sal",
+      "description": "Grilled meats and fish with sea views. Honest cooking, seasonal produce and wines from Empordà."
+    },
+    "whatsapp": {
+      "text": "Hi, I’d like to book a table at the restaurant. Can you confirm availability? Thank you."
+    },
+    "hero": {
+      "aria": "Restaurant",
+      "title": "Grilled meats and fish with sea views",
+      "subtitle": "Specialists in grilled meats and fresh fish, where seasonal produce and the intimate atmosphere of L’Escala’s old town create an authentic experience.",
+      "cta": "Book a table",
+      "note": "10% discount for hotel guests who book directly on our website"
+    },
+    "propuesta": {
+      "eyebrow": "THE CONCEPT",
+      "title": "The grill as the main character",
+      "lead": "We work with selected meats and fresh fish, respecting the product and mastering the grill. Honest cuisine, defined flavors and Mediterranean recipes made without gimmicks.",
+      "p2": "Local produce, Empordà wines and a menu designed to enjoy without rushing.",
+      "imageAlt": "Grilled fish"
+    },
+    "entorno": {
+      "eyebrow": "THE SETTING",
+      "title": "A restaurant just steps from the Mediterranean",
+      "p1": "A cozy indoor dining room and two terraces designed to enjoy at a relaxed pace.",
+      "p2": "In summer, live music and sunset cocktails.",
+      "p3": "In winter, a fireplace and long after-dinner conversations.",
+      "p4": "A place to dine calmly, whether you’re a guest or a visitor.",
+      "imageAlt": "Terrace with sea views"
+    },
+    "experiencia": {
+      "aria": "The experience",
+      "eyebrow": "THE EXPERIENCE",
+      "title": "More than a restaurant, a close experience",
+      "lead": "It’s about enjoying the fire, the sea and the time.",
+      "p2": "The restaurant is run and hosted by its owner, creating an authentic atmosphere where many guests return not only for the food, but for the hospitality."
+    },
+    "ventajas": {
+      "eyebrow": "FOR GUESTS",
+      "title": "Perks for our hotel guests",
+      "lead": "If you stay at Taverna de la Sal and book directly:",
+      "items": [
+        "10% discount at the restaurant",
+        "Priority attention for your booking",
+        "Seasonal personalized recommendations"
+      ],
+      "cta": "Book your stay with perks"
+    },
+    "carta": {
+      "eyebrow": "THE MENU",
+      "title": "Explore our menu",
+      "lead": "Discover grilled meats and fish, seasonal dishes and a carefully curated selection of local wines.",
+      "linkText": "View menu",
+      "ctaAria": "Open the menu in a new tab",
+      "url": "#"
+    },
+    "horarios": {
+      "eyebrow": "BOOKINGS",
+      "title": "Opening hours",
+      "week": {
+        "title": "Monday to Friday",
+        "time": "Dinner: 18:30 — 22:30"
+      },
+      "weekend": {
+        "title": "Weekends and holidays",
+        "lunch": "Lunch: 12:30 — 15:30",
+        "dinner": "Dinner: 18:30 — 22:30"
+      },
+      "note": "Limited seating, especially during high season.",
+      "cta": "Book a table"
+    }
+  }
+
 
 
   

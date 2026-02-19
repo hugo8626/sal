@@ -4,11 +4,11 @@ import Navbar from "./components/NavBar/Navbar";
 import Footer from "./components/Footer/Footer";
 
 import Home from "./pages/home/Home";
+import Servicios from "./pages/servicios/Servicios";
 import Restaurante from "./pages/restaurante/Restaurante";
 import Room from "./pages/rooms/Room";
 import History from "./pages/historia/History";
 import Area from "./pages/area/Area";
-import Reservas from "./components/reservas/Reserva";
 
 /* === ADMIN === */
 import Admin from "./pages/admin/Admin";
@@ -39,89 +39,79 @@ import CookieBanner from "./components/CookieBanner/CookieBanner";
 
 import "./styles/App.css";
 
+/* 🔥 URL limpia SIN fechas */
+const BOOKING_URL =
+  "https://direct-book.com/properties/tavernadelasaldirect?locale=es&items[0][adults]=2&items[0][children]=0&items[0][infants]=0&currency=EUR&trackPage=yes";
+
 export default function App() {
   return (
     <BrowserRouter>
-      {/* ✅ Siempre al top en cada cambio de ruta */}
       <ScrollToTop />
-
-      {/* ✅ Mantiene i18n sync con la URL /:lang/... */}
       <LanguageSync />
 
-      {/* ✅ Navbar y Footer quedan globales (se ven también en admin).
-          Si NO quieres Navbar/Footer en admin, se hace con layout aparte. */}
       <Navbar />
 
       <Routes>
-        /* =========================================================
-           1 RUTAS CON IDIOMA (IMPORTANTE EL ORDEN)
-           - Admin/login y admin deben ir ANTES del catch-all /:lang/*
-        ========================================================= */
 
-        {/* ✅ ADMIN LOGIN con idioma */}
+        {/* ================== RUTAS CON IDIOMA ================== */}
+
         <Route path="/:lang/admin/login" element={<AdminLogin />} />
-
-        {/* ✅ ADMIN panel con idioma */}
         <Route path="/:lang/admin" element={<Admin />} />
 
-        {/* Páginas principales con idioma */}
+        <Route path="/:lang" element={<Home />} />
+        <Route path="/:lang/servicios" element={<Servicios />} />
         <Route path="/:lang/restaurante" element={<Restaurante />} />
         <Route path="/:lang/habitaciones" element={<Room />} />
         <Route path="/:lang/historia" element={<History />} />
         <Route path="/:lang/entorno" element={<Area />} />
-        <Route path="/:lang/reservar" element={<Reservas />} />
+
+        {/* RESERVAS → MOTOR EXTERNO */}
+        <Route
+          path="/:lang/reservar"
+          element={<Navigate to={BOOKING_URL} replace />}
+        />
+
         <Route path="/:lang/contacto" element={<Contacto />} />
 
-        {/* Legal con idioma */}
+        {/* LEGAL */}
         <Route path="/:lang/privacidad" element={<Privacy />} />
         <Route path="/:lang/aviso-legal" element={<LegalNotice />} />
         <Route path="/:lang/cookies" element={<Cookies />} />
 
-        {/* ✅ CATCH-ALL del idioma: siempre al final del bloque /:lang/
-            Si lo pones arriba, "se come" /:lang/admin/login y te manda a Home */}
         <Route path="/:lang/*" element={<Home />} />
 
-        /* =========================================================
-           2 RUTAS DE ERROR (sin idioma)
-        ========================================================= */
+        {/* ================== ERRORES ================== */}
+
         <Route path="/401" element={<Unauthorized />} />
         <Route path="/403" element={<Forbidden />} />
         <Route path="/500" element={<ServerError />} />
 
-        /* =========================================================
-           3LEGACY ROUTES sin idioma -redirigen a /es/...
-        ========================================================= */
+        {/* ================== LEGACY SIN IDIOMA ================== */}
 
-        {/* Home raíz */}
         <Route path="/" element={<Navigate to="/es" replace />} />
-
-        {/* Legacy principales */}
+        <Route path="/servicios" element={<Navigate to="/es/servicios" replace />} />
         <Route path="/restaurante" element={<Navigate to="/es/restaurante" replace />} />
         <Route path="/habitaciones" element={<Navigate to="/es/habitaciones" replace />} />
         <Route path="/historia" element={<Navigate to="/es/historia" replace />} />
         <Route path="/entorno" element={<Navigate to="/es/entorno" replace />} />
-        <Route path="/reservar" element={<Navigate to="/es/reservar" replace />} />
-        <Route path="/contacto" element={<Navigate to="/es/contacto" replace />} />
 
-        {/* ✅ Legacy admin: manda al login en ES (el panel se protege por token) */}
+        {/*  Legacy reservar → externo */}
+        <Route path="/reservar" element={<Navigate to={BOOKING_URL} replace />} />
+
+        <Route path="/contacto" element={<Navigate to="/es/contacto" replace />} />
         <Route path="/admin" element={<Navigate to="/es/admin/login" replace />} />
         <Route path="/admin/login" element={<Navigate to="/es/admin/login" replace />} />
-
-        {/* Legacy legal */}
         <Route path="/privacidad" element={<Navigate to="/es/privacidad" replace />} />
         <Route path="/aviso-legal" element={<Navigate to="/es/aviso-legal" replace />} />
         <Route path="/cookies" element={<Navigate to="/es/cookies" replace />} />
 
-        {/* =========================================================
-           4) REDIRECTS “viejos”
-        ========================================================= */}
+        {/* REDIRECTS ANTIGUOS */}
         <Route path="/rooms" element={<Navigate to="/es/habitaciones" replace />} />
         <Route path="/area" element={<Navigate to="/es/entorno" replace />} />
 
-        /* =========================================================
-           5 404 GLOBAL
-        ========================================================= */
+        {/* 404 GLOBAL */}
         <Route path="*" element={<NotFound />} />
+
       </Routes>
 
       <CookieBanner />
