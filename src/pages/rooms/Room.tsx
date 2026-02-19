@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 
 import heroRooms from "../../assets/images/habitaciones/cami.png";
 import introRooms from "../../assets/images/habitaciones/camabaño.png";
-
+import { BOOKING_URL } from "../../config/links";
 import img1 from "../../assets/images/habitaciones/camaesquina.png";
 import img2 from "../../assets/images/habitaciones/sila.png";
 import img3 from "../../assets/images/habitaciones/espejo.png";
@@ -107,11 +107,15 @@ export default function Room() {
             <p className="roomsHero__subtitle">{t("rooms.hero.subtitle")}</p>
           </div>
 
-          {/* ✅ CTA directo a reservar */}
           <div className="roomsHero__ctaWrap">
-            <Link className="roomsHero__cta" to={route(lang, "reservar")}>
-              {t("rooms.hero.cta")}
-            </Link>
+            <a
+                className="roomsHero__cta"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("rooms.hero.cta")}
+              </a>
           </div>
         </section>
 
@@ -187,9 +191,14 @@ export default function Room() {
           <div className="roomsFinal__container">
             <h2 className="roomsFinal__title">{t("rooms.final.title")}</h2>
 
-            <Link to={route(lang, "reservar")} className="roomsFinal__btn">
+           <a
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="roomsFinal__btn"
+            >
               {t("rooms.final.button")}
-            </Link>
+            </a>
           </div>
         </section>
 
@@ -222,9 +231,14 @@ export default function Room() {
           <div className="roomsBigCta__container">
             <h2 className="roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
 
-            <Link className="roomsBigCta__btn" to={route(lang, "reservar")}>
-              {t("rooms.bigCta.button")}
-            </Link>
+            <a
+                className="roomsBigCta__btn"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("rooms.bigCta.button")}
+              </a>
           </div>
         </section>
       </main>

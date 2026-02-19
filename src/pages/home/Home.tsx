@@ -11,7 +11,7 @@ import camaimg from "../../assets/images/heroimg/camazul.png";
 import azoteaimg from "../../assets/images/heroimg/terraza.png";
 import restauranteimg from "../../assets/images/restaurante/oxido.png";
 import salaimg from "../../assets/images/espacios/IMG-20240419-WA0062.jpg";
-
+import { BOOKING_URL } from "../../config/links";
 /**
  * ✅ Idiomas soportados en rutas (/es/..., /en/..., etc.)
  * Si no encuentra un idioma válido en la URL, cae a "es".
@@ -26,8 +26,8 @@ function getLangFromPath(pathname: string): SupportedLang {
 }
 
 /**
- * ✅ Helper para construir rutas internas multiidioma
- * path debe venir SIN "/" inicial, ej: "reservar", "habitaciones"
+ * Helper para construir rutas internas multiidioma
+ * path debe venir SIN "/" inicial, ej: ", "habitaciones"
  */
 function route(lang: SupportedLang, path: string) {
   const clean = path.replace(/^\/+/, "");
@@ -92,10 +92,14 @@ export default function Home() {
               <h1 className="hero__title">{t("home.hero.title")}</h1>
               <p className="hero__subtitle">{t("home.hero.subtitle")}</p>
 
-              {/* ✅ CTA principal siempre a Reservar */}
-              <Link className="btn btn--primary" to={route(lang, "reservar")}>
-                {t("home.hero.cta")}
-              </Link>
+             <a
+                  className="btn btn--primary"
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("home.hero.cta")}
+                </a>
             </div>
           </div>
         </section>
@@ -245,9 +249,14 @@ export default function Home() {
                 <Link to={route(lang, "habitaciones")} className="btn btn--outline">
                   {t("home.rooms.details")}
                 </Link>
-                <Link to={route(lang, "reservar")} className="btn btn--primary">
+              <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--primary"
+                >
                   {t("home.rooms.cta")}
-                </Link>
+                </a>  
               </div>
             </div>
 
@@ -329,10 +338,11 @@ export default function Home() {
               </article>
             </div>
 
-            {/* ✅ ARREGLADO: servicios → HABITACIONES (no /room) */}
-            <Link className="link link--center" to={route(lang, "habitaciones")}>
-              {t("home.services.link")}
-            </Link>
+           
+          
+              <Link className="link link--center" to={route(lang, "servicios")}>
+                {t("home.services.link")}
+              </Link>
           </div>
         </section>
 
@@ -409,9 +419,14 @@ export default function Home() {
             <p className="ctaFinal__text">{t("home.cta.text")}</p>
 
             <div className="ctaFinal__actions">
-              <Link to={route(lang, "reservar")} className="btn btn--light">
-                {t("home.cta.button")}
-              </Link>
+             <a
+                  href={BOOKING_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn--light"
+                >
+                  {t("home.cta.button")}
+                </a>
             </div>
           </div>
         </section>

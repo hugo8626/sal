@@ -49,7 +49,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3 */}
+      
           <div className="footer__col">
             <p className="footer__heading">ENLACES</p>
 
@@ -67,7 +67,6 @@ export default function Footer() {
                 <Link to="/entorno">Entorno</Link>
               </li>
 
-              {/* NUEVO */}
               <li>
                 <Link to="/contacto">Contacto</Link>
               </li>

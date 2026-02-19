@@ -141,7 +141,7 @@ export default function Restaurante() {
               </li>
             </ul>
 
-            {/* ✅ Ruta correcta: /:lang/reservar */}
+           
             <a className="restCenter__btn" href={`/${lang}/reservar`}>
               {t("restaurante.ventajas.cta")}
             </a>

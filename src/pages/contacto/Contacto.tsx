@@ -1,35 +1,14 @@
 import "./contacto.css";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
+import { BOOKING_URL } from "../../config/links";
 
 import heroContact from "../../assets/images/espacios/sala.jpg";
 import ctaImg from "../../assets/images/espacios/sala.jpg";
 
 import SEO from "../../components/seo/SEO";
 
-/**
- * ✅ Idiomas soportados en rutas
- */
-const SUPPORTED = ["es", "en", "fr", "ca"] as const;
-type SupportedLang = (typeof SUPPORTED)[number];
-
-function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
-  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
-}
-
-/**
- * ✅ Helper para rutas internas multiidioma
- */
-function route(lang: SupportedLang, path: string) {
-  const clean = path.replace(/^\/+/, "");
-  return `/${lang}/${clean}`;
-}
-
 export default function Contacto() {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
-  const lang = getLangFromPath(pathname);
 
   return (
     <>
@@ -92,7 +71,6 @@ export default function Contacto() {
                   {t("contact.cards.address.line2")}
                 </p>
 
-                {/* ✅ Enlace externo seguro */}
                 <a
                   className="contactCard__btn"
                   href={t("contact.cards.address.mapsUrl")}
@@ -154,7 +132,6 @@ export default function Contacto() {
             <h2 className="contactSection__title">{t("contact.form.title")}</h2>
             <p className="contactSection__subtitle">{t("contact.form.subtitle")}</p>
 
-            {/* ✅ Evita recargar la SPA si aún no conectas backend */}
             <form
               className="formCard"
               onSubmit={(e) => {
@@ -224,12 +201,7 @@ export default function Contacto() {
                       strokeWidth="1.8"
                       strokeLinejoin="round"
                     />
-                    <path
-                      d="M21 3 10 14"
-                      stroke="currentColor"
-                      strokeWidth="1.8"
-                      strokeLinejoin="round"
-                    />
+                    <path d="M21 3 10 14" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
                   </svg>
                 </span>
                 {t("contact.form.submit")}
@@ -271,10 +243,15 @@ export default function Contacto() {
               {t("contact.cta.title.line3")}
             </h2>
 
-            {/* ✅ Link interno multiidioma */}
-            <Link className="contactCta__btn" to={route(lang, "reservar")}>
+            <a
+              className="contactCta__btn"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("contact.cta.aria", { defaultValue: "Reservar" })}
+            >
               {t("contact.cta.button")}
-            </Link>
+            </a>
           </div>
         </section>
       </main>

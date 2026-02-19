@@ -1,7 +1,6 @@
 import "./Area.css";
 import { useTranslation } from "react-i18next";
 import { useLocation, Link } from "react-router-dom";
-
 import heroImg from "../../assets/images/pueblo/bonitcala.jpg";
 import antigua from "../../assets/images/pueblo/anchoabn.jpg";
 import casco from "../../assets/images/pueblo/iglesia.jpg";
@@ -210,7 +209,7 @@ export default function Area() {
               </article>
             </div>
 
-            {/* ✅ Enlace externo seguro */}
+            {/*  Enlace externo seguro */}
             <a
               className="areaBeaches__link"
               href={t("area.beaches.url")}
@@ -254,7 +253,7 @@ export default function Area() {
                   <h3>{t("area.nature.items.2.title")}</h3>
                   <p>{t("area.nature.items.2.text")}</p>
 
-                  {/* ✅ Enlace externo seguro */}
+                  {/* Enlace externo seguro */}
                   <a
                     className="areaNature__link"
                     href={t("area.nature.items.2.url")}

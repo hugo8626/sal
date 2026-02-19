@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./NotFound.css";
-
+import { BOOKING_URL } from "../../config/links";
 export default function NotFound() {
   return (
     <main className="notFound page">
@@ -15,9 +15,14 @@ export default function NotFound() {
           <Link className="btn btn--primary" to="/">
             Volver al inicio
           </Link>
-          <Link className="btn btn--outline" to="/reservar">
+         <a
+            className="btn btn--outline"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Reservar
-          </Link>
+          </a>
         </div>
       </section>
     </main>

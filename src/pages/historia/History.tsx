@@ -1,40 +1,18 @@
 import "./History.css";
 import { useTranslation } from "react-i18next";
-import { Link, useLocation } from "react-router-dom";
 
+import { BOOKING_URL } from "../../config/links"; 
 import heroImg from "../../assets/images/espacios/sala.jpg";
 import pareja from "../../assets/images/espacios/pareja.jpg";
 import taverna from "../../assets/images/pueblo/taverna.jpg";
 
 import SEO from "../../components/seo/SEO";
 
-/**
- * ✅ Idiomas soportados en rutas
- */
-const SUPPORTED = ["es", "en", "fr", "ca"] as const;
-type SupportedLang = (typeof SUPPORTED)[number];
 
-/**
- * ✅ Lee idioma desde URL (/es/..., /en/..., etc.)
- * Fallback: "es"
- */
-function getLangFromPath(pathname: string): SupportedLang {
-  const first = pathname.split("/")[1]?.toLowerCase() ?? "";
-  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
-}
-
-/**
- * ✅ Construye rutas internas con idioma
- */
-function route(lang: SupportedLang, path: string) {
-  const clean = path.replace(/^\/+/, "");
-  return `/${lang}/${clean}`;
-}
 
 export default function History() {
   const { t } = useTranslation();
-  const { pathname } = useLocation();
-  const lang = getLangFromPath(pathname);
+  
 
   return (
     <>
@@ -60,10 +38,14 @@ export default function History() {
               <h1 className="historyHero__title">{t("history.hero.title")}</h1>
               <p className="historyHero__subtitle">{t("history.hero.subtitle")}</p>
 
-              {/* ✅ CTA a reservar con ruta multiidioma */}
-              <Link className="btn btn--outline historyHero__btn" to={route(lang, "reservar")}>
+              <a
+                className="btn btn--primary"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {t("history.hero.cta")}
-              </Link>
+              </a>
             </div>
           </div>
         </section>
@@ -143,9 +125,16 @@ export default function History() {
               {t("history.final.textLine2")}
             </p>
 
-            <Link className="btn btn--primary" to={route(lang, "reservar")}>
-              {t("history.final.cta")}
-            </Link>
+           
+
+            <a
+               className="btn btn--primary"
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {t("history.final.cta")}
+              </a>
           </div>
         </section>
       </main>

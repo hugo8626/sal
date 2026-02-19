@@ -1,5 +1,5 @@
 import "./Servicios.css";
-
+import { BOOKING_URL } from "../../config/links";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
@@ -255,9 +255,14 @@ export default function Servicios() {
           <div className="container restFinal__inner">
             <h2 className="restFinal__title">{t("servicesPage.final.title")}</h2>
 
-            <Link className="restFinal__btn" to={route(lang, "reservar")}>
+           <a
+              className="restFinal__btn"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {t("servicesPage.final.cta")}
-            </Link>
+            </a>
           </div>
         </section>
       </main>
