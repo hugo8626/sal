@@ -167,57 +167,55 @@
       "button": "Vérifier la disponibilité"
     }
   },
-
-
-
-
   
+
+
   "rooms": {
     "hero": {
       "title": "Chambres boutique à L'Escala",
-      "subtitle": "Des espaces lumineux et accueillants, conçus pour un vrai repos, dans un hôtel réservé aux adultes au bord de la mer.",
+      "subtitle": "Espaces lumineux et chaleureux conçus pour un véritable repos, dans un hôtel réservé aux adultes au bord de la mer.",
       "cta": "Réserver"
     },
     "intro": {
-      "title": "Pour celles et ceux qui aiment le détail",
-      "lead": "Des chambres uniques de 25 à 30 m², pensées pour celles et ceux qui voient le repos comme une expérience de calme, de lumière et d’attention au bord de la Méditerranée.",
+      "title": "Pour ceux qui apprécient le détail",
+      "lead": "Chambres uniques de 25 à 30 m², conçues pour ceux qui considèrent le repos comme une expérience de calme, de lumière et de soin au bord de la Méditerranée.",
       "list": [
-        "Toutes en double",
-        "Deux peuvent être adaptées en triple sur demande",
+        "Toutes doubles avec lit matrimonial",
+        "Deux d’entre elles adaptables en triple sur demande",
         "Avec balcon et vue latérale sur la mer"
       ],
-      "quote": "Un refuge exclusif pour les couples en quête de détail, d’intimité et de design face à la Méditerranée.",
+      "quote": "Un refuge exclusif pour les couples en quête de détails, d’intimité et de design face à la Méditerranée.",
       "imageAlt": "Chambre avec salle de bain et lumière naturelle"
     },
     "features": [
       {
         "title": "Confort",
         "items": [
-          "Surface de 25 à 30 m²",
+          "Surface entre 25 et 30 m²",
           "Lit king-size (2,00 × 1,80 m)",
           "Climatisation et chauffage"
         ]
       },
       {
-        "title": "Salle de bain & soin",
+        "title": "Salle de bain et soins",
         "items": [
           "Douche à l’italienne",
-          "Produits d’accueil sélectionnés",
+          "Produits d’accueil inclus",
           "Sèche-cheveux"
         ]
       },
       {
-        "title": "Des détails qui comptent",
+        "title": "Des détails qui font la différence",
         "items": [
-          "Bouilloire avec sélection de café et de thé",
-          "Mini-réfrigérateur",
+          "Bouilloire avec sélection de café et thé",
+          "Mini-réfrigérateur · fer vertical",
           "Coffre-fort"
         ]
       },
       {
-        "title": "Technologie & connexion",
+        "title": "Technologie et connexion",
         "items": [
-          "TV écran plat",
+          "Télévision écran plat",
           "Chaînes nationales et internationales",
           "Wi-Fi haut débit gratuit"
         ]
@@ -225,55 +223,63 @@
     ],
     "gallery": {
       "title": "Chaque détail, choisi avec intention.",
-      "subtitle": "Une visite visuelle d’espaces où design, confort et calme se rencontrent.",
+      "subtitle": "Un parcours visuel à travers des espaces où design, confort et sérénité se rencontrent.",
       "imageAlt": "Détail d’une chambre de l’hôtel"
     },
     "final": {
-      "title": "Un petit nombre de chambres garantit une atmosphère calme et exclusive tout au long de la saison.",
+      "title": "Peu de chambres garantissent une atmosphère calme et exclusive tout au long de la saison.",
       "button": "RÉSERVER UNE CHAMBRE"
     },
     "services": {
-      "text": "Au-delà de votre chambre, profitez de notre terrasse avec vue sur la mer et de notre restaurant à la braise.",
-      "link": "Découvrir nos services"
+      "text": "En plus de votre chambre, vous pourrez profiter de notre terrasse avec vue sur la mer et de notre restaurant à la braise.",
+      "link": "Découvrez nos services"
     },
     "faq": {
       "title": "Questions fréquentes",
       "items": [
         {
           "q": "L’hôtel est-il réservé aux adultes ?",
-          "a": "Oui. Taverna de la Sal est un hôtel réservé aux adultes, pensé pour offrir une atmosphère calme et relaxante à tous nos hôtes."
+          "a": "Oui. Taverna de la Sal est un hôtel réservé aux adultes, pour les personnes de plus de 14 ans, conçu pour offrir une atmosphère calme et relaxante tout au long du séjour."
         },
         {
-          "q": "Le petit-déjeuner est-il inclus ?",
+          "q": "Le petit-déjeuner est-il inclus dans le séjour ?",
           "a": "Oui, le petit-déjeuner quotidien avec des produits locaux est inclus dans toutes les réservations."
         },
         {
           "q": "Y a-t-il un parking privé ?",
-          "a": "Oui. Nous proposons un parking privé à proximité avec un nombre de places limité. Réservation préalable requise et coût supplémentaire."
+          "a": "Oui. Nous proposons un parking privé à proximité avec des places limitées. Une réservation préalable est nécessaire et un supplément s’applique."
         },
         {
           "q": "Quelles sont les heures d’arrivée et de départ ?",
-          "a": "L’arrivée est possible à partir de 15h00 et le départ est à 11h00. Une arrivée anticipée ou un départ tardif peut être demandé, selon disponibilité."
+          "a": "Le check-in est disponible à partir de 15h00 jusqu’à 19h00 et le check-out est à 11h00."
         },
         {
-          "q": "La terrasse est-elle ouverte à tous ?",
-          "a": "La terrasse est réservée aux clients de l’hôtel et uniquement aux adultes. En été, nous proposons musique live et cocktails le soir."
+          "q": "La terrasse rooftop est-elle ouverte à tous ?",
+          "a": "La terrasse est réservée exclusivement aux clients de l’hôtel et aux adultes."
         },
         {
-          "q": "Acceptez-vous les animaux ?",
-          "a": "Malheureusement, les animaux ne sont pas autorisés."
+          "q": "Acceptez-vous les animaux de compagnie ?",
+          "a": "Malheureusement, les animaux de compagnie ne sont pas autorisés dans l’établissement."
         },
         {
-          "q": "Peut-on fumer dans les chambres ?",
-          "a": "Non. Toutes les chambres et espaces intérieurs sont 100 % non-fumeurs. Vous pouvez fumer sur la terrasse."
+          "q": "Est-il permis de fumer dans les chambres ?",
+          "a": "Non. Toutes nos chambres et espaces intérieurs sont 100 % non-fumeurs. Si vous le souhaitez, vous pouvez fumer sur la terrasse."
         }
       ]
     },
     "bigCta": {
       "title": "Votre repos commence ici.",
-      "button": "VÉRIFIER LES DISPONIBILITÉS"
+      "button": "VÉRIFIER LA DISPONIBILITÉ"
     }
-  },
+  }
+
+
+
+
+
+  
+ 
+  ,
   "servicesPage": {
   "seo": {
     "title": "Services | Taverna de la Sal",

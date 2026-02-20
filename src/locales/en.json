@@ -169,29 +169,28 @@
   }
 ,
 
-  
   "rooms": {
     "hero": {
-      "title": "Boutique rooms in L'Escala",
-      "subtitle": "Bright, welcoming spaces designed for real rest, in an adults-only hotel by the sea.",
-      "cta": "Book"
+      "title": "Boutique Rooms in L'Escala",
+      "subtitle": "Bright and welcoming spaces designed for true rest, in an adults-only hotel by the sea.",
+      "cta": "Book now"
     },
     "intro": {
-      "title": "For those who value detail",
-      "lead": "Unique rooms between 25 and 30 m², designed for guests who understand rest as an experience of calm, light and care beside the Mediterranean.",
+      "title": "For those who appreciate the details",
+      "lead": "Unique rooms of 25 to 30 m², designed for those who understand rest as an experience of calm, light, and care by the Mediterranean.",
       "list": [
-        "All double rooms",
-        "Two can be adapted for triple occupancy on request",
-        "With balcony and side sea views"
+        "All rooms feature double beds",
+        "Two can be adapted to triple occupancy upon request",
+        "With balcony and partial sea views"
       ],
-      "quote": "An exclusive hideaway for couples seeking detail, privacy and design facing the Mediterranean.",
+      "quote": "An exclusive retreat for couples seeking detail, privacy, and design by the Mediterranean.",
       "imageAlt": "Room with bathroom and natural light"
     },
     "features": [
       {
         "title": "Comfort",
         "items": [
-          "25–30 m² of space",
+          "Surface area between 25 and 30 m²",
           "King-size bed (2.00 × 1.80 m)",
           "Air conditioning and heating"
         ]
@@ -200,78 +199,82 @@
         "title": "Bathroom & care",
         "items": [
           "Walk-in shower",
-          "Selected amenities",
+          "Bathroom amenities included",
           "Hair dryer"
         ]
       },
       {
-        "title": "Details that matter",
+        "title": "Details that make the difference",
         "items": [
-          "Kettle with coffee & tea selection",
-          "Mini fridge",
+          "Kettle with coffee and tea selection",
+          "Mini fridge · vertical steamer",
           "Safe"
         ]
       },
       {
-        "title": "Tech & connection",
+        "title": "Technology & connectivity",
         "items": [
           "Flat-screen TV",
-          "National & international channels",
+          "National and international channels",
           "Free high-speed Wi-Fi"
         ]
       }
     ],
     "gallery": {
       "title": "Every detail, chosen with intention.",
-      "subtitle": "A visual journey through spaces where design, comfort and calm come together.",
+      "subtitle": "A visual journey through spaces where design, comfort, and calm meet.",
       "imageAlt": "Hotel room detail"
     },
     "final": {
-      "title": "A small number of rooms ensures a calm, exclusive atmosphere throughout the season.",
+      "title": "A limited number of rooms ensures a calm and exclusive atmosphere throughout the season.",
       "button": "BOOK A ROOM"
     },
     "services": {
-      "text": "Beyond your room, enjoy our sea-view terrace and our charcoal-grill restaurant.",
+      "text": "In addition to your room, you can enjoy our sea-view terrace and charcoal grill restaurant.",
       "link": "Discover our services"
     },
     "faq": {
-      "title": "Frequently asked questions",
+      "title": "Frequently Asked Questions",
       "items": [
         {
-          "q": "Is the hotel adults-only?",
-          "a": "Yes. Taverna de la Sal is an adults-only hotel, designed to offer a quiet and relaxing atmosphere for all guests."
+          "q": "Is the hotel adults only?",
+          "a": "Yes. Taverna de la Sal is an adults-only hotel for guests aged 14 and over, designed to provide a calm and relaxing atmosphere throughout the stay."
         },
         {
           "q": "Is breakfast included?",
           "a": "Yes, daily breakfast with local products is included in all reservations."
         },
         {
-          "q": "Do you have private parking?",
-          "a": "Yes. We offer nearby private parking with limited spaces. Advance reservation is required and there is an additional cost."
+          "q": "Is there private parking?",
+          "a": "Yes. We offer nearby private parking with limited spaces. Advance reservation is required and an additional fee applies."
         },
         {
-          "q": "What are check-in and check-out times?",
-          "a": "Check-in is from 15:00 and check-out is at 11:00. Early check-in or late check-out may be requested, subject to availability."
+          "q": "What are the check-in and check-out times?",
+          "a": "Check-in is available from 15:00 to 19:00, and check-out is at 11:00."
         },
         {
-          "q": "Is the terrace open to everyone?",
-          "a": "The terrace is for hotel guests only and reserved for adults. In summer we offer live music and cocktails in the evening."
+          "q": "Is the rooftop terrace open to everyone?",
+          "a": "The terrace is reserved exclusively for hotel guests and adults."
         },
         {
-          "q": "Do you allow pets?",
-          "a": "Unfortunately, pets are not allowed."
+          "q": "Are pets allowed?",
+          "a": "Unfortunately, pets are not allowed on the premises."
         },
         {
-          "q": "Can you smoke in the rooms?",
-          "a": "No. All rooms and indoor areas are 100% smoke-free. If you wish, you can smoke on the terrace."
+          "q": "Is smoking allowed in the rooms?",
+          "a": "No. All rooms and indoor spaces are 100% smoke-free. If you wish, you may smoke on the terrace."
         }
       ]
     },
     "bigCta": {
-      "title": "Your rest starts here.",
+      "title": "Your rest begins here.",
       "button": "CHECK AVAILABILITY"
     }
-  },
+  }
+,
+
+  
+  
 
 
   "servicesPage": {

@@ -172,18 +172,19 @@
 
 
 
+ 
   "rooms": {
     "hero": {
-      "title": "Habitacions boutique a l'Escala",
-      "subtitle": "Espais lluminosos i acollidors dissenyats per a un descans real, en un hotel només adults vora el mar.",
+      "title": "Habitacions boutique a L'Escala",
+      "subtitle": "Espais lluminosos i acollidors dissenyats per al descans real, en un hotel només adults vora el mar.",
       "cta": "Reservar"
     },
     "intro": {
-      "title": "Només per a qui valora el detall",
-      "lead": "Habitacions úniques d’entre 25 i 30 m², dissenyades per a qui entén el descans com una experiència de calma, llum i cura al costat del Mediterrani.",
+      "title": "Per a qui valora el detall",
+      "lead": "Habitacions úniques de 25 a 30 m², dissenyades per a qui entén el descans com una experiència de calma, llum i cura vora el Mediterrani.",
       "list": [
-        "Totes dobles matrimonials",
-        "Dues d’elles adaptables a triple sota sol·licitud",
+        "Totes dobles amb llit matrimonial",
+        "Dues es poden adaptar a triple sota sol·licitud",
         "Amb balcó i vistes laterals al mar"
       ],
       "quote": "Un refugi exclusiu per a parelles que busquen detall, privacitat i disseny davant del Mediterrani.",
@@ -202,15 +203,15 @@
         "title": "Bany i cura",
         "items": [
           "Dutxa tipus walk-in",
-          "Amenities seleccionats",
-          "Assecador de cabell"
+          "Amenities de bany inclosos",
+          "Assecador de cabells"
         ]
       },
       {
         "title": "Detalls que marquen la diferència",
         "items": [
           "Bullidor amb selecció de cafè i te",
-          "Mini nevera",
+          "Mini nevera · planxa vertical",
           "Caixa forta"
         ]
       },
@@ -224,16 +225,16 @@
       }
     ],
     "gallery": {
-      "title": "Cada detall, triat amb intenció.",
+      "title": "Cada detall, escollit amb intenció.",
       "subtitle": "Un recorregut visual per espais on disseny, confort i calma es troben.",
-      "imageAlt": "Detall d’habitació de l’hotel"
+      "imageAlt": "Detall d’una habitació de l’hotel"
     },
     "final": {
       "title": "Poques habitacions garanteixen un ambient tranquil i exclusiu durant tota la temporada.",
       "button": "RESERVAR HABITACIÓ"
     },
     "services": {
-      "text": "A més de la teva habitació, podràs gaudir de la nostra terrassa amb vistes al mar i del restaurant a la brasa.",
+      "text": "A més de la teva habitació, podràs gaudir de la nostra terrassa amb vista al mar i del restaurant a la brasa.",
       "link": "Descobreix els nostres serveis"
     },
     "faq": {
@@ -241,10 +242,10 @@
       "items": [
         {
           "q": "L’hotel és només per a adults?",
-          "a": "Sí. Taverna de la Sal és un hotel només per a adults, pensat per oferir un ambient tranquil i relaxat a tots els nostres hostes."
+          "a": "Sí. Taverna de la Sal és un hotel només adults, per a majors de 14 anys, dissenyat per oferir un ambient tranquil i relaxat durant tota l’estada."
         },
         {
-          "q": "L’esmorzar està inclòs a l’estada?",
+          "q": "L’esmorzar està inclòs en l’estada?",
           "a": "Sí, l’esmorzar diari amb productes locals està inclòs en totes les reserves."
         },
         {
@@ -253,27 +254,28 @@
         },
         {
           "q": "Quina és l’hora d’entrada i sortida?",
-          "a": "El check-in està disponible a partir de les 15:00 i el check-out és a les 11:00. Es pot sol·licitar entrada anticipada o sortida tardana, subjecte a disponibilitat."
+          "a": "El check-in està disponible a partir de les 15:00 fins a les 19:00 i el check-out és a les 11:00."
         },
         {
-          "q": "La terrassa està oberta per a tothom?",
-          "a": "La terrassa és només per a hostes de l’hotel i està reservada per a adults. A l’estiu, oferim música en viu i còctels a la nit."
+          "q": "La terrassa rooftop està oberta per a tothom?",
+          "a": "La terrassa és només per als hostes de l’hotel i està reservada per a adults."
         },
         {
-          "q": "Accepteu mascotes?",
+          "q": "S’accepten mascotes?",
           "a": "Malauradament, no s’admeten mascotes a l’establiment."
         },
         {
           "q": "Es pot fumar a les habitacions?",
-          "a": "No. Totes les habitacions i espais interiors són 100% lliures de fum. Si vols, pots fumar a la terrassa."
+          "a": "No. Totes les habitacions i espais interiors són 100 % lliures de fum. Si ho desitges, pots fumar a la terrassa."
         }
       ]
     },
     "bigCta": {
       "title": "El teu descans comença aquí.",
-      "button": "COMPROVAR DISPONIBILITAT"
+      "button": "COMPROVA LA DISPONIBILITAT"
     }
-  },
+  }
+,
   "servicesPage": {
   "seo": {
     "title": "Serveis | Taverna de la Sal",
