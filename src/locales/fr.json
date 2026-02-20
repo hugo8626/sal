@@ -627,7 +627,7 @@
         "Assistance personnalisée"
       ],
       "phoneNote": "Vous préférez réserver par téléphone ?",
-      "phone": "+34 972 000 000"
+      "phone": "+34 972 776 278"
     }
   }
   ,
@@ -666,7 +666,7 @@
       },
       "s5": {
         "title": "5. Identification du responsable",
-        "p1": "Responsable du traitement : [RAISON SOCIALE] · NIF/CIF : [NIF/CIF] · Adresse : [ADRESSE COMPLÈTE] · Email : [EMAIL]"
+        "p1": "Responsable du traitement : · NIF/CIF : B55243653 · Adresse : Santa Maxima, 7 17130 L'Escala (Girona) · Email : info@tavernadelasal.com"
       },
       "s6": {
         "title": "6. Plus d’informations",
@@ -686,7 +686,7 @@
     "sections": {
       "identification": {
         "title": "1. Informations d’identification",
-        "content": "Titulaire : [NOM LÉGAL DE L’HÔTEL OU SOCIÉTÉ]\nNuméro fiscal : [CIF / NIF]\nAdresse : [ADRESSE COMPLÈTE]\nEmail : [EMAIL]\nTéléphone : [TÉLÉPHONE]"
+        "content": "Titulaire : Can Kiwi SL\nNuméro fiscal : B55243653\nAdresse : Santa Maxima, 7 17130 L'Escala (Girona)\nEmail : info@tavernadelasal.com\nTéléphone : 972776278"
       },
       "object": {
         "title": "2. Objet",
@@ -730,7 +730,7 @@
     "sections": {
       "controller": {
         "title": "1. Responsable del tratamiento",
-        "content": "Titular: [NOMBRE LEGAL DEL HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicilio: [DIRECCIÓN COMPLETA]\nEmail: [EMAIL]\nTeléfono: [TELÉFONO]"
+        "content": "Titular: Can Kiwi SL\nCIF/NIF: B55243653\nDomicilio: Santa Maxima, 7 17130 L'Escala (Girona)\nEmail: info@tavernadelasal.com\nTeléfono: 972776278"
       },
       "purpose": {
         "title": "2. Finalidad del tratamiento",
@@ -769,7 +769,7 @@
           "Limitar u oponerse al tratamiento.",
           "Solicitar la portabilidad de sus datos."
         ],
-        "contact": "Puede ejercer sus derechos enviando una solicitud al correo electrónico [EMAIL]."
+        "contact": "Puede ejercer sus derechos enviando una solicitud al correo electrónico info@tavernadelasal.com."
       },
       "security": {
         "title": "7. Seguridad",

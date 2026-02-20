@@ -17,10 +17,11 @@ export default function Contacto() {
         title={t("contact.seo.title", { defaultValue: "Contacto | Taverna de la Sal" })}
         description={t("contact.seo.description", {
           defaultValue:
-            "Contacta con Taverna de la Sal en L'Escala. Dirección, teléfono, email y mapa para llegar fácilmente.",
+            "Contacta con Taverna de la Sal en L'Escala. Santa Maxima, 7  17130 L'Escala (Girona)  , 972776278 , info@tavernadelasal.com",
         })}
         image={heroContact}
       />
+   
 
       <main className="contactPage">
         {/* ================= HERO ================= */}

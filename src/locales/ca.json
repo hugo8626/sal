@@ -618,7 +618,7 @@
         "Atenció personalitzada"
       ],
       "phoneNote": "Prefereixes reservar per telèfon?",
-      "phone": "+34 972 000 000"
+      "phone": "+34 972 776 278"
     }
   }
   ,
@@ -657,7 +657,7 @@
       },
       "s5": {
         "title": "5. Identificació del responsable",
-        "p1": "Responsable del tractament: [RAÓ SOCIAL] · NIF/CIF: [NIF/CIF] · Adreça: [ADREÇA COMPLETA] · Email: [EMAIL]"
+        "p1": "Responsable del tractament:Can Kiwi SL· NIF/CIF: B55243653 · Adreça:Santa Maxima, 7 17130 L'Escala (Girona)· Email: info@tavernadelasal.com"
       },
       "s6": {
         "title": "6. Més informació",
@@ -678,7 +678,7 @@
     "sections": {
       "identification": {
         "title": "1. Dades identificatives",
-        "content": "Titular: [NOM LEGAL DE L’HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicili: [ADREÇA COMPLETA]\nEmail: [EMAIL]\nTelèfon: [TELÈFON]"
+        "content": "Titular: Can Kiwi SL\nCIF/NIF: B55243653\nDomicili: Santa Maxima, 7\nEmail: info@tavernadelasal.com\nTelèfon: 972776278"
       },
       "object": {
         "title": "2. Objecte",
@@ -722,7 +722,7 @@
     "sections": {
       "controller": {
         "title": "1. Responsable del tractament",
-        "content": "Titular: [NOM LEGAL DE L’HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicili: [ADREÇA COMPLETA]\nEmail: [EMAIL]\nTelèfon: [TELÈFON]"
+        "content": "Titular:\nCIF/NIF: B55243653\nDomicili: Santa Maxima, 7\nEmail: info@tavernadelasal.com\nTelèfon: 972776278"
       },
       "purpose": {
         "title": "2. Finalitat del tractament",

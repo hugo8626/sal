@@ -109,7 +109,7 @@ export default function Room() {
 
           <div className="roomsHero__ctaWrap">
             <a
-                className="roomsHero__cta"
+                className="btn btn-primary roomsHero__cta"
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"

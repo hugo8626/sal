@@ -1,15 +1,13 @@
 /* =========================================
    FOOTER
-   - Mantiene tu estética (azul oscuro + franja azul)
-   - Evita hardcodear layout: usa --container
-   - Tipos y bordes coherentes con index.css
+   - Estética azul oscuro coherente
+   - Sistema basado en variables
+   - Social icons profesionales
 ========================================= */
 
 .footer {
-  /* Mantengo tu look, pero alineo con el sistema */
   background: var(--color-dark);
   color: rgba(255, 255, 255, 0.88);
-
   padding: 48px 0 28px;
   position: relative;
 }
@@ -28,7 +26,7 @@
 .footer__container {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 0 24px; /* igual que .container global */
+  padding: 0 24px;
 }
 
 .footer__grid {
@@ -38,7 +36,10 @@
   margin-top: 30px;
 }
 
-/* columna marca */
+/* =========================================
+   BRAND
+========================================= */
+
 .footer__title {
   font-family: var(--font-heading);
   font-size: 1.1rem;
@@ -54,7 +55,45 @@
   max-width: 340px;
 }
 
-/* headings columnas */
+/* =========================================
+   SOCIALS (Instagram + WhatsApp)
+========================================= */
+
+.socials {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+
+  transition: all 0.25s ease;
+}
+
+.socials__link:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+  fill: #ffffff;
+}
+
+/* =========================================
+   COLUMN HEADINGS
+========================================= */
+
 .footer__heading {
   font-size: 0.7rem;
   letter-spacing: 0.18em;
@@ -63,7 +102,10 @@
   color: rgba(255, 255, 255, 0.60);
 }
 
-/* contacto */
+/* =========================================
+   CONTACTO
+========================================= */
+
 .footer__list {
   list-style: none;
   padding: 0;
@@ -80,7 +122,6 @@
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* enlaces de contacto (tel y mailto) */
 .footer__contactLink {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.85);
@@ -92,7 +133,10 @@
   color: #ffffff;
 }
 
-/* enlaces navegación */
+/* =========================================
+   LINKS
+========================================= */
+
 .footer__links {
   list-style: none;
   padding: 0;
@@ -112,19 +156,24 @@
   color: #ffffff;
 }
 
-/* línea divisoria */
+/* =========================================
+   DIVIDER
+========================================= */
+
 .footer__divider {
   height: 1px;
   background: rgba(255, 255, 255, 0.12);
   margin: 32px 0 18px;
 }
 
-/* parte inferior */
+/* =========================================
+   BOTTOM
+========================================= */
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.55);
 }
@@ -144,7 +193,10 @@
   color: #ffffff;
 }
 
-/* responsive */
+/* =========================================
+   RESPONSIVE
+========================================= */
+
 @media (max-width: 900px) {
   .footer__grid {
     grid-template-columns: 1fr;

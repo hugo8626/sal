@@ -58,36 +58,20 @@
 }
 
 /* CTA (único) */
-.roomsHero__ctaWrap {
+
+.roomsHero__ctaWrap{
   position: absolute;
   left: 50%;
-  bottom: 8rem;
+  bottom: 7rem;
   transform: translateX(-50%);
   z-index: 2;
   width: min(720px, calc(100% - 3rem));
-}
-
-.roomsHero__cta {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 64px;
-  border-radius: var(--radius-sm);
-  background: var(--color-primary);
-  text-decoration: none;
-  font-family: var(--font-body);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  color: var(--color-bg-main);
-  box-shadow: var(--shadow-md);
-  transition: filter 0.2s ease, transform 0.2s ease;
+  justify-content: center; 
+ 
 }
 
-.roomsHero__cta:hover {
-  filter: brightness(1.06);
-  transform: translateY(-1px);
-}
+
 
 /* ================= INTRO ================= */
 
@@ -254,6 +238,7 @@
   aspect-ratio: 4 / 3;
   background: rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease;
+  box-shadow: 0 10px 6px rgba(0, 0, 0, 0.1);
 }
 
 .gItem:hover {
@@ -289,20 +274,7 @@
   margin: 0 0 var(--space-7);
 }
 
-.roomsFinal__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 2.2rem;
-  background: var(--color-primary);
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  border-radius: var(--radius-sm);
-  transition: filter 0.25s ease, transform 0.25s ease;
-}
+
 
 .roomsFinal__btn:hover {
   filter: brightness(1.06);
@@ -449,20 +421,7 @@
   font-size: clamp(2.2rem, 4vw, 4rem);
 }
 
-.roomsBigCta__btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.05rem 2.4rem;
-  background: var(--color-primary);
-  color: #fff;
-  text-decoration: none;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  border-radius: var(--radius-sm);
-  transition: filter 0.25s ease, transform 0.25s ease;
-}
+
 
 .roomsBigCta__btn:hover {
   filter: brightness(1.06);

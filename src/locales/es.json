@@ -623,7 +623,7 @@
         "Atención personalizada"
       ],
       "phoneNote": "¿Prefieres reservar por teléfono?",
-      "phone": "+34 972 000 000"
+      "phone": "+34 972 776 278"
     }
   }
   ,
@@ -662,13 +662,13 @@
       },
       "s5": {
         "title": "5. Identificación del responsable",
-        "p1": "Responsable del tratamiento: [NOMBRE O RAZÓN SOCIAL] · NIF/CIF: [NIF/CIF] · Dirección: [DIRECCIÓN COMPLETA] · Email: [EMAIL]"
+        "p1": "Responsable del tratamiento: Can Kiwi Sl · NIF/ B55243653 · Dirección: Santa Maxima, 7· Email: info@tavernadelasal.com"
       },
       "s6": {
         "title": "6. Más información",
         "p1": "Para más información sobre el tratamiento de datos personales, consulte nuestra Política de Privacidad."
       },
-      "updated": "Última actualización: [FECHA]"
+      "updated": "Última actualización: 2026"
     }
   }
   ,
@@ -682,7 +682,7 @@
     "sections": {
       "identification": {
         "title": "1. Datos identificativos",
-        "content": "Titular: [NOMBRE LEGAL DEL HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicilio: [DIRECCIÓN COMPLETA]\nEmail: [EMAIL]\nTeléfono: [TELÉFONO]"
+        "content": "Titular: Can Kiwi SL\nCIF/NIF: B55243653\nDomicilio: Santa Maxima, 7\nEmail:info@tavernadelasal.com\nTeléfono: 972776278"
       },
       "object": {
         "title": "2. Objeto",
@@ -727,7 +727,7 @@
     "sections": {
       "controller": {
         "title": "1. Responsable del tratamiento",
-        "content": "Titular: [NOMBRE LEGAL DEL HOTEL O EMPRESA]\nCIF/NIF: [CIF / NIF]\nDomicilio: [DIRECCIÓN COMPLETA]\nEmail: [EMAIL]\nTeléfono: [TELÉFONO]"
+        "content": "Titular: Can Kiwi SL\nCIF/NIF: B55243653\nDomicilio: Santa Maxima, 7\nEmail: info@tavernadelasal.com\nTeléfono: 972776278"
       },
       "purpose": {
         "title": "2. Finalidad del tratamiento",
@@ -766,7 +766,7 @@
           "Limitar u oponerse al tratamiento.",
           "Solicitar la portabilidad de sus datos."
         ],
-        "contact": "Puede ejercer sus derechos enviando una solicitud al correo electrónico [EMAIL]."
+        "contact": "Puede ejercer sus derechos enviando una solicitud al correo electrónico info@tavernadelasal.com."
       },
       "security": {
         "title": "7. Seguridad",
