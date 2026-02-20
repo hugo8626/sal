@@ -50,7 +50,7 @@
   gap: var(--space-3);
   align-items: center;
 
-  color: #fff;
+  color: #010101;
   text-align: center;
 }
 
@@ -325,6 +325,17 @@
   width:2rem;
   
  
+}
+
+.ctainea{
+  display: inline-block;
+  margin-top: 18px;
+  letter-spacing: 2px;
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 6px;
+
+  
 }
 
 

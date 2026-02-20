@@ -36,7 +36,7 @@
       "aria": "Portada",
       "eyebrow": "HOTEL BOUTIQUE · SOLO ADULTOS · L’ESCALA",
       "title": "Taverna de la Sal",
-      "subtitle": "Seis habitaciones íntimas en un edificio del siglo XIX restaurado, a pocos metros del mar. Diseñadas para desconectar de verdad y disfrutar sin prisas",
+      "subtitle": "Seis  habitaciones íntimas a pocos pasos del mar. Calma, historia y desconexión en el corazon de la costa Brava.",
       "cta": "COMPROBAR DISPONIBILIDAD"
     },
     "story": {
@@ -67,7 +67,7 @@
     "atmosphere": {
       "eyebrow": "ATMÓSFERA",
       "title": "Luz, detalle y calma",
-      "text": "Desde la luz del mediterráneo hasta los interiores cuidadosamente diseñados, cada espacio invita a desconectar",
+      "text": "Desde la luz del mediterráneo hasta los interiores cuidadosamente diseñados, cada espacio invita a desconectar.",
       "images": [
         "Detalle decorativo",
         "Escalera interior",
@@ -94,11 +94,11 @@
       ]
     },
     "rooms": {
-      "eyebrow": "HABITACIONES",
+      "eyebrow": "Habitaciones premium",
       "title": "Habitaciones con vistas al Mediterráneo",
-      "text": "Habitaciones dobles de entre 25 y 30 m, con balcón privado y vistas laterales al mar. Decoradas con materiales naturales, luz suave y una paleta de tonos arena y azul que invitan a desconectar.",
+      "text": " Espacios dobles de entre 25 y 30 m², con balcón privado y vistas laterales al mar. Decorados con materiales naturales, luz suave y una paleta de tonos arena y azul que invitan a desconectar.",
       "features": [
-        "Desayuno artesanal incluido cada mañana",
+        "Desayuno buffet mediterráneo incluido cada mañana",
         "Diseño mediterráneo contemporáneo",
         "Servicio de limpieza diario y cuidado al detalle",
         "Ropa de cama de alta calidad"
@@ -110,8 +110,8 @@
     "restaurant": {
       "eyebrow": "RESTAURANTE",
       "title": "Brasa, producto y Mediterráneo",
-      "text": "Nuestro restaurante ofrece una cocina honesta basada en carnes y pescados a la brasa, con producto de temporada y una selección de vinos DO Empordà. Un ambiente íntimo junto al mar para disfrutar de la mejor gastronomía ampurdanesa",
-      "cta": "Descubrir el restaurante",
+      "text": "Nuestro restaurante ofrece una cocina honesta basada en carnes y pescados a la brasa, con producto de temporada y una selección de vinos DO Empordà. Un ambiente íntimo junto al mar para disfrutar de la mejor gastronomia del Empordà.",
+      "cta": "Descubrir el restaurante →",
       "imageAlt": "Mesa en la terraza del restaurante con vistas al mar"
     },
     "services": {

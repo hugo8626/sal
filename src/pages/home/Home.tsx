@@ -288,7 +288,7 @@ export default function Home() {
               <h2 className="title">{t("home.restaurant.title")}</h2>
               <p className="text">{t("home.restaurant.text")}</p>
 
-              <Link className="btn btn--primary" to={route(lang, "restaurante")}>
+              <Link className="ctainea " to={route(lang, "restaurante")}>
                 {t("home.restaurant.cta")}
               </Link>
             </div>
