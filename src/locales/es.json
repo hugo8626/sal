@@ -198,7 +198,7 @@
         "title": "Baño y cuidado",
         "items": [
           "Ducha tipo walk-in",
-          "Amenities seleccionadas",
+          "Amenities de baño incluidos",
           "Secador de pelo"
         ]
       },
@@ -206,8 +206,8 @@
         "title": "Detalles que marcan la diferencia",
         "items": [
           "Hervidor con selección de café y té",
-          "Mini nevera",
-          "Caja fuerte"
+          "Mini nevera - Plancha vertical",
+          "Caja fuerte "
         ]
       },
       {
@@ -237,7 +237,7 @@
       "items": [
         {
           "q": "¿El hotel es solo para adultos?",
-          "a": "Sí. Taverna de la Sal es un hotel solo para adultos, pensado para ofrecer un ambiente tranquilo y relajado a todos nuestros huéspedes."
+          "a": "Sí. Taverna de la Sal es un hotel solo adultos, para mayores de 14 años, diseñado para ofrecer un ambiente tranquilo y relajado durante toda la estancia."
         },
         {
           "q": "¿El desayuno está incluido en la estancia?",
@@ -249,11 +249,11 @@
         },
         {
           "q": "¿Cuál es la hora de entrada y salida?",
-          "a": "El check-in está disponible a partir de las 15:00 y el check-out es a las 11:00. Se puede solicitar entrada anticipada o salida tardía, sujeto a disponibilidad."
+          "a": " El check-in está disponible a partir de las 15:00 hasta las 19:00 y el check-out es a las 11:00."
         },
         {
-          "q": "¿La terraza está abierta para todos?",
-          "a": "La terraza es solo para huéspedes del hotel y está reservada para adultos. En verano, ofrecemos música en vivo y cócteles por la noche."
+          "q": "¿La terraza rooftop está abierta para todos?",
+          "a": "La terraza es solo para huéspedes del hotel y está reservada para adultos."
         },
         {
           "q": "¿Aceptan mascotas?",

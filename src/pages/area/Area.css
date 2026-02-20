@@ -103,7 +103,8 @@
 }
 
 .placeCard img {
-  width: 100%;
+  width: 30rem;
+  height: 20rem;
   display: block;
   border-radius: 14px;
   overflow: hidden;
