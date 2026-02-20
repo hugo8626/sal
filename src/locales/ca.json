@@ -32,20 +32,20 @@
       "aria": "Menú mòbil"
     }
   },
-
+  
   "home": {
     "hero": {
       "aria": "Portada",
       "eyebrow": "HOTEL BOUTIQUE · NOMÉS ADULTS · L’ESCALA",
       "title": "Taverna de la Sal",
-      "subtitle": "Sis habitacions íntimes en un edifici del segle XIX restaurat, a pocs metres del mar. Dissenyades per desconnectar de veritat i gaudir sense presses",
-      "cta": "COMPROVAR DISPONIBILITAT"
+      "subtitle": "Sis habitacions íntimes a pocs passos del mar. Calma, història i desconnexió al cor de la Costa Brava.",
+      "cta": "COMPROVA LA DISPONIBILITAT"
     },
     "story": {
       "eyebrow": "LA NOSTRA HISTÒRIA",
-      "title": "Un edifici del segle XIX lligat al mar i a la sal",
-      "text": "Aquest edifici centenari, vinculat a la tradició marinera i salinera de l'Escala, ha estat restaurat amb cura per convertir-se en un hotel boutique només adults i un restaurant mediterrani que respecta la seva essència original.",
-      "link": "DESCOBRIR LA NOSTRA HISTÒRIA  →",
+      "title": "Un edifici del segle XIX lligat al mar i la sal",
+      "text": "Aquest edifici centenari, vinculat a la tradició marinera i salinera de l'Escala, ha estat restaurat amb cura per convertir-se en un hotel boutique només per a adults i un restaurant mediterrani que respecta la seva essència original.",
+      "link": "DESCOBREIX LA NOSTRA HISTÒRIA →",
       "imageAlt": "Entrada amb volta de l’hotel"
     },
     "refuge": {
@@ -57,19 +57,19 @@
           "text": "Sis habitacions i un ambient només adults que garanteix tranquil·litat i descans sense interrupcions."
         },
         {
-          "title": "Davant del mar i al nucli antic",
+          "title": "Davant del mar i nucli antic",
           "text": "Ubicació privilegiada entre el Mediterrani i els carrers empedrats del centre històric de l'Escala."
         },
         {
           "title": "Hospitalitat propera",
-          "text": "Gestionat pels propietaris, que cuiden cada detall perquè la teva estada sigui inoblidable."
+          "text": "Gestionat pels seus propietaris, que cuiden cada detall perquè la teva estada sigui inoblidable."
         }
       ]
     },
     "atmosphere": {
       "eyebrow": "ATMOSFERA",
       "title": "Llum, detall i calma",
-      "text": "Des de la llum del Mediterrani fins als interiors acuradament dissenyats, cada espai convida a desconnectar",
+      "text": "Des de la llum mediterrània fins als interiors acuradament dissenyats, cada espai convida a desconnectar.",
       "images": [
         "Detall decoratiu",
         "Escala interior",
@@ -86,7 +86,7 @@
           "text": "Gaudeix de la nostra cuina a la brasa amb un descompte exclusiu per a reserves directes."
         },
         {
-          "title": "Millor tarifa garantida",
+          "title": "Millor preu garantit",
           "text": "Reservant directament sempre obtindràs el millor preu disponible."
         },
         {
@@ -96,24 +96,24 @@
       ]
     },
     "rooms": {
-      "eyebrow": "HABITACIONS",
+      "eyebrow": "Habitacions premium",
       "title": "Habitacions amb vistes al Mediterrani",
-      "text": "Habitacions dobles d’entre 25 i 30 m, amb balcó privat i vistes laterals al mar. Decorades amb materials naturals, llum suau i una paleta de tons sorra i blau que conviden a desconnectar.",
+      "text": "Espais dobles de 25 a 30 m² amb balcó privat i vistes laterals al mar. Decorades amb materials naturals, llum suau i una paleta de tons sorra i blau que conviden a desconnectar.",
       "features": [
-        "Esmorzar artesanal inclòs cada matí",
+        "Esmorzar bufet mediterrani inclòs cada matí",
         "Disseny mediterrani contemporani",
         "Servei de neteja diari i cura pel detall",
         "Roba de llit d’alta qualitat"
       ],
       "details": "Veure detalls",
-      "cta": "Comprovar disponibilitat",
+      "cta": "Comprova la disponibilitat",
       "imageAlt": "Habitació amb balcó i vistes al Mediterrani"
     },
     "restaurant": {
       "eyebrow": "RESTAURANT",
       "title": "Brasa, producte i Mediterrani",
-      "text": "El nostre restaurant ofereix una cuina honesta basada en carns i peixos a la brasa, amb producte de temporada i una selecció de vins DO Empordà. Un ambient íntim vora el mar per gaudir de la millor gastronomia empordanesa",
-      "cta": "Descobrir el restaurant",
+      "text": "El nostre restaurant ofereix una cuina honesta basada en carns i peixos a la brasa, producte de temporada i una selecció de vins DO Empordà. Un ambient íntim vora el mar per gaudir de la millor gastronomia de l’Empordà.",
+      "cta": "Descobreix el restaurant →",
       "imageAlt": "Taula a la terrassa del restaurant amb vistes al mar"
     },
     "services": {
@@ -124,9 +124,9 @@
         "Terrassa amb vistes al mar",
         "Neteja diària",
         "Wi-Fi gratuït",
-        "Pàrquing amb reserva"
+        "Pàrquing sota reserva"
       ],
-      "link": "CONEIX TOTS ELS SERVEIS →"
+      "link": "DESCOBREIX TOTS ELS SERVEIS →"
     },
     "area": {
       "eyebrow": "ENTORN",
@@ -139,7 +139,7 @@
         "Tradició de l’anxova"
       ],
       "imageAlt": "Vista aèria de l’Escala a la Costa Brava",
-      "link": "EXPLORAR L’ESCALA →"
+      "link": "EXPLORA L’ESCALA →"
     },
     "reviews": {
       "eyebrow": "OPINIONS",
@@ -147,17 +147,17 @@
       "starsAria": "5 de 5 estrelles",
       "items": [
         {
-          "quote": "“Personalitat, comoditat i calidesa genuïna. Habitacions dissenyades amb cura, neteja impecable i una terrassa a l’azotea perfecta per a la posta de sol. Un esmorzar excepcional i un servei que realment marca la diferència.”",
+          "quote": "« Personalitat, comoditat i calidesa genuïna. Habitacions dissenyades amb cura, neteja impecable i una terrassa al terrat perfecta per a la posta de sol. Esmorzar excepcional i un servei que realment marca la diferència. »",
           "name": "Emanuel P.",
           "city": "Madrid"
         },
         {
-          "quote": "“Una meravella com n’és de tranquil i el poc soroll que té aquest hotel. Les habitacions estan molt cuidades, els llits són molt còmodes i tot està super net. L’esmorzar és de molt bona qualitat.”",
+          "quote": "« Una meravella la tranquil·litat i el poc soroll que té aquest hotel. Les habitacions estan cuidades al màxim, els llits són molt còmodes i tot està impecablement net. L’esmorzar és de gran qualitat. »",
           "name": "Cristian V.",
           "city": "Bilbao"
         },
         {
-          "quote": "“Ubicació perfecta just al costat del port. Amfitrions encantadors. Habitacions amb estil, esmorzar excel·lent i un restaurant amb un autèntic ambient local”",
+          "quote": "« Ubicació perfecta just al costat del port. Amfitrions encantadors. Habitacions amb estil, esmorzar excel·lent i un restaurant amb autèntic ambient local. »",
           "name": "Anna K.",
           "city": "Barcelona"
         }
@@ -166,9 +166,11 @@
     "cta": {
       "title": "El teu refugi davant del Mediterrani t’espera",
       "text": "Reserva directament i viu una experiència íntima, autèntica i inoblidable al cor de l’Escala.",
-      "button": "Comprovar disponibilitat"
+      "button": "Comprova la disponibilitat"
     }
   },
+
+
 
   "rooms": {
     "hero": {

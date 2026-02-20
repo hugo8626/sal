@@ -30,20 +30,20 @@
       "aria": "Menu mobile"
     }
   },
-
+  
   "home": {
     "hero": {
-      "aria": "Accueil",
-      "eyebrow": "HÔTEL BOUTIQUE · ADULTES UNIQUEMENT · L’ESCALA",
+      "aria": "Page d’accueil",
+      "eyebrow": "HÔTEL BOUTIQUE · ADULTS ONLY · L’ESCALA",
       "title": "Taverna de la Sal",
-      "subtitle": "Six chambres intimistes dans un bâtiment du XIXe siècle restauré, à quelques mètres de la mer. Conçues pour vraiment déconnecter et savourer sans hâte.",
-      "cta": "VÉRIFIER LES DISPONIBILITÉS"
+      "subtitle": "Six chambres intimes à quelques pas de la mer. Calme, histoire et déconnexion au cœur de la Costa Brava.",
+      "cta": "VÉRIFIER LA DISPONIBILITÉ"
     },
     "story": {
       "eyebrow": "NOTRE HISTOIRE",
       "title": "Un bâtiment du XIXe siècle lié à la mer et au sel",
-      "text": "Ce bâtiment historique, ancré dans les traditions maritimes et salinières de L’Escala, a été soigneusement restauré pour devenir un hôtel boutique réservé aux adultes et un restaurant méditerranéen respectueux de son essence d’origine.",
-      "link": "DÉCOUVRIR NOTRE HISTOIRE  →",
+      "text": "Ce bâtiment centenaire, lié à la tradition maritime et salinière de L'Escala, a été soigneusement restauré pour devenir un hôtel boutique réservé aux adultes et un restaurant méditerranéen respectant son essence originale.",
+      "link": "DÉCOUVRIR NOTRE HISTOIRE →",
       "imageAlt": "Entrée voûtée de l’hôtel"
     },
     "refuge": {
@@ -52,22 +52,22 @@
       "cards": [
         {
           "title": "Exclusivité totale",
-          "text": "Six chambres et une atmosphère réservée aux adultes qui garantit calme et repos sans interruptions."
+          "text": "Six chambres et une atmosphère réservée aux adultes garantissant tranquillité et repos sans interruption."
         },
         {
-          "title": "Entre mer et vieille ville",
-          "text": "Emplacement privilégié entre la Méditerranée et les ruelles pavées du centre historique de L’Escala."
+          "title": "Face à la mer et au cœur historique",
+          "text": "Emplacement privilégié entre la Méditerranée et les ruelles pavées du centre historique de L'Escala."
         },
         {
-          "title": "Hospitalité proche et sincère",
-          "text": "Géré par ses propriétaires, qui soignent chaque détail pour rendre votre séjour inoubliable."
+          "title": "Hospitalité authentique",
+          "text": "Géré par ses propriétaires, qui prennent soin de chaque détail pour rendre votre séjour inoubliable."
         }
       ]
     },
     "atmosphere": {
       "eyebrow": "ATMOSPHÈRE",
-      "title": "Lumière, détail et calme",
-      "text": "De la lumière méditerranéenne aux intérieurs soigneusement pensés, chaque espace invite à déconnecter.",
+      "title": "Lumière, détails et sérénité",
+      "text": "De la lumière méditerranéenne aux intérieurs soigneusement conçus, chaque espace invite à la déconnexion.",
       "images": [
         "Détail décoratif",
         "Escalier intérieur",
@@ -80,12 +80,12 @@
       "title": "Avantages de réserver avec nous",
       "cards": [
         {
-          "title": "10% de réduction au restaurant",
-          "text": "Profitez de notre cuisine à la braise avec une réduction exclusive en réservant en direct."
+          "title": "10 % de réduction au restaurant",
+          "text": "Profitez de notre cuisine à la braise avec une réduction exclusive pour les réservations directes."
         },
         {
           "title": "Meilleur tarif garanti",
-          "text": "En réservant en direct, vous obtenez toujours le meilleur prix disponible."
+          "text": "En réservant directement, vous obtenez toujours le meilleur prix disponible."
         },
         {
           "title": "Attention personnalisée",
@@ -94,25 +94,25 @@
       ]
     },
     "rooms": {
-      "eyebrow": "CHAMBRES",
+      "eyebrow": "Chambres premium",
       "title": "Chambres avec vue sur la Méditerranée",
-      "text": "Chambres doubles de 25 à 30 m², avec balcon privé et vue latérale sur la mer. Décorées avec des matériaux naturels, une lumière douce et une palette de tons sable et bleu qui invite à déconnecter.",
+      "text": "Espaces doubles de 25 à 30 m² avec balcon privé et vue latérale sur la mer. Décorés avec des matériaux naturels, une lumière douce et une palette de tons sable et bleu invitant à la détente.",
       "features": [
-        "Petit-déjeuner artisanal inclus chaque matin",
+        "Petit-déjeuner buffet méditerranéen inclus chaque matin",
         "Design méditerranéen contemporain",
-        "Ménage quotidien et attention aux détails",
+        "Service de ménage quotidien et souci du détail",
         "Linge de lit de haute qualité"
       ],
       "details": "Voir les détails",
-      "cta": "Vérifier les disponibilités",
+      "cta": "Vérifier la disponibilité",
       "imageAlt": "Chambre avec balcon et vue sur la Méditerranée"
     },
     "restaurant": {
       "eyebrow": "RESTAURANT",
-      "title": "Braise, produit et Méditerranée",
-      "text": "Notre restaurant propose une cuisine sincère centrée sur les viandes et poissons à la braise, avec des produits de saison et une sélection de vins DO Empordà. Une ambiance intimiste au bord de la mer pour savourer la meilleure gastronomie locale.",
-      "cta": "Découvrir le restaurant",
-      "imageAlt": "Table sur la terrasse du restaurant avec vue sur la mer"
+      "title": "Braise, produits et Méditerranée",
+      "text": "Notre restaurant propose une cuisine sincère basée sur des viandes et poissons à la braise, des produits de saison et une sélection de vins DO Empordà. Une ambiance intime au bord de la mer pour savourer la meilleure gastronomie de l’Empordà.",
+      "cta": "Découvrir le restaurant →",
+      "imageAlt": "Table en terrasse avec vue sur la mer"
     },
     "services": {
       "eyebrow": "SERVICES",
@@ -129,10 +129,10 @@
     "area": {
       "eyebrow": "ENVIRONNEMENT",
       "title": "L’Escala, Costa Brava",
-      "text": "Un village de pêche authentique sur la Costa Brava, où le patrimoine gréco-romain d’Empúries côtoie des plages d’eau cristalline, des criques cachées et une tradition gastronomique unique marquée par les célèbres anchois de L’Escala.",
+      "text": "Un village marin authentique de la Costa Brava où le patrimoine gréco-romain d’Empúries coexiste avec des plages aux eaux cristallines, des criques cachées et une tradition gastronomique unique marquée par les célèbres anchois de L'Escala.",
       "items": [
         "Plages à quelques pas",
-        "Vieille ville de L’Escala",
+        "Centre historique de L’Escala",
         "Ruines d’Empúries",
         "Tradition de l’anchois"
       ],
@@ -145,17 +145,17 @@
       "starsAria": "5 étoiles sur 5",
       "items": [
         {
-          "quote": "« Caractère, confort et chaleur authentique. Chambres pensées avec soin, propreté irréprochable et une terrasse sur le toit parfaite pour le coucher de soleil. Petit-déjeuner exceptionnel et un service qui fait vraiment la différence. »",
+          "quote": "« Personnalité, confort et chaleur authentique. Chambres conçues avec soin, propreté impeccable et terrasse sur le toit parfaite pour le coucher du soleil. Petit-déjeuner exceptionnel et service qui fait réellement la différence. »",
           "name": "Emanuel P.",
           "city": "Madrid"
         },
         {
-          "quote": "« Un vrai bonheur, tellement calme et silencieux. Les chambres sont impeccables, les lits très confortables et tout est très propre. Le petit-déjeuner est de très bonne qualité. »",
+          "quote": "« Un hôtel d’un calme remarquable. Les chambres sont parfaitement entretenues, les lits très confortables et tout est impeccablement propre. Le petit-déjeuner est d’excellente qualité. »",
           "name": "Cristian V.",
           "city": "Bilbao"
         },
         {
-          "quote": "« Emplacement parfait juste à côté du port. Hôtes adorables. Chambres avec style, excellent petit-déjeuner et un restaurant à l’ambiance vraiment locale. »",
+          "quote": "« Emplacement parfait juste à côté du port. Hôtes charmants. Chambres élégantes, excellent petit-déjeuner et restaurant avec une véritable ambiance locale. »",
           "name": "Anna K.",
           "city": "Barcelone"
         }
@@ -163,11 +163,15 @@
     },
     "cta": {
       "title": "Votre refuge face à la Méditerranée vous attend",
-      "text": "Réservez en direct et vivez une expérience intimiste, authentique et inoubliable au cœur de L’Escala.",
-      "button": "Vérifier les disponibilités"
+      "text": "Réservez directement et vivez une expérience intime, authentique et inoubliable au cœur de L’Escala.",
+      "button": "Vérifier la disponibilité"
     }
   },
 
+
+
+
+  
   "rooms": {
     "hero": {
       "title": "Chambres boutique à L'Escala",

@@ -30,48 +30,48 @@
       "aria": "Mobile menu"
     }
   },
-
+  
   "home": {
     "hero": {
-      "aria": "Cover",
+      "aria": "Homepage",
       "eyebrow": "BOUTIQUE HOTEL · ADULTS ONLY · L’ESCALA",
       "title": "Taverna de la Sal",
-      "subtitle": "Six intimate rooms in a restored 19th-century building, just a few meters from the sea. Designed to truly switch off and enjoy at your own pace.",
+      "subtitle": "Six intimate rooms just steps from the sea. Calm, history, and disconnection in the heart of the Costa Brava.",
       "cta": "CHECK AVAILABILITY"
     },
     "story": {
       "eyebrow": "OUR STORY",
-      "title": "A 19th-century building shaped by sea and salt",
-      "text": "This historic building, rooted in L'Escala’s seafaring and salt traditions, has been carefully restored into an adults-only boutique hotel and a Mediterranean restaurant that respects its original character.",
-      "link": "DISCOVER OUR STORY  →",
+      "title": "A 19th-century building linked to the sea and salt",
+      "text": "This century-old building, connected to L'Escala’s maritime and salt-trading heritage, has been carefully restored to become an adults-only boutique hotel and a Mediterranean restaurant that respects its original essence.",
+      "link": "DISCOVER OUR STORY →",
       "imageAlt": "Arched entrance of the hotel"
     },
     "refuge": {
-      "eyebrow": "YOUR COASTA BRAVA HIDEAWAY",
+      "eyebrow": "YOUR COSTA BRAVA RETREAT",
       "title": "Why choose Taverna de la Sal",
       "cards": [
         {
           "title": "Total exclusivity",
-          "text": "Six rooms and an adults-only atmosphere that guarantees peace and uninterrupted rest."
+          "text": "Six rooms and an adults-only atmosphere that guarantees tranquility and uninterrupted rest."
         },
         {
-          "title": "Seafront & old town",
+          "title": "By the sea & historic center",
           "text": "A privileged location between the Mediterranean and the cobbled streets of L'Escala’s historic center."
         },
         {
-          "title": "Warm, personal hospitality",
-          "text": "Run by the owners, who care for every detail to make your stay unforgettable."
+          "title": "Genuine hospitality",
+          "text": "Managed by its owners, who care for every detail to make your stay unforgettable."
         }
       ]
     },
     "atmosphere": {
       "eyebrow": "ATMOSPHERE",
       "title": "Light, detail and calm",
-      "text": "From Mediterranean light to thoughtfully designed interiors, every space invites you to unwind.",
+      "text": "From Mediterranean light to carefully designed interiors, every space invites you to unwind.",
       "images": [
         "Decorative detail",
-        "Indoor staircase",
-        "Rooftop terrace with views",
+        "Interior staircase",
+        "Terrace with views",
         "Bright room"
       ]
     },
@@ -80,12 +80,12 @@
       "title": "Benefits of booking with us",
       "cards": [
         {
-          "title": "10% off at the restaurant",
-          "text": "Enjoy our charcoal-grill cuisine with an exclusive discount when you book direct."
+          "title": "10% restaurant discount",
+          "text": "Enjoy our charcoal-grilled cuisine with an exclusive discount for direct bookings."
         },
         {
           "title": "Best rate guaranteed",
-          "text": "Booking direct always gives you the best available price."
+          "text": "Booking directly ensures you always get the best available price."
         },
         {
           "title": "Personalized attention",
@@ -94,46 +94,46 @@
       ]
     },
     "rooms": {
-      "eyebrow": "ROOMS",
+      "eyebrow": "Premium Rooms",
       "title": "Rooms with Mediterranean views",
-      "text": "Double rooms between 25 and 30 m², with a private balcony and side sea views. Decorated with natural materials, soft light, and a palette of sand and blue tones that invites you to disconnect.",
+      "text": "Double spaces of 25–30 m² with private balcony and partial sea views. Decorated with natural materials, soft light, and a palette of sand and blue tones designed for relaxation.",
       "features": [
-        "Handcrafted breakfast included every morning",
+        "Mediterranean buffet breakfast included every morning",
         "Contemporary Mediterranean design",
-        "Daily housekeeping and attention to detail",
-        "High-quality bedding"
+        "Daily housekeeping with attention to detail",
+        "High-quality bed linens"
       ],
-      "details": "See details",
+      "details": "View details",
       "cta": "Check availability",
       "imageAlt": "Room with balcony and Mediterranean views"
     },
     "restaurant": {
       "eyebrow": "RESTAURANT",
-      "title": "Charcoal, local produce and the Mediterranean",
-      "text": "Our restaurant offers honest cuisine centered on charcoal-grilled meats and fish, seasonal produce, and a selection of DO Empordà wines. An intimate setting by the sea to enjoy the best local gastronomy.",
-      "cta": "Discover the restaurant",
-      "imageAlt": "Table on the restaurant terrace with sea views"
+      "title": "Fire, produce & Mediterranean flavor",
+      "text": "Our restaurant offers honest cuisine focused on charcoal-grilled meats and fish, seasonal produce, and a selection of DO Empordà wines. An intimate seaside setting to enjoy the finest gastronomy of the Empordà.",
+      "cta": "Discover the restaurant →",
+      "imageAlt": "Restaurant terrace table overlooking the sea"
     },
     "services": {
       "eyebrow": "SERVICES",
       "title": "Everything you need",
       "items": [
-        "Breakfast with local produce",
-        "Terrace with sea views",
+        "Breakfast with local products",
+        "Sea-view terrace",
         "Daily housekeeping",
         "Free Wi-Fi",
-        "Parking by reservation"
+        "Parking upon reservation"
       ],
-      "link": "SEE ALL SERVICES →"
+      "link": "DISCOVER ALL SERVICES →"
     },
     "area": {
-      "eyebrow": "AREA",
+      "eyebrow": "SURROUNDINGS",
       "title": "L’Escala, Costa Brava",
-      "text": "An authentic fishing village on the Costa Brava, where Empúries’ Greco-Roman heritage meets crystal-clear beaches, hidden coves, and a unique food tradition marked by L'Escala’s famous anchovies.",
+      "text": "An authentic fishing town on the Costa Brava where the Greco-Roman heritage of Empúries coexists with crystal-clear beaches, hidden coves, and a unique gastronomic tradition marked by the famous anchovies of L'Escala.",
       "items": [
         "Beaches just steps away",
-        "L’Escala old town",
-        "Empúries ruins",
+        "Historic center of L’Escala",
+        "Ruins of Empúries",
         "Anchovy tradition"
       ],
       "imageAlt": "Aerial view of L’Escala on the Costa Brava",
@@ -145,29 +145,31 @@
       "starsAria": "5 out of 5 stars",
       "items": [
         {
-          "quote": "“Character, comfort and genuine warmth. Beautifully designed rooms, spotless cleanliness, and a rooftop terrace perfect for sunset. An outstanding breakfast and service that truly makes the difference.”",
+          "quote": "“Personality, comfort and genuine warmth. Thoughtfully designed rooms, impeccable cleanliness, and a rooftop terrace perfect for sunset. Exceptional breakfast and service that truly makes a difference.”",
           "name": "Emanuel P.",
           "city": "Madrid"
         },
         {
-          "quote": "“A wonderful level of peace and quiet. The rooms are extremely well cared for, the beds are very comfortable and everything is super clean. Breakfast is excellent quality.”",
+          "quote": "“Incredibly peaceful hotel with very little noise. The rooms are beautifully maintained, beds are very comfortable, and everything is spotlessly clean. Breakfast is of excellent quality.”",
           "name": "Cristian V.",
           "city": "Bilbao"
         },
         {
-          "quote": "“Perfect location right next to the harbor. Lovely hosts. Stylish rooms, excellent breakfast and a restaurant with a truly local atmosphere.”",
+          "quote": "“Perfect location right by the harbor. Charming hosts. Stylish rooms, excellent breakfast, and a restaurant with a truly authentic local atmosphere.”",
           "name": "Anna K.",
           "city": "Barcelona"
         }
       ]
     },
     "cta": {
-      "title": "Your Mediterranean hideaway awaits",
+      "title": "Your Mediterranean retreat awaits",
       "text": "Book direct and enjoy an intimate, authentic and unforgettable experience in the heart of L’Escala.",
       "button": "Check availability"
     }
-  },
+  }
+,
 
+  
   "rooms": {
     "hero": {
       "title": "Boutique rooms in L'Escala",
