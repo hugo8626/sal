@@ -35,7 +35,7 @@ export default function History() {
           <div className="historyHero__bg" style={{ backgroundImage: `url(${heroImg})` }}>
             <div className="historyHero__overlay" />
             <div className="container historyHero__content">
-              <h1 className="historyHero__title">{t("history.hero.title")}</h1>
+              <h1 className="hero__title historyHero__title">{t("history.hero.title")}</h1>
               <p className="historyHero__subtitle">{t("history.hero.subtitle")}</p>
 
               <a

@@ -33,7 +33,7 @@ export default function Contacto() {
           <div className="contactHero__overlay" />
 
           <div className="contactHero__content">
-            <h1 className="contactHero__title">
+            <h1 className="hero__title  contactHero__title">
               {t("contact.hero.title.line1")}
               <br />
               {t("contact.hero.title.line2")}

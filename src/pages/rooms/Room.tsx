@@ -103,7 +103,7 @@ export default function Room() {
           <div className="roomsHero__overlay" />
 
           <div className="roomsHero__content">
-            <h1 className="roomsHero__title">{t("rooms.hero.title")}</h1>
+            <h1 className="hero__title roomsHero__title">{t("rooms.hero.title")}</h1>
             <p className="roomsHero__subtitle">{t("rooms.hero.subtitle")}</p>
           </div>
 

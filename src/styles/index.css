@@ -70,6 +70,13 @@ ol {
   font-display: swap;
 }
 
+@font-face {
+  font-family: play;
+  src: url(../assets/fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  
+}
 /* =========================================
    DESIGN SYSTEM (TOKENS)
 ========================================= */
@@ -78,6 +85,8 @@ ol {
   /* ---- Tipografías ---- */
   --font-heading: "AnticDidone", serif;
   --font-body: "Inter", sans-serif;
+
+  --font-title: "Play", sans-serif;
 
   /* ---- Colores principales ---- */
   --color-bg-main: #fbfaf8;
@@ -136,7 +145,7 @@ body {
    TIPOGRAFÍA BASE
 ========================================= */
 
-h1,
+
 h2,
 h3,
 h4 {
@@ -153,6 +162,12 @@ h3 { font-size: 1.4rem; }
 p {
   font-size: 1rem;
   color: var(--color-text);
+}
+.hero__title{
+  font-family: var(--font-title);
+  color: var(--color-bg-beige);
+  letter-spacing: .8rem;
+  font-size: 4rem;
 }
 
 /* =========================================

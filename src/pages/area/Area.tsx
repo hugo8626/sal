@@ -60,7 +60,7 @@ export default function Area() {
         >
           <div className="areaHero__overlay" />
           <div className="areaHero__content">
-            <h1>{t("area.hero.title")}</h1>
+            <h1 className="hero__title">{t("area.hero.title")}</h1>
             <p>{t("area.hero.subtitle")}</p>
           </div>
         </section>
