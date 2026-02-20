@@ -290,9 +290,9 @@
     "imageAlt": "Restaurante a la brasa"
   },
   "breakfast": {
-    "eyebrow": "EL ENTORNO",
+    "eyebrow": "DESAYUNO BUFFET  MEDITERRÁNEO",
     "title": "Empieza el día con sabor",
-    "text": "Disfruta cada mañana de una selección de productos locales, pan artesanal, fruta de temporada, zumos naturales y café recién hecho en un ambiente tranquilo y solo adultos.",
+    "text": "  Cada mañana servimos un desayuno buffet cuidado y elegante, con productos frescos y de proximidad: pan y bollería recién horneada, fruta de temporada, embutidos y quesos locales, acompañado de zumo de naranja natural  y café preparado al momento. Un comienzo del día tranquilo, en un ambiente mediterráneo a pocos pasos del mar.    ",
     "imageAlt": "Desayuno con producto local"
   },
   "terrace": {
@@ -337,7 +337,7 @@
       "imageAlt": "Los anfitriones",
       "kicker": "Taverna de la Sal no nació como un proyecto empresarial.",
       "p1": "Nació como una manera de vivir. Matthew llegó desde Nueva Zelanda con una idea muy clara: la hospitalidad no es un servicio, es una forma de estar presente. Durante años ha trabajado en el mundo de la hostelería y aprendió que los detalles silenciosos son los que realmente se recuerdan.",
-      "p2": "Marina creció en L’Escala. Conoce el ritmo del mar, el carácter del pueblo y esa forma mediterránea de cuidar que mezcla cercanía y calma.",
+      "p2": "Mariona creció en L’Escala. Conoce el ritmo del mar, el carácter del pueblo y esa forma mediterránea de cuidar que mezcla cercanía y calma.",
       "quoteLines": [
         "Dos mares distintos.",
         "Dos culturas.",

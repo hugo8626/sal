@@ -276,51 +276,62 @@
     }
   }
 ,
+
   "servicesPage": {
-  "seo": {
-    "title": "Serveis | Taverna de la Sal",
-    "description": "Serveis de l’hotel: restaurant a la brasa, esmorzar amb producte local, terrassa mediterrània, racó de lectura, pàrquing i Wi-Fi."
-  },
-  "hero": {
-    "aria": "Serveis",
-    "title": "Serveis que completen la teva experiència",
-    "subtitle": "Cada detall ha estat pensat perquè la teva estada sigui còmoda i tranquil·la.",
-    "note": "✓ 10% de descompte per a reserves directes"
-  },
-  "brasa": {
-    "eyebrow": "GAUDEIX",
-    "title": "Restaurant a la brasa",
-    "text1": "Carns i peixos a la brasa amb producte de temporada.",
-    "text2": "10% de descompte si reserves directament.",
-    "cta": "VEURE MÉS",
-    "imageAlt": "Restaurant a la brasa"
-  },
-  "breakfast": {
-    "eyebrow": "L’ENTORN",
-    "title": "Comença el dia amb sabor",
-    "text": "Productes locals, pa artesanal i cafè acabat de fer.",
-    "imageAlt": "Esmorzar amb producte local"
-  },
-  "terrace": {
-    "title": "Terrassa amb vistes al Mediterrani",
-    "text": "Vistes a la badia i postes de sol inoblidables.",
-    "imageAlt": "Terrassa amb vistes al mar"
-  },
-  "reading": {
-    "title": "Racó de lectura",
-    "text": "Un espai tranquil per relaxar-se.",
-    "imageAlt": "Racó de lectura de l’hotel"
-  },
-  "cards": [
-    { "title": "Confort sense preocupacions", "text": "Neteja diària i cura al detall." },
-    { "title": "Pàrquing al centre", "text": "Places limitades amb reserva prèvia." },
-    { "title": "Wi-Fi d’alta velocitat", "text": "Disponible a totes les habitacions." }
-  ],
-  "final": {
-    "title": "Petit hotel, atenció propera i serveis pensats per gaudir.",
-    "cta": "COMPROVAR DISPONIBILITAT"
+    "seo": {
+      "title": "Serveis | Taverna de la Sal",
+      "description": "Serveis de l’hotel: restaurant a la brasa, esmorzar amb producte local, terrassa amb vistes al Mediterrani, racó de lectura, pàrquing i Wi-Fi."
+    },
+    "hero": {
+      "aria": "Serveis",
+      "title": "Serveis que completen la teva experiència",
+      "subtitle": "Cada detall ha estat pensat perquè la teva estada a Taverna de la Sal sigui còmoda, tranquil·la i sense preocupacions.",
+      "note": "✓ 10% de descompte per als hostes de l’hotel que reserven directament a la nostra web"
+    },
+    "brasa": {
+      "eyebrow": "GAUDEIX",
+      "title": "Restaurant a la brasa",
+      "text1": "Especialistes en carns i peixos a la brasa, amb producte de temporada i un ambient íntim al nucli antic de L'Escala.",
+      "text2": "Si reserves directament a la nostra web, gaudiràs d’un 10% de descompte al restaurant durant la teva estada.",
+      "cta": "VEURE MÉS",
+      "imageAlt": "Restaurant a la brasa"
+    },
+    "breakfast": {
+      "eyebrow": "ESMORZAR BUFET MEDITERRANI",
+      "title": "Comença el dia amb gust",
+      "text": "Cada matí servim un esmorzar bufet cuidat i elegant, amb productes frescos i de proximitat: pa i brioixeria acabats de fornejar, fruita de temporada, embotits i formatges locals, acompanyats de suc de taronja natural i cafè preparat al moment. Un inici del dia tranquil, en un ambient mediterrani a pocs passos del mar.",
+      "imageAlt": "Esmorzar amb producte local"
+    },
+    "terrace": {
+      "title": "Terrassa amb vistes al Mediterrani",
+      "text": "La nostra terrassa ofereix vistes a la badia i al nucli antic. A l’estiu, còctels i música en viu; a l’hivern, calma i capvespres inoblidables.",
+      "imageAlt": "Terrassa amb vistes al mar"
+    },
+    "reading": {
+      "title": "Racó de lectura",
+      "text": "Un petit espai tranquil on relaxar-se, llegir o simplement aturar el temps. Disposem de llibres i revistes sobre L'Escala, el mar i la història local.",
+      "imageAlt": "Racó de lectura de l’hotel"
+    },
+    "cards": [
+      {
+        "title": "Confort sense preocupacions",
+        "text": "Servei de neteja diari per garantir frescor i comoditat. Tovalloles i amenities addicionals disponibles sota petició."
+      },
+      {
+        "title": "Pàrquing al cor del poble",
+        "text": "Plaça d’aparcament privat a prop de l’hotel. Places limitades, cal reserva prèvia i té un cost addicional. Un luxe poc habitual en un poble costaner com L'Escala."
+      },
+      {
+        "title": "Wi-Fi d’alta velocitat",
+        "text": "Connexió disponible a totes les habitacions i zones comunes perquè puguis planificar el dia o compartir la teva experiència."
+      }
+    ],
+    "final": {
+      "title": "Petit hotel, atenció propera i serveis pensats perquè només t’ocupis de gaudir.",
+      "cta": "COMPROVA LA DISPONIBILITAT"
+    }
   }
-},
+,
 
 
 
@@ -336,7 +347,7 @@
       "imageAlt": "Els amfitrions",
       "kicker": "Taverna de la Sal no va néixer com un projecte empresarial.",
       "p1": "Va néixer com una manera de viure. En Matthew va arribar des de Nova Zelanda amb una idea molt clara: l’hospitalitat no és un servei, és una manera de ser present. Durant anys ha treballat en el món de l’hostaleria i va aprendre que els detalls silenciosos són els que realment es recorden.",
-      "p2": "La Marina va créixer a l’Escala. Coneix el ritme del mar, el caràcter del poble i aquella manera mediterrània de cuidar que barreja proximitat i calma.",
+      "p2": "La Mariona va créixer a l’Escala. Coneix el ritme del mar, el caràcter del poble i aquella manera mediterrània de cuidar que barreja proximitat i calma.",
       "quoteLines": [
         "Dos mars diferents.",
         "Dues cultures.",

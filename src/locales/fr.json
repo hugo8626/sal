@@ -275,60 +275,60 @@
 
   ,
   "servicesPage": {
-  "seo": {
-    "title": "Services | Taverna de la Sal",
-    "description": "Services de l’hôtel : restaurant à la braise, petit-déjeuner avec produits locaux, terrasse avec vue sur la Méditerranée, coin lecture, parking et Wi-Fi."
-  },
-  "hero": {
-    "aria": "Services",
-    "title": "Des services qui complètent votre expérience",
-    "subtitle": "Chaque détail a été pensé pour que votre séjour à Taverna de la Sal soit confortable, calme et sans souci.",
-    "note": "✓ 10 % de réduction pour les clients de l’hôtel qui réservent directement sur notre site"
-  },
-  "brasa": {
-    "eyebrow": "PROFITEZ",
-    "title": "Restaurant à la braise",
-    "text1": "Spécialistes des viandes et poissons à la braise, avec des produits de saison et une ambiance intimiste dans la vieille ville de L'Escala.",
-    "text2": "Si vous réservez directement sur notre site, vous bénéficierez de 10 % de réduction au restaurant pendant votre séjour.",
-    "cta": "VOIR PLUS",
-    "imageAlt": "Restaurant à la braise"
-  },
-  "breakfast": {
-    "eyebrow": "L’ENVIRONNEMENT",
-    "title": "Commencez la journée avec goût",
-    "text": "Chaque matin, profitez d’une sélection de produits locaux, pain artisanal, fruits de saison, jus naturels et café fraîchement préparé, dans une ambiance calme et réservée aux adultes.",
-    "imageAlt": "Petit-déjeuner avec produits locaux"
-  },
-  "terrace": {
-    "title": "Terrasse avec vue sur la Méditerranée",
-    "text": "Notre terrasse offre une vue sur la baie et la vieille ville. En été : cocktails et musique live ; en hiver : calme et couchers de soleil inoubliables.",
-    "imageAlt": "Terrasse avec vue sur la mer"
-  },
-  "reading": {
-    "title": "Coin lecture",
-    "text": "Un petit espace tranquille pour se détendre, lire ou simplement ralentir. Nous proposons des livres et magazines sur L'Escala, la mer et l’histoire locale.",
-    "imageAlt": "Coin lecture de l’hôtel"
-  },
-  "cards": [
-    {
-      "title": "Confort sans souci",
-      "text": "Ménage quotidien pour garantir fraîcheur et confort. Serviettes et produits d’accueil supplémentaires disponibles sur demande."
+    "seo": {
+      "title": "Services | Taverna de la Sal",
+      "description": "Services de l’hôtel : restaurant à la braise, petit-déjeuner avec produits locaux, terrasse avec vue sur la Méditerranée, coin lecture, parking et Wi-Fi."
     },
-    {
-      "title": "Parking au cœur du village",
-      "text": "Place de parking privée proche de l’hôtel. Places limitées, réservation préalable et coût supplémentaire. Un luxe rare dans un village côtier comme L'Escala."
+    "hero": {
+      "aria": "Services",
+      "title": "Des services qui complètent votre expérience",
+      "subtitle": "Chaque détail a été pensé pour que votre séjour à Taverna de la Sal soit confortable, paisible et sans souci.",
+      "note": "✓ 10 % de réduction pour les clients de l’hôtel qui réservent directement sur notre site"
     },
-    {
-      "title": "Wi-Fi haut débit",
-      "text": "Connexion disponible dans toutes les chambres et les espaces communs pour organiser votre journée ou partager votre expérience."
+    "brasa": {
+      "eyebrow": "PROFITEZ",
+      "title": "Restaurant à la braise",
+      "text1": "Spécialistes des viandes et poissons à la braise, avec des produits de saison et une ambiance intime dans le vieux L'Escala.",
+      "text2": "Si vous réservez directement sur notre site, vous bénéficierez de 10 % de réduction au restaurant pendant votre séjour.",
+      "cta": "VOIR PLUS",
+      "imageAlt": "Restaurant à la braise"
+    },
+    "breakfast": {
+      "eyebrow": "PETIT-DÉJEUNER BUFFET MÉDITERRANÉEN",
+      "title": "Commencez la journée avec saveur",
+      "text": "Chaque matin, nous servons un petit-déjeuner buffet soigné et élégant, avec des produits frais et locaux : pain et viennoiseries fraîchement sortis du four, fruits de saison, charcuteries et fromages locaux, accompagnés de jus d’orange naturel et de café préparé à la minute. Un début de journée paisible dans une atmosphère méditerranéenne à quelques pas de la mer.",
+      "imageAlt": "Petit-déjeuner avec produits locaux"
+    },
+    "terrace": {
+      "title": "Terrasse avec vue sur la Méditerranée",
+      "text": "Notre terrasse offre une vue sur la baie et le centre historique. En été, cocktails et musique live ; en hiver, calme et couchers de soleil inoubliables.",
+      "imageAlt": "Terrasse avec vue sur la mer"
+    },
+    "reading": {
+      "title": "Coin lecture",
+      "text": "Un petit espace paisible pour se détendre, lire ou simplement arrêter le temps. Nous disposons de livres et magazines sur L'Escala, la mer et l’histoire locale.",
+      "imageAlt": "Coin lecture de l’hôtel"
+    },
+    "cards": [
+      {
+        "title": "Confort sans souci",
+        "text": "Service de ménage quotidien pour garantir fraîcheur et confort. Serviettes et produits d’accueil supplémentaires disponibles sur demande."
+      },
+      {
+        "title": "Parking au cœur du village",
+        "text": "Place de parking privé à proximité de l’hôtel. Places limitées, réservation préalable et supplément. Un luxe rare dans un village côtier comme L'Escala."
+      },
+      {
+        "title": "Wi-Fi haut débit",
+        "text": "Connexion disponible dans toutes les chambres et espaces communs pour planifier votre journée ou partager votre expérience."
+      }
+    ],
+    "final": {
+      "title": "Petit hôtel, accueil chaleureux et services pensés pour que vous n’ayez qu’à profiter.",
+      "cta": "VÉRIFIER LA DISPONIBILITÉ"
     }
-  ],
-  "final": {
-    "title": "Petit hôtel, attention proche et services pensés pour que vous n’ayez qu’à profiter.",
-    "cta": "VÉRIFIER LES DISPONIBILITÉS"
   }
-},
-  
+,
  
 
   "history": {
@@ -342,7 +342,7 @@
       "imageAlt": "Les hôtes",
       "kicker": "Taverna de la Sal n’est pas né comme un projet d’entreprise.",
       "p1": "C’est né comme une manière de vivre. Matthew est arrivé de Nouvelle-Zélande avec une idée très claire : l’hospitalité n’est pas un service, c’est une façon d’être présent. Pendant des années, il a travaillé dans l’hôtellerie et a appris que ce sont les détails silencieux qui restent en mémoire.",
-      "p2": "Marina a grandi à L’Escala. Elle connaît le rythme de la mer, le caractère du village et cette manière méditerranéenne de prendre soin, faite de proximité et de calme.",
+      "p2": "Mariona a grandi à L’Escala. Elle connaît le rythme de la mer, le caractère du village et cette manière méditerranéenne de prendre soin, faite de proximité et de calme.",
       "quoteLines": [
         "Deux mers différentes.",
         "Deux cultures.",
