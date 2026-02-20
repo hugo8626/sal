@@ -11,8 +11,7 @@ import History from "./pages/historia/History";
 import Area from "./pages/area/Area";
 
 /* === ADMIN === */
-import Admin from "./pages/admin/Admin";
-import AdminLogin from "./pages/admin/Login";
+
 
 /* === CONTACTO === */
 import Contacto from "./pages/contacto/Contacto";
@@ -55,8 +54,7 @@ export default function App() {
 
         {/* ================== RUTAS CON IDIOMA ================== */}
 
-        <Route path="/:lang/admin/login" element={<AdminLogin />} />
-        <Route path="/:lang/admin" element={<Admin />} />
+       
 
         <Route path="/:lang" element={<Home />} />
         <Route path="/:lang/servicios" element={<Servicios />} />
@@ -100,7 +98,7 @@ export default function App() {
 
         <Route path="/contacto" element={<Navigate to="/es/contacto" replace />} />
         <Route path="/admin" element={<Navigate to="/es/admin/login" replace />} />
-        <Route path="/admin/login" element={<Navigate to="/es/admin/login" replace />} />
+       
         <Route path="/privacidad" element={<Navigate to="/es/privacidad" replace />} />
         <Route path="/aviso-legal" element={<Navigate to="/es/aviso-legal" replace />} />
         <Route path="/cookies" element={<Navigate to="/es/cookies" replace />} />
