@@ -818,59 +818,60 @@
 },
 
 
+  
   "restaurante": {
     "seo": {
       "title": "Restaurant | Taverna de la Sal",
-      "description": "Viandes et poissons grillés avec vue sur la mer. Cuisine sincère, produits de saison et vins de l’Empordà."
+      "description": "Viandes et poissons à la braise avec vue sur la mer. Cuisine sincère, produits de saison et vins de l’Empordà."
     },
     "whatsapp": {
-      "text": "Bonjour, je voudrais réserver une table au restaurant. Pouvez-vous me confirmer la disponibilité ? Merci."
+      "text": "Bonjour, je souhaite réserver une table au restaurant. Pouvez-vous me confirmer la disponibilité ? Merci."
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Viandes et poissons grillés avec vue sur la mer",
-      "subtitle": "Spécialistes des viandes et poissons grillés, où les produits de saison et l’atmosphère intime du centre historique de L’Escala créent une expérience authentique.",
+      "title": "La braise face à la mer",
+      "subtitle": "Spécialistes des viandes et poissons à la braise, élaborés avec des produits frais et de saison dans un cadre intime au cœur du vieux L’Escala.",
       "cta": "Réserver une table",
-      "note": "10% de réduction pour les clients de l’hôtel qui réservent directement sur notre site"
+      "note": "10 % de réduction pour les clients qui réservent directement sur notre site."
     },
     "propuesta": {
       "eyebrow": "LA PROPOSITION",
       "title": "La braise comme protagoniste",
-      "lead": "Nous travaillons des viandes sélectionnées et des poissons frais, avec respect du produit et technique à la braise. Cuisine honnête, saveurs nettes et recettes méditerranéennes sans artifices.",
+      "lead": "Nous travaillons des viandes sélectionnées et des poissons frais avec respect du produit et maîtrise de la cuisson à la braise. Cuisine sincère, saveurs nettes et recettes méditerranéennes sans artifices.",
       "p2": "Produits locaux, vins de l’Empordà et une carte pensée pour savourer sans se presser.",
-      "imageAlt": "Poisson grillé"
+      "imageAlt": "Poisson à la braise"
     },
     "entorno": {
       "eyebrow": "LE CADRE",
-      "title": "Un restaurant à deux pas de la Méditerranée",
-      "p1": "Salle intérieure chaleureuse et deux terrasses pensées pour profiter sans se presser.",
+      "title": "Un restaurant à quelques pas de la Méditerranée",
+      "p1": "Salle intérieure chaleureuse et terrasse conçue pour profiter sans se presser. Un lieu pour déjeuner et dîner en toute tranquillité, que vous soyez client de l’hôtel ou visiteur.",
       "p2": "En été, musique live et cocktails au coucher du soleil.",
-      "p3": "En hiver, cheminée et longues discussions à table.",
-      "p4": "Un lieu conçu pour dîner au calme, que vous soyez client de l’hôtel ou visiteur.",
+      "p3": "En hiver, cheminée et longues conversations à table.",
+      "p4": "Un espace pensé pour dîner calmement, que vous soyez client de l’hôtel ou visiteur.",
       "imageAlt": "Terrasse avec vue sur la mer"
     },
     "experiencia": {
       "aria": "L’expérience",
       "eyebrow": "L’EXPÉRIENCE",
-      "title": "Plus qu’un restaurant, une expérience proche",
-      "lead": "Il s’agit de profiter du feu, de la mer et du temps.",
-      "p2": "Le restaurant est dirigé et servi par son propriétaire, créant une ambiance authentique où beaucoup reviennent non seulement pour la cuisine, mais aussi pour l’accueil."
+      "title": "Plus qu’un restaurant, une expérience proche et authentique",
+      "lead": "Il s’agit de savourer le feu, la mer et le temps.",
+      "p2": "Le restaurant est dirigé et servi par son propriétaire, créant une atmosphère authentique où nombre de nos convives reviennent non seulement pour la cuisine, mais aussi pour l’accueil."
     },
     "ventajas": {
-      "eyebrow": "POUR LES CLIENTS",
-      "title": "Avantages pour nos clients de l’hôtel",
-      "lead": "Si vous séjournez à Taverna de la Sal et réservez en direct :",
+      "eyebrow": "POUR LES CLIENTS DE L’HÔTEL",
+      "title": "Avantages pour nos hôtes",
+      "lead": "Si vous séjournez à Taverna de la Sal et réservez directement :",
       "items": [
-        "10% de réduction au restaurant",
-        "Priorité pour votre réservation",
+        "10 % de réduction au restaurant",
+        "Priorité lors de votre réservation",
         "Recommandations personnalisées selon la saison"
       ],
-      "cta": "Réserver un séjour avec avantages"
+      "cta": "Réserver votre séjour avec avantages"
     },
     "carta": {
       "eyebrow": "LA CARTE",
       "title": "Découvrez notre carte",
-      "lead": "Découvrez viandes et poissons grillés, suggestions de saison et une sélection soignée de vins locaux.",
+      "lead": "Découvrez viandes et poissons à la braise, propositions de saison et une sélection soignée de vins locaux.",
       "linkText": "Voir le menu",
       "ctaAria": "Ouvrir le menu dans un nouvel onglet",
       "url": "#"
@@ -879,18 +880,19 @@
       "eyebrow": "RÉSERVATIONS",
       "title": "Horaires",
       "week": {
-        "title": "Du lundi au vendredi",
-        "time": "Dîner : 18:30 — 22:30"
+        "title": "Lundi au vendredi",
+        "time": "Dîner : 18h30 — 22h30"
       },
       "weekend": {
         "title": "Week-ends et jours fériés",
-        "lunch": "Déjeuner : 12:30 — 15:30",
-        "dinner": "Dîner : 18:30 — 22:30"
+        "lunch": "Déjeuner : 12h30 — 15h30",
+        "dinner": "Dîner : 18h30 — 22h30"
       },
-      "note": "Places limitées, surtout en haute saison.",
+      "note": "La capacité est limitée, особенно en haute saison.",
       "cta": "Réserver une table"
     }
   }
+
 
 
 

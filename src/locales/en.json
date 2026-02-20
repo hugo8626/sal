@@ -807,77 +807,78 @@
   }
 },
 
+ 
   "restaurante": {
     "seo": {
       "title": "Restaurant | Taverna de la Sal",
-      "description": "Grilled meats and fish with sea views. Honest cooking, seasonal produce and wines from Empordà."
+      "description": "Charcoal-grilled meats and fish with sea views. Honest cuisine, seasonal produce and Empordà wines."
     },
     "whatsapp": {
-      "text": "Hi, I’d like to book a table at the restaurant. Can you confirm availability? Thank you."
+      "text": "Hello, I would like to reserve a table at the restaurant. Could you confirm availability? Thank you."
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Grilled meats and fish with sea views",
-      "subtitle": "Specialists in grilled meats and fresh fish, where seasonal produce and the intimate atmosphere of L’Escala’s old town create an authentic experience.",
-      "cta": "Book a table",
-      "note": "10% discount for hotel guests who book directly on our website"
+      "title": "Charcoal grill with sea views",
+      "subtitle": "Specialists in charcoal-grilled meats and fish, prepared with fresh seasonal produce in an intimate setting in the old town of L’Escala.",
+      "cta": "Reserve a table",
+      "note": "10% discount for guests who book directly on our website."
     },
     "propuesta": {
-      "eyebrow": "THE CONCEPT",
-      "title": "The grill as the main character",
-      "lead": "We work with selected meats and fresh fish, respecting the product and mastering the grill. Honest cuisine, defined flavors and Mediterranean recipes made without gimmicks.",
-      "p2": "Local produce, Empordà wines and a menu designed to enjoy without rushing.",
-      "imageAlt": "Grilled fish"
+      "eyebrow": "OUR APPROACH",
+      "title": "Fire as the main element",
+      "lead": "We work with selected meats and fresh fish, respecting the product and mastering charcoal grilling. Honest cuisine, defined flavors and Mediterranean recipes prepared without artifice.",
+      "p2": "Local produce, Empordà wines and a menu designed to be enjoyed without rushing.",
+      "imageAlt": "Charcoal-grilled fish"
     },
     "entorno": {
       "eyebrow": "THE SETTING",
       "title": "A restaurant just steps from the Mediterranean",
-      "p1": "A cozy indoor dining room and two terraces designed to enjoy at a relaxed pace.",
+      "p1": "A cozy indoor dining room and a terrace designed for unhurried enjoyment. A place to dine in calm surroundings, whether you are a guest or a visitor.",
       "p2": "In summer, live music and sunset cocktails.",
       "p3": "In winter, a fireplace and long after-dinner conversations.",
-      "p4": "A place to dine calmly, whether you’re a guest or a visitor.",
+      "p4": "A space designed for relaxed dining, whether you are a guest or a visitor.",
       "imageAlt": "Terrace with sea views"
     },
     "experiencia": {
       "aria": "The experience",
       "eyebrow": "THE EXPERIENCE",
-      "title": "More than a restaurant, a close experience",
-      "lead": "It’s about enjoying the fire, the sea and the time.",
-      "p2": "The restaurant is run and hosted by its owner, creating an authentic atmosphere where many guests return not only for the food, but for the hospitality."
+      "title": "More than a restaurant, a welcoming experience",
+      "lead": "It is about enjoying fire, the sea and time.",
+      "p2": "The restaurant is run and hosted by its owner, creating an authentic atmosphere where many guests return not only for the cuisine, but also for the hospitality."
     },
     "ventajas": {
-      "eyebrow": "FOR GUESTS",
-      "title": "Perks for our hotel guests",
+      "eyebrow": "FOR HOTEL GUESTS",
+      "title": "Benefits for our guests",
       "lead": "If you stay at Taverna de la Sal and book directly:",
       "items": [
         "10% discount at the restaurant",
-        "Priority attention for your booking",
-        "Seasonal personalized recommendations"
+        "Priority table reservation",
+        "Personalized seasonal recommendations"
       ],
-      "cta": "Book your stay with perks"
+      "cta": "Book your stay with benefits"
     },
     "carta": {
       "eyebrow": "THE MENU",
       "title": "Explore our menu",
-      "lead": "Discover grilled meats and fish, seasonal dishes and a carefully curated selection of local wines.",
+      "lead": "Discover charcoal-grilled meats and fish, seasonal dishes and a carefully selected range of local wines.",
       "linkText": "View menu",
-      "ctaAria": "Open the menu in a new tab",
+      "ctaAria": "Open menu in a new tab",
       "url": "#"
     },
     "horarios": {
-      "eyebrow": "BOOKINGS",
+      "eyebrow": "RESERVATIONS",
       "title": "Opening hours",
       "week": {
         "title": "Monday to Friday",
         "time": "Dinner: 18:30 — 22:30"
       },
       "weekend": {
-        "title": "Weekends and holidays",
+        "title": "Weekends & holidays",
         "lunch": "Lunch: 12:30 — 15:30",
         "dinner": "Dinner: 18:30 — 22:30"
       },
-      "note": "Limited seating, especially during high season.",
-      "cta": "Book a table"
+      "note": "Seating is limited, especially during high season.",
+      "cta": "Reserve a table"
     }
   }
 

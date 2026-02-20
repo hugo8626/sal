@@ -824,10 +824,10 @@
     },
     "hero": {
       "aria": "Restaurante",
-      "title": "Carnes y pescados a la brasa con vistas al mar",
-      "subtitle": "Especialistas en carnes y pescados a la brasa, donde el producto de temporada y el entorno íntimo del casco antiguo de L’Escala crean una experiencia auténtica.",
+      "title": " Brasa con vistas al mar ",
+      "subtitle": "Especialistas en carnes y pescados a la brasa, elaborados con producto fresco y de temporada en un entorno íntimo del casco antiguo de L’Escala. ",
       "cta": "Reservar mesa",
-      "note": "10% de descuento para huéspedes del hotel que reservan directamente en nuestra web"
+      "note": "10% de descuento para huéspedes que reserven directamente en nuestra web."
     },
     "propuesta": {
       "eyebrow": "LA PROPUESTA",
@@ -839,7 +839,7 @@
     "entorno": {
       "eyebrow": "EL ENTORNO",
       "title": "Un restaurante a pocos pasos del Mediterráneo",
-      "p1": "Comedor interior acogedor y dos terrazas pensadas para disfrutar sin prisas.",
+      "p1": "Comedor interior acogedor y una terraza pensada para disfrutar sin prisas. Un lugar para comer y cenar con calma, tanto si eres huésped como visitante.",
       "p2": "En verano, música en vivo y cócteles al atardecer.",
       "p3": "En invierno, chimenea y sobremesas largas.",
       "p4": "Un espacio pensado para cenar con calma, tanto si eres huésped como visitante.",

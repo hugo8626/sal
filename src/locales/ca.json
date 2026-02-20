@@ -809,34 +809,32 @@
   }
 },
 
-
-
   "restaurante": {
     "seo": {
       "title": "Restaurant | Taverna de la Sal",
       "description": "Carns i peixos a la brasa amb vistes al mar. Cuina honesta, producte de temporada i vins de l’Empordà."
     },
     "whatsapp": {
-      "text": "Hola, vull reservar una taula al restaurant. Em pots confirmar disponibilitat? Gràcies."
+      "text": "Hola, voldria reservar una taula al restaurant. Em podeu confirmar disponibilitat? Gràcies."
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Carns i peixos a la brasa amb vistes al mar",
-      "subtitle": "Especialistes en carns i peixos a la brasa, on el producte de temporada i l’ambient íntim del nucli antic de l’Escala creen una experiència autèntica.",
+      "title": "Brasa amb vistes al mar",
+      "subtitle": "Especialistes en carns i peixos a la brasa, elaborats amb producte fresc i de temporada en un entorn íntim del nucli antic de l’Escala.",
       "cta": "Reservar taula",
-      "note": "10% de descompte per a hostes de l’hotel que reserven directament a la nostra web"
+      "note": "10% de descompte per als hostes que reservin directament a la nostra web."
     },
     "propuesta": {
       "eyebrow": "LA PROPOSTA",
       "title": "La brasa com a protagonista",
-      "lead": "Treballem carns seleccionades i peixos frescos amb respecte pel producte i tècnica a la brasa. Cuina honesta, sabors definits i receptes mediterrànies sense artificis.",
+      "lead": "Treballem carns seleccionades i peixos frescos amb respecte pel producte i domini de la brasa. Cuina honesta, sabors definits i receptes mediterrànies elaborades sense artificis.",
       "p2": "Producte de proximitat, vins de l’Empordà i una carta pensada per gaudir sense presses.",
       "imageAlt": "Peix a la brasa"
     },
     "entorno": {
       "eyebrow": "L’ENTORN",
       "title": "Un restaurant a pocs passos del Mediterrani",
-      "p1": "Menjador interior acollidor i dues terrasses pensades per gaudir sense presses.",
+      "p1": "Menjador interior acollidor i una terrassa pensada per gaudir sense presses. Un lloc per dinar i sopar amb calma, tant si ets hoste com visitant.",
       "p2": "A l’estiu, música en viu i còctels al capvespre.",
       "p3": "A l’hivern, llar de foc i llargues sobretaules.",
       "p4": "Un espai pensat per sopar amb calma, tant si ets hoste com visitant.",
@@ -847,24 +845,24 @@
       "eyebrow": "L’EXPERIÈNCIA",
       "title": "Més que un restaurant, una experiència propera",
       "lead": "Es tracta de gaudir del foc, del mar i del temps.",
-      "p2": "El restaurant està dirigit i atès pel seu propietari, creant un ambient autèntic on molts comensals tornen no només per la cuina, sinó pel tracte."
+      "p2": "El restaurant està dirigit i atès pel seu propietari, creant un ambient autèntic on molts comensals tornen no només per la cuina, sinó també pel tracte."
     },
     "ventajas": {
-      "eyebrow": "PER A HOSTES",
+      "eyebrow": "PER ALS HOSTES",
       "title": "Avantatges per als nostres hostes",
       "lead": "Si t’allotges a Taverna de la Sal i reserves directament:",
       "items": [
         "10% de descompte al restaurant",
-        "Atenció prioritària a la teva reserva",
-        "Recomanacions personalitzades segons temporada"
+        "Prioritat en la reserva de taula",
+        "Recomanacions personalitzades segons la temporada"
       ],
-      "cta": "Reservar estada amb avantatges"
+      "cta": "Reserva l’estada amb avantatges"
     },
     "carta": {
       "eyebrow": "LA CARTA",
       "title": "Explora la nostra carta",
-      "lead": "Descobreix carns i peixos a la brasa, propostes de temporada i una selecció acurada de vins locals.",
-      "linkText": "Veure el menú",
+      "lead": "Descobreix carns i peixos a la brasa, propostes de temporada i una acurada selecció de vins locals.",
+      "linkText": "Veure menú",
       "ctaAria": "Obrir el menú en una pestanya nova",
       "url": "#"
     },
@@ -872,7 +870,7 @@
       "eyebrow": "RESERVES",
       "title": "Horaris",
       "week": {
-        "title": "De dilluns a divendres",
+        "title": "Dilluns a divendres",
         "time": "Sopar: 18:30 — 22:30"
       },
       "weekend": {
@@ -884,6 +882,11 @@
       "cta": "Reservar taula"
     }
   }
+
+
+
+
+  
 
 
 
