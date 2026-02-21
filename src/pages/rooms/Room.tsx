@@ -195,7 +195,7 @@ export default function Room() {
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="link"
+              className="btn btn--primary"
             >
               {t("rooms.final.button")}
             </a>
@@ -229,10 +229,10 @@ export default function Room() {
         {/* ================= BIG CTA ================= */}
         <section className="roomsBigCta">
           <div className="roomsBigCta__container">
-            <h2 className="btn btn--primary roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
+            <h2 className="title roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
 
             <a
-                className="roomsBigCta__btn"
+                className="btn btn--primary roomsBigCta__btn"
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
