@@ -39,11 +39,7 @@ export default function Home() {
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
-  /**
-   * ✅ Mejoras:
-   * - useMemo: evita recalcular arrays/objetos en cada render.
-   * - defaultValue en alts importantes: no dejamos el alt vacío por fallo de i18n.
-   */
+
   const roomsFeatures = useMemo(
     () => (t("home.rooms.features", { returnObjects: true }) as string[]) ?? [],
     [t]
@@ -242,7 +238,7 @@ export default function Home() {
               <p className="text">{t("home.rooms.text")}</p>
 
               <ul className="features">
-                {Array.isArray(roomsFeatures) && roomsFeatures.map((x) => <li key={x}>{x}</li>)}
+                {Array.isArray(roomsFeatures) && roomsFeatures.map((x) => <li className="text" key={x}>{x}</li>)}
               </ul>
 
               <div className="actions">
@@ -288,7 +284,7 @@ export default function Home() {
               <h2 className="title">{t("home.restaurant.title")}</h2>
               <p className="text">{t("home.restaurant.text")}</p>
 
-              <Link className="ctainea " to={route(lang, "restaurante")}>
+              <Link className=" link " to={route(lang, "restaurante")}>
                 {t("home.restaurant.cta")}
               </Link>
             </div>
@@ -313,7 +309,7 @@ export default function Home() {
                 <span className="service__icon" aria-hidden="true">
                   ☀
                 </span>
-                <p>{servicesItems?.[1]}</p>
+                <p >{servicesItems?.[1]}</p>
               </article>
 
               <article className="service">
@@ -334,7 +330,7 @@ export default function Home() {
                 <span className="service__icon" aria-hidden="true">
                   🚗
                 </span>
-                <p>{servicesItems?.[4]}</p>
+                <p >{servicesItems?.[4]}</p>
               </article>
             </div>
 
@@ -358,19 +354,19 @@ export default function Home() {
               <ul className="area__list">
                 <li>
                   <span className="area__icon">≋</span>
-                  <span>{areaItems?.[0]}</span>
+                  <span className="text">{areaItems?.[0]}</span>
                 </li>
                 <li>
                   <span className="area__icon">⌂</span>
-                  <span>{areaItems?.[1]}</span>
+                  <span className="text">{areaItems?.[1]}</span>
                 </li>
                 <li>
                   <span className="area__icon">🏛</span>
-                  <span>{areaItems?.[2]}</span>
+                  <span className="text">{areaItems?.[2]}</span>
                 </li>
                 <li>
                   <span className="area__icon">🐟</span>
-                  <span>{areaItems?.[3]}</span>
+                  <span className="text">{areaItems?.[3]}</span>
                 </li>
               </ul>
 

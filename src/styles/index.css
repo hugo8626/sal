@@ -93,7 +93,7 @@ ol {
   --color-bg-beige: #e9e3da;
   --color-primary: #3f5f7d;
   --color-gold: #b68d2c;
-  --color-dark: #0f1a2b;
+  --color-dark: rgb(58, 79, 129);
   --color-text: #404652;
   --color-light-text: #6b7280;
 
@@ -135,8 +135,8 @@ ol {
 body {
   font-family: var(--font-body);
   background: var(--color-bg-main);
-  color: var(--color-text);
-  line-height: 1.6;
+  
+ 
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -146,29 +146,124 @@ body {
 ========================================= */
 
 
-h2,
+/* h2,
 h3,
 h4 {
   font-family: var(--font-heading);
   color: var(--color-dark);
   line-height: 1.15;
   letter-spacing: -0.02em;
-}
+} */
 
-h1 { font-size: clamp(2.5rem, 4vw, 3.5rem); }
-h2 { font-size: clamp(2rem, 3vw, 2.6rem); }
-h3 { font-size: 1.4rem; }
 
-p {
-  font-size: 1rem;
-  color: var(--color-text);
-}
+
+
 .hero__title{
   font-family: var(--font-title);
   color: var(--color-bg-beige);
-  letter-spacing: .8rem;
-  font-size: 4rem;
+  letter-spacing: .5rem;
+  font-size: 7rem;
+  line-height: 1.1;
+  
+  
+ 
+  
 }
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin: 10px 0 16px;
+  color: var(--color-dark);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  
+
+ 
+}
+
+
+
+.hero__subtitle {
+  font-size: 1.2rem;
+  margin: 0;
+  max-width: 60ch;
+  font-weight: 700;
+  color:var(--color-bg-beige);
+  padding: 02rem;
+  
+
+ 
+  
+}
+
+
+.text{
+ font-size: 1rem;
+    line-height: 1.8;
+    margin: 0 0 16px;
+    color: var(--color-text);
+   
+}
+
+
+
+/* cards */
+
+
+.cards3 {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  
+  
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+    
+  gap: 12px;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--color-bg-main);
+  box-shadow: var(--shadow-grey);
+  border: var(--border-black);
+  
+}
+
+
+.icon {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+
+  border: 1px solid rgba(182, 141, 44, 0.35);
+  background: rgba(182, 141, 44, 0.08);
+  color: var(--color-gold);
+}
+
+.card__title {
+  font-size: 1.05rem;
+  margin: 0;
+  color: var(--color-dark);
+}
+
+.card__text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 38ch;
+  margin: 0;
+  color: #5b616c;
+  text-align: center;
+}
+
+
+
+
 
 /* =========================================
    UTILIDADES GENERALES
@@ -184,7 +279,7 @@ p {
   padding: var(--space-8) 0;
 }
 
-.section--beige {
+.section--beige{
   background: var(--color-bg-beige);
 }
 
@@ -209,10 +304,12 @@ p {
 
   text-decoration: underline;
   text-underline-offset: 6px;
- color: var(--color-primary);
+  color:rgb(88, 87, 65);
   font-size: .8rem;
   letter-spacing: 2px;
   margin-top: 18px;
+  font-family: var(--font-body);
+ 
 
 }
 

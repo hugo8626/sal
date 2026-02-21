@@ -61,7 +61,7 @@ export default function Area() {
           <div className="areaHero__overlay" />
           <div className="areaHero__content">
             <h1 className="hero__title">{t("area.hero.title")}</h1>
-            <p>{t("area.hero.subtitle")}</p>
+            <p className="hero__subtitle">{t("area.hero.subtitle")}</p>
           </div>
         </section>
 
@@ -77,14 +77,14 @@ export default function Area() {
             </div>
 
             <div className="areaIntro__content">
-              <h2>{t("area.intro.title")}</h2>
+              <h2 className="title">{t("area.intro.title")}</h2>
 
-              <p className="areaIntro__lead">{t("area.intro.lead")}</p>
+              <p className="text areaIntro__lead">{t("area.intro.lead")}</p>
 
               <div className="areaIntro__text">
-                <p>{t("area.intro.p1")}</p>
-                <p>{t("area.intro.p2")}</p>
-                <p>{t("area.intro.p3")}</p>
+                <p className="text">{t("area.intro.p1")}</p>
+                <p className="text">{t("area.intro.p2")}</p>
+                <p className="text">{t("area.intro.p3")}</p>
               </div>
             </div>
           </div>
@@ -94,8 +94,8 @@ export default function Area() {
         <section className="section section--beige areaPlaces">
           <div className="areaPlaces__container">
             <div className="areaPlaces__header">
-              <h2>{t("area.places.header.title")}</h2>
-              <p>{t("area.places.header.subtitle")}</p>
+              <h2 className="title">{t("area.places.header.title")}</h2>
+              <p className="text">{t("area.places.header.subtitle")}</p>
             </div>
 
             <div className="areaPlaces__grid">
@@ -106,16 +106,16 @@ export default function Area() {
                   loading="lazy"
                 />
                 <div className="placeCard__body">
-                  <h3>
+                  <h3 className="title">
                     {t("area.places.cards.0.title")}{" "}
                     <span>{t("area.places.cards.0.distance")}</span>
                   </h3>
 
-                  <p>{t("area.places.cards.0.text")}</p>
+                  <p className="text">{t("area.places.cards.0.text")}</p>
 
-                  {/* ✅ Enlace externo seguro */}
+                
                   <a
-                    className="placeCard__link"
+                    className="link"
                     href={t("area.places.cards.0.url")}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -135,8 +135,8 @@ export default function Area() {
                   loading="lazy"
                 />
                 <div className="placeCard__body">
-                  <h3>{t("area.places.cards.1.title")}</h3>
-                  <p>{t("area.places.cards.1.text")}</p>
+                  <h3 className="title">{t("area.places.cards.1.title")}</h3>
+                  <p className="text">{t("area.places.cards.1.text")}</p>
                 </div>
               </article>
 
@@ -147,8 +147,8 @@ export default function Area() {
                   loading="lazy"
                 />
                 <div className="placeCard__body">
-                  <h3>{t("area.places.cards.2.title")}</h3>
-                  <p>{t("area.places.cards.2.text")}</p>
+                  <h3 className="title">{t("area.places.cards.2.title")}</h3>
+                  <p className="text">{t("area.places.cards.2.text")}</p>
                 </div>
               </article>
 
@@ -159,8 +159,8 @@ export default function Area() {
                   loading="lazy"
                 />
                 <div className="placeCard__body">
-                  <h3>{t("area.places.cards.3.title")}</h3>
-                  <p>{t("area.places.cards.3.text")}</p>
+                  <h3 className="title">{t("area.places.cards.3.title")}</h3>
+                  <p className="text">{t("area.places.cards.3.text")}</p>
                 </div>
               </article>
             </div>
@@ -175,43 +175,43 @@ export default function Area() {
         >
           <div className="areaBanner__overlay" />
           <div className="areaBanner__content">
-            <h2>{t("area.banner.title")}</h2>
+            <h2 className="title">{t("area.banner.title")}</h2>
           </div>
         </section>
 
         {/* ================= PLAYAS ================= */}
         <section className="section section--white areaBeaches">
           <div className="areaBeaches__container">
-            <p className="areaBeaches__intro">{t("area.beaches.intro")}</p>
+            <p className="text areaBeaches__intro">{t("area.beaches.intro")}</p>
 
             <div className="areaBeaches__grid">
               <article className="beachItem">
-                <h3>
+                <h3 className="title">
                   {t("area.beaches.items.0.title")}{" "}
                   <span>{t("area.beaches.items.0.distance")}</span>
                 </h3>
-                <p>{t("area.beaches.items.0.text")}</p>
+                <p className="text">{t("area.beaches.items.0.text")}</p>
               </article>
 
               <article className="beachItem">
-                <h3>{t("area.beaches.items.1.title")}</h3>
-                <p>{t("area.beaches.items.1.text")}</p>
+                <h3 className="title">{t("area.beaches.items.1.title")}</h3>
+                <p className="text">{t("area.beaches.items.1.text")}</p>
               </article>
 
               <article className="beachItem">
-                <h3>{t("area.beaches.items.2.title")}</h3>
-                <p>{t("area.beaches.items.2.text")}</p>
+                <h3 className="title">{t("area.beaches.items.2.title")}</h3>
+                <p className="text">{t("area.beaches.items.2.text")}</p>
               </article>
 
               <article className="beachItem">
-                <h3>{t("area.beaches.items.3.title")}</h3>
-                <p>{t("area.beaches.items.3.text")}</p>
+                <h3 className="title">{t("area.beaches.items.3.title")}</h3>
+                <p className="text">{t("area.beaches.items.3.text")}</p>
               </article>
             </div>
 
             {/*  Enlace externo seguro */}
             <a
-              className="areaBeaches__link"
+              className="link"
               href={t("area.beaches.url")}
               target="_blank"
               rel="noopener noreferrer"
@@ -234,28 +234,28 @@ export default function Area() {
             </div>
 
             <div className="areaNature__content">
-              <h2>{t("area.nature.title")}</h2>
+              <h2 className="title">{t("area.nature.title")}</h2>
 
-              <p>{t("area.nature.p1")}</p>
+              <p className="text">{t("area.nature.p1")}</p>
 
               <div className="paisajes">
                 <div className="paisajes__item">
-                  <h3>{t("area.nature.items.0.title")}</h3>
-                  <p>{t("area.nature.items.0.text")}</p>
+                  <h3 className="title">{t("area.nature.items.0.title")}</h3>
+                  <p className="text">{t("area.nature.items.0.text")}</p>
                 </div>
 
                 <div className="paisajes__item">
-                  <h3>{t("area.nature.items.1.title")}</h3>
-                  <p>{t("area.nature.items.1.text")}</p>
+                  <h3 className="title">{t("area.nature.items.1.title")}</h3>
+                  <p className="text">{t("area.nature.items.1.text")}</p>
                 </div>
 
                 <div className="paisajes__item">
-                  <h3>{t("area.nature.items.2.title")}</h3>
-                  <p>{t("area.nature.items.2.text")}</p>
+                  <h3 className="title">{t("area.nature.items.2.title")}</h3>
+                  <p className="text" >{t("area.nature.items.2.text")}</p>
 
                   {/* Enlace externo seguro */}
                   <a
-                    className="areaNature__link"
+                    className="link"
                     href={t("area.nature.items.2.url")}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -277,7 +277,7 @@ export default function Area() {
         <section className="section section--white areaExperiences">
           <div className="areaExperiences__container">
             <header className="areaExperiences__header">
-              <h2>{t("area.experiences.title")}</h2>
+              <h2 className="title">{t("area.experiences.title")}</h2>
             </header>
 
             <div className="areaExperiences__layout">
@@ -298,40 +298,40 @@ export default function Area() {
                 <div className="expItem">
                   <span>01</span>
                   <div>
-                    <h3>{t("area.experiences.items.0.title")}</h3>
-                    <p>{t("area.experiences.items.0.text")}</p>
+                    <h3 className="title">{t("area.experiences.items.0.title")}</h3>
+                    <p className="text">{t("area.experiences.items.0.text")}</p>
                   </div>
                 </div>
 
                 <div className="expItem">
                   <span>02</span>
                   <div>
-                    <h3>{t("area.experiences.items.1.title")}</h3>
-                    <p>{t("area.experiences.items.1.text")}</p>
+                    <h3 className="title">{t("area.experiences.items.1.title")}</h3>
+                    <p className="text">{t("area.experiences.items.1.text")}</p>
                   </div>
                 </div>
 
                 <div className="expItem">
                   <span>03</span>
                   <div>
-                    <h3>{t("area.experiences.items.2.title")}</h3>
-                    <p>{t("area.experiences.items.2.text")}</p>
+                    <h3 className="title">{t("area.experiences.items.2.title")}</h3>
+                    <p className="text">{t("area.experiences.items.2.text")}</p>
                   </div>
                 </div>
 
                 <div className="expItem">
                   <span>04</span>
                   <div>
-                    <h3>{t("area.experiences.items.3.title")}</h3>
-                    <p>{t("area.experiences.items.3.text")}</p>
+                    <h3 className="title">{t("area.experiences.items.3.title")}</h3>
+                    <p className="text">{t("area.experiences.items.3.text")}</p>
                   </div>
                 </div>
 
                 <div className="expItem">
                   <span>05</span>
                   <div>
-                    <h3>{t("area.experiences.items.4.title")}</h3>
-                    <p>{t("area.experiences.items.4.text")}</p>
+                    <h3 className="title">{t("area.experiences.items.4.title")}</h3>
+                    <p className="text">{t("area.experiences.items.4.text")}</p>
                   </div>
                 </div>
               </div>
@@ -343,13 +343,13 @@ export default function Area() {
         <section className="section section--beige areaFood">
           <div className="areaFood__container">
             <div className="areaFood__content">
-              <h2>{t("area.food.title")}</h2>
+              <h2 className="title">{t("area.food.title")}</h2>
 
-              <p>{t("area.food.p1")}</p>
-              <p>{t("area.food.p2")}</p>
-              <p>{t("area.food.p3")}</p>
+              <p className="text">{t("area.food.p1")}</p>
+              <p className="text">{t("area.food.p2")}</p>
+              <p className="text">{t("area.food.p3")}</p>
 
-              <p className="areaFood__italic">{t("area.food.italic")}</p>
+              <p className="text areaFood__italic">{t("area.food.italic")}</p>
 
               {/* ✅ Link interno multiidioma */}
               <Link className="areaFood__btn" to={route(lang, "restaurante")}>

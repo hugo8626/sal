@@ -104,12 +104,12 @@ export default function Room() {
 
           <div className="roomsHero__content">
             <h1 className="hero__title roomsHero__title">{t("rooms.hero.title")}</h1>
-            <p className="roomsHero__subtitle">{t("rooms.hero.subtitle")}</p>
+            <p className="hero__subtitle roomsHero__subtitle">{t("rooms.hero.subtitle")}</p>
           </div>
 
-          <div className="roomsHero__ctaWrap">
+          <div className="btn btn--primary roomsHero__ctaWrap">
             <a
-                className="btn btn-primary roomsHero__cta"
+                className="buttroomsHero__cta"
                 href={BOOKING_URL}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -123,12 +123,12 @@ export default function Room() {
         <section className="roomsIntro">
           <div className="roomsIntro__container">
             <div className="roomsIntro__content">
-              <h2 className="roomsIntro__title">{t("rooms.intro.title")}</h2>
-              <p className="roomsIntro__lead">{t("rooms.intro.lead")}</p>
+              <h2 className="title roomsIntro__title">{t("rooms.intro.title")}</h2>
+              <p className="text roomsIntro__lead">{t("rooms.intro.lead")}</p>
 
               <ul className="roomsIntro__list">
                 {introList.map((item, i) => (
-                  <li key={`${item}-${i}`}>{item}</li>
+                  <li className="text" key={`${item}-${i}`}>{item}</li>
                 ))}
               </ul>
 
@@ -151,7 +151,7 @@ export default function Room() {
           <div className="roomsFeatures__container">
             {features.map((feature, index) => (
               <article className="featureItem" key={`${feature.title}-${index}`}>
-                <h3 className="featureItem__title">{feature.title}</h3>
+                <h3 className="title featureItem__title">{feature.title}</h3>
 
                 <ul className="featureItem__list">
                   {Array.isArray(feature.items) &&
@@ -166,8 +166,8 @@ export default function Room() {
         <section className="roomsGallery">
           <div className="roomsGallery__container">
             <header className="roomsGallery__header">
-              <h2 className="roomsGallery__title">{t("rooms.gallery.title")}</h2>
-              <p className="roomsGallery__subtitle">{t("rooms.gallery.subtitle")}</p>
+              <h2 className="title roomsGallery__title">{t("rooms.gallery.title")}</h2>
+              <p className="text roomsGallery__subtitle">{t("rooms.gallery.subtitle")}</p>
             </header>
 
             <div className="roomsGallery__grid">
@@ -189,13 +189,13 @@ export default function Room() {
         {/* ================= CTA FINAL ================= */}
         <section className="roomsFinal">
           <div className="roomsFinal__container">
-            <h2 className="roomsFinal__title">{t("rooms.final.title")}</h2>
+            <h2 className="title roomsFinal__title">{t("rooms.final.title")}</h2>
 
            <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="roomsFinal__btn"
+              className="link"
             >
               {t("rooms.final.button")}
             </a>
@@ -205,9 +205,9 @@ export default function Room() {
         {/* ================= SERVICIOS / RESTAURANTE ================= */}
         <section className="roomsServices">
           <div className="roomsServices__container">
-            <p className="roomsServices__text">{t("rooms.services.text")}</p>
+            <p className="text roomsServices__text">{t("rooms.services.text")}</p>
 
-            <Link to={route(lang, "servicios")} className="roomsServices__link">
+            <Link  to={route(lang, "servicios")} className="link roomsServices__link">
               {t("rooms.services.link")} <span className="roomsServices__arrow">→</span>
             </Link>
           </div>
@@ -216,7 +216,7 @@ export default function Room() {
         {/* ================= FAQ ================= */}
         <section className="roomsFaq">
           <div className="roomsFaq__container">
-            <h2 className="roomsFaq__title">{t("rooms.faq.title")}</h2>
+            <h2 className="title roomsFaq__title">{t("rooms.faq.title")}</h2>
 
             <div className="roomsFaq__list">
               {faq.map((item, i) => (
@@ -229,7 +229,7 @@ export default function Room() {
         {/* ================= BIG CTA ================= */}
         <section className="roomsBigCta">
           <div className="roomsBigCta__container">
-            <h2 className="roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
+            <h2 className="btn btn--primary roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
 
             <a
                 className="roomsBigCta__btn"

@@ -1,8 +1,5 @@
 /* =========================================
    FOOTER
-   - Estética azul oscuro coherente
-   - Sistema basado en variables
-   - Social icons profesionales
 ========================================= */
 
 .footer {
@@ -56,7 +53,7 @@
 }
 
 /* =========================================
-   SOCIALS (Instagram + WhatsApp)
+   SOCIALS
 ========================================= */
 
 .socials {
@@ -69,13 +66,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 42px;
   height: 42px;
-
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.08);
-
   transition: all 0.25s ease;
 }
 
@@ -87,7 +81,6 @@
 .socials__icon {
   width: 20px;
   height: 20px;
-  fill: #ffffff;
 }
 
 /* =========================================
@@ -112,14 +105,6 @@
   margin: 0;
   display: grid;
   gap: 12px;
-}
-
-.footer__item {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.85);
 }
 
 .footer__contactLink {
@@ -191,6 +176,44 @@
 
 .footer__legal a:hover {
   color: #ffffff;
+}
+
+/* =========================================
+   FIRMA CREADOR WEB
+========================================= */
+
+.footer__creator {
+  margin-top: 26px;
+  text-align: center;
+  opacity: 0.65;
+}
+
+.creator__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.65);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.creator__link:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.creator__logo {
+  height: 18px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.25s ease;
+}
+
+.creator__link:hover .creator__logo {
+  opacity: 1;
 }
 
 /* =========================================

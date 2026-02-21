@@ -50,7 +50,7 @@
   gap: var(--space-3);
   align-items: center;
 
-  color: #010101;
+ 
   text-align: center;
 }
 
@@ -62,12 +62,6 @@
 
 
 
-.hero__subtitle {
-  margin: 0;
-  max-width: 60ch;
-  font-weight: 700;
-  color: rgba(255, 255, 255, 0.92);
-}
 
 /* =========================================
    STORY
@@ -91,20 +85,9 @@
    TITLES / TEXT
 ========================================= */
 
-.title {
-  font-size: 2.2rem;
-  margin: 10px 0 16px;
-  color: var(--color-dark);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
 
-.text {
-  font-size: 1rem;
-  line-height: 1.8;
-  margin: 0 0 16px;
-  color: var(--color-text);
-}
+
+
 
 /* texto centrado más suave (para atmósfera) */
 .text--muted {
@@ -117,55 +100,6 @@
    CARDS
 ========================================= */
 
-.cards3 {
-  margin-top: 28px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  
-  
-}
-.card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-    
-  gap: 12px;
-  padding: 22px;
-  border-radius: 18px;
-  background: var(--color-bg-main);
-  box-shadow: var(--shadow-grey);
-  border: var(--border-black);
-  
-}
-
-
-.icon {
-  width: 34px;
-  height: 34px;
-  display: grid;
-  place-items: center;
-  border-radius: 999px;
-
-  border: 1px solid rgba(182, 141, 44, 0.35);
-  background: rgba(182, 141, 44, 0.08);
-  color: var(--color-gold);
-}
-
-.card__title {
-  font-size: 1.05rem;
-  margin: 0;
-  color: var(--color-dark);
-}
-
-.card__text {
-  font-size: 0.95rem;
-  line-height: 1.7;
-  max-width: 38ch;
-  margin: 0;
-  color: #5b616c;
-  text-align: center;
-}
 
 /* =========================================
    ATMÓSFERA
@@ -322,16 +256,7 @@
  
 }
 
-.ctainea{
-  display: inline-block;
-  margin-top: 18px;
-  letter-spacing: 2px;
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 6px;
 
-  
-}
 
 
 .area__img {

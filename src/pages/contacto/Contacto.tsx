@@ -39,7 +39,7 @@ export default function Contacto() {
               {t("contact.hero.title.line2")}
             </h1>
 
-            <p className="contactHero__subtitle">{t("contact.hero.subtitle")}</p>
+            <p className="hero__subtitle contactHero__subtitle">{t("contact.hero.subtitle")}</p>
           </div>
         </section>
 
@@ -236,7 +236,7 @@ export default function Contacto() {
         >
           <div className="contactCta__overlay" />
           <div className="contactCta__content">
-            <h2 className="contactCta__title">
+            <h2 className="title contactCta__title">
               {t("contact.cta.title.line1")}
               <br />
               {t("contact.cta.title.line2")}
@@ -245,7 +245,7 @@ export default function Contacto() {
             </h2>
 
             <a
-              className="contactCta__btn"
+              className="btn btn--primary"
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"

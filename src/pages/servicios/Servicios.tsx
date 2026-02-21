@@ -109,10 +109,10 @@ export default function Servicios() {
         >
           <div className="restHero__overlay" />
           <div className="container restHero__content">
-            <h1 className="restHero__title">{t("servicesPage.hero.title")}</h1>
-            <p className="restHero__subtitle">{t("servicesPage.hero.subtitle")}</p>
+            <h1 className="hero__title restHero__title">{t("servicesPage.hero.title")}</h1>
+            <p className="hero__subtitle restHero__subtitle">{t("servicesPage.hero.subtitle")}</p>
 
-            <p className="restHero__note">
+            <p className="text restHero__note">
               {t("servicesPage.hero.note", { defaultValue: "" })}
             </p>
           </div>
@@ -122,17 +122,15 @@ export default function Servicios() {
         <section className="section section--white">
           <div className="container restSplit">
             <div className="restSplit__body">
-              <span className="restIcon" aria-hidden="true">
-                <Icon name="fork" />
-              </span>
+           
 
-              <p className="restEyebrow">{t("servicesPage.brasa.eyebrow")}</p>
-              <h2 className="restH2">{t("servicesPage.brasa.title")}</h2>
+              <p className="eyebrow restEyebrow">{t("servicesPage.brasa.eyebrow")}</p>
+              <h2 className="title restH2">{t("servicesPage.brasa.title")}</h2>
 
-              <p className="restP">{t("servicesPage.brasa.text1")}</p>
-              <p className="restP">{t("servicesPage.brasa.text2")}</p>
+              <p className="text restP">{t("servicesPage.brasa.text1")}</p>
+              <p className="text restP">{t("servicesPage.brasa.text2")}</p>
 
-              <Link className="restBtnOutline" to={route(lang, "restaurante")}>
+              <Link className="link" to={route(lang, "restaurante")}>
                 {t("servicesPage.brasa.cta")}
               </Link>
             </div>
@@ -149,17 +147,15 @@ export default function Servicios() {
         </section>
 
         {/* ================= BLOQUE 2: DESAYUNO ================= */}
-        <section className="section section--white">
+        <section className="section section--beige">
           <div className="container restSplit restSplit--reverse">
             <div className="restSplit__body">
-              <span className="restIcon" aria-hidden="true">
-                <Icon name="sun" />
-              </span>
+             
 
-              <p className="restEyebrow">{t("servicesPage.breakfast.eyebrow")}</p>
-              <h2 className="restH2">{t("servicesPage.breakfast.title")}</h2>
+              <p className="eyebrow restEyebrow">{t("servicesPage.breakfast.eyebrow")}</p>
+              <h2 className="title restH2">{t("servicesPage.breakfast.title")}</h2>
 
-              <p className="restP restP--highlight">{t("servicesPage.breakfast.text")}</p>
+              <p className="text restP restP--highlight">{t("servicesPage.breakfast.text")}</p>
             </div>
 
             <figure className="restSplit__media">
@@ -177,12 +173,11 @@ export default function Servicios() {
         <section className="section section--white">
           <div className="container restSplit">
             <div className="restSplit__body">
-              <span className="restIcon" aria-hidden="true">
-                <Icon name="waves" />
-              </span>
+              <p className="eyebrow restEyebrow">Terraza</p>
+             
 
-              <h2 className="restH2">{t("servicesPage.terrace.title")}</h2>
-              <p className="restP">{t("servicesPage.terrace.text")}</p>
+              <h2 className="title restH2">{t("servicesPage.terrace.title")}</h2>
+              <p className="text restP">{t("servicesPage.terrace.text")}</p>
             </div>
 
             <figure className="restSplit__media">
@@ -197,15 +192,13 @@ export default function Servicios() {
         </section>
 
         {/* ================= BLOQUE 4: LECTURA ================= */}
-        <section className="section section--white">
+        <section className="section section--beige">
           <div className="container restSplit restSplit--reverse">
             <div className="restSplit__body">
-              <span className="restIcon" aria-hidden="true">
-                <Icon name="book" />
-              </span>
+           <p className="eyebrow restEyebrow">calma</p>
 
-              <h2 className="restH2">{t("servicesPage.reading.title")}</h2>
-              <p className="restP">{t("servicesPage.reading.text")}</p>
+              <h2 className="title restH2">{t("servicesPage.reading.title")}</h2>
+              <p className="text restP">{t("servicesPage.reading.text")}</p>
             </div>
 
             <figure className="restSplit__media">
@@ -222,29 +215,29 @@ export default function Servicios() {
         {/* ================= CARDS ================= */}
         <section className="section section--white">
           <div className="container">
-            <div className="restCards">
-              <article className="restCard">
-                <span className="restCard__icon" aria-hidden="true">
+            <div className="cards3 ">
+              <article className="card">
+                <span className="icon" aria-hidden="true">
                   <Icon name="sparkle" />
                 </span>
-                <h3 className="restCard__title">{t("servicesPage.cards.0.title")}</h3>
-                <p className="restCard__text">{t("servicesPage.cards.0.text")}</p>
+                <h3 className="card__title">{t("servicesPage.cards.0.title")}</h3>
+                <p className="card__text">{t("servicesPage.cards.0.text")}</p>
               </article>
 
-              <article className="restCard">
-                <span className="restCard__icon" aria-hidden="true">
+              <article className="card">
+                <span className="icon" aria-hidden="true">
                   <Icon name="parking" />
                 </span>
-                <h3 className="restCard__title">{t("servicesPage.cards.1.title")}</h3>
-                <p className="restCard__text">{t("servicesPage.cards.1.text")}</p>
+                <h3 className="card__title">{t("servicesPage.cards.1.title")}</h3>
+                <p className="card__text">{t("servicesPage.cards.1.text")}</p>
               </article>
 
-              <article className="restCard">
-                <span className="restCard__icon" aria-hidden="true">
+              <article className="card ">
+                <span className="icon" aria-hidden="true">
                   <Icon name="wifi" />
                 </span>
-                <h3 className="restCard__title">{t("servicesPage.cards.2.title")}</h3>
-                <p className="restCard__text">{t("servicesPage.cards.2.text")}</p>
+                <h3 className="card__title ">{t("servicesPage.cards.2.title")}</h3>
+                <p className="card__text ">{t("servicesPage.cards.2.text")}</p>
               </article>
             </div>
           </div>
@@ -253,7 +246,7 @@ export default function Servicios() {
         {/* ================= CTA FINAL ================= */}
         <section className="section section--beige restFinal">
           <div className="container restFinal__inner">
-            <h2 className="restFinal__title">{t("servicesPage.final.title")}</h2>
+            <h2 className="title restFinal__title">{t("servicesPage.final.title")}</h2>
 
            <a
               className="restFinal__btn"

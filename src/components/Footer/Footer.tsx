@@ -1,9 +1,11 @@
 import "./Footer.css";
 import { Link } from "react-router-dom";
 
-/* IMPORTAMOS LOS SVG */
 import instagramIcon from "../../assets/images/logos/instagram.svg";
 import whatsappIcon from "../../assets/images/logos/was.svg";
+
+/* logo creador */
+import creatorLogo from "../../assets/images/logos/instagram.svg";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -14,8 +16,8 @@ export default function Footer() {
         <div className="footer__grid">
 
           {/* ===============================
-              COL 1 — BRAND + SOCIALS
-          ================================ */}
+              BRAND
+          =============================== */}
           <div className="footer__brand">
             <h3 className="footer__title">Taverna de la Sal</h3>
 
@@ -25,8 +27,6 @@ export default function Footer() {
             </p>
 
             <div className="socials">
-
-              {/* INSTAGRAM */}
               <a
                 href="https://www.instagram.com/tavernadelasal/"
                 target="_blank"
@@ -34,14 +34,9 @@ export default function Footer() {
                 aria-label="Instagram"
                 className="socials__link"
               >
-                <img
-                  src={instagramIcon}
-                  alt="Instagram"
-                  className="socials__icon"
-                />
+                <img src={instagramIcon} alt="Instagram" className="socials__icon" />
               </a>
 
-              {/* WHATSAPP */}
               <a
                 href="https://wa.me/34600000000"
                 target="_blank"
@@ -49,29 +44,26 @@ export default function Footer() {
                 aria-label="WhatsApp"
                 className="socials__link"
               >
-                <img
-                  src={whatsappIcon}
-                  alt="WhatsApp"
-                  className="socials__icon"
-                />
+                <img src={whatsappIcon} alt="WhatsApp" className="socials__icon" />
               </a>
-
             </div>
           </div>
 
           {/* ===============================
-              COL 2 — CONTACTO
-          ================================ */}
+              CONTACTO
+          =============================== */}
           <div className="footer__col">
             <p className="footer__heading">CONTACTO</p>
 
             <ul className="footer__list">
               <li>L&apos;Escala, Girona</li>
               <li>
-                <a href="tel:+34972776278">+34 972776278</a>
+                <a className="footer__contactLink" href="tel:+34972776278">
+                  +34 972 776 278
+                </a>
               </li>
               <li>
-                <a href="mailto:info@tavernadelasal.com">
+                <a className="footer__contactLink" href="mailto:info@tavernadelasal.com">
                   info@tavernadelasal.com
                 </a>
               </li>
@@ -79,24 +71,26 @@ export default function Footer() {
           </div>
 
           {/* ===============================
-              COL 3 — ENLACES
-          ================================ */}
+              ENLACES
+          =============================== */}
           <div className="footer__col">
             <p className="footer__heading">ENLACES</p>
 
             <ul className="footer__links">
               <li><Link to="/habitaciones">Habitaciones</Link></li>
-              <li><Link to="/restaurante">Servicios</Link></li>
+              <li><Link to="/servicios">Servicios</Link></li>
               <li><Link to="/historia">Nuestra Historia</Link></li>
               <li><Link to="/entorno">Entorno</Link></li>
               <li><Link to="/contacto">Contacto</Link></li>
             </ul>
           </div>
-
         </div>
 
         <div className="footer__divider" />
 
+        {/* ===============================
+            BOTTOM
+        =============================== */}
         <div className="footer__bottom">
           <p>© {year} Taverna de la Sal. Todos los derechos reservados.</p>
 
@@ -106,6 +100,27 @@ export default function Footer() {
             <Link to="/cookies">Cookies</Link>
           </nav>
         </div>
+
+        {/* ===============================
+            FIRMA CREADOR WEB
+        =============================== */}
+        <div className="footer__creator">
+          <a
+            href="https://tuwebcreador.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="creator__link"
+            aria-label="Web creada por"
+          >
+            <span className="creator__text">Fityxdigital</span>
+            <img
+              src={creatorLogo}
+              alt="Nombre del creador"
+              className="creator__logo"
+            />
+          </a>
+        </div>
+
       </div>
     </footer>
   );

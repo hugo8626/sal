@@ -76,9 +76,9 @@ export default function Restaurante() {
           <div className="restHero__overlay" />
 
           <div className="restHero__content">
-            <h1>{t("restaurante.hero.title")}</h1>
+            <h1 className="hero__title">{t("restaurante.hero.title")}</h1>
 
-            <p>{t("restaurante.hero.subtitle")}</p>
+            <p className="hero__subtitle">{t("restaurante.hero.subtitle")}</p>
 
             {/* CTA WhatsApp */}
             <a
@@ -105,13 +105,13 @@ export default function Restaurante() {
                 {t("restaurante.propuesta.eyebrow")}
               </p>
 
-              <h2>{t("restaurante.propuesta.title")}</h2>
+              <h2 className="title">{t("restaurante.propuesta.title")}</h2>
 
-              <p className="restSplit__lead">
+              <p className=" text restSplit__lead">
                 {t("restaurante.propuesta.lead")}
               </p>
 
-              <p>{t("restaurante.propuesta.p2")}</p>
+              <p className="text">{t("restaurante.propuesta.p2")}</p>
             </div>
 
             <div className="restSplit__media">
@@ -142,12 +142,12 @@ export default function Restaurante() {
                 {t("restaurante.entorno.eyebrow")}
               </p>
 
-              <h2>{t("restaurante.entorno.title")}</h2>
+              <h2 className="title">{t("restaurante.entorno.title")}</h2>
 
-              <p>{t("restaurante.entorno.p1")}</p>
-              <p>{t("restaurante.entorno.p2")}</p>
-              <p>{t("restaurante.entorno.p3")}</p>
-              <p>{t("restaurante.entorno.p4")}</p>
+              <p className="text" >{t("restaurante.entorno.p1")}</p>
+              <p className="bye">{t("restaurante.entorno.p2")}</p>
+              <p className="bye">{t("restaurante.entorno.p3")}</p>
+              <p className="bye">{t("restaurante.entorno.p4")}</p>
             </div>
 
           </div>
@@ -166,13 +166,13 @@ export default function Restaurante() {
               {t("restaurante.experiencia.eyebrow")}
             </p>
 
-            <h2>{t("restaurante.experiencia.title")}</h2>
+            <h2 className="title">{t("restaurante.experiencia.title")}</h2>
 
-            <p className="restDark__lead">
+            <p className="text restDark__lead">
               {t("restaurante.experiencia.lead")}
             </p>
 
-            <p>{t("restaurante.experiencia.p2")}</p>
+            <p className="text">{t("restaurante.experiencia.p2")}</p>
           </div>
         </section>
 
@@ -184,9 +184,9 @@ export default function Restaurante() {
               {t("restaurante.ventajas.eyebrow")}
             </p>
 
-            <h2>{t("restaurante.ventajas.title")}</h2>
+            <h2 className="title">{t("restaurante.ventajas.title")}</h2>
 
-            <p className="restCenter__lead">
+            <p className="text restCenter__lead">
               {t("restaurante.ventajas.lead")}
             </p>
 
@@ -214,14 +214,14 @@ export default function Restaurante() {
               {t("restaurante.carta.eyebrow")}
             </p>
 
-            <h2>{t("restaurante.carta.title")}</h2>
+            <h2 className="title">{t("restaurante.carta.title")}</h2>
 
-            <p className="restCenter__lead">
+            <p className="text restCenter__lead">
               {t("restaurante.carta.lead")}
             </p>
 
             <a
-              className="restLink"
+              className="link"
               href="https://docs.google.com/document/d/1UHRPUm4q1uIj6z6lqksVUhgYQm7ar-3cg9pETBSRPZQ/export?format=pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -241,22 +241,22 @@ export default function Restaurante() {
               {t("restaurante.horarios.eyebrow")}
             </p>
 
-            <h2>{t("restaurante.horarios.title")}</h2>
+            <h2 className="title">{t("restaurante.horarios.title")}</h2>
 
             <div className="restHours">
               <div className="restHours__col">
-                <h3>{t("restaurante.horarios.week.title")}</h3>
-                <p>{t("restaurante.horarios.week.time")}</p>
+                <h3 className="title-hora">{t("restaurante.horarios.week.title")}</h3>
+                <p className="text">{t("restaurante.horarios.week.time")}</p>
               </div>
 
               <div className="restHours__col">
-                <h3>{t("restaurante.horarios.weekend.title")}</h3>
-                <p>{t("restaurante.horarios.weekend.lunch")}</p>
-                <p>{t("restaurante.horarios.weekend.dinner")}</p>
+                <h3 className="title-hora">{t("restaurante.horarios.weekend.title")}</h3>
+                <p className="text">{t("restaurante.horarios.weekend.lunch")}</p>
+                <p className="text">{t("restaurante.horarios.weekend.dinner")}</p>
               </div>
             </div>
 
-            <p className="restCenter__lead">
+            <p className="text restCenter__lead">
               {t("restaurante.horarios.note")}
             </p>
 
