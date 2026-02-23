@@ -10,35 +10,37 @@
    HERO
 ========================================= */
 
-.hero {
-  min-height: 100vh;
-  min-height: 100svh; /* móvil moderno */
-}
-
+.hero,
 .hero__background {
   min-height: 100vh;
   min-height: 100svh;
+}
 
-  /* ===== FOTO DESKTOP ===== */
-  background-image: url("../../assets/images/heroimg/herofinal.png");
-
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  /* Enfoque desktop (ajustado para tu foto actual) */
-  background-position: 50% 45%;
-
+.hero__background {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+
+  /*
+    El background lo controlo con variables CSS que vienen desde Home.tsx:
+      --hero-desktop
+      --hero-mobile
+
+    Así Vite empaqueta bien las imágenes y no dependo de rutas relativas en CSS.
+  */
+  background-image: var(--hero-desktop);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 45%;
 }
 
 .hero__background::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(152, 152, 152, 0.4);
+  pointer-events: none;
 }
 
 .hero__content {
@@ -49,19 +51,12 @@
   flex-direction: column;
   gap: var(--space-3);
   align-items: center;
-
- 
   text-align: center;
 }
 
 .eyebrow--light {
   color: rgba(255, 255, 255, 0.9);
 }
-
-
-
-
-
 
 /* =========================================
    STORY
@@ -75,21 +70,17 @@
 }
 
 .story__img {
-  width: 100%;
+ width: 30rem;
+ max-height: 20rem;
   border-radius: 18px;
   display: block;
   box-shadow: var(--shadow-md);
 }
 
 /* =========================================
-   TITLES / TEXT
+   TEXT
 ========================================= */
 
-
-
-
-
-/* texto centrado más suave (para atmósfera) */
 .text--muted {
   max-width: 70ch;
   margin: 0 auto 10px;
@@ -97,12 +88,7 @@
 }
 
 /* =========================================
-   CARDS
-========================================= */
-
-
-/* =========================================
-   ATMÓSFERA
+   ATMOSPHERE
 ========================================= */
 
 .atmosphere {
@@ -126,9 +112,9 @@
 .atmosphere__img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
   object-position: center;
-  display: block;
 }
 
 /* =========================================
@@ -150,10 +136,9 @@
 }
 
 .features {
-  margin: 16px 0 0;
+  margin: 16px 0 26px;
   padding: 0;
   list-style: none;
-  margin-bottom: 26px; /* ✅ aire antes de los botones */
 }
 
 .features li {
@@ -171,14 +156,12 @@
   color: var(--color-gold);
 }
 
-/* Botones */
 .actions {
   display: flex;
   gap: 24px;
   row-gap: 14px;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 0;
 }
 
 .actions .btn {
@@ -222,16 +205,13 @@
   color: #5b616c;
 }
 
-/* Iconos SIN color: monocromo */
 .service__icon {
   font-size: 22px;
   line-height: 1;
   color: currentColor;
   opacity: 0.9;
-  
 }
 
-/* Link centrado debajo de servicios */
 .link--center {
   display: inline-block;
   margin-top: 18px;
@@ -248,16 +228,11 @@
   align-items: center;
 }
 
-.area__icon{
+.area__icon {
   display: inline-block;
-  padding-bottom: 1rem;
-  width:2rem;
-  
- 
+  width: 2rem;
+  line-height: 1;
 }
-
-
-
 
 .area__img {
   width: 100%;
@@ -266,7 +241,6 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Link alineado a la izquierda para entorno */
 .link--left {
   display: inline-block;
   margin-top: 18px;
@@ -280,10 +254,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 26px;
-  
 }
 
-.reviews__eyebrow{
+.reviews__eyebrow {
   padding-bottom: 5px;
   text-align: center;
   color: var(--color-gold);
@@ -292,7 +265,8 @@
   letter-spacing: 0.25em;
   text-transform: uppercase;
 }
-.reviews__title{
+
+.reviews__title {
   padding-bottom: 15px;
   text-align: center;
   margin-bottom: 1rem;
@@ -301,9 +275,12 @@
 .review {
   border: 1px solid var(--color-border);
   padding: 26px;
-  background:var(--color-bg-beige);
-  box-shadow:var(--shadow-grey);
+  background: var(--color-bg-beige);
+  box-shadow: var(--shadow-grey);
+}
 
+.review__stars {
+  color: var(--color-gold);
 }
 
 /* =========================================
@@ -314,20 +291,18 @@
   background: #4e6f8c;
   padding: 5rem 0;
   text-align: center;
-  
 }
-.ctaFinal__title{
-  margin-bottom: 1 rem;
+
+.ctaFinal__title {
+  margin-bottom: 1rem;
   font-size: 2.5rem;
+  color: rgb(223, 223, 223);
 }
 
 .ctaFinal__text {
   margin-bottom: 30px;
   color: #fff;
-  font-size: .9rem;
-}
-.review__stars{
-  color: var(--color-gold);
+  font-size: 0.9rem;
 }
 
 .ctaFinal__actions {
@@ -335,7 +310,8 @@
   display: flex;
   justify-content: center;
 }
-.ctaFinal__eyebrow{
+
+.ctaFinal__eyebrow {
   color: #fff;
 }
 
@@ -374,14 +350,8 @@
     grid-template-columns: 1fr;
   }
 
-  /* ===== HERO MÓVIL ===== */
   .hero__background {
-    /* 🔥 CAMBIA AQUÍ cuando tengas la versión vertical */
-    /* background-image: url("../../assets/images/heroimg/herofinal-mobile.png"); */
-
-    background-image: url("../../assets/images/pueblo/iglesia.jpg");
-
-    /* Ajuste de encuadre móvil */
+    background-image: var(--hero-mobile);
     background-position: 50% 20%;
   }
 
@@ -389,7 +359,6 @@
     font-size: 2rem;
     letter-spacing: 0.2rem;
     margin-bottom: 20px;
-   
   }
 
   .hero__subtitle {

@@ -1,37 +1,62 @@
-  import "./Home.css";
-import { useMemo } from "react";
+import "./Home.css";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
+import type { TFunction } from "i18next";
+import type { CSSProperties } from "react";
 import SEO from "../../components/seo/SEO";
 
-import storyImg from "../../assets/images/heroimg/salida.png";
-import pezdecoration from "../../assets/images/heroimg/entradapescado.png";
-import escaleraimg from "../../assets/images/heroimg/genital.png";
+import storyImg from "../../assets/images/heroimg/entrada.png";
+import pezdecoration from "../../assets/images/heroimg/vistas.png";
+import escaleraimg from "../../assets/images/heroimg/cenital.png";
 import camaimg from "../../assets/images/heroimg/camazul.png";
 import azoteaimg from "../../assets/images/heroimg/terraza.png";
-import restauranteimg from "../../assets/images/restaurante/oxido.png";
+import restauranteimg from "../../assets/images/restaurante/chorizos.png";
 import salaimg from "../../assets/images/espacios/IMG-20240419-WA0062.jpg";
+
+/*
+  Backgrounds del hero:
+  Importo las imágenes para que Vite las gestione como assets y no se rompan rutas en producción.
+  Las paso a CSS como variables para cambiar de desktop a móvil con media queries en Home.css.
+*/
+import heroDesktop from "../../assets/images/heroimg/herofinal.png";
+import heroMobile from "../../assets/images/heroimg/heromovil.png";
+
 import { BOOKING_URL } from "../../config/links";
-/**
- * ✅ Idiomas soportados en rutas (/es/..., /en/..., etc.)
- * Si no encuentra un idioma válido en la URL, cae a "es".
- */
+
+/* ================= IDIOMAS SOPORTADOS ================= */
+
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
-  // pathname: "/es/habitaciones" → ["", "es", "habitaciones"]
   const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
-/**
- * Helper para construir rutas internas multiidioma
- * path debe venir SIN "/" inicial, ej: ", "habitaciones"
- */
 function route(lang: SupportedLang, path: string) {
   const clean = path.replace(/^\/+/, "");
   return `/${lang}/${clean}`;
+}
+
+/* ================= HELPERS i18n TIPADOS ================= */
+
+function tArray(t: TFunction, key: string): string[] {
+  const v: unknown = t(key, { returnObjects: true });
+  if (!Array.isArray(v)) return [];
+  return v.filter((x): x is string => typeof x === "string");
+}
+
+type Review = { quote: string; name: string; city: string };
+
+function tReviews(t: TFunction, key: string): Review[] {
+  const v: unknown = t(key, { returnObjects: true });
+  if (!Array.isArray(v)) return [];
+
+  return v.filter((x): x is Review => {
+    if (typeof x !== "object" || x === null) return false;
+    const r = x as Record<string, unknown>;
+    return typeof r.quote === "string" && typeof r.name === "string" && typeof r.city === "string";
+  });
 }
 
 export default function Home() {
@@ -39,35 +64,36 @@ export default function Home() {
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
+  /*
+    Listas traducidas.
+    Si alguna key no existe o viene mal, devuelvo arrays vacíos para que no reviente el render.
+  */
+  const roomsFeatures = tArray(t, "home.rooms.features");
+  const servicesItems = tArray(t, "home.services.items");
+  const areaItems = tArray(t, "home.area.items");
+  const reviewsItems = tReviews(t, "home.reviews.items");
 
-  const roomsFeatures = useMemo(
-    () => (t("home.rooms.features", { returnObjects: true }) as string[]) ?? [],
-    [t]
-  );
+  const servicesIcons = ["☕", "☀", "✦", "⌁", "🚗"] as const;
+  const areaIcons = ["≋", "⌂", "🏛", "🐟"] as const;
 
-  const servicesItems = useMemo(
-    () => (t("home.services.items", { returnObjects: true }) as string[]) ?? [],
-    [t]
-  );
+  /*
+    Variables CSS para el hero.
+    En Home.css uso:
+      background-image: var(--hero-desktop);
+    y en el media query móvil:
+      background-image: var(--hero-mobile);
 
-  const areaItems = useMemo(
-    () => (t("home.area.items", { returnObjects: true }) as string[]) ?? [],
-    [t]
-  );
+    Aquí no uso any. Le digo al tipado que estas dos custom properties existen.
+  */
+  type HeroVars = CSSProperties & Record<"--hero-desktop" | "--hero-mobile", string>;
 
-  const reviewsItems = useMemo(
-    () =>
-      (t("home.reviews.items", { returnObjects: true }) as Array<{
-        quote: string;
-        name: string;
-        city: string;
-      }>) ?? [],
-    [t]
-  );
+  const heroVars: HeroVars = {
+    "--hero-desktop": `url(${heroDesktop})`,
+    "--hero-mobile": `url(${heroMobile})`,
+  };
 
   return (
     <>
-      {/* ✅ SEO (canonical dinámico lo maneja tu componente SEO.tsx) */}
       <SEO
         title={t("home.seo.title", {
           defaultValue: "Hotel Taverna de la Sal | Hotel boutique en L'Escala",
@@ -82,20 +108,15 @@ export default function Home() {
       <main className="page">
         {/* ================= HERO ================= */}
         <section className="hero" aria-label={t("home.hero.aria", { defaultValue: "Portada" })}>
-          <div className="hero__background">
+          <div className="hero__background" style={heroVars}>
             <div className="container hero__content">
               <p className="eyebrow eyebrow--light">{t("home.hero.eyebrow")}</p>
               <h1 className="hero__title">{t("home.hero.title")}</h1>
               <p className="hero__subtitle">{t("home.hero.subtitle")}</p>
 
-             <a
-                  className="btn btn--primary"
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {t("home.hero.cta")}
-                </a>
+              <a className="btn btn--primary" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                {t("home.hero.cta")}
+              </a>
             </div>
           </div>
         </section>
@@ -132,19 +153,25 @@ export default function Home() {
 
             <div className="cards3">
               <article className="card">
-                <div className="icon">%</div>
+                <div className="icon" aria-hidden="true">
+                  %
+                </div>
                 <h3 className="card__title">{t("home.refuge.cards.0.title")}</h3>
                 <p className="card__text">{t("home.refuge.cards.0.text")}</p>
               </article>
 
               <article className="card">
-                <div className="icon">★</div>
+                <div className="icon" aria-hidden="true">
+                  ★
+                </div>
                 <h3 className="card__title">{t("home.refuge.cards.1.title")}</h3>
                 <p className="card__text">{t("home.refuge.cards.1.text")}</p>
               </article>
 
               <article className="card">
-                <div className="icon">☀</div>
+                <div className="icon" aria-hidden="true">
+                  ☀
+                </div>
                 <h3 className="card__title">{t("home.refuge.cards.2.title")}</h3>
                 <p className="card__text">{t("home.refuge.cards.2.text")}</p>
               </article>
@@ -208,19 +235,25 @@ export default function Home() {
 
             <div className="cards3">
               <article className="card">
-                <div className="icon">10%</div>
+                <div className="icon" aria-hidden="true">
+                  10%
+                </div>
                 <h3 className="card__title">{t("home.benefits.cards.0.title")}</h3>
                 <p className="card__text">{t("home.benefits.cards.0.text")}</p>
               </article>
 
               <article className="card">
-                <div className="icon">€</div>
+                <div className="icon" aria-hidden="true">
+                  €
+                </div>
                 <h3 className="card__title">{t("home.benefits.cards.1.title")}</h3>
                 <p className="card__text">{t("home.benefits.cards.1.text")}</p>
               </article>
 
               <article className="card">
-                <div className="icon">✉</div>
+                <div className="icon" aria-hidden="true">
+                  ✉
+                </div>
                 <h3 className="card__title">{t("home.benefits.cards.2.title")}</h3>
                 <p className="card__text">{t("home.benefits.cards.2.text")}</p>
               </article>
@@ -238,21 +271,21 @@ export default function Home() {
               <p className="text">{t("home.rooms.text")}</p>
 
               <ul className="features">
-                {Array.isArray(roomsFeatures) && roomsFeatures.map((x) => <li className="text" key={x}>{x}</li>)}
+                {roomsFeatures.map((x) => (
+                  <li className="text" key={x}>
+                    {x}
+                  </li>
+                ))}
               </ul>
 
               <div className="actions">
                 <Link to={route(lang, "habitaciones")} className="btn btn--outline">
                   {t("home.rooms.details")}
                 </Link>
-              <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--primary"
-                >
+
+                <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn--primary">
                   {t("home.rooms.cta")}
-                </a>  
+                </a>
               </div>
             </div>
 
@@ -284,7 +317,7 @@ export default function Home() {
               <h2 className="title">{t("home.restaurant.title")}</h2>
               <p className="text">{t("home.restaurant.text")}</p>
 
-              <Link className=" link " to={route(lang, "restaurante")}>
+              <Link className="link" to={route(lang, "restaurante")}>
                 {t("home.restaurant.cta")}
               </Link>
             </div>
@@ -298,47 +331,19 @@ export default function Home() {
             <h2 className="title">{t("home.services.title")}</h2>
 
             <div className="services">
-              <article className="service">
-                <span className="service__icon" aria-hidden="true">
-                  ☕
-                </span>
-                <p>{servicesItems?.[0]}</p>
-              </article>
-
-              <article className="service">
-                <span className="service__icon" aria-hidden="true">
-                  ☀
-                </span>
-                <p >{servicesItems?.[1]}</p>
-              </article>
-
-              <article className="service">
-                <span className="service__icon" aria-hidden="true">
-                  ✦
-                </span>
-                <p>{servicesItems?.[2]}</p>
-              </article>
-
-              <article className="service">
-                <span className="service__icon" aria-hidden="true">
-                  ⌁
-                </span>
-                <p>{servicesItems?.[3]}</p>
-              </article>
-
-              <article className="service">
-                <span className="service__icon" aria-hidden="true">
-                  🚗
-                </span>
-                <p >{servicesItems?.[4]}</p>
-              </article>
+              {servicesIcons.map((icon, i) => (
+                <article className="service" key={`${icon}-${i}`}>
+                  <span className="service__icon" aria-hidden="true">
+                    {icon}
+                  </span>
+                  <p>{servicesItems[i] ?? ""}</p>
+                </article>
+              ))}
             </div>
 
-           
-          
-              <Link className="link link--center" to={route(lang, "servicios")}>
-                {t("home.services.link")}
-              </Link>
+            <Link className="link link--center" to={route(lang, "servicios")}>
+              {t("home.services.link")}
+            </Link>
           </div>
         </section>
 
@@ -352,22 +357,14 @@ export default function Home() {
               <p className="text">{t("home.area.text")}</p>
 
               <ul className="area__list">
-                <li>
-                  <span className="area__icon">≋</span>
-                  <span className="text">{areaItems?.[0]}</span>
-                </li>
-                <li>
-                  <span className="area__icon">⌂</span>
-                  <span className="text">{areaItems?.[1]}</span>
-                </li>
-                <li>
-                  <span className="area__icon">🏛</span>
-                  <span className="text">{areaItems?.[2]}</span>
-                </li>
-                <li>
-                  <span className="area__icon">🐟</span>
-                  <span className="text">{areaItems?.[3]}</span>
-                </li>
+                {areaIcons.map((icon, i) => (
+                  <li key={`${icon}-${i}`}>
+                    <span className="area__icon" aria-hidden="true">
+                      {icon}
+                    </span>
+                    <span className="text">{areaItems[i] ?? ""}</span>
+                  </li>
+                ))}
               </ul>
 
               <Link className="link link--left" to={route(lang, "entorno")}>
@@ -390,20 +387,19 @@ export default function Home() {
         <section className="reviews section section--white">
           <div className="container reviews__inner">
             <p className="reviews__eyebrow">{t("home.reviews.eyebrow")}</p>
-            <h2 className="reviews__title">{t("home.reviews.title")}</h2>
+            <h2 className="title reviews__title">{t("home.reviews.title")}</h2>
 
             <div className="reviews__grid">
-              {Array.isArray(reviewsItems) &&
-                reviewsItems.map((r, idx) => (
-                  <article className="review" key={`${r.name}-${idx}`}>
-                    <div className="review__stars" aria-label={t("home.reviews.starsAria")}>
-                      ★★★★★
-                    </div>
-                    <p className="review__quote">{r.quote}</p>
-                    <p className="review__name">{r.name}</p>
-                    <p className="review__city">{r.city}</p>
-                  </article>
-                ))}
+              {reviewsItems.map((r, idx) => (
+                <article className="review" key={`${r.name}-${idx}`}>
+                  <div className="review__stars" aria-label={t("home.reviews.starsAria")}>
+                    ★★★★★
+                  </div>
+                  <p className="review__quote">{r.quote}</p>
+                  <p className="review__name">{r.name}</p>
+                  <p className="review__city">{r.city}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
@@ -415,14 +411,9 @@ export default function Home() {
             <p className="ctaFinal__text">{t("home.cta.text")}</p>
 
             <div className="ctaFinal__actions">
-             <a
-                  href={BOOKING_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--light"
-                >
-                  {t("home.cta.button")}
-                </a>
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer" className="btn btn--light">
+                {t("home.cta.button")}
+              </a>
             </div>
           </div>
         </section>

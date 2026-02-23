@@ -3,7 +3,7 @@
 ========================================= */
 
 .footer {
-  background: var(--color-dark);
+  background: hsl(231, 29%, 22%);
   color: rgba(255, 255, 255, 0.88);
   padding: 48px 0 28px;
   position: relative;
@@ -69,7 +69,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
+  
   transition: all 0.25s ease;
 }
 

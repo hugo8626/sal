@@ -11,6 +11,21 @@
     linear-gradient(#f6f2ea, #f6f2ea);
 }
 
+/* ================================================================
+   CONTAINERS (mismo patrón en toda la página)
+   - evito repetir max-width/margins/padding
+================================================================ */
+.areaIntro__container,
+.areaPlaces__container,
+.areaBeaches__container,
+.areaNature__container,
+.areaExperiences__container,
+.areaFood__container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 /* ================= HERO ================= */
 .areaHero {
   position: relative;
@@ -29,24 +44,18 @@
 
 .areaHero__content {
   position: relative;
+  z-index: 1;
   text-align: center;
 
-   display: flex;
+  display: flex;
   flex-direction: column;
-  padding: 0 2rem;
-  z-index: 1;
   align-items: center;
+
+  padding: 0 2rem;
 }
-
-
-
-
 
 /* ================= INTRO ================= */
 .areaIntro__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
@@ -76,12 +85,6 @@
 }
 
 /* ================= PLACES ================= */
-.areaPlaces__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .areaPlaces__header {
   margin-bottom: 3.5rem;
   max-width: 600px;
@@ -93,12 +96,18 @@
   gap: 3rem;
 }
 
+/* Evito ancho fijo: el grid controla el tamaño, no el img */
 .placeCard img {
-  width: 30rem;
-  height: 20rem;
+  width: 100%;
+  height: auto;
   display: block;
+
   border-radius: 14px;
   overflow: hidden;
+
+  object-fit: cover;
+  aspect-ratio: 3 / 2;
+
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -106,16 +115,11 @@
   margin-top: 1.2rem;
 }
 
-
 .placeCard__body span {
   font-size: 0.8rem;
   opacity: 0.6;
   white-space: nowrap;
 }
-
-
-
-
 
 /* ================= BANNER ================= */
 .areaBanner {
@@ -140,12 +144,9 @@
   padding: 0 2rem;
 }
 
-
 /* ================= BEACHES ================= */
 .areaBeaches__container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 24px;
+  max-width: 1100px; /* aquí sí lo dejabas más estrecho */
 }
 
 .areaBeaches__intro {
@@ -162,14 +163,11 @@
   row-gap: 3.2rem;
 }
 
-
 .beachItem h3 span {
   font-size: 0.8rem;
   opacity: 0.7;
   white-space: nowrap;
 }
-
-
 
 .beachItem::after {
   content: "";
@@ -181,12 +179,8 @@
   opacity: 0.15;
 }
 
-
 /* ================= NATURE ================= */
 .areaNature__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: grid;
   grid-template-columns: 420px 1fr;
   gap: 4rem;
@@ -211,7 +205,7 @@
   max-width: 680px;
 }
 
-/* Listado “paisajes” con coherencia visual (línea vertical + respiración) */
+/* Listado paisajes (línea vertical) */
 .paisajes {
   margin-top: 1.6rem;
   display: grid;
@@ -243,17 +237,6 @@
   opacity: 0.9;
 }
 
-/* ✅ Link de naturaleza visible y coherente */
-.areaNature__link {
-  display: inline-block;
-  margin-top: 0.7rem;
-  text-decoration: none;
-  color: #b26a1f;
-}
-.areaNature__link:hover {
-  text-decoration: underline;
-}
-
 .areaNature__note {
   margin-top: 1.8rem;
   font-style: italic;
@@ -261,12 +244,6 @@
 }
 
 /* ================= EXPERIENCES ================= */
-.areaExperiences__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .areaExperiences__header {
   text-align: center;
   max-width: 760px;
@@ -290,8 +267,10 @@
   display: block;
   object-fit: cover;
   aspect-ratio: 4 / 3;
+
   border-radius: 14px;
   overflow: hidden;
+
   box-shadow: 0 16px 35px rgba(0, 0, 0, 0.1);
 }
 
@@ -318,7 +297,6 @@
   margin: 0 0 0.35rem;
 }
 
-/* ✅ evita “texto cortado raro”: párrafo con ancho lógico y altura correcta */
 .expItem p {
   margin: 0;
   line-height: 1.7;
@@ -328,9 +306,6 @@
 
 /* ================= FOOD ================= */
 .areaFood__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
   display: grid;
   grid-template-columns: 1fr 520px;
   gap: 4rem;
@@ -361,11 +336,11 @@
   aspect-ratio: 4 / 3;
 }
 
-/* ✅ BOTÓN AZUL (como en tu web) */
 .areaFood__btn {
   display: inline-flex;
   align-items: center;
   gap: 0.85rem;
+
   margin-top: 1.6rem;
   padding: 0.95rem 1.35rem;
 

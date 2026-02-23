@@ -4,83 +4,66 @@ import { useLocation } from "react-router-dom";
 
 import SEO from "../../components/seo/SEO";
 
-/* =========================================================
-   IMÁGENES
-   ========================================================= */
 import heroImg from "../../assets/images/restaurante/oxido.png";
-import propuestaImg from "../../assets/images/restaurante/playa.png";
-import entornoImg from "../../assets/images/restaurante/photo_2026-02-14_18-51-06.jpg";
-import experienciaBg from "../../assets/images/restaurante/oxido.png";
+import propuestaImg from "../../assets/images/restaurante/brasa.jpeg";
+import entornoImg from "../../assets/images/espacios/terraza.png";
+import experienciaBg from "../../assets/images/restaurante/baner.png";
 
-/* =========================================================
-   SOPORTE MULTIIDIOMA
-   Detecta el idioma desde la URL (/es, /en, etc.)
-   ========================================================= */
+
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
 function getLangFromPath(pathname: string): SupportedLang {
   const first = pathname.split("/")[1]?.toLowerCase() ?? "";
-  return (SUPPORTED as readonly string[]).includes(first)
-    ? (first as SupportedLang)
-    : "es";
+  return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
-/* =========================================================
-   WHATSAPP
-   Genera enlace dinámico con texto traducido
-   ========================================================= */
-const WA_NUMBER = "34600000000"; // ← Cambiar por número real
+const WA_NUMBER = "34600000000";
 
 function waLink(text: string) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
-/* =========================================================
-   COMPONENTE RESTAURANTE
-   ========================================================= */
 export default function Restaurante() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
-  const waText = t("restaurante.whatsapp.text");
+  const waText = t("restaurante.whatsapp.text", {
+    defaultValue: "Hola, quiero reservar una mesa en el restaurante.",
+  });
 
   return (
     <>
-      {/* =====================================================
-         SEO
-         - Título dinámico
-         - Descripción dinámica
-         - Imagen OpenGraph
-      ====================================================== */}
       <SEO
-        title={t("restaurante.seo.title")}
-        description={t("restaurante.seo.description")}
+        title={t("restaurante.seo.title", { defaultValue: "Restaurante | Taverna de la Sal" })}
+        description={t("restaurante.seo.description", {
+          defaultValue:
+            "Restaurante a la brasa en L'Escala: producto de temporada, ambiente íntimo y cocina de calidad cerca del mar.",
+        })}
         image={heroImg}
       />
 
-      {/* =====================================================
-         MAIN
-         - restPage → estilos base
-         - restPage--restaurant → namespace exclusivo
-      ====================================================== */}
       <main className="restPage restPage--restaurant">
-
-        {/* ================= HERO ================= */}
+        {/* HERO
+            - En vez de poner background-image inline (que rompe el cambio por CSS),
+              lo paso como CSS variable para que el CSS pueda cambiarla en móvil.
+        */}
         <section
           className="restHero"
-          style={{ backgroundImage: `url(${heroImg})` }}
-          aria-label={t("restaurante.hero.aria")}
+          style={
+            {
+              "--rest-hero-bg": `url(${heroImg})`,
+            } as React.CSSProperties
+          }
+          aria-label={t("restaurante.hero.aria", { defaultValue: "Restaurante" })}
         >
           <div className="restHero__overlay" />
 
           <div className="restHero__content">
             <h1 className="hero__title">{t("restaurante.hero.title")}</h1>
-
             <p className="hero__subtitle">{t("restaurante.hero.subtitle")}</p>
 
-            {/* CTA WhatsApp */}
             <a
               className="restHero__btn"
               href={waLink(waText)}
@@ -96,151 +79,126 @@ export default function Restaurante() {
           </div>
         </section>
 
-        {/* ================= PROPUESTA ================= */}
+        {/* PROPUESTA */}
         <section className="section section--white restSplit">
           <div className="restSplit__container">
-
             <div className="restSplit__content">
-              <p className="eyebrow">
-                {t("restaurante.propuesta.eyebrow")}
-              </p>
-
+              <p className="eyebrow">{t("restaurante.propuesta.eyebrow")}</p>
               <h2 className="title">{t("restaurante.propuesta.title")}</h2>
 
-              <p className=" text restSplit__lead">
-                {t("restaurante.propuesta.lead")}
-              </p>
-
+              <p className="text restSplit__lead">{t("restaurante.propuesta.lead")}</p>
               <p className="text">{t("restaurante.propuesta.p2")}</p>
             </div>
 
             <div className="restSplit__media">
               <img
                 src={propuestaImg}
-                alt={t("restaurante.propuesta.imageAlt")}
+                alt={t("restaurante.propuesta.imageAlt", { defaultValue: "Propuesta gastronómica" })}
                 loading="lazy"
               />
             </div>
-
           </div>
         </section>
 
-        {/* ================= ENTORNO ================= */}
+        {/* ENTORNO */}
         <section className="section section--beige restSplit restSplit--reverse">
           <div className="restSplit__container">
-
             <div className="restSplit__media">
               <img
                 src={entornoImg}
-                alt={t("restaurante.entorno.imageAlt")}
+                alt={t("restaurante.entorno.imageAlt", { defaultValue: "Entorno del restaurante" })}
                 loading="lazy"
               />
             </div>
 
             <div className="restSplit__content">
-              <p className="eyebrow">
-                {t("restaurante.entorno.eyebrow")}
-              </p>
-
+              <p className="eyebrow">{t("restaurante.entorno.eyebrow")}</p>
               <h2 className="title">{t("restaurante.entorno.title")}</h2>
 
-              <p className="text" >{t("restaurante.entorno.p1")}</p>
+              <p className="text">{t("restaurante.entorno.p1")}</p>
               <p className="bye">{t("restaurante.entorno.p2")}</p>
               <p className="bye">{t("restaurante.entorno.p3")}</p>
               <p className="bye">{t("restaurante.entorno.p4")}</p>
             </div>
-
           </div>
         </section>
 
-        {/* ================= EXPERIENCIA (OSCURA) ================= */}
+        {/* EXPERIENCIA
+            - Misma idea: background como CSS variable para poder cambiar por CSS si quieres.
+        */}
         <section
           className="restDark"
-          style={{ backgroundImage: `url(${experienciaBg})` }}
-          aria-label={t("restaurante.experiencia.aria")}
+          style={
+            {
+              "--rest-dark-bg": `url(${experienciaBg})`,
+            } as React.CSSProperties
+          }
+          aria-label={t("restaurante.experiencia.aria", { defaultValue: "Experiencia" })}
         >
           <div className="restDark__overlay" />
 
           <div className="restDark__content">
-            <p className="eyebrow eyebrow--light">
-              {t("restaurante.experiencia.eyebrow")}
-            </p>
-
+            <p className="eyebrow eyebrow--light">{t("restaurante.experiencia.eyebrow")}</p>
             <h2 className="title">{t("restaurante.experiencia.title")}</h2>
 
-            <p className="text restDark__lead">
-              {t("restaurante.experiencia.lead")}
-            </p>
-
+            <p className="text restDark__lead">{t("restaurante.experiencia.lead")}</p>
             <p className="text">{t("restaurante.experiencia.p2")}</p>
           </div>
         </section>
 
-        {/* ================= VENTAJAS HUÉSPEDES ================= */}
+        {/* VENTAJAS */}
         <section className="section section--beige restCenter">
           <div className="restCenter__container">
-
-            <p className="eyebrow">
-              {t("restaurante.ventajas.eyebrow")}
-            </p>
-
+            <p className="eyebrow">{t("restaurante.ventajas.eyebrow")}</p>
             <h2 className="title">{t("restaurante.ventajas.title")}</h2>
 
-            <p className="text restCenter__lead">
-              {t("restaurante.ventajas.lead")}
-            </p>
+            <p className="text restCenter__lead">{t("restaurante.ventajas.lead")}</p>
 
             <ul className="restChecks">
-              <li><span className="check">✓</span>{t("restaurante.ventajas.items.0")}</li>
-              <li><span className="check">✓</span>{t("restaurante.ventajas.items.1")}</li>
-              <li><span className="check">✓</span>{t("restaurante.ventajas.items.2")}</li>
+              <li>
+                <span className="check">✓</span>
+                {t("restaurante.ventajas.items.0")}
+              </li>
+              <li>
+                <span className="check">✓</span>
+                {t("restaurante.ventajas.items.1")}
+              </li>
+              <li>
+                <span className="check">✓</span>
+                {t("restaurante.ventajas.items.2")}
+              </li>
             </ul>
 
-            <a
-              className="restCenter__btn"
-              href={`/${lang}/reservar`}
-            >
+            <a className="restCenter__btn" href={`/${lang}/reservar`}>
               {t("restaurante.ventajas.cta")}
             </a>
-
           </div>
         </section>
 
-        {/* ================= CARTA ================= */}
+        {/* CARTA */}
         <section className="section section--white restCenter">
           <div className="restCenter__container">
-
-            <p className="eyebrow">
-              {t("restaurante.carta.eyebrow")}
-            </p>
-
+            <p className="eyebrow">{t("restaurante.carta.eyebrow")}</p>
             <h2 className="title">{t("restaurante.carta.title")}</h2>
 
-            <p className="text restCenter__lead">
-              {t("restaurante.carta.lead")}
-            </p>
+            <p className="text restCenter__lead">{t("restaurante.carta.lead")}</p>
 
             <a
               className="link"
               href="https://docs.google.com/document/d/1UHRPUm4q1uIj6z6lqksVUhgYQm7ar-3cg9pETBSRPZQ/export?format=pdf"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={t("restaurante.carta.ctaAria")}
+              aria-label={t("restaurante.carta.ctaAria", { defaultValue: "Abrir carta en PDF" })}
             >
               {t("restaurante.carta.linkText")} →
             </a>
-
           </div>
         </section>
 
-        {/* ================= HORARIOS ================= */}
+        {/* HORARIOS */}
         <section className="section section--beige restCenter">
           <div className="restCenter__container">
-
-            <p className="eyebrow">
-              {t("restaurante.horarios.eyebrow")}
-            </p>
-
+            <p className="eyebrow">{t("restaurante.horarios.eyebrow")}</p>
             <h2 className="title">{t("restaurante.horarios.title")}</h2>
 
             <div className="restHours">
@@ -256,9 +214,7 @@ export default function Restaurante() {
               </div>
             </div>
 
-            <p className="text restCenter__lead">
-              {t("restaurante.horarios.note")}
-            </p>
+            <p className="text restCenter__lead">{t("restaurante.horarios.note")}</p>
 
             <a
               className="restCenter__btn"
@@ -268,10 +224,8 @@ export default function Restaurante() {
             >
               {t("restaurante.horarios.cta")}
             </a>
-
           </div>
         </section>
-
       </main>
     </>
   );

@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ================== HOME ================== -->
   <url>
     <loc>https://www.tavernadelasal.com/es</loc>
     <lastmod>2026-02-19</lastmod>
@@ -13,6 +14,38 @@
   </url>
 
   <url>
+    <loc>https://www.tavernadelasal.com/en</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es"/>
+  </url>
+
+
+  <!-- ================== HABITACIONES ================== -->
+  <url>
     <loc>https://www.tavernadelasal.com/es/habitaciones</loc>
     <lastmod>2026-02-19</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/habitaciones"/>
@@ -22,6 +55,80 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/habitaciones"/>
   </url>
 
+  <url>
+    <loc>https://www.tavernadelasal.com/en/habitaciones</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/habitaciones"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/habitaciones</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/habitaciones"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/habitaciones</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/habitaciones"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/habitaciones"/>
+  </url>
+
+
+  <!-- ================== SERVICIOS ================== -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/servicios</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/servicios"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/servicios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/servicios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/servicios"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/en/servicios</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/servicios"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/servicios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/servicios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/servicios"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/servicios</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/servicios"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/servicios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/servicios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/servicios"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/servicios</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/servicios"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/servicios"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/servicios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/servicios"/>
+  </url>
+
+
+  <!-- ================== RESTAURANTE ================== -->
   <url>
     <loc>https://www.tavernadelasal.com/es/restaurante</loc>
     <lastmod>2026-02-19</lastmod>
@@ -33,6 +140,38 @@
   </url>
 
   <url>
+    <loc>https://www.tavernadelasal.com/en/restaurante</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/restaurante"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/restaurante</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/restaurante"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/restaurante</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/restaurante"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/restaurante"/>
+  </url>
+
+
+  <!-- ================== HISTORIA ================== -->
+  <url>
     <loc>https://www.tavernadelasal.com/es/historia</loc>
     <lastmod>2026-02-19</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/historia"/>
@@ -42,6 +181,38 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/historia"/>
   </url>
 
+  <url>
+    <loc>https://www.tavernadelasal.com/en/historia</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/historia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/historia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/historia"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/historia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/historia"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/historia</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/historia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/historia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/historia"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/historia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/historia"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/historia</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/historia"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/historia"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/historia"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/historia"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/historia"/>
+  </url>
+
+
+  <!-- ================== ENTORNO ================== -->
   <url>
     <loc>https://www.tavernadelasal.com/es/entorno</loc>
     <lastmod>2026-02-19</lastmod>
@@ -53,7 +224,69 @@
   </url>
 
   <url>
+    <loc>https://www.tavernadelasal.com/en/entorno</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/entorno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/entorno"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/entorno"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/entorno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/entorno"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/entorno</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/entorno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/entorno"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/entorno"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/entorno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/entorno"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/entorno</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/entorno"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/entorno"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/entorno"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/entorno"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/entorno"/>
+  </url>
+
+
+  <!-- ================== CONTACTO ================== -->
+  <url>
     <loc>https://www.tavernadelasal.com/es/contacto</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/contacto"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/en/contacto</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/contacto"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/contacto</loc>
+    <lastmod>2026-02-19</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.tavernadelasal.com/fr/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="https://www.tavernadelasal.com/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tavernadelasal.com/es/contacto"/>
+  </url>
+
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/contacto</loc>
     <lastmod>2026-02-19</lastmod>
     <xhtml:link rel="alternate" hreflang="es" href="https://www.tavernadelasal.com/es/contacto"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.tavernadelasal.com/en/contacto"/>

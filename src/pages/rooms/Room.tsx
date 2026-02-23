@@ -1,26 +1,24 @@
 import "./Room.css";
-import { useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
+import type { TFunction } from "i18next";
 
 import heroRooms from "../../assets/images/habitaciones/cami.png";
 import introRooms from "../../assets/images/habitaciones/camabaño.png";
 import { BOOKING_URL } from "../../config/links";
+
 import img1 from "../../assets/images/habitaciones/camaesquina.png";
-import img2 from "../../assets/images/habitaciones/sila.png";
-import img3 from "../../assets/images/habitaciones/espejo.png";
-import img4 from "../../assets/images/habitaciones/camatele.png";
-import img5 from "../../assets/images/habitaciones/amenittis.png";
-import img6 from "../../assets/images/habitaciones/cama.png";
-import img7 from "../../assets/images/habitaciones/terraza.png";
+import img2 from "../../assets/images/habitaciones/sofacama.png";
+import img3 from "../../assets/images/habitaciones/atardecer.png";
+import img4 from "../../assets/images/habitaciones/amenittis.png";
+import img5 from "../../assets/images/habitaciones/espejo.png";
+import img6 from "../../assets/images/habitaciones/camazul.png";
+import img7 from "../../assets/images/habitaciones/copas.png";
 import img8 from "../../assets/images/habitaciones/terraz.png";
 
 import FaqItem from "../../components/FaqItem/FaqItem";
 import SEO from "../../components/seo/SEO";
 
-/**
- * ✅ Tipos para i18n (evita errores silenciosos)
- */
 type Feature = {
   title: string;
   items: string[];
@@ -31,59 +29,62 @@ type Faq = {
   a: string;
 };
 
-/**
- * ✅ Idiomas soportados en rutas
- */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
-/**
- * ✅ Lee el idioma desde la URL (/es/..., /en/...)
- * Si no hay, cae a "es".
- */
 function getLangFromPath(pathname: string): SupportedLang {
   const first = pathname.split("/")[1]?.toLowerCase() ?? "";
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
-/**
- * ✅ Helper para construir rutas internas con idioma
- */
 function route(lang: SupportedLang, path: string) {
   const clean = path.replace(/^\/+/, "");
   return `/${lang}/${clean}`;
 }
+
+function tArray(t: TFunction, key: string): string[] {
+  const v: unknown = t(key, { returnObjects: true });
+  if (!Array.isArray(v)) return [];
+  return v.filter((x): x is string => typeof x === "string");
+}
+
+function tFeatures(t: TFunction, key: string): Feature[] {
+  const v: unknown = t(key, { returnObjects: true });
+  if (!Array.isArray(v)) return [];
+
+  return v.filter((x): x is Feature => {
+    if (typeof x !== "object" || x === null) return false;
+    const r = x as Record<string, unknown>;
+    if (typeof r.title !== "string") return false;
+    if (!Array.isArray(r.items)) return false;
+    return r.items.every((it) => typeof it === "string");
+  });
+}
+
+function tFaq(t: TFunction, key: string): Faq[] {
+  const v: unknown = t(key, { returnObjects: true });
+  if (!Array.isArray(v)) return [];
+
+  return v.filter((x): x is Faq => {
+    if (typeof x !== "object" || x === null) return false;
+    const r = x as Record<string, unknown>;
+    return typeof r.q === "string" && typeof r.a === "string";
+  });
+}
+
+const GALLERY = [img1, img2, img3, img4, img5, img6, img7, img8] as const;
 
 export default function Room() {
   const { t } = useTranslation();
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
-  /**
-   * ✅ useMemo:
-   * - Evita recalcular objetos/arrays en cada render.
-   * - Además ponemos "guardas" (fallbacks) para que no explote si falta una key.
-   */
-  const features = useMemo(() => {
-    const data = t("rooms.features", { returnObjects: true }) as Feature[] | unknown;
-    return Array.isArray(data) ? (data as Feature[]) : [];
-  }, [t]);
-
-  const faq = useMemo(() => {
-    const data = t("rooms.faq.items", { returnObjects: true }) as Faq[] | unknown;
-    return Array.isArray(data) ? (data as Faq[]) : [];
-  }, [t]);
-
-  const introList = useMemo(() => {
-    const data = t("rooms.intro.list", { returnObjects: true }) as string[] | unknown;
-    return Array.isArray(data) ? (data as string[]) : [];
-  }, [t]);
-
-  const gallery = useMemo(() => [img1, img2, img3, img4, img5, img6, img7, img8], []);
+  const features = tFeatures(t, "rooms.features");
+  const faq = tFaq(t, "rooms.faq.items");
+  const introList = tArray(t, "rooms.intro.list");
 
   return (
     <>
-      {/* ✅ SEO específico de la página */}
       <SEO
         title={t("rooms.seo.title", { defaultValue: "Habitaciones | Taverna de la Sal" })}
         description={t("rooms.seo.description", {
@@ -94,7 +95,7 @@ export default function Room() {
       />
 
       <main className="roomsPage">
-        {/* ================= HERO ================= */}
+        {/* HERO */}
         <section
           className="roomsHero"
           style={{ backgroundImage: `url(${heroRooms})` }}
@@ -107,19 +108,17 @@ export default function Room() {
             <p className="hero__subtitle roomsHero__subtitle">{t("rooms.hero.subtitle")}</p>
           </div>
 
-          <div className="btn btn--primary roomsHero__ctaWrap">
-            <a
-                className="buttroomsHero__cta"
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("rooms.hero.cta")}
-              </a>
-          </div>
+          <a
+            className="btn btn--primary roomsHero__cta"
+            href={BOOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {t("rooms.hero.cta")}
+          </a>
         </section>
 
-        {/* ================= INTRO ================= */}
+        {/* INTRO */}
         <section className="roomsIntro">
           <div className="roomsIntro__container">
             <div className="roomsIntro__content">
@@ -128,11 +127,15 @@ export default function Room() {
 
               <ul className="roomsIntro__list">
                 {introList.map((item, i) => (
-                  <li className="text" key={`${item}-${i}`}>{item}</li>
+                  <li className="text" key={`${item}-${i}`}>
+                    {item}
+                  </li>
                 ))}
               </ul>
 
-              <blockquote className="roomsIntro__quote">{t("rooms.intro.quote")}</blockquote>
+              <blockquote className="roomsIntro__quote">
+                {t("rooms.intro.quote")}
+              </blockquote>
             </div>
 
             <div className="roomsIntro__media">
@@ -146,7 +149,7 @@ export default function Room() {
           </div>
         </section>
 
-        {/* ================= FEATURES ================= */}
+        {/* FEATURES */}
         <section className="roomsFeatures">
           <div className="roomsFeatures__container">
             {features.map((feature, index) => (
@@ -154,15 +157,16 @@ export default function Room() {
                 <h3 className="title featureItem__title">{feature.title}</h3>
 
                 <ul className="featureItem__list">
-                  {Array.isArray(feature.items) &&
-                    feature.items.map((item, i) => <li key={`${item}-${i}`}>{item}</li>)}
+                  {feature.items.map((item, i) => (
+                    <li key={`${item}-${i}`}>{item}</li>
+                  ))}
                 </ul>
               </article>
             ))}
           </div>
         </section>
 
-        {/* ================= GALLERY ================= */}
+        {/* GALLERY */}
         <section className="roomsGallery">
           <div className="roomsGallery__container">
             <header className="roomsGallery__header">
@@ -171,7 +175,7 @@ export default function Room() {
             </header>
 
             <div className="roomsGallery__grid">
-              {gallery.map((img, i) => (
+              {GALLERY.map((img, i) => (
                 <figure className="gItem" key={i}>
                   <img
                     src={img}
@@ -186,12 +190,12 @@ export default function Room() {
           </div>
         </section>
 
-        {/* ================= CTA FINAL ================= */}
+        {/* CTA FINAL */}
         <section className="roomsFinal">
           <div className="roomsFinal__container">
             <h2 className="title roomsFinal__title">{t("rooms.final.title")}</h2>
 
-           <a
+            <a
               href={BOOKING_URL}
               target="_blank"
               rel="noopener noreferrer"
@@ -202,43 +206,56 @@ export default function Room() {
           </div>
         </section>
 
-        {/* ================= SERVICIOS / RESTAURANTE ================= */}
+        {/* SERVICIOS */}
         <section className="roomsServices">
           <div className="roomsServices__container">
-            <p className="text roomsServices__text">{t("rooms.services.text")}</p>
+            <p className="text roomsServices__text">
+              {t("rooms.services.text")}
+            </p>
 
-            <Link  to={route(lang, "servicios")} className="link roomsServices__link">
-              {t("rooms.services.link")} <span className="roomsServices__arrow">→</span>
+            <Link
+              to={route(lang, "servicios")}
+              className="link roomsServices__link"
+            >
+              {t("rooms.services.link")}{" "}
+              <span className="roomsServices__arrow">→</span>
             </Link>
           </div>
         </section>
 
-        {/* ================= FAQ ================= */}
+        {/* FAQ */}
         <section className="roomsFaq">
           <div className="roomsFaq__container">
             <h2 className="title roomsFaq__title">{t("rooms.faq.title")}</h2>
 
             <div className="roomsFaq__list">
               {faq.map((item, i) => (
-                <FaqItem key={`${item.q}-${i}`} q={item.q} a={item.a} defaultOpen={i === 0} />
+                <FaqItem
+                  key={`${item.q}-${i}`}
+                  q={item.q}
+                  a={item.a}
+                  defaultOpen={i === 0}
+                />
               ))}
             </div>
           </div>
         </section>
 
-        {/* ================= BIG CTA ================= */}
+        {/* BIG CTA */}
         <section className="roomsBigCta">
           <div className="roomsBigCta__container">
-            <h2 className="title roomsBigCta__title">{t("rooms.bigCta.title")}</h2>
+            <h2 className="title roomsBigCta__title">
+              {t("rooms.bigCta.title")}
+            </h2>
 
             <a
-                className="btn btn--primary roomsBigCta__btn"
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {t("rooms.bigCta.button")}
-              </a>
+              className="btn btn--primary roomsBigCta__btn"
+              href={BOOKING_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t("rooms.bigCta.button")}
+            </a>
           </div>
         </section>
       </main>

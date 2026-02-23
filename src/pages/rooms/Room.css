@@ -17,7 +17,7 @@
   background-position: center;
   display: grid;
   place-items: center;
-  padding: 0 var(--space-5); /* 24px */
+  padding: clamp(24px, 6vh, 80px) var(--space-5); /* ✅ aire para zoom */
 }
 
 .roomsHero__overlay {
@@ -25,19 +25,14 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.35),
+    rgba(116, 116, 116, 0.35),
     rgba(0, 0, 0, 0.15) 45%,
     rgba(0, 0, 0, 0.35)
   );
 }
 
 .roomsHero__content {
-  /* position: relative;
-  z-index: 1;
-  text-align: center;
-  max-width: 980px;
-  margin-top: var(--space-6); */
-   position: relative;
+  position: relative;
   z-index: 1;
 
   display: flex;
@@ -47,10 +42,12 @@
 
   color: #010101;
   text-align: center;
+
+  width: min(980px, 92%); /* ✅ evita desbordes */
+  margin: 0 auto;
 }
 
-
-
+/* ✅ tu subtítulo ya estaba bien */
 .roomsHero__subtitle {
   font-family: var(--font-body);
   color: rgba(255, 255, 255, 0.85);
@@ -61,20 +58,27 @@
 }
 
 /* CTA (único) */
+/* ❌ antes: absolute + bottom fijo = se rompe con zoom */
+.roomsHero__ctaWrap {
+  position: relative;            /* ✅ vuelve al flujo normal */
+  left: auto;
+  bottom: auto;
+  transform: none;
 
-.roomsHero__ctaWrap{
-  position: absolute;
-  left: 50%;
-  bottom: 7rem;
-  transform: translateX(-50%);
   z-index: 2;
   width: min(720px, calc(100% - 3rem));
   display: flex;
-  justify-content: center; 
- 
+  justify-content: center;
+
+  margin-top: var(--space-6);    /* ✅ separa del texto */
 }
 
-
+/* (opcional) si el botón se hace enorme por zoom, lo limitas */
+.roomsHero__ctaWrap .btn {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
 
 /* ================= INTRO ================= */
 
@@ -134,7 +138,7 @@
   font-style: italic;
   font-weight: 400;
   line-height: 1.35;
-  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-size: clamp(1.25rem, 2vw, 1.5rem);
   color: var(--color-dark);
 }
 
@@ -143,7 +147,6 @@
   overflow: hidden;
   box-shadow: var(--shadow-md);
 }
-
 
 .roomsIntro__img {
   width: 100%;
@@ -277,8 +280,6 @@
   margin: 0 0 var(--space-7);
 }
 
-
-
 .roomsFinal__btn:hover {
   filter: brightness(1.06);
   transform: translateY(-1px);
@@ -296,9 +297,6 @@
   max-width: var(--container-narrow);
   margin: 0 auto;
 }
-
-
-
 
 .roomsServices__arrow {
   font-size: 0.9rem;
@@ -404,9 +402,6 @@
   font-size: clamp(2.2rem, 4vw, 4rem);
 }
 
-
-
-
 /* ================= RESPONSIVE ================= */
 
 @media (max-width: 992px) {
@@ -430,8 +425,10 @@
     min-height: 75vh;
   }
 
+  /* ✅ en móvil no hace falta “bottom”, ya está en flujo */
   .roomsHero__ctaWrap {
-    bottom: var(--space-5);
+    width: min(720px, calc(100% - 2rem));
+    margin-top: var(--space-5);
   }
 
   .roomsHero__cta {
@@ -452,5 +449,11 @@
 
   .faqItem__q {
     font-size: 0.98rem;
+  }
+}
+@media (max-width: 640px) {
+  .roomsHero {
+    background-position: 75% 35%; /* sube el encuadre */
+    min-height: 70vh;            /* opcional: menos alto */
   }
 }

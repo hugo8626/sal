@@ -12,19 +12,17 @@ export default function Contacto() {
 
   return (
     <>
-      {/* ✅ SEO Contacto */}
       <SEO
         title={t("contact.seo.title", { defaultValue: "Contacto | Taverna de la Sal" })}
         description={t("contact.seo.description", {
           defaultValue:
-            "Contacta con Taverna de la Sal en L'Escala. Santa Maxima, 7  17130 L'Escala (Girona)  , 972776278 , info@tavernadelasal.com",
+            "Contacta con Taverna de la Sal en L'Escala. Santa Maxima, 7 17130 L'Escala (Girona), 972776278, info@tavernadelasal.com",
         })}
         image={heroContact}
       />
-   
 
       <main className="contactPage">
-        {/* ================= HERO ================= */}
+        {/* HERO */}
         <section
           className="contactHero"
           style={{ backgroundImage: `url(${heroContact})` }}
@@ -33,7 +31,7 @@ export default function Contacto() {
           <div className="contactHero__overlay" />
 
           <div className="contactHero__content">
-            <h1 className="hero__title  contactHero__title">
+            <h1 className="hero__title contactHero__title">
               {t("contact.hero.title.line1")}
               <br />
               {t("contact.hero.title.line2")}
@@ -43,8 +41,11 @@ export default function Contacto() {
           </div>
         </section>
 
-        {/* ================= CARDS ================= */}
-        <section className="contactCards" aria-label={t("contact.cards.aria", { defaultValue: "Contacto" })}>
+        {/* CARDS */}
+        <section
+          className="contactCards"
+          aria-label={t("contact.cards.aria", { defaultValue: "Contacto" })}
+        >
           <div className="contactWrap">
             <div className="contactCards__grid">
               {/* Dirección */}
@@ -127,10 +128,13 @@ export default function Contacto() {
           </div>
         </section>
 
-        {/* ================= FORM ================= */}
-        <section className="contactForm" aria-label={t("contact.form.aria", { defaultValue: "Formulario de contacto" })}>
+        {/* FORM */}
+        <section
+          className="contactForm"
+          aria-label={t("contact.form.aria", { defaultValue: "Formulario de contacto" })}
+        >
           <div className="contactWrap contactWrap--narrow">
-            <h2 className="contactSection__title">{t("contact.form.title")}</h2>
+            <h2 className="title contactSection__title">{t("contact.form.title")}</h2>
             <p className="contactSection__subtitle">{t("contact.form.subtitle")}</p>
 
             <form
@@ -146,6 +150,7 @@ export default function Contacto() {
                   </label>
                   <input
                     id="name"
+                    name="name"
                     className="input"
                     placeholder={t("contact.form.fields.name.placeholder")}
                     required
@@ -159,6 +164,7 @@ export default function Contacto() {
                   </label>
                   <input
                     id="email"
+                    name="email"
                     className="input"
                     type="email"
                     placeholder={t("contact.form.fields.email.placeholder")}
@@ -173,6 +179,7 @@ export default function Contacto() {
                   </label>
                   <input
                     id="subject"
+                    name="subject"
                     className="input"
                     placeholder={t("contact.form.fields.subject.placeholder")}
                     required
@@ -186,6 +193,7 @@ export default function Contacto() {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     className="textarea"
                     placeholder={t("contact.form.fields.message.placeholder")}
                     rows={6}
@@ -202,7 +210,12 @@ export default function Contacto() {
                       strokeWidth="1.8"
                       strokeLinejoin="round"
                     />
-                    <path d="M21 3 10 14" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" />
+                    <path
+                      d="M21 3 10 14"
+                      stroke="currentColor"
+                      strokeWidth="1.8"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </span>
                 {t("contact.form.submit")}
@@ -211,10 +224,10 @@ export default function Contacto() {
           </div>
         </section>
 
-        {/* ================= MAP ================= */}
+        {/* MAP */}
         <section className="contactMap" aria-label={t("contact.map.aria", { defaultValue: "Mapa" })}>
           <div className="contactWrap">
-            <h2 className="contactSection__title">{t("contact.map.title")}</h2>
+            <h2 className="title contactSection__title">{t("contact.map.title")}</h2>
             <p className="contactSection__subtitle">{t("contact.map.subtitle")}</p>
 
             <div className="mapFrame">
@@ -228,13 +241,14 @@ export default function Contacto() {
           </div>
         </section>
 
-        {/* ================= CTA FINAL ================= */}
+        {/* CTA FINAL */}
         <section
           className="contactCta"
           style={{ backgroundImage: `url(${ctaImg})` }}
           aria-label={t("contact.cta.aria", { defaultValue: "Reservar" })}
         >
           <div className="contactCta__overlay" />
+
           <div className="contactCta__content">
             <h2 className="title contactCta__title">
               {t("contact.cta.title.line1")}
@@ -244,13 +258,7 @@ export default function Contacto() {
               {t("contact.cta.title.line3")}
             </h2>
 
-            <a
-              className="btn btn--primary"
-              href={BOOKING_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={t("contact.cta.aria", { defaultValue: "Reservar" })}
-            >
+            <a className="btn btn--primary" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
               {t("contact.cta.button")}
             </a>
           </div>

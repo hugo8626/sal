@@ -1,6 +1,5 @@
 /* =========================
-   RESTAURANTE / SERVICIOS
-   Coherente con Home/Rooms
+   SERVICIOS / RESTAURANTE
 ========================= */
 
 .restPage {
@@ -12,11 +11,11 @@
 ========================= */
 
 .restHero {
+  position: relative;
   min-height: 78vh;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 55%;
-  position: relative;
   display: grid;
   place-items: center;
 }
@@ -28,31 +27,23 @@
 }
 
 .restHero__content {
- 
-  
-  padding: 6rem 0; 
-
-
-
- position: relative;
+  position: relative;
   z-index: 1;
   width: 100%;
-  max-width: 1500px;
   text-align: center;
- 
-  
-
+  padding: 6rem 0;
 }
-
 
 .restHero__subtitle {
   margin: 18px auto 0;
- 
-  
+}
+
+.restHero__note {
+  display: none;
 }
 
 /* =========================
-   SPLITS
+   SPLIT SECTIONS
 ========================= */
 
 .restSplit {
@@ -60,6 +51,14 @@
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
+}
+
+.restSplit__body {
+  max-width: 56ch;
+}
+
+.restSplit__media {
+  margin: 0;
 }
 
 .restSplit--reverse .restSplit__body {
@@ -70,16 +69,9 @@
   order: 1;
 }
 
-.restSplit__body {
-  max-width: 56ch;
-}
-
-
-.restIcon svg {
-  width: 26px;
-  height: 26px;
-  fill: currentColor;
-}
+/* =========================
+   TEXT STYLES (LOCAL)
+========================= */
 
 .restH2 {
   margin: 0 0 18px;
@@ -103,15 +95,14 @@
 
 .restP--highlight {
   display: inline;
-  
   padding: 0.15em 0.25em;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
 
-.restSplit__media {
-  margin: 0;
-}
+/* =========================
+   MEDIA
+========================= */
 
 .restImg {
   width: 100%;
@@ -122,23 +113,8 @@
   margin-left: auto;
 }
 
-
-
 /* =========================
-   CARDS (3)
-========================= */
-
-
-
-
-
-
-
-
-
-
-/* =========================
-   CTA FINAL
+   FINAL CTA
 ========================= */
 
 .restFinal {
@@ -151,16 +127,16 @@
   margin: 0 auto;
 }
 
-
-
 .restFinal__btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 18px 42px;
+
   background: #2f4d6a;
   color: #fff;
   text-decoration: none;
+
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-size: 0.95rem;
@@ -185,16 +161,18 @@
     max-width: 100%;
   }
 
-  .restCards {
-    grid-template-columns: 1fr;
+  .restHero__content {
+    padding: 5rem 0;
   }
+}
 
-  .restCard {
-    padding: 32px 26px;
-    min-height: auto;
+@media (max-width: 768px) {
+  .restHero {
+    min-height: 10vh;
+    background-position: 60% 30%; /* sube/baja el encuadre */
   }
 
   .restHero__content {
-    padding: 5rem 0;
+    padding: 4rem 0;
   }
 }

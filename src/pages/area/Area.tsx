@@ -1,6 +1,7 @@
 import "./Area.css";
 import { useTranslation } from "react-i18next";
-import { useLocation, Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 import heroImg from "../../assets/images/pueblo/bonitcala.jpg";
 import antigua from "../../assets/images/pueblo/anchoabn.jpg";
 import casco from "../../assets/images/pueblo/iglesia.jpg";
@@ -15,9 +16,7 @@ import pescado from "../../assets/images/pueblo/pescado.jpg";
 
 import SEO from "../../components/seo/SEO";
 
-/**
- * ✅ Idiomas soportados en rutas
- */
+/* Idiomas soportados en rutas */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
@@ -26,12 +25,17 @@ function getLangFromPath(pathname: string): SupportedLang {
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
-/**
- * ✅ Helper para construir rutas internas multiidioma
- */
+/* Construye rutas internas multiidioma */
 function route(lang: SupportedLang, path: string) {
   const clean = path.replace(/^\/+/, "");
   return `/${lang}/${clean}`;
+}
+
+/* Lee una url desde i18n sin arriesgarte a "area.xxx.url" en el href */
+function safeHref(value: string, fallback = "#") {
+  // Si i18next devuelve la key literal, no queremos eso como href.
+  if (!value || value.includes(".url")) return fallback;
+  return value;
 }
 
 export default function Area() {
@@ -39,9 +43,23 @@ export default function Area() {
   const { pathname } = useLocation();
   const lang = getLangFromPath(pathname);
 
+  const ruinsUrl = safeHref(
+    t("area.places.cards.0.url", { defaultValue: "#" }),
+    "#"
+  );
+
+  const beachesUrl = safeHref(
+    t("area.beaches.url", { defaultValue: "#" }),
+    "#"
+  );
+
+  const landscapesUrl = safeHref(
+    t("area.nature.items.2.url", { defaultValue: "#" }),
+    "#"
+  );
+
   return (
     <>
-      {/* ✅ SEO página Entorno */}
       <SEO
         title={t("area.seo.title", { defaultValue: "Entorno | Taverna de la Sal" })}
         description={t("area.seo.description", {
@@ -78,7 +96,6 @@ export default function Area() {
 
             <div className="areaIntro__content">
               <h2 className="title">{t("area.intro.title")}</h2>
-
               <p className="text areaIntro__lead">{t("area.intro.lead")}</p>
 
               <div className="areaIntro__text">
@@ -113,10 +130,9 @@ export default function Area() {
 
                   <p className="text">{t("area.places.cards.0.text")}</p>
 
-                
                   <a
                     className="link"
-                    href={t("area.places.cards.0.url")}
+                    href={ruinsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t("area.places.cards.0.aria", {
@@ -175,7 +191,7 @@ export default function Area() {
         >
           <div className="areaBanner__overlay" />
           <div className="areaBanner__content">
-            <h2 className="title">{t("area.banner.title")}</h2>
+            <h2 className="hero__title">{t("area.banner.title")}</h2>
           </div>
         </section>
 
@@ -209,10 +225,9 @@ export default function Area() {
               </article>
             </div>
 
-            {/*  Enlace externo seguro */}
             <a
               className="link"
-              href={t("area.beaches.url")}
+              href={beachesUrl}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t("area.beaches.aria", { defaultValue: "Abrir enlace en una nueva pestaña" })}
@@ -235,7 +250,6 @@ export default function Area() {
 
             <div className="areaNature__content">
               <h2 className="title">{t("area.nature.title")}</h2>
-
               <p className="text">{t("area.nature.p1")}</p>
 
               <div className="paisajes">
@@ -251,12 +265,11 @@ export default function Area() {
 
                 <div className="paisajes__item">
                   <h3 className="title">{t("area.nature.items.2.title")}</h3>
-                  <p className="text" >{t("area.nature.items.2.text")}</p>
+                  <p className="text">{t("area.nature.items.2.text")}</p>
 
-                  {/* Enlace externo seguro */}
                   <a
                     className="link"
-                    href={t("area.nature.items.2.url")}
+                    href={landscapesUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={t("area.nature.items.2.aria", {
@@ -295,45 +308,15 @@ export default function Area() {
               </div>
 
               <div className="areaExperiences__list">
-                <div className="expItem">
-                  <span>01</span>
-                  <div>
-                    <h3 className="title">{t("area.experiences.items.0.title")}</h3>
-                    <p className="text">{t("area.experiences.items.0.text")}</p>
+                {["01", "02", "03", "04", "05"].map((n, i) => (
+                  <div className="expItem" key={n}>
+                    <span>{n}</span>
+                    <div>
+                      <h3 className="title">{t(`area.experiences.items.${i}.title`)}</h3>
+                      <p className="text">{t(`area.experiences.items.${i}.text`)}</p>
+                    </div>
                   </div>
-                </div>
-
-                <div className="expItem">
-                  <span>02</span>
-                  <div>
-                    <h3 className="title">{t("area.experiences.items.1.title")}</h3>
-                    <p className="text">{t("area.experiences.items.1.text")}</p>
-                  </div>
-                </div>
-
-                <div className="expItem">
-                  <span>03</span>
-                  <div>
-                    <h3 className="title">{t("area.experiences.items.2.title")}</h3>
-                    <p className="text">{t("area.experiences.items.2.text")}</p>
-                  </div>
-                </div>
-
-                <div className="expItem">
-                  <span>04</span>
-                  <div>
-                    <h3 className="title">{t("area.experiences.items.3.title")}</h3>
-                    <p className="text">{t("area.experiences.items.3.text")}</p>
-                  </div>
-                </div>
-
-                <div className="expItem">
-                  <span>05</span>
-                  <div>
-                    <h3 className="title">{t("area.experiences.items.4.title")}</h3>
-                    <p className="text">{t("area.experiences.items.4.text")}</p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -351,7 +334,6 @@ export default function Area() {
 
               <p className="text areaFood__italic">{t("area.food.italic")}</p>
 
-              {/* ✅ Link interno multiidioma */}
               <Link className="areaFood__btn" to={route(lang, "restaurante")}>
                 {t("area.food.button")} <span aria-hidden="true">→</span>
               </Link>

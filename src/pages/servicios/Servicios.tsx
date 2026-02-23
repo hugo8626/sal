@@ -1,22 +1,18 @@
 import "./Servicios.css";
-import { BOOKING_URL } from "../../config/links";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
-import heroImg from "../../assets/images/restaurante/axidosincopa.png";
-import brasaImg from "../../assets/images/restaurante/photo_2026-02-14_18-51-06.jpg";
-import marImg from "../../assets/images/restaurante/oxido.png";
+import heroImg from "../../assets/images/espacios/hero.png";
+import brasaImg from "../../assets/images/espacios/paella.png";
+import bufet from "../../assets/images/espacios/bufet.png";
+import marImg from "../../assets/images/espacios/terraza.png";
+import lectura from "../../assets/images/espacios/sala.jpg";
 
+import { BOOKING_URL } from "../../config/links";
 import SEO from "../../components/seo/SEO";
 
-/**
- * ✅ Nombres de iconos permitidos (type-safe)
- */
 type IconName = "fork" | "sun" | "waves" | "book" | "sparkle" | "parking" | "wifi";
 
-/**
- * ✅ Idiomas soportados en rutas
- */
 const SUPPORTED = ["es", "en", "fr", "ca"] as const;
 type SupportedLang = (typeof SUPPORTED)[number];
 
@@ -25,17 +21,11 @@ function getLangFromPath(pathname: string): SupportedLang {
   return (SUPPORTED as readonly string[]).includes(first) ? (first as SupportedLang) : "es";
 }
 
-/**
- * ✅ Helper para construir rutas internas multiidioma
- */
 function route(lang: SupportedLang, path: string) {
   const clean = path.replace(/^\/+/, "");
   return `/${lang}/${clean}`;
 }
 
-/**
- * ✅ Iconos inline SVG (sin dependencias)
- */
 function Icon({ name }: { name: IconName }) {
   switch (name) {
     case "fork":
@@ -44,36 +34,42 @@ function Icon({ name }: { name: IconName }) {
           <path d="M6 2v7a2 2 0 0 0 2 2v11h2V11a2 2 0 0 0 2-2V2h-2v7H10V2H8v7H6V2H6zm11 0v9h2v11h2V2h-4z" />
         </svg>
       );
+
     case "sun":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm0-16h1V0h-2v2h1zm0 22h1v-2h-2v2h1zM4.22 5.64 2.81 4.22 1.39 5.64l1.41 1.41 1.42-1.41zM21.19 19.78l1.41 1.41 1.41-1.41-1.41-1.41-1.41 1.41zM0 13h2v-2H0v2zm22 0h2v-2h-2v2zM4.22 18.36 2.81 19.78 1.39 18.36l1.41-1.41 1.42 1.41zM21.19 4.22l1.41-1.41 1.41 1.41-1.41 1.41-1.41-1.41z" />
         </svg>
       );
+
     case "waves":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M2 7c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1v2c-2 0-2 1-4 1s-2-1-4-1-2 1-4 1-2-1-4-1-2 1-4 1V7zm0 6c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1v2c-2 0-2 1-4 1s-2-1-4-1-2 1-4 1-2-1-4-1-2 1-4 1v-2zm0 6c2 0 2-1 4-1s2 1 4 1 2-1 4-1 2 1 4 1 2-1 4-1v2c-2 0-2 1-4 1s-2-1-4-1-2 1-4 1-2-1-4-1-2 1-4 1v-2z" />
         </svg>
       );
+
     case "book":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M6 3h9a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H6a3 3 0 0 0-3 3V6a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v12.17A4.98 4.98 0 0 1 6 18h9a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H6z" />
         </svg>
       );
+
     case "sparkle":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M12 2l1.2 4.2L17.4 8 13.2 9.2 12 13.4 10.8 9.2 6.6 8l4.2-1.8L12 2zm8 8l.7 2.4 2.3.6-2.3.6L20 16l-.7-2.4-2.3-.6 2.3-.6L20 10zM5 14l.9 3 2.9.8-2.9.8L5 22l-.9-3-2.9-.8 2.9-.8L5 14z" />
         </svg>
       );
+
     case "parking":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 3h7a5 5 0 0 1 0 10H9v8H7V3zm2 2v6h5a3 3 0 0 0 0-6H9z" />
         </svg>
       );
+
     case "wifi":
       return (
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -90,7 +86,6 @@ export default function Servicios() {
 
   return (
     <>
-      {/* ✅ En tu JSON: servicesPage.seo NO existe. Uso defaultValue para no romper */}
       <SEO
         title={t("servicesPage.seo.title", { defaultValue: "Servicios | Taverna de la Sal" })}
         description={t("servicesPage.seo.description", {
@@ -101,29 +96,24 @@ export default function Servicios() {
       />
 
       <main className="restPage">
-        {/* ================= HERO ================= */}
+        {/* HERO */}
         <section
           className="restHero"
           style={{ backgroundImage: `url(${heroImg})` }}
-          aria-label={t("servicesPage.hero.aria")}
+          aria-label={t("servicesPage.hero.aria", { defaultValue: "Servicios" })}
         >
           <div className="restHero__overlay" />
           <div className="container restHero__content">
             <h1 className="hero__title restHero__title">{t("servicesPage.hero.title")}</h1>
             <p className="hero__subtitle restHero__subtitle">{t("servicesPage.hero.subtitle")}</p>
-
-            <p className="text restHero__note">
-              {t("servicesPage.hero.note", { defaultValue: "" })}
-            </p>
+            <p className="text restHero__note">{t("servicesPage.hero.note", { defaultValue: "" })}</p>
           </div>
         </section>
 
-        {/* ================= BLOQUE 1: BRASA ================= */}
+        {/* BRASA */}
         <section className="section section--white">
           <div className="container restSplit">
             <div className="restSplit__body">
-           
-
               <p className="eyebrow restEyebrow">{t("servicesPage.brasa.eyebrow")}</p>
               <h2 className="title restH2">{t("servicesPage.brasa.title")}</h2>
 
@@ -146,22 +136,19 @@ export default function Servicios() {
           </div>
         </section>
 
-        {/* ================= BLOQUE 2: DESAYUNO ================= */}
+        {/* DESAYUNO */}
         <section className="section section--beige">
           <div className="container restSplit restSplit--reverse">
             <div className="restSplit__body">
-             
-
               <p className="eyebrow restEyebrow">{t("servicesPage.breakfast.eyebrow")}</p>
               <h2 className="title restH2">{t("servicesPage.breakfast.title")}</h2>
-
               <p className="text restP restP--highlight">{t("servicesPage.breakfast.text")}</p>
             </div>
 
             <figure className="restSplit__media">
               <img
                 className="restImg"
-                src={marImg}
+                src={bufet}
                 alt={t("servicesPage.breakfast.imageAlt", { defaultValue: "Desayuno" })}
                 loading="lazy"
               />
@@ -169,12 +156,13 @@ export default function Servicios() {
           </div>
         </section>
 
-        {/* ================= BLOQUE 3: TERRAZA ================= */}
+        {/* TERRAZA */}
         <section className="section section--white">
           <div className="container restSplit">
             <div className="restSplit__body">
-              <p className="eyebrow restEyebrow">Terraza</p>
-             
+              <p className="eyebrow restEyebrow">
+                {t("servicesPage.terrace.eyebrow", { defaultValue: "Terraza" })}
+              </p>
 
               <h2 className="title restH2">{t("servicesPage.terrace.title")}</h2>
               <p className="text restP">{t("servicesPage.terrace.text")}</p>
@@ -191,11 +179,13 @@ export default function Servicios() {
           </div>
         </section>
 
-        {/* ================= BLOQUE 4: LECTURA ================= */}
+        {/* LECTURA */}
         <section className="section section--beige">
           <div className="container restSplit restSplit--reverse">
             <div className="restSplit__body">
-           <p className="eyebrow restEyebrow">calma</p>
+              <p className="eyebrow restEyebrow">
+                {t("servicesPage.reading.eyebrow", { defaultValue: "Calma" })}
+              </p>
 
               <h2 className="title restH2">{t("servicesPage.reading.title")}</h2>
               <p className="text restP">{t("servicesPage.reading.text")}</p>
@@ -204,7 +194,7 @@ export default function Servicios() {
             <figure className="restSplit__media">
               <img
                 className="restImg"
-                src={brasaImg}
+                src={lectura}
                 alt={t("servicesPage.reading.imageAlt", { defaultValue: "Rincón de lectura" })}
                 loading="lazy"
               />
@@ -212,10 +202,10 @@ export default function Servicios() {
           </div>
         </section>
 
-        {/* ================= CARDS ================= */}
+        {/* CARDS */}
         <section className="section section--white">
           <div className="container">
-            <div className="cards3 ">
+            <div className="cards3">
               <article className="card">
                 <span className="icon" aria-hidden="true">
                   <Icon name="sparkle" />
@@ -232,23 +222,23 @@ export default function Servicios() {
                 <p className="card__text">{t("servicesPage.cards.1.text")}</p>
               </article>
 
-              <article className="card ">
+              <article className="card">
                 <span className="icon" aria-hidden="true">
                   <Icon name="wifi" />
                 </span>
-                <h3 className="card__title ">{t("servicesPage.cards.2.title")}</h3>
-                <p className="card__text ">{t("servicesPage.cards.2.text")}</p>
+                <h3 className="card__title">{t("servicesPage.cards.2.title")}</h3>
+                <p className="card__text">{t("servicesPage.cards.2.text")}</p>
               </article>
             </div>
           </div>
         </section>
 
-        {/* ================= CTA FINAL ================= */}
+        {/* CTA FINAL */}
         <section className="section section--beige restFinal">
           <div className="container restFinal__inner">
             <h2 className="title restFinal__title">{t("servicesPage.final.title")}</h2>
 
-           <a
+            <a
               className="restFinal__btn"
               href={BOOKING_URL}
               target="_blank"

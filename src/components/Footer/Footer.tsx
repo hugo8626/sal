@@ -5,9 +5,9 @@ import instagramIcon from "../../assets/images/logos/instagram.svg";
 import whatsappIcon from "../../assets/images/logos/was.svg";
 
 /* logo creador */
-import creatorLogo from "../../assets/images/logos/instagram.svg";
+import creatorLogo from "../../assets/images/logos/LETRAS.svg";
 
-export default function Footer() {
+export default function Footer() {<p></p>
   const year = new Date().getFullYear();
 
   return (
@@ -106,13 +106,13 @@ export default function Footer() {
         =============================== */}
         <div className="footer__creator">
           <a
-            href="https://tuwebcreador.com"
+            href="https://fityxdigital.com"
             target="_blank"
             rel="noopener noreferrer"
             className="creator__link"
             aria-label="Web creada por"
           >
-            <span className="creator__text">Fityxdigital</span>
+            <span className="creator__text">Diseño web·Fotografía·Marketing</span>
             <img
               src={creatorLogo}
               alt="Nombre del creador"
