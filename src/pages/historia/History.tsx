@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import type { CSSProperties } from "react";
 
 import { BOOKING_URL } from "../../config/links";
-import heroImg from "../../assets/images/laras/servicios.jpeg";
+import heroImg from "../../assets/images/herodes/historia.jpg";
 import pareja from "../../assets/images/espacios/pareja.jpg";
 import taverna from "../../assets/images/pueblo/taverna.jpg";
 

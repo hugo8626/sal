@@ -1,7 +1,11 @@
 /* =========================================================
    RESTAURANTE — HERO
 ========================================================= */
+.restHero{
 
+background-position: 50% 25%;
+
+}
 @media (max-width: 900px) {
   .restHero {
     background-position: 50% 25%;
@@ -145,6 +149,6 @@
   gap: 30px;
 }
 
-.rest-text_bye {
+.res-bye {
   display: none;
 }

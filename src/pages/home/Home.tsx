@@ -7,7 +7,7 @@ import type { CSSProperties } from "react";
 import SEO from "../../components/seo/SEO";
 
 import storyImg from "../../assets/images/heroimg/entradapescado.png";
-import pezdecoration from "../../assets/images/heroimg/vistas.png";
+import pezdecoration from "../../assets/images/heroimg/entrada.png";
 import escaleraimg from "../../assets/images/heroimg/cenital.png";
 import camaimg from "../../assets/images/heroimg/camazul.png";
 import azoteaimg from "../../assets/images/heroimg/terraza.png";
@@ -15,8 +15,8 @@ import restauranteimg from "../../assets/images/restaurante/chorizos.png";
 import salaimg from "../../assets/images/espacios/IMG-20240419-WA0062.jpg";
 import vistas from "../../assets/images/habitaciones/atardecer.png";
 
-import heroDesktop from "../../assets/images/heroimg/hero.png";
-import heroMobile from "../../assets/images/heroimg/heromovil.png";
+import heroDesktop from "../../assets/images/herodes/home.jpg";
+import heroMobile from "../../assets/images/herodes/heromovil.png";
 
 import { BOOKING_URL } from "../../config/links";
 import { SUPPORTED_LANGS, type SupportedLang, ROUTE_SEGMENTS } from "../../router/paths";

@@ -4,7 +4,8 @@ import type { CSSProperties } from "react";
 
 import SEO from "../../components/seo/SEO";
 
-import heroImg from "../../assets/images/restaurante/oxido.png";
+import heroresImg from "../../assets/images/herodes/restaurante.jpg";
+import heroresmovil from "../../assets/images/herodes/restauramovil.jpg";
 import propuestaImg from "../../assets/images/restaurante/brasa.jpeg";
 import entornoImg from "../../assets/images/espacios/terraza.png";
 import experienciaBg from "../../assets/images/restaurante/baner.png";
@@ -37,8 +38,8 @@ export default function Restaurante() {
   type HeroVars = CSSProperties & Record<"--hero-bg" | "--hero-bg-mobile", string>;
 
   const heroVars: HeroVars = {
-    "--hero-bg": `url(${heroImg})`,
-    "--hero-bg-mobile": `url(${heroImg})`,
+    "--hero-bg": `url(${heroresImg})`,
+    "--hero-bg-mobile": `url(${heroresmovil})`,
   };
 
   return (
@@ -53,7 +54,7 @@ export default function Restaurante() {
           defaultValue:
             "Restaurante a la brasa en L'Escala: producto de temporada, ambiente íntimo y cocina de calidad cerca del mar.",
         })}
-        image={heroImg}
+        image={heroresImg}
       />
 
       <main className="restPage restPage--restaurant">
@@ -117,9 +118,9 @@ export default function Restaurante() {
               <h2 className="rest-title g-title">{t("restaurante.entorno.title")}</h2>
 
               <p className="rest-text g-text">{t("restaurante.entorno.p1")}</p>
-              <p className="rest-text g-text">{t("restaurante.entorno.p2")}</p>
-              <p className="rest-text g-text">{t("restaurante.entorno.p3")}</p>
-              <p className="rest-text g-text">{t("restaurante.entorno.p4")}</p>
+              <p className="res-bye g-text">{t("restaurante.entorno.p2")}</p>
+              <p className="res-bye rest-text g-text">{t("restaurante.entorno.p3")}</p>
+              <p className="res-bye rest-text g-text">{t("restaurante.entorno.p4")}</p>
             </div>
 
             <figure className="rest-media g-media">

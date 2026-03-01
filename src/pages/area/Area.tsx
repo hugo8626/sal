@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import type { CSSProperties } from "react";
 
-import heroImg from "../../assets/images/pueblo/bonitcala.jpg";
+import heroImg from "../../assets/images/herodes/entorno.jpg";
 import antigua from "../../assets/images/pueblo/anchoabn.jpg";
 import casco from "../../assets/images/pueblo/iglesia.jpg";
 import alfoli from "../../assets/images/pueblo/alfolisal.jpg";

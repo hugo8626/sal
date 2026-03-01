@@ -4,8 +4,8 @@ import type { CSSProperties } from "react";
 
 import { BOOKING_URL } from "../../config/links";
 
-import heroContact from "../../assets/images/habitaciones/atardecer.png";
-import ctaImg from "../../assets/images/espacios/sala.jpg";
+import heroContact from "../../assets/images/herodes/atardecer.jpg";
+import ctaImg from "../../assets/images/herodes/sala.jpg";
 
 import SEO from "../../components/seo/SEO";
 
@@ -14,8 +14,21 @@ import SEO from "../../components/seo/SEO";
 ========================================================= */
 
 function safeHref(value: string, fallback = "#") {
-  if (!value || value.includes(".") || value.includes("undefined")) return fallback;
-  return value;
+  const v = (value ?? "").trim();
+
+  // vacíos o rotos
+  if (!v) return fallback;
+  if (v.includes("undefined") || v.includes("null")) return fallback;
+
+  // permitimos solo protocolos/rutas válidas
+  const isSafe =
+    v.startsWith("http://") ||
+    v.startsWith("https://") ||
+    v.startsWith("mailto:") ||
+    v.startsWith("tel:") ||
+    v.startsWith("/");
+
+  return isSafe ? v : fallback;
 }
 
 /* =========================================================
@@ -41,8 +54,13 @@ export default function Contacto() {
   ========================================================= */
 
   const mapsUrl = safeHref(t("contact.cards.address.mapsUrl", { defaultValue: "#" }), "#");
-  const mailtoUrl = safeHref(t("contact.cards.email.mailto", { defaultValue: "mailto:info@tavernadelasal.com" }), "mailto:info@tavernadelasal.com");
+  const mailtoUrl = safeHref(
+    t("contact.cards.email.mailto", { defaultValue: "mailto:info@tavernadelasal.com" }),
+    "mailto:info@tavernadelasal.com"
+  );
   const telUrl = safeHref(t("contact.cards.phone.tel", { defaultValue: "tel:+34972776278" }), "tel:+34972776278");
+
+  // IMPORTANTE: aquí antes te devolvía "" por el "."
   const mapIframeSrc = safeHref(t("contact.map.iframeSrc", { defaultValue: "" }), "");
 
   return (
@@ -180,10 +198,7 @@ export default function Contacto() {
               <p className="contactForm__subtitle">{t("contact.form.subtitle")}</p>
             </header>
 
-            <form
-              className="contactForm__box"
-              action="mailto:info@tavernadelasal.com?subject=Mensaje desde la web Taverna de la Sal"
-            >
+            <form className="contactForm__box" action="mailto:info@tavernadelasal.com?subject=Mensaje desde la web Taverna de la Sal">
               <div className="contactForm__grid">
                 <div className="contactForm__field">
                   <label className="contactForm__label" htmlFor="name">
@@ -268,7 +283,10 @@ export default function Contacto() {
             MAP
         ========================================================= */}
 
-        <section className="section section--white contact__section" aria-label={t("contact.map.aria", { defaultValue: "Mapa" })}>
+        <section
+          className="section section--white contact__section"
+          aria-label={t("contact.map.aria", { defaultValue: "Mapa" })}
+        >
           <div className="section__inner contact__inner">
             <header className="section__head">
               <h2 className="title">{t("contact.map.title")}</h2>
@@ -298,7 +316,7 @@ export default function Contacto() {
           <div className="contact__ctaOverlay" />
 
           <div className="contact__ctaContent">
-            <h2 className="g-title">
+            <h2 className="g-title contac-titlecta">
               {t("contact.cta.title.line1")}
               <br />
               {t("contact.cta.title.line2")}

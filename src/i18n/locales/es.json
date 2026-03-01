@@ -96,7 +96,7 @@
     "rooms": {
       "eyebrow": "Habitaciones premium",
       "title": "Habitaciones con vistas al Mediterráneo",
-      "text": " Espacios dobles de entre 25 y 30 m², con balcón privado y vistas laterales al mar. Decorados con materiales naturales, luz suave y una paleta de tonos arena y azul que invitan a desconectar.",
+      "text": " Espacios dobles de entre 25 y 30 m², con balcón privado y vistas laterales al mar. Decorados con materiales naturales, luz suave y una paleta de tonos arena y azul que aportan equilibrio y armonía.",
       "features": [
         "Desayuno buffet mediterráneo incluido cada mañana",
         "Diseño mediterráneo contemporáneo",
@@ -110,8 +110,8 @@
     "restaurant": {
       "eyebrow": "RESTAURANTE",
       "title": "Brasa, producto y Mediterráneo",
-      "text": "Nuestro restaurante ofrece una cocina honesta basada en carnes y pescados a la brasa, con producto de temporada y una selección de vinos DO Empordà. Un ambiente íntimo junto al mar para disfrutar de la mejor gastronomia del Empordà.",
-      "cta": "Descubrir el restaurante →",
+      "text": "Nuestro restaurante ofrece una cocina honesta basada en carnes y pescados a la brasa, con producto de temporada y una selección de vinos DO Empordà. Un ambiente íntimo junto al mar para disfrutar de la mejor gastronomia local.",
+      "cta": "Descubrir el restaurante ",
       "imageAlt": "Mesa en la terraza del restaurante con vistas al mar"
     },
     "services": {
@@ -124,7 +124,7 @@
         "Wi-Fi gratuito",
         "Parking bajo reserva"
       ],
-      "link": "CONOCER TODOS LOS SERVICIOS →"
+      "link": "CONOCER TODOS LOS SERVICIOS "
     },
     "area": {
       "eyebrow": "ENTORNO",
@@ -137,7 +137,7 @@
         "Tradición de la anchoa"
       ],
       "imageAlt": "Vista aérea de L’Escala en la Costa Brava",
-      "link": "EXPLORAR L’ESCALA →"
+      "link": "EXPLORAR L’ESCALA "
     },
     "reviews": {
       "eyebrow": "OPINIONES",
@@ -296,8 +296,9 @@
     "imageAlt": "Desayuno con producto local"
   },
   "terrace": {
-    "title": "Terraza con vistas al Mediterráneo",
-    "text": "Nuestra terraza ofrece vistas a la bahía y al casco antiguo. En verano, cócteles y música en vivo; en invierno, calma y atardeceres inolvidables.",
+    "eyebrow": "Frente al mar",
+    "title": "Terraza rooftop con vistas al Mediterráneo.",
+    "text": "Nuestro Rooftop ofrece vistas a la bahía y al casco antiguo. Cócteles, calma y atardeceres inolvidables.",
     "imageAlt": "Terraza con vistas al mar"
   },
   "reading": {
@@ -360,7 +361,7 @@
     "final": {
       "textLine1": "Si decides alojarte con nosotros, no solo reservas una habitación.",
       "textLine2": "Formas parte de una historia que empezó mucho antes de tu llegada.",
-      "cta": "Vivir la experiencia"
+      "cta": "Descubrir la experiencia "
     }
   },
 
@@ -410,8 +411,8 @@
       ]
     },
     "banner": {
-      "aria": "El Mediterráneo cerca del hotel",
-      "title": "El Mediterráneo, a solo unos pasos"
+      "aria": "Mediterráneo cerca del hotel",
+      "title": "Mediterráneo, a solo unos pasos"
     },
     "beaches": {
       "intro": "Desde el hotel puedes salir caminando y estar frente al mar en segundos.",
@@ -822,8 +823,8 @@
     },
     "hero": {
       "aria": "Restaurante",
-      "title": " Brasa con vistas al mar ",
-      "subtitle": "Especialistas en carnes y pescados a la brasa, elaborados con producto fresco y de temporada en un entorno íntimo del casco antiguo de L’Escala. ",
+      "title": "Brasa y cocina mediterránea",
+      "subtitle": "Producto local, cocina de mar y cortes seleccionados con criterio, en una propuesta pensada para compartir y disfrutar con calma.",
       "cta": "Reservar mesa",
       "note": "10% de descuento para huéspedes que reserven directamente en nuestra web."
     },
@@ -831,12 +832,12 @@
       "eyebrow": "LA PROPUESTA",
       "title": "La brasa como protagonista",
       "lead": "Trabajamos carnes seleccionadas y pescados frescos con respeto por el producto y técnica a la brasa. Cocina honesta, sabores definidos y recetas mediterráneas elaboradas sin artificios.",
-      "p2": "Producto de proximidad, vinos del Empordà y una carta pensada para disfrutar sin prisas.",
+      "p2": "Producto de proximidad, vinos del Empordà y una carta para degustar sin prisas.",
       "imageAlt": "Pescado a la brasa"
     },
     "entorno": {
       "eyebrow": "EL ENTORNO",
-      "title": "Un restaurante a pocos pasos del Mediterráneo",
+      "title": "A pocos pasos del Mediterráneo ",
       "p1": "Comedor interior acogedor y una terraza pensada para disfrutar sin prisas. Un lugar para comer y cenar con calma, tanto si eres huésped como visitante.",
       "p2": "En verano, música en vivo y cócteles al atardecer.",
       "p3": "En invierno, chimenea y sobremesas largas.",
@@ -846,9 +847,9 @@
     "experiencia": {
       "aria": "La experiencia",
       "eyebrow": "LA EXPERIENCIA",
-      "title": "Más que un restaurante, una experiencia cercana",
+      "title": "Cocina y trato con identidad",
       "lead": "Se trata de disfrutar el fuego, el mar y el tiempo.",
-      "p2": "El restaurante está dirigido y atendido por su propietario, creando un ambiente auténtico donde muchos de nuestros comensales regresan no solo por la cocina, sino por el trato."
+      "p2": "Dirigido y atendido por su propietario, el restaurante mantiene un trato cercano y auténtico, donde muchos regresan no solo por la cocina, sino por cómo se sienten en la mesa"
     },
     "ventajas": {
       "eyebrow": "PARA HUÉSPEDES",

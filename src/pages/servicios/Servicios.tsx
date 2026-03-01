@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import type { CSSProperties } from "react";
 
-import heroImg from "../../assets/images/laras/recepciion.jpeg";
+import heroImg from "../../assets/images/herodes/services.jpg";
 import brasaImg from "../../assets/images/espacios/paella.png";
 import bufet from "../../assets/images/espacios/bufet.png";
 import marImg from "../../assets/images/habitaciones/copas.png";
@@ -102,7 +102,7 @@ export default function Servicios() {
             HERO
         ========================================================= */}
 
-        <section className="hero" style={heroVars} aria-label={t("servicesPage.hero.aria", { defaultValue: "Servicios" })}>
+        <section className="hero heroserv" style={heroVars} aria-label={t("servicesPage.hero.aria", { defaultValue: "Servicios" })}>
           <div className="hero__overlay" />
           <div className="container hero__content">
             <h1 className="hero__title">{t("servicesPage.hero.title")}</h1>
