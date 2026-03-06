@@ -215,7 +215,10 @@
 .creator__link:hover .creator__logo {
   opacity: 1;
 }
-
+.creator__logo{
+  background-color: #ffffff;
+  padding:1px;
+}
 /* =========================================
    RESPONSIVE
 ========================================= */
