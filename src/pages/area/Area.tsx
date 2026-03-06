@@ -342,13 +342,13 @@ export default function Area() {
         ========================================================= */}
 
         <section className="area-section section--beige">
-          <div className="area-container g-container area-split-reverse">
+          <div className="area-nature g-container area-split-reverse">
             <div className="area-intro g-intro">
-              <h2 className="area-title g-title">
+              <h2 className="nature-title g-title">
                 {t("area.nature.title")}
               </h2>
 
-              <p className="area-text g-text">
+              <p className="nature-text g-text">
                 {t("area.nature.p1")}
               </p>
 

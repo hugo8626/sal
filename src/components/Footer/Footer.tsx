@@ -114,7 +114,7 @@ export default function Footer() {
             className="creator__link"
             aria-label="Web creada por"
           >
-            <span className="creator__text">Diseño web·Fotografía·Marketing</span>
+            <span className="creator__text">Diseño web·Marketing</span>
             <img src={creatorLogo} alt="Nombre del creador" className="creator__logo" />
           </a>
         </div>

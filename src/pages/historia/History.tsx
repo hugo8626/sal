@@ -132,7 +132,7 @@ export default function History() {
 
             <div className="history-lines">
               <p className="history-text g-text">{t("history.philosophy.p1")}</p>
-              <p className="history-text g-text">{t("history.philosophy.p2")}</p>
+              <p className="history-text_cursiva g-text">{t("history.philosophy.p2")}</p>
             </div>
           </div>
         </section>

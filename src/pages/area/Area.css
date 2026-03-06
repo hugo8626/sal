@@ -173,6 +173,29 @@
   border-radius: 18px;
   display: block;
 }
+/* area nature */
+
+
+
+.nature-title{
+  margin-bottom: 4px;
+
+}
+
+.nature-text{
+  margin-bottom: 20px;
+}
+
+
+.area-nature-card-title{
+  margin-bottom: 4px;
+}
+.area-nature-card-text{
+  margin-bottom: 15px;
+}
+.area-nature-note{
+  margin-top: 10px;
+}
 
 /* =========================================================
    EXPERIENCES — LIST
@@ -181,6 +204,7 @@
 .area-experiences-list {
   display: flex;
   flex-direction: column;
+
 }
 
 .area-exp-item {
@@ -204,7 +228,7 @@
 
 .area-exp-title {
   margin: 0;
-  font-size: 30px;
+  font-size: 1.1rem;
   line-height: 1.15;
 }
 

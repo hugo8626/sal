@@ -89,6 +89,9 @@
   text-align: center;
   justify-content: center;
 }
+.history-text_cursiva{
+  font-style: italic;
+}
 
 .history-cta-text {
   margin-bottom: 40px;

@@ -252,7 +252,7 @@
           "a": " El check-in està disponible a partir de les 15:00 fins a les 19:00 i el check-out és a les 11:00."
         },
         {
-          "q": "La terrassa rooftop està oberta per a tothom?",
+          "q": "La terrassa Rooftop està oberta per a tothom?",
           "a": "La terrassa és només per als hostes de l’hotel i està reservada per a adults."
         },
         {
@@ -297,7 +297,7 @@
     },
     "terrace": {
       "eyebrow": "Davant del mar",
-      "title": "Terrassa rooftop amb vistes al Mediterrani.",
+      "title": "Terrassa Rooftop amb vistes al Mediterrani.",
       "text": "El nostre Rooftop ofereix vistes a la badia i al nucli antic. Còctels, calma i capvespres inoblidables.",
       "imageAlt": "Terrassa amb vistes al mar"
     },
@@ -817,7 +817,7 @@
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Brasa i cuina mediterrània",
+      "title": "Brasa i Cuina Mediterrània",
       "subtitle": "Producte local, cuina de mar i talls seleccionats amb criteri, en una proposta pensada per compartir i gaudir amb calma.",
       "cta": "Reservar taula",
       "note": "10% de descompte per a hostes que reservin directament a la nostra web."

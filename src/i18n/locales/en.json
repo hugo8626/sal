@@ -145,7 +145,7 @@
       "starsAria": "5 out of 5 stars",
       "items": [
         {
-          "quote": "“Personality, comfort and genuine warmth. Carefully designed rooms, impeccable cleanliness and a rooftop terrace perfect for sunset. An exceptional breakfast and service that truly makes the difference.”",
+          "quote": "“Personality, comfort and genuine warmth. Carefully designed rooms, impeccable cleanliness and a Rooftop terrace perfect for sunset. An exceptional breakfast and service that truly makes the difference.”",
           "name": "Emanuel P.",
           "city": "Madrid"
         },
@@ -818,7 +818,7 @@
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Charcoal grill and Mediterranean cooking",
+      "title": "Charcoal Grill and Mediterranean cooking",
       "subtitle": "Local produce, sea cuisine and carefully selected cuts, in a proposal designed to share and enjoy at a relaxed pace.",
       "cta": "Book a table",
       "note": "10% discount for guests who book directly on our website."
