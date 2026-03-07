@@ -37,7 +37,6 @@ body {
 
 .hero {
   position: relative;
-  min-height: 100vh;
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -63,7 +62,7 @@ body {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(87, 86, 86, 0.28);
 }
 
 .hero__content {
@@ -215,4 +214,19 @@ button.btn {
     padding: 13px 18px;
     font-size: 0.8rem;
   }
+}
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+section.reveal-section {
+  opacity: 0;
+  transform: translateY(180px);
+  transition: all 1.5s ease;
+}
+
+section.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

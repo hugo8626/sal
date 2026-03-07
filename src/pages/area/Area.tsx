@@ -12,7 +12,7 @@ import museo from "../../assets/images/pueblo/museo.jpg";
 import banerplaya from "../../assets/images/pueblo/rocaplaya.jpg";
 import emporda from "../../assets/images/pueblo/emporda.jpg";
 import kayak from "../../assets/images/pueblo/kayak.jpg";
-import barcos from "../../assets/images/pueblo/barcos.avif";
+import barcos from "../../assets/images/pueblo/barcos.jpg";
 import pescado from "../../assets/images/pueblo/pescado.jpg";
 
 import SEO from "../../components/seo/SEO";

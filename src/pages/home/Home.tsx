@@ -6,17 +6,17 @@ import type { CSSProperties } from "react";
 
 import SEO from "../../components/seo/SEO";
 
-import storyImg from "../../assets/images/home/entradapescado.png";
+import storyImg from "../../assets/images/home/entradapescado.jpg";
 import pezdecoration from "../../assets/images/home/aseonsorsillas.jpg";
-import escaleraimg from "../../assets/images/home/cenital.png";
-import camaimg from "../../assets/images/home/camazul.png";
-import azoteaimg from "../../assets/images/home/terraza.png";
-import restauranteimg from "../../assets/images/restaurante/chorizos.png";
+import escaleraimg from "../../assets/images/home/cenital.jpg";
+import camaimg from "../../assets/images/home/camazul.jpg";
+import azoteaimg from "../../assets/images/home/terraza.jpg";
+import restauranteimg from "../../assets/images/home/chorizos.jpg";
 import salaimg from "../../assets/images/espacios/IMG-20240419-WA0062.jpg";
-import vistas from "../../assets/images/habitaciones/atardecer.png";
+import vistas from "../../assets/images/habitaciones/atardecer.jpg";
 
 import heroDesktop from "../../assets/images/herodes/home.jpg";
-import heroMobile from "../../assets/images/herodes/heromovil.png";
+import heroMobile from "../../assets/images/herodes/heromovil.jpg";
 
 import { BOOKING_URL } from "../../config/links";
 import { SUPPORTED_LANGS, type SupportedLang, ROUTE_SEGMENTS } from "../../router/paths";

@@ -4,9 +4,9 @@ import { Link, useParams } from "react-router-dom";
 import type { CSSProperties } from "react";
 
 import heroImg from "../../assets/images/herodes/services.jpg";
-import brasaImg from "../../assets/images/espacios/paella.png";
-import bufet from "../../assets/images/espacios/bufet.png";
-import marImg from "../../assets/images/habitaciones/copas.png";
+import brasaImg from "../../assets/images/espacios/paella.jpg";
+import bufet from "../../assets/images/espacios/bufet.jpg";
+import marImg from "../../assets/images/habitaciones/copas.jpg";
 import lectura from "../../assets/images/espacios/sala.jpg";
 
 import { BOOKING_URL } from "../../config/links";

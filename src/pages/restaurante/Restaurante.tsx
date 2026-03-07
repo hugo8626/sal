@@ -6,9 +6,9 @@ import SEO from "../../components/seo/SEO";
 
 import heroresImg from "../../assets/images/herodes/restaurante.jpg";
 import heroresmovil from "../../assets/images/herodes/restauramovil.jpg";
-import propuestaImg from "../../assets/images/restaurante/brasa.jpeg";
-import entornoImg from "../../assets/images/espacios/terraza.png";
-import experienciaBg from "../../assets/images/restaurante/baner.png";
+import propuestaImg from "../../assets/images/restaurante/brasa.jpg";
+import entornoImg from "../../assets/images/espacios/terraza.jpg";
+import experienciaBg from "../../assets/images/restaurante/baner.jpg";
 
 /* =========================================================
    WHATSAPP
