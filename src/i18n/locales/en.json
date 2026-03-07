@@ -81,7 +81,7 @@
       "cards": [
         {
           "title": "10% restaurant discount",
-          "text": "Enjoy our charcoal-grill cuisine with an exclusive discount for direct bookings."
+          "text": "Enjoy our grill cuisine with an exclusive discount for direct bookings."
         },
         {
           "title": "Best rate guaranteed",
@@ -109,8 +109,8 @@
     },
     "restaurant": {
       "eyebrow": "RESTAURANT",
-      "title": "Charcoal grill, produce and the Mediterranean",
-      "text": "Our restaurant offers honest cuisine based on charcoal-grilled meats and fish, seasonal produce and a selection of DO Empordà wines. An intimate setting by the sea to enjoy the best local gastronomy.",
+      "title": "Grill, produce and the Mediterranean",
+      "text": "Our restaurant offers honest cuisine based on grilled meats and fish, seasonal produce and a selection of DO Empordà wines. An intimate setting by the sea to enjoy the best local gastronomy.",
       "cta": "Discover the restaurant ",
       "imageAlt": "Table on the restaurant terrace with sea views"
     },
@@ -229,7 +229,7 @@
       "button": "BOOK A ROOM"
     },
     "services": {
-      "text": "In addition to your room, you can enjoy our sea-view terrace and charcoal-grill restaurant.",
+      "text": "In addition to your room, you can enjoy our sea-view terrace and grill restaurant.",
       "link": "Discover our services"
     },
     "faq": {
@@ -273,7 +273,7 @@
   "servicesPage": {
     "seo": {
       "title": "Services | Taverna de la Sal",
-      "description": "Hotel services: charcoal-grill restaurant, breakfast with local products, terrace with Mediterranean views, reading corner, parking and Wi-Fi."
+      "description": "Hotel services: grill restaurant, breakfast with local products, terrace with Mediterranean views, reading corner, parking and Wi-Fi."
     },
     "hero": {
       "aria": "Services",
@@ -283,11 +283,11 @@
     },
     "brasa": {
       "eyebrow": "ENJOY",
-      "title": "Charcoal-grill restaurant",
-      "text1": "Specialists in charcoal-grilled meats and fish, with seasonal produce and an intimate atmosphere in the old town of L'Escala.",
+      "title": "Grill restaurant",
+      "text1": "Specialists in grilled meats and fish, with seasonal produce and an intimate atmosphere in the old town of L'Escala.",
       "text2": "If you book directly on our website, you will enjoy a 10% discount in the restaurant during your stay.",
       "cta": "SEE MORE",
-      "imageAlt": "Charcoal-grill restaurant"
+      "imageAlt": "Grill restaurant"
     },
     "breakfast": {
       "eyebrow": "MEDITERRANEAN BUFFET BREAKFAST",
@@ -811,24 +811,24 @@
   "restaurante": {
     "seo": {
       "title": "Restaurant | Taverna de la Sal",
-      "description": "Charcoal-grilled meats and fish with sea views. Honest cooking, seasonal produce and Empordà wines."
+      "description": "Grilled meats and fish with sea views. Honest cooking, seasonal produce and Empordà wines."
     },
     "whatsapp": {
       "text": "Hi, I’d like to book a table at the restaurant. Can you confirm availability? Thank you."
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Charcoal Grill and Mediterranean cooking",
+      "title": "Grill and Mediterranean cooking",
       "subtitle": "Local produce, sea cuisine and carefully selected cuts, in a proposal designed to share and enjoy at a relaxed pace.",
       "cta": "Book a table",
       "note": "10% discount for guests who book directly on our website."
     },
     "propuesta": {
       "eyebrow": "THE PROPOSAL",
-      "title": "Charcoal grill as the protagonist",
-      "lead": "We work with selected meats and fresh fish, respecting the product and charcoal-grill technique. Honest cooking, defined flavors and Mediterranean recipes made without artifice.",
+      "title": "Grill as the protagonist",
+      "lead": "We work with selected meats and fresh fish, respecting the product and grill technique. Honest cooking, defined flavors and Mediterranean recipes made without artifice.",
       "p2": "Local produce, Empordà wines and a menu to enjoy without rush.",
-      "imageAlt": "Charcoal-grilled fish"
+      "imageAlt": "grilled fish"
     },
     "entorno": {
       "eyebrow": "THE SETTING",
@@ -860,7 +860,7 @@
     "carta": {
       "eyebrow": "THE MENU",
       "title": "Explore our menu",
-      "lead": "Discover charcoal-grilled meats and fish, seasonal specials and a carefully curated selection of local wines.",
+      "lead": "Discover grilled meats and fish, seasonal specials and a carefully curated selection of local wines.",
       "linkText": "View menu",
       "ctaAria": "Open menu in a new tab",
       "url": "#"

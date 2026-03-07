@@ -81,7 +81,7 @@
       "cards": [
         {
           "title": "10 % de réduction au restaurant",
-          "text": "Profitez de notre cuisine au feu de bois avec une réduction exclusive pour les réservations directes."
+          "text": "Profitez de notre cuisine au grill avec une réduction exclusive pour les réservations directes."
         },
         {
           "title": "Meilleur tarif garanti",
@@ -109,7 +109,7 @@
     },
     "restaurant": {
       "eyebrow": "RESTAURANT",
-      "title": "Feu de bois, produit et Méditerranée",
+      "title": "Grill, produit et Méditerranée",
       "text": "Notre restaurant propose une cuisine sincère, centrée sur les viandes et poissons au feu de bois, avec des produits de saison et une sélection de vins DO Empordà. Une ambiance intimiste au bord de la mer pour profiter de la meilleure gastronomie locale.",
       "cta": "Découvrir le restaurant ",
       "imageAlt": "Table sur la terrasse du restaurant avec vue sur la mer"
@@ -229,7 +229,7 @@
       "button": "RÉSERVER UNE CHAMBRE"
     },
     "services": {
-      "text": "En plus de votre chambre, vous pourrez profiter de notre terrasse avec vue sur la mer et de notre restaurant au feu de bois.",
+      "text": "En plus de votre chambre, vous pourrez profiter de notre terrasse avec vue sur la mer et de notre restaurant au grill.",
       "link": "Découvrez nos services"
     },
     "faq": {
@@ -274,7 +274,7 @@
   "servicesPage": {
     "seo": {
       "title": "Services | Taverna de la Sal",
-      "description": "Services de l’hôtel : restaurant au feu de bois, petit-déjeuner avec produit local, terrasse avec vue sur la Méditerranée, coin lecture, parking et Wi-Fi."
+      "description": "Services de l’hôtel : restaurant au grill, petit-déjeuner avec produit local, terrasse avec vue sur la Méditerranée, coin lecture, parking et Wi-Fi."
     },
     "hero": {
       "aria": "Services",
@@ -284,11 +284,11 @@
     },
     "brasa": {
       "eyebrow": "PROFITEZ",
-      "title": "Restaurant au feu de bois",
-      "text1": "Spécialistes des viandes et poissons au feu de bois, avec des produits de saison et une ambiance intimiste dans la vieille ville de L'Escala.",
+      "title": "Restaurant au grill",
+      "text1": "Spécialistes des viandes et poissons au grill, avec des produits de saison et une ambiance intimiste dans la vieille ville de L'Escala.",
       "text2": "Si vous réservez en direct sur notre site, vous bénéficierez de 10 % de réduction au restaurant pendant votre séjour.",
       "cta": "VOIR PLUS",
-      "imageAlt": "Restaurant au feu de bois"
+      "imageAlt": "Restaurant au grill"
     },
     "breakfast": {
       "eyebrow": "PETIT-DÉJEUNER BUFFET MÉDITERRANÉEN",
@@ -812,24 +812,24 @@
   "restaurante": {
     "seo": {
       "title": "Restaurant | Taverna de la Sal",
-      "description": "Viandes et poissons au feu de bois avec vue sur la mer. Cuisine sincère, produits de saison et vins de l’Empordà."
+      "description": "Viandes et poissons au grill avec vue sur la mer. Cuisine sincère, produits de saison et vins de l’Empordà."
     },
     "whatsapp": {
       "text": "Bonjour, je voudrais réserver une table au restaurant. Pouvez-vous me confirmer la disponibilité ? Merci."
     },
     "hero": {
       "aria": "Restaurant",
-      "title": "Feu de bois et Cuisine Méditerranéenne",
+      "title": "Grill et Cuisine Méditerranéenne",
       "subtitle": "Produit local, cuisine de la mer et morceaux sélectionnés avec exigence, dans une proposition pensée pour partager et savourer avec calme.",
       "cta": "Réserver une table",
       "note": "10 % de réduction pour les clients qui réservent directement sur notre site."
     },
     "propuesta": {
       "eyebrow": "LA PROPOSITION",
-      "title": "Le feu de bois comme protagoniste",
-      "lead": "Nous travaillons des viandes sélectionnées et des poissons frais avec respect du produit et une technique au feu de bois. Cuisine sincère, saveurs nettes et recettes méditerranéennes élaborées sans artifices.",
+      "title": "Le Grill comme protagoniste",
+      "lead": "Nous travaillons des viandes sélectionnées et des poissons frais avec respect du produit et une technique au grill. Cuisine sincère, saveurs nettes et recettes méditerranéennes élaborées sans artifices.",
       "p2": "Produits de proximité, vins de l’Empordà et une carte à déguster sans hâte.",
-      "imageAlt": "Poisson au feu de bois"
+      "imageAlt": "Poisson au grill"
     },
     "entorno": {
       "eyebrow": "LE CADRE",
@@ -861,7 +861,7 @@
     "carta": {
       "eyebrow": "LA CARTE",
       "title": "Explorez notre carte",
-      "lead": "Découvrez viandes et poissons au feu de bois, propositions de saison et une sélection soignée de vins locaux.",
+      "lead": "Découvrez viandes et poissons au grill, propositions de saison et une sélection soignée de vins locaux.",
       "linkText": "Voir le menu",
       "ctaAria": "Ouvrir le menu dans un nouvel onglet",
       "url": "#"
