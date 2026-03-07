@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca</loc>
+  </url>
+
+  <!-- ROOMS -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/rooms</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en/rooms</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/rooms</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/rooms</loc>
+  </url>
+
+  <!-- RESTAURANT -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/restaurant</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en/restaurant</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/restaurant</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/restaurant</loc>
+  </url>
+
+  <!-- HISTORY -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/history</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en/history</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/history</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/history</loc>
+  </url>
+
+  <!-- AREA -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/area</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en/area</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/area</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/area</loc>
+  </url>
+
+  <!-- SERVICES -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/services</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en/services</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/services</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/services</loc>
+  </url>
+
+  <!-- CONTACT -->
+  <url>
+    <loc>https://www.tavernadelasal.com/es/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/en/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/fr/contact</loc>
+  </url>
+  <url>
+    <loc>https://www.tavernadelasal.com/ca/contact</loc>
+  </url>
+
+</urlset>
