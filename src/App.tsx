@@ -19,14 +19,15 @@ function ScrollAnimations() {
       observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio > 0.35) {
+            if (entry.isIntersecting) {
               entry.target.classList.add("is-visible");
               observer?.unobserve(entry.target);
             }
           });
         },
-            {threshold: 0.05,
-            rootMargin: "0px 0px -150px 0px",
+        {
+          threshold: 0,
+          rootMargin: "0px 0px 180px 0px",
         }
       );
 
