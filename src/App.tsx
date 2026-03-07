@@ -25,9 +25,8 @@ function ScrollAnimations() {
             }
           });
         },
-        {
-          threshold: [0, 0.15, 0.35, 0.5],
-          rootMargin: "0px 0px -15% 0px",
+            {threshold: 0.05,
+            rootMargin: "0px 0px -150px 0px",
         }
       );
 
